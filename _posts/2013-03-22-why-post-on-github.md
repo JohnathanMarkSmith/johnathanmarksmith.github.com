@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Why did Java Spring consultant post his resume on GitHub.com"
-description: "Why did Java Spring consultant post his resume on GitHub.com"
+title: "Why Did The Java Spring Consultant Post His Resume On GitHub.com"
+description: "Why Did The Java Spring Consultant Post His Resume On GitHub.com"
 categories: [ java, spring, consultant, github ]
 tags: [ java, spring, consultant, github ]
 comments: false
