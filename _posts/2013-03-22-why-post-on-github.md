@@ -4,6 +4,7 @@ title: "Why did Java Spring consultant post his resume on GitHub.com"
 description: "Why did Java Spring consultant post his resume on GitHub.com"
 categories: [ java, spring, consultant, github ]
 tags: [ java, spring, consultant, github ]
+comments: false
 ---
 
 Let think about this, Why not use a public system like GitHub to post resumes and other documents that you would like to track or make public to others. GitHub can be used for so much more then just source code tracking. Think about it… any document you would like to track or share you can just GitHub and it does not have to be documents. You can keep workstation settings, scripts or anything in it. We need to stop thinking of GitHub if a web0bases hosting service for software development projects. You can make public and private repositories and put anything into them..
