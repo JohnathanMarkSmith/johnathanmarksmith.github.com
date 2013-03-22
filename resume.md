@@ -2,6 +2,8 @@
 layout: page
 title: "Resume"
 description: "Johnathan Mark Smiths Resume: Java, Springs, Maven, Git and More"
+category: [resume, java, spring, maven, programming]
+tags: [resume, java, spring, maven, programming]
 ---
 
 <h1>Johnathan Mark Smith - Resume</h1>
