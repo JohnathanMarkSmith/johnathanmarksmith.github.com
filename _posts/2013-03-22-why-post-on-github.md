@@ -2,8 +2,8 @@
 layout: post
 title: "Why Did The Java Spring Consultant Post His Resume On GitHub.com"
 description: "Why Did The Java Spring Consultant Post His Resume On GitHub.com"
-categories: [ java, spring, consultant, github ]
-tags: [ java, spring, consultant, github ]
+categories: [ Java, Spring, Consultant, Github ]
+tags: [ Java, Spring, Consultant, Github ]
 comments: false
 ---
 
