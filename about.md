@@ -4,11 +4,15 @@ title: "About"
 description: "About Johnathan Mark Smith"
 ---
 
-Over 24 years experience specializing in business technology in the areas of web application development and
-collaborative computing. I would like to work as an architect-developer for applications or product development. I am
-particularly interested in organizations that use leading technologies such as Springs, WebFlow, Maven, JUnit, JSP’s,
-Servlets, XML, Java, Struts, PHP, LDAP, Android and Web Application Servers. I have a very solid background with
-Java, OOP, Design-Patterns and Multi-Threading. I am also able to interface with all levels of management.
+Over 24 years experience, specializing in business technology in the areas of web application development and collaborative computing I been working as an architect-developer for applications or product development.
+
+I am particularly interested in organizations that use leading technologies such as Android, Springs, Spring-WebFlow, JSP’s, Servlets, XML, Java, Struts, PHP, LDAP, Maven, JUnit and Web Application Servers.
+
+I have a very solid background with Java, OOP, Design-Patterns and Multi-Threading. I am also able to interface with all levels of management!
+
+My consulting services enable businesses maximize value from their business process initiatives and IT investments leading to improved organizational performance. Our services leverage business knowledge, process excellence, technology expertise and substantial domain experience in chosen industry verticals.
+
+My frameworks and accelerators are an integral part of our methodology to deliver consulting services with efficiency and consistency.
 
 ## Languages:
 Java, JavaScript, HTML, PHP, SQL, PL/SQL, CSS, Perl, Korn Shell, Visual Basic, COBOL
