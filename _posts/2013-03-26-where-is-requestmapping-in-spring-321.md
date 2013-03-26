@@ -4,6 +4,7 @@ title: "Where is RequestMapping in Spring 3.2.1?"
 description: "Where is RequestMapping in Spring 3.2.1?"
 categories: [ Spring, Java ]
 tags: [ Spring, Java ]
+comments: false
 ---
 Where is RequestMapping in Spring 3.2.1?
 
