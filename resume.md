@@ -6,6 +6,9 @@ category: [resume, java, spring, maven, programming]
 tags: [resume, java, spring, maven, programming]
 ---
 
+TO DOWNLAOD RESUME IN ANY FORAMT CLICK <a href="http://johnathanmarksmith.com/resume/">HERE</a> 
+
+
 <h1>Johnathan Mark Smith - Resume</h1>
 <h2>OBJECTIVE</h2>
 
@@ -181,4 +184,5 @@ IBM HTTP Server, Netscape and Apache
 
 - Computer Programming.
 
+TO DOWNLAOD RESUME IN ANY FORAMT CLICK <a href="http://johnathanmarksmith.com/resume/">HERE</a> 
 {% include JB/setup %}
