@@ -2,7 +2,7 @@
 layout: post
 title: "Mirroring a Git repostory"
 description: ""
-categories: [Git, Programming, GitHub]
+categories: [Git, Programming, Github]
 tags: [Git, Programming, Github]
 comments: false
 ---
