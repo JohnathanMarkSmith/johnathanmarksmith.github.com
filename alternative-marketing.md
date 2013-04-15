@@ -26,4 +26,8 @@ Think about what you do on a daily basis. If you know a company’s name, do you
 
 ## Can your clients find you?  We can help.
 
+<div style="text-align: center">
+<img src="images/24hours-banner.jpg" alt="Social Media with Johnathan Mark Smith">
+</div>
+
 {% include JB/setup %}
