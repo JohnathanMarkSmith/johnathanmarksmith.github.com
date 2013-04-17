@@ -7,7 +7,7 @@ tags: [ Github, Git ]
 comments: false
 ---
 
-I get access a good number of times "How do I clone a local Git Repository?". So do make it easy I am going to pust it on my blog site so I can just follow the link to in.  are you ready??
+I get asked a good number of times "How do I clone a local Git Repository?". So do make it easy I am going to pust it on my blog site so I can just follow the link to in.  are you ready??
 
 This worked for me:
 
