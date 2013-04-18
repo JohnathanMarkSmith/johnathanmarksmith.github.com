@@ -17,7 +17,7 @@ The first thing we need to do is to download the Maven tar file and untar it to 
 
 {% highlight bash %}
 wget http://mirrors.gigenet.com/apache/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz
-su -c "tar -zxvf apache-maven-3.0.4-bin.tar.gz -C /opt/" 
+su -c "tar -zxvf apache-maven-3.0.5-bin.tar.gz -C /opt/" 
 {% endhighlight %}
 
 ### Setup the Maven Environment Variables in shared profile.
