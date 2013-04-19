@@ -36,7 +36,7 @@ Now its time to test your install of Apache2 and PHP, To Do this we are going to
 
 The following command will create and index.php file with the PHPInfo command in it:
 {% highlight bash %}
- sudo echo “<?php phpinfo(); ?>” > /var/www/html/index.php
+echo “<?php phpinfo(); ?>” > /var/www/html/index.php
 {% endhighlight %}
 
 Now launch your browser to http://127.0.0.1 or http://localhost if anything was done righ your output should look like the one below:
