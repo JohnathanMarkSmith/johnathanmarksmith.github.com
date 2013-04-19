@@ -43,7 +43,7 @@ Now launch your browser to http://127.0.0.1 or http://localhost if anything was 
 
 
 <div style="text-align: center">
-<img src="images/php.jpg" alt="Install Apache2 and PHP with Johnathan Mark Smith">
+<img src="/images/php.jpg" alt="Install Apache2 and PHP with Johnathan Mark Smith">
 </div>
 
 
