@@ -4,6 +4,7 @@ title: "Resume"
 description: "Johnathan Mark Smiths Resume: Java, Springs, Maven, Git and More"
 category: [resume, java, spring, maven, programming]
 tags: [resume, java, spring, maven, programming]
+group: navigation
 ---
 
 TO DOWNLAOD RESUME IN ANY FORAMT CLICK <a href="http://johnathanmarksmith.com/resume/">HERE</a> 
