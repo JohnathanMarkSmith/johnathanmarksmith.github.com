@@ -18,8 +18,6 @@ git shortlog -s -n -e --all
 and your output should look like:
 
 {% highlight bash %}
-    33	Johnathan Smith <johnathan.smith@uftwf.org>
-    21	Jade <plusjade@gmail.com>
     10	Johnathan Smith <johnathansmith1969@gmail.com>
     10	Yuya Saito <studiomohawk@gmail.com>
      4	Andrea Schiavini <andrea.schiavini@gmail.com>
