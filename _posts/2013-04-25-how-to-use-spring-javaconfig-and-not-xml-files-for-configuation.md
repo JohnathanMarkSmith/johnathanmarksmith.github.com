@@ -80,6 +80,22 @@ You can download the source code to this at my github project.
 
 Now that's it. have fun with Spring JavaConfig. 
 
+### Down and Run Project
+
+If you would like to download the project from GitHub and run it just follow the following commands:
+
+{% highlight bash %}
+git clone git@github.com:JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig.git
+cd HelloSpringJavaBasedJavaConfig
+mvn packge
+cd target
+java -jar HelloSpringJavaBasedJavaConfig.jar
+{% endhighlight %}
+
+LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING....
+
+
+
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
 
  
