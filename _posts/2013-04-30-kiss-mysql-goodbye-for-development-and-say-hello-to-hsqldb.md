@@ -145,7 +145,7 @@ If you would like to download the project from GitHub and run it just follow the
 {% highlight bash %}
 git clone git@github.com:JohnathanMarkSmith/NoMySQL.git
 cd NoMySQL
-mvn packge
+mvn package
 cd target
 java -jar NoMySQL.jar
 {% endhighlight %}
