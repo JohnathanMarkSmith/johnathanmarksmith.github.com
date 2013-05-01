@@ -4,7 +4,8 @@ title: "Working with Git stash   Stashing Your Changes"
 description: "Working with Git stash   Stashing Your Changes"
 categories: [ Git, Programming ]
 tags: [ Git, Programming ]
-comments: false---
+comments: false
+---
 
 Stashing is a great way to pause what you’re currently working on and come back to it later. For example, if you working on that awesome, brand new feature but someone just found a bug that you need to fix. Add your changes to the index using
 
