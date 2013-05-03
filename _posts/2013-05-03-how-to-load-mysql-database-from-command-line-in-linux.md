@@ -18,6 +18,7 @@ mysql --user root --password regandb < backup.mysql
 
 MySQL will prompt you for a password then your mysql will be loaded depending on how big your backup/file is it may take some time. You could add a -f flag if your database is very big, it will prevent it from stopping if there is error. 
 
+ITS THAT EASY!!! :)
 
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
 
