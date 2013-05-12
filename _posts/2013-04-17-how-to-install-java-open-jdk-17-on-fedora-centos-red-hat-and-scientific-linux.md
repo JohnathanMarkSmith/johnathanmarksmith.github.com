@@ -21,4 +21,8 @@ su -c "yum install java-1.7.0-openjdk*"
 
 Thats all you have to do... stop asking... :)
 
+Here is the video
+
+http://www.youtube.com/watch?v=bZ7McZJZQ0o
+
 {% include JB/setup %}
