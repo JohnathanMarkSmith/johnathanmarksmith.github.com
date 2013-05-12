@@ -68,7 +68,7 @@
       <file leaf-file-name="2013-04-12-working-with-spring-webflow-and-dojo-by-johnathan-mark-smith.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2013-04-12-working-with-spring-webflow-and-dojo-by-johnathan-mark-smith.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="3" selection-start="1961" selection-end="2004" vertical-scroll-proportion="0.0">
+            <state line="23" column="0" selection-start="867" selection-end="1305" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -77,7 +77,16 @@
       <file leaf-file-name="2013-04-17-how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2013-04-17-how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="737" selection-end="737" vertical-scroll-proportion="0.6747405">
+            <state line="15" column="28" selection-start="565" selection-end="565" vertical-scroll-proportion="0.4054054">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2013-04-24-how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2013-04-24-how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="0" selection-start="1325" selection-end="1460" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -385,14 +394,21 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/_posts/2013-04-12-working-with-spring-webflow-and-dojo-by-johnathan-mark-smith.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="3" selection-start="1961" selection-end="2004" vertical-scroll-proportion="0.0">
+        <state line="23" column="0" selection-start="867" selection-end="1305" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-04-24-how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1325" selection-end="1460" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-04-17-how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="737" selection-end="737" vertical-scroll-proportion="0.6747405">
+        <state line="15" column="28" selection-start="565" selection-end="565" vertical-scroll-proportion="0.4054054">
           <folding />
         </state>
       </provider>

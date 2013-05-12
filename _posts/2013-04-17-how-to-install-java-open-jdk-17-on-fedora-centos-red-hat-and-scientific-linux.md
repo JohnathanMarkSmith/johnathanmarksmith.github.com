@@ -23,6 +23,10 @@ Thats all you have to do... stop asking... :)
 
 Here is the video
 
-http://www.youtube.com/watch?v=bZ7McZJZQ0o
+<object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
+
+If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
+
 
 {% include JB/setup %}
