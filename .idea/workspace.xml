@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c86a0493-8784-48ac-b1f1-fcb61d97936a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-04-17-how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux.md" afterPath="$PROJECT_DIR$/_posts/2013-04-17-how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-04-24-how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux.md" afterPath="$PROJECT_DIR$/_posts/2013-04-24-how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux.md" />
     </list>
     <ignored path="johnathanmarksmith.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,19 +74,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2013-04-17-how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="2013-04-17-how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2013-04-17-how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="28" selection-start="565" selection-end="565" vertical-scroll-proportion="0.4054054">
+            <state line="15" column="28" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2013-04-24-how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="2013-04-24-how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2013-04-24-how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="1325" selection-end="1460" vertical-scroll-proportion="0.0">
+            <state line="26" column="17" selection-start="986" selection-end="986" vertical-scroll-proportion="0.43243244">
               <folding />
             </state>
           </provider>
@@ -111,6 +111,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/_posts/2013-04-17-how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux.md" />
+        <option value="$PROJECT_DIR$/_posts/2013-04-24-how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux.md" />
       </list>
     </option>
   </component>
@@ -399,16 +400,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2013-04-24-how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2013-04-17-how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1325" selection-end="1460" vertical-scroll-proportion="0.0">
+        <state line="15" column="28" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2013-04-17-how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2013-04-24-how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="28" selection-start="565" selection-end="565" vertical-scroll-proportion="0.4054054">
+        <state line="26" column="17" selection-start="986" selection-end="986" vertical-scroll-proportion="0.43243244">
           <folding />
         </state>
       </provider>
