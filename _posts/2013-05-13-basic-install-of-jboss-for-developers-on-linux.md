@@ -36,7 +36,7 @@ The output should look something like the one below:
 
   JBoss Bootstrap Environment
 
-  JBOSS_HOME: /home/jsmith/tmp/jboss-as-7.1.1.Final
+  JBOSS_HOME: /home/jsmith/jboss-as-7.1.1.Final
 
   JAVA: java
 
@@ -67,7 +67,7 @@ The output should look something like the one below:
 14:10:28,272 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-3) Starting Coyote HTTP/1.1 on http--127.0.0.1-8080
 14:10:28,746 INFO  [org.jboss.as.remoting] (MSC service thread 1-1) JBAS017100: Listening on /127.0.0.1:4447
 14:10:28,749 INFO  [org.jboss.as.remoting] (MSC service thread 1-3) JBAS017100: Listening on /127.0.0.1:9999
-14:10:28,754 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) JBAS015012: Started FileSystemDeploymentService for directory /home/jsmith/tmp/jboss-as-7.1.1.Final/standalone/deployments
+14:10:28,754 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) JBAS015012: Started FileSystemDeploymentService for directory /home/jsmith/jboss-as-7.1.1.Final/standalone/deployments
 14:10:28,896 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
 14:10:29,026 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
 14:10:29,027 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss AS 7.1.1.Final "Brontes" started in 3281ms - Started 133 of 208 services (74 services are passive or on-demand)
