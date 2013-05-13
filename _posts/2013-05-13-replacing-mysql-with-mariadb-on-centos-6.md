@@ -19,7 +19,7 @@ AND AGAIN..... WARNING: YOU SHOULD ALWAYS MAKE A BACKUP OF ANY DATABASES BEFORE 
 
 If you have MySQL installed and running its time to stop it by entering the following command:
 
-    [root@regan ~]# service stop mysqld
+    [root@regan ~]# service mysqld stop
 
 
 ### Removing MySQL
