@@ -4,7 +4,7 @@ title: "About"
 description: "About Johnathan Mark Smith"
 ---
 
-Over 24 years experience, specializing in business technology in the areas of web application development and collaborative computing I been working as an architect-developer for applications or product development.
+Over 25 years experience, specializing in business technology in the areas of web application development and collaborative computing I been working as an architect-developer for applications or product development.
 
 I am particularly interested in organizations that use leading technologies such as Android, Springs, Spring-WebFlow, JSP’s, Servlets, XML, Java, Struts, PHP, LDAP, Maven, JUnit and Web Application Servers.
 
