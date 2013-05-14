@@ -14,18 +14,54 @@ Using Spring XML configuration is so 2000's the time has come to push the XML aw
 Here is the main code to my sample project
 
 {% highlight bash %}
-public class MainApp
+public class Main
 {
+
+    private static final Logger LOGGER = getLogger(Main.class);
+
     public static void main(String[] args)
     {
-        ApplicationContext context = new AnnotationConfigApplicationContext(HelloWorldConfig.class);
+        // in this setup, both the main(String[]) method and the JUnit method both specify that
+        ApplicationContext context = new AnnotationConfigApplicationContext( HelloWorldConfiguration.class );
+        MessageService mService = context.getBean(MessageService.class);
         HelloWorld helloWorld = context.getBean(HelloWorld.class);
 
+        /**
+         * Displaying default messgae
+         */
+        LOGGER.debug("Message from HelloWorld Bean: " + helloWorld.getMessage());
 
-        System.out.println(helloWorld.getMessage());
+        /**
+         *   Saving Message to database
+         */
+        Message message = new Message();
+        message.setMessage(helloWorld.getMessage());
+        mService.SaveMessage(message);
 
+        /**
+         * Settting new message in bean
+         */
         helloWorld.setMessage("I am in Staten Island, New York");
-        System.out.println(helloWorld.getMessage());
+        LOGGER.debug("Message from HelloWorld Bean: " + helloWorld.getMessage());
+
+        /**
+         * Saving Message in database.
+         */
+        message.setMessage(helloWorld.getMessage());
+        mService.SaveMessage(message);
+
+        /**
+         * Getting messages from database
+         *    - display number of message(s)
+         *    - display each message in database
+         */
+        List<Message> myList = mService.listMessages();
+        LOGGER.debug("You Have " + myList.size() + " Message(s) In The Database");
+
+        for (Message i : myList)
+        {
+            LOGGER.debug("Message: ID: " + i.getId() + ", Message: " + i.getMessage() + ".");
+        }
     }
 }
 {% endhighlight %}
@@ -49,27 +85,19 @@ You can see from this code that the ApplicationContext is mapped to a HelloWorld
  */
 
 @Configuration
-@ComponentScan(basePackages = {"com.johnathanmarksmith.HelloSpringJavaBasedJavaConfig.bean"})
+@Import(DatabaseConfiguration.class)
+@ComponentScan
 @PropertySource("classpath:application.properties")
-public class HelloWorldConfig
-{
-
-    @Autowired
-    Environment env;
+public class HelloWorldConfiguration {
 
     @Bean
-    public HelloWorld getHelloWorld()
-    {
+    public HelloWorld getHelloWorld(Environment env) {
         HelloWorld hw = new HelloWorld();
-
-       /*
-        This is use to read in the property from the application.properties file
-       */
-
         hw.setMessage(env.getProperty("bean.text"));
-
         return hw;
     }
+
+
 }
 {% endhighlight %}
 
