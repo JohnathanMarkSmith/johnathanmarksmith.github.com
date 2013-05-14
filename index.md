@@ -11,7 +11,7 @@ Here are some of my posts (check out the <a href="archive.html">archive page</a>
 
 
 <ul class="posts">
-{% for post in site.posts limit: 10 %}
+{% for post in site.posts limit: 15 %}
   <div class="post_info">
     <li>
          <a href="{{ post.url }}">{{ post.title }}</a> 
