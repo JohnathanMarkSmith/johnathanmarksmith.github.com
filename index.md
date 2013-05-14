@@ -16,7 +16,6 @@ Here are some of my posts (check out the <a href="archive.html">archive page</a>
     <li>
      <a href="{{ post.url }}">{{ post.title }}</a> <span>({{ post.date | date:"%Y-%m-%d" }})</span>
     </li>
-    </br> <em>{{ post.excerpt }} </em>
     </div>
   {% endfor %}
 </ul>
