@@ -14,7 +14,8 @@ Here are some of my posts (check out the <a href="archive.html">archive page</a>
 {% for post in site.posts limit: 10 %}
   <div class="post_info">
     <li>
-     <a href="{{ post.url }}">{{ post.title }}</a> <span>({{ post.date | date:"%Y-%m-%d" }})</span>
+         <a href="{{ post.url }}">{{ post.title }}</a> 
+         <span>({{ post.date | date:"%Y-%m-%d" }})</span>
     </li>
     </div>
   {% endfor %}
