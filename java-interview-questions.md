@@ -29,6 +29,19 @@ A Java class can implement multiple interfaces but it can extend only one abstra
 Interface is absolutely abstract and cannot be instantiated; A Java abstract class also cannot be instantiated, but can be invoked if a main() exists.
 
 
+## What is difference between overloading and overriding?
+
+
+   a) In overloading, there is a relationship between methods available in the same class whereas in overriding, there is relationship between a superclass method and subclass method. 
+   
+   b) Overloading does not block inheritance from the superclass whereas overriding blocks inheritance from the superclass. 
+   
+   c) In overloading, separate methods share the same name whereas in overriding, subclass method replaces the superclass. 
+
+   d) Overloading must have different method signatures whereas overriding must have same signature.
+
+
+
 ## In Java, what’s the difference between method overloading and method overriding?
 
  The difference between overriding and overloading in Java is a common source of confusion – but it is fairly simple to understand. Let’s start the discussion by talking more about method overloading. Overloading in Java can occur when two or more methods in the same class share the same name or even if a child class shares a method with the same name as one of it’s parent classes. But, in order to actually have overloaded methods, the methods not only have to have the same name, but there are other conditions that must be satisfied – read below to see what those conditions are.
