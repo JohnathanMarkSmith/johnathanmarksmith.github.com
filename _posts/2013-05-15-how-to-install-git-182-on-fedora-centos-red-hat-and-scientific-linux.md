@@ -37,7 +37,7 @@ Your output should look something like this:
     git version 1.8.2.3
 
 
-That's it, your done!git version 1.8.2.3
+That's it, your done!
 
 
 
