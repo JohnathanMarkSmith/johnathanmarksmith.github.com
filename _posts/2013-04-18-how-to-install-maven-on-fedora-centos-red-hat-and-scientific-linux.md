@@ -52,7 +52,9 @@ Default locale: en_US, platform encoding: UTF-8
 OS name: "linux", version: "2.6.32-358.2.1.el6.i686", arch: "i386", family: "unix"
 {% endhighlight %}
 
-Now that's it. have fun with maven. 
+Now that's it. have fun with maven.
+
+<object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
 
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
 
