@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Java Interview Quesiton: What is the difference between overloading and overriding"
-description: "Java Interview Quesiton: What is the difference between overloading and overriding"
-categories: [ Java, Interview Question ]
-tags: [ Java, Interview Question ]
+title: "Java Interview Question: What is the difference between overloading and overriding"
+description: "Java Interview Question: What is the difference between overloading and overriding"
+categories: [ Java, Interview Questions ]
+tags: [ Java, Interview Questions ]
 comments: false
 ---
 

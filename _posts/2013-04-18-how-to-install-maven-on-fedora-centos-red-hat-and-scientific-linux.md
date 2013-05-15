@@ -2,8 +2,8 @@
 layout: post
 title: "How to install Maven on Fedora, CentOS, Red Hat and Scientific Linux"
 description: "How to install Maven on Fedora, CentOS, Red Hat and Scientific Linux"
-categories: [ Linux, Java, Maven ]
-tags: [ Linux, Java, Maven ]
+categories: [ Linux, Java, Maven, Programming, Project Management]
+tags: [ Linux, Java, Maven, Programming, Project Management ]
 comments: false
 ---
 

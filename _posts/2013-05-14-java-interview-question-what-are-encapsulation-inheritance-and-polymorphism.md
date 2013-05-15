@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Java Interview Quesiton: What are Encapsulation, Inheritance and Polymorphism?"
-description: "Java Interview Quesiton: What are Encapsulation, Inheritance and Polymorphism?"
-categories: [ Java, Interview Question ]
-tags: [ Java, Interview Question ]
+title: "Java Interview Question: What are Encapsulation, Inheritance and Polymorphism?"
+description: "Java Interview Question: What are Encapsulation, Inheritance and Polymorphism?"
+categories: [ Java, Interview Questions ]
+tags: [ Java, Interview Questions ]
 comments: false
 ---
 
