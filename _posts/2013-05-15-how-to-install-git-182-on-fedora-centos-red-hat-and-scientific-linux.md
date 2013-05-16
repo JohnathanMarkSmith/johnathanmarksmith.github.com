@@ -28,6 +28,9 @@ make prefix=/usr/local install
 
 {% endhighlight %}
 
+
+### Time For a Test
+
 After the above is done you should check the version, type in the following command
 
     git --version
