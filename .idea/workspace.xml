@@ -7,7 +7,7 @@
     </list>
     <ignored path="johnathanmarksmith.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1368704470066" ignored="false" />
+    <file path="/Dummy.txt" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1368704555857" ignored="false" />
     <file path="/2013-05-13-replacing-mysql-with-mariadb-on-centos-6.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1368481277501" ignored="false" />
     <file path="/2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1368666986393" ignored="false" />
     <file path="/2013-05-16-java-interview-quesiton-what-is-the-difference-between-this-and-super.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1368704340748" ignored="false" />
@@ -95,7 +95,7 @@
       <file leaf-file-name="java-interview-questions.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/java-interview-questions.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="3748" selection-end="3748" vertical-scroll-proportion="0.88188976">
+            <state line="106" column="0" selection-start="6574" selection-end="6574" vertical-scroll-proportion="0.7637795">
               <folding />
             </state>
           </provider>
@@ -368,7 +368,11 @@
       <created>1368704476211</created>
       <updated>1368704476211</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added new interview question of the day">
+      <created>1368704558514</created>
+      <updated>1368704558514</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -525,7 +529,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/java-interview-questions.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="3748" selection-end="3748" vertical-scroll-proportion="0.88188976">
+        <state line="106" column="0" selection-start="6574" selection-end="6574" vertical-scroll-proportion="0.7637795">
           <folding />
         </state>
       </provider>

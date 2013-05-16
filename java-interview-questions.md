@@ -61,10 +61,6 @@ It’s important to understand that method overloading is NOT something you can 
 Confused? Well, here are some very helpful examples of where overloading would be both valid and invalid:
 Examples of Method Overloading in Java – both valid and invalid:
 
-## What is the difference between this() and super()?
-
-this() can be used to invoke a constructor or method of the same class whereas super() can be used to invoke a super class constructor or method.
-
 {% highlight bash %}
 //compiler error - can't overload based on the   
 //type returned -
@@ -104,6 +100,10 @@ protected Object clone() throws CloneNotSupportedException - this method is used
 ## What are Encapsulation, Inheritance and Polymorphism?
 
 Encapsulation is the mechanism that binds together code and data it manipulates and keeps both safe from outside interference and misuse. Inheritance is the process by which one object acquires the properties of another object. Polymorphism is the feature that allows one interface to be used for general class actions.
+
+## What is the difference between this() and super()?
+
+this() can be used to invoke a constructor or method of the same class whereas super() can be used to invoke a super class constructor or method.
 
 
 
