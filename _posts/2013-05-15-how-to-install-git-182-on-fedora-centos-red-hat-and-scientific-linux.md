@@ -36,6 +36,15 @@ Your output should look something like this:
 
     git version 1.8.2.3
 
+### Your Identity, Tell Git Who You Are
+
+You need to tell git who you are, the following commands will setup your name and email address:
+
+    config --global user.name "John Doe"
+    config --global user.email johndoe@example.com
+
+
+
 
 That's it, your done!
 
