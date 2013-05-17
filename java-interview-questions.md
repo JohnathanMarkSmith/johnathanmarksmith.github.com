@@ -106,6 +106,14 @@ Encapsulation is the mechanism that binds together code and data it manipulates 
 this() can be used to invoke a constructor or method of the same class whereas super() can be used to invoke a super class constructor or method.
 
 
+## Can a final class have a abstract method?
+
+No. I final class can not have a abstract method in it because when you declare a method in a class as abstract, then the class must be declared as abstract.
+
+"Final" and "Abstract" cannot used at the same time. Any class can be either final or abstract not both!
+
+   Final class means cannot be subclassed.
+   Abstract class means must be subclassed.
 
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
 
