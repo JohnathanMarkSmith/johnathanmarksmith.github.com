@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c86a0493-8784-48ac-b1f1-fcb61d97936a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md" afterPath="$PROJECT_DIR$/_posts/2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2013-05-20-java-interview-quesiton-what-is-the-difference-between-array-and-vector.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java-interview-questions.md" afterPath="$PROJECT_DIR$/java-interview-questions.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="johnathanmarksmith.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1369050587774" ignored="false" />
+    <file path="/Dummy.txt" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1369050626449" ignored="false" />
     <file path="/2013-05-13-replacing-mysql-with-mariadb-on-centos-6.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1368481277501" ignored="false" />
     <file path="/2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1369050579833" ignored="false" />
     <file path="/2013-05-16-java-interview-quesiton-what-is-the-difference-between-this-and-super.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1368704340748" ignored="false" />
     <file path="db-console:/7fb622ff/0bac5e2e-656a-4b5e-be80-22106be7d588/" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1368713181049" ignored="false" />
     <file path="/2013-05-17-java-interview-quesiton-can-a-final-class-have-a-abstract-method.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1368793495777" ignored="false" />
+    <file path="/java-interview-questions.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1369051613636" ignored="false" />
+    <file path="/2013-05-20-java-interview-quesiton-what-is-the-difference-between-array-and-vector.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1369051622505" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,22 +76,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="java-interview-questions.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="java-interview-questions.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/java-interview-questions.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="43" selection-start="6619" selection-end="6619" vertical-scroll-proportion="0.0">
+            <state line="121" column="0" selection-start="7160" selection-end="7160" vertical-scroll-proportion="0.8695652">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.83272725">
+            <state line="53" column="0" selection-start="1612" selection-end="1612" vertical-scroll-proportion="-18.32">
               <folding />
             </state>
           </provider>
@@ -112,7 +115,19 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
+            <state line="21" column="0" selection-start="627" selection-end="866" vertical-scroll-proportion="-12.6">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2013-05-20-java-interview-quesiton-what-is-the-difference-between-array-and-vector.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2013-05-20-java-interview-quesiton-what-is-the-difference-between-array-and-vector.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="91" selection-start="286" selection-end="392" vertical-scroll-proportion="-5.4">
               <folding />
             </state>
           </provider>
@@ -165,8 +180,9 @@
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/index.md" />
         <option value="$PROJECT_DIR$/_posts/2013-05-17-java-interview-quesiton-can-a-final-class-have-a-abstract-method.md" />
-        <option value="$PROJECT_DIR$/java-interview-questions.md" />
         <option value="$PROJECT_DIR$/_posts/2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md" />
+        <option value="$PROJECT_DIR$/_posts/2013-05-20-java-interview-quesiton-what-is-the-difference-between-array-and-vector.md" />
+        <option value="$PROJECT_DIR$/java-interview-questions.md" />
       </list>
     </option>
   </component>
@@ -420,12 +436,16 @@
       <created>1369050590498</created>
       <updated>1369050590498</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added new interview question of the day">
+      <created>1369050632200</created>
+      <updated>1369050632200</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="90" width="1920" height="760" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -445,7 +465,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27965647" sideWeight="0.6713396" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27965647" sideWeight="0.6713396" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -516,13 +536,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="36" selection-start="3499" selection-end="3499" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/java-interview-questions.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -605,12 +618,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="1612" selection-end="1612" vertical-scroll-proportion="-18.32">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-05-17-java-interview-quesiton-can-a-final-class-have-a-abstract-method.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
+        <state line="21" column="0" selection-start="627" selection-end="866" vertical-scroll-proportion="-12.6">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-05-20-java-interview-quesiton-what-is-the-difference-between-array-and-vector.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="91" selection-start="286" selection-end="392" vertical-scroll-proportion="-5.4">
           <folding />
         </state>
       </provider>
@@ -620,17 +653,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="43" selection-start="6619" selection-end="6619" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.83272725">
+        <state line="121" column="0" selection-start="7160" selection-end="7160" vertical-scroll-proportion="0.8695652">
           <folding />
         </state>
       </provider>

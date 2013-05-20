@@ -115,6 +115,13 @@ No. I final class can not have a abstract method in it because when you declare 
    Final class means cannot be subclassed.
    Abstract class means must be subclassed.
 
+
+## Java Interview Quesiton: What is the difference between Array and Vector?
+
+Array is a set of related data type and static whereas vector is a growable array of objects and dynamic.
+
+
+
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
 
 {% include JB/setup %}
