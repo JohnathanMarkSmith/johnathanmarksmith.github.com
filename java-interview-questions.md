@@ -56,7 +56,7 @@ How to NOT overload methods:
 It’s important to understand that method overloading is NOT something you can accomplish by doing these 2 things:
 
     1.) Changing the return type of the method   
-    2.)  Changing the name of the method parameters, but not changing the parameter types.  
+    2.) Changing the name of the method parameters, but not changing the parameter types.
 
 Confused? Well, here are some very helpful examples of where overloading would be both valid and invalid:
 Examples of Method Overloading in Java – both valid and invalid:
