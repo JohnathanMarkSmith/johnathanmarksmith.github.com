@@ -46,10 +46,10 @@ You need to tell git who you are, the following commands will setup your name an
     config --global user.name "John Doe"
     config --global user.email johndoe@example.com
 
-
-
-
 That's it, your done!
+
+Here is the video:
+<object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/oxI5vzil840?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/oxI5vzil840?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
 
 
 
