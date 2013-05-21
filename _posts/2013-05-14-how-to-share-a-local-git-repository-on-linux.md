@@ -2,8 +2,8 @@
 layout: post
 title: "How to share a local git repository on linux"
 description: "How to share a local git repository on linux"
-categories: [ Linux, Git ]
-tags: [ Linux, Git ]
+categories: [ Linux, Git, Git Interview Question ]
+tags: [ Linux, Git, Git Interview Question ]
 comments: false
 ---
 
@@ -37,6 +37,8 @@ Now to clone the shared repository, use
 
 That was easy right?
 
+
+You can see the full list of <a href="/git-interview-questions.html">Git Interview Questions Here</a>
 
 
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>

@@ -2,8 +2,8 @@
 layout: post
 title: "Java Interview Quesiton: What is the difference between this() and super()"
 description: "Java Interview Quesiton: What is the difference between this() and super()"
-categories: [ Java, Interview Questions ]
-tags: [ Java, Interview Questions ]
+categories: [ Java, Java Interview Questions ]
+tags: [ Java, Java Interview Questions ]
 comments: false
 ---
 

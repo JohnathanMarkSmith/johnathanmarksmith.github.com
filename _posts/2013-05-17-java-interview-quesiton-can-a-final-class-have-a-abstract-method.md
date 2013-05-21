@@ -2,8 +2,8 @@
 layout: post
 title: "Java Interview Quesiton: Can a final class have a abstract method"
 description: "Java Interview Quesiton: Can a final class have a abstract method"
-categories: [ Java, Interview Questions ]
-tags: [ Java, Interview Questions ]
+categories: [ Java, Java Interview Questions ]
+tags: [ Java, Java Interview Questions ]
 comments: false
 ---
 

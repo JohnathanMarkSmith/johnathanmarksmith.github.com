@@ -2,8 +2,8 @@
 layout: post
 title: "How to clone a local Git Repository"
 description: "How to clone a local Git Repository"
-categories: [ Github, Git ]
-tags: [ Github, Git ]
+categories: [ Github, Git, Git Interview Question ]
+tags: [ Github, Git, Git Interview Question ]
 comments: false
 ---
 
@@ -29,5 +29,11 @@ git clone file:////192.168.10.51/code
 {% endhighlight %}
 
 If the git repository is in a subdirectory, simply append the path.
+
+
+You can see the full list of <a href="/git-interview-questions.html">Git Interview Questions Here</a>
+
+If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
+
 
 {% include JB/setup %}
