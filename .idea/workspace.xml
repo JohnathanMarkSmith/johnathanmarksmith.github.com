@@ -7,7 +7,7 @@
     </list>
     <ignored path="johnathanmarksmith.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1369098268141" ignored="false" />
+    <file path="/Dummy.txt" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1369098326855" ignored="false" />
     <file path="/2013-05-13-replacing-mysql-with-mariadb-on-centos-6.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1368481277501" ignored="false" />
     <file path="/2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1369050579833" ignored="false" />
     <file path="/2013-05-16-java-interview-quesiton-what-is-the-difference-between-this-and-super.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1368704340748" ignored="false" />
@@ -15,6 +15,7 @@
     <file path="/2013-05-17-java-interview-quesiton-can-a-final-class-have-a-abstract-method.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1368793495777" ignored="false" />
     <file path="/java-interview-questions.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1369051613636" ignored="false" />
     <file path="/2013-05-20-java-interview-quesiton-what-is-the-difference-between-array-and-vector.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1369051622505" ignored="false" />
+    <file path="/2013-05-13-basic-install-of-jboss-for-developers-on-linux.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1369098371436" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +79,7 @@
       <file leaf-file-name="2013-05-13-basic-install-of-jboss-for-developers-on-linux.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2013-05-13-basic-install-of-jboss-for-developers-on-linux.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="0" selection-start="6149" selection-end="6149" vertical-scroll-proportion="0.60066557">
+            <state line="113" column="0" selection-start="6200" selection-end="6200" vertical-scroll-proportion="0.6777963">
               <folding />
             </state>
           </provider>
@@ -376,7 +377,11 @@
       <created>1369051647418</created>
       <updated>1369051647419</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added new interview question of the day">
+      <created>1369098332307</created>
+      <updated>1369098332307</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -394,6 +399,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -406,7 +412,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -570,7 +575,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-05-13-basic-install-of-jboss-for-developers-on-linux.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="0" selection-start="6149" selection-end="6149" vertical-scroll-proportion="0.60066557">
+        <state line="113" column="0" selection-start="6200" selection-end="6200" vertical-scroll-proportion="0.6777963">
           <folding />
         </state>
       </provider>
