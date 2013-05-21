@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c86a0493-8784-48ac-b1f1-fcb61d97936a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java-interview-questions.md" afterPath="$PROJECT_DIR$/java-interview-questions.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-05-13-basic-install-of-jboss-for-developers-on-linux.md" afterPath="$PROJECT_DIR$/_posts/2013-05-13-basic-install-of-jboss-for-developers-on-linux.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="johnathanmarksmith.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1369057502287" ignored="false" />
+    <file path="/Dummy.txt" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1369098268141" ignored="false" />
     <file path="/2013-05-13-replacing-mysql-with-mariadb-on-centos-6.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1368481277501" ignored="false" />
     <file path="/2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1369050579833" ignored="false" />
     <file path="/2013-05-16-java-interview-quesiton-what-is-the-difference-between-this-and-super.md" changelist="c86a0493-8784-48ac-b1f1-fcb61d97936a" time="1368704340748" ignored="false" />
@@ -29,7 +29,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -66,6 +65,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -75,100 +75,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="java-interview-questions.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java-interview-questions.md">
+      <file leaf-file-name="2013-05-13-basic-install-of-jboss-for-developers-on-linux.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2013-05-13-basic-install-of-jboss-for-developers-on-linux.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="8" selection-start="2176" selection-end="2176" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2013-05-15-java-interview-question-what-is-the-difference-between-overloading-and-overriding.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/2013-05-15-java-interview-question-what-is-the-difference-between-overloading-and-overriding.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="853" selection-end="1092" vertical-scroll-proportion="0.6496063">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="johnathanmarksmith.github.com.iml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/johnathanmarksmith.github.com.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2013-05-16-java-interview-quesiton-what-is-the-difference-between-this-and-super.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2013-05-16-java-interview-quesiton-what-is-the-difference-between-this-and-super.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="440" selection-end="679" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2013-05-17-java-interview-quesiton-can-a-final-class-have-a-abstract-method.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2013-05-17-java-interview-quesiton-can-a-final-class-have-a-abstract-method.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="627" selection-end="866" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2013-05-20-java-interview-quesiton-what-is-the-difference-between-array-and-vector.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2013-05-20-java-interview-quesiton-what-is-the-difference-between-array-and-vector.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="91" selection-start="286" selection-end="392" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="58" selection-start="749" selection-end="749" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_config.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="36" selection-start="3499" selection-end="3499" vertical-scroll-proportion="0.0">
+            <state line="110" column="0" selection-start="6149" selection-end="6149" vertical-scroll-proportion="0.60066557">
               <folding />
             </state>
           </provider>
@@ -203,12 +113,14 @@
         <option value="$PROJECT_DIR$/_posts/2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md" />
         <option value="$PROJECT_DIR$/_posts/2013-05-20-java-interview-quesiton-what-is-the-difference-between-array-and-vector.md" />
         <option value="$PROJECT_DIR$/java-interview-questions.md" />
+        <option value="$PROJECT_DIR$/_posts/2013-05-13-basic-install-of-jboss-for-developers-on-linux.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="90" />
-    <option name="width" value="1920" />
+    <option name="x" value="10" />
+    <option name="y" value="22" />
+    <option name="width" value="1260" />
     <option name="height" value="760" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -239,7 +151,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -274,7 +186,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,8 +202,8 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -306,6 +218,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -334,19 +259,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -468,14 +380,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="90" width="1920" height="760" extended-state="0" />
+    <frame x="10" y="22" width="1260" height="760" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -488,7 +400,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27965647" sideWeight="0.67086613" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2792422" sideWeight="0.67086613" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -560,16 +472,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="35" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -602,57 +504,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="36" selection-start="3499" selection-end="3499" vertical-scroll-proportion="0.0">
+        <state line="104" column="36" selection-start="3499" selection-end="3499" vertical-scroll-proportion="0.24267101">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="58" selection-start="749" selection-end="749" vertical-scroll-proportion="0.0">
+        <state line="22" column="58" selection-start="749" selection-end="749" vertical-scroll-proportion="0.45091513">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-05-16-java-interview-quesiton-what-is-the-difference-between-this-and-super.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="440" selection-end="679" vertical-scroll-proportion="0.0">
+        <state line="14" column="0" selection-start="440" selection-end="679" vertical-scroll-proportion="0.39473686">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-05-15-how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.0">
+        <state line="53" column="0" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.5954357">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2013-05-17-java-interview-quesiton-can-a-final-class-have-a-abstract-method.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-05-17-java-interview-quesiton-can-a-final-class-have-a-abstract-method.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="627" selection-end="866" vertical-scroll-proportion="0.0">
+        <state line="21" column="0" selection-start="627" selection-end="866" vertical-scroll-proportion="0.5675676">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-05-20-java-interview-quesiton-what-is-the-difference-between-array-and-vector.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="91" selection-start="286" selection-end="392" vertical-scroll-proportion="0.0">
+        <state line="9" column="91" selection-start="286" selection-end="392" vertical-scroll-proportion="0.22462562">
           <folding />
         </state>
       </provider>
@@ -665,9 +555,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/java-interview-questions.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="8" selection-start="2176" selection-end="2176" vertical-scroll-proportion="0.0">
           <folding />
@@ -675,11 +562,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-05-15-java-interview-question-what-is-the-difference-between-overloading-and-overriding.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="853" selection-end="1092" vertical-scroll-proportion="0.6496063">
+        <state line="21" column="35" selection-start="993" selection-end="993" vertical-scroll-proportion="0.6188605">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-05-13-basic-install-of-jboss-for-developers-on-linux.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="0" selection-start="6149" selection-end="6149" vertical-scroll-proportion="0.60066557">
           <folding />
         </state>
       </provider>

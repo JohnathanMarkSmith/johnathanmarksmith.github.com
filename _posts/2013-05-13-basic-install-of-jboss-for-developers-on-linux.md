@@ -110,7 +110,6 @@ Ok that is the basic install of jboss as a standalone for a developer to use.  N
 </div>
 
 
-
 <object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
 
 
