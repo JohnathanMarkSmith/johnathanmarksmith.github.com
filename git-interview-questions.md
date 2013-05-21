@@ -9,7 +9,7 @@ description: "Git Interview Questions"
 I really like working with Git and but I really dont like going on interviews and getting asked questions on it.. As developers we really dont have to know EVERYTHING but hard but we should know how to find the anwsers.
 
 
-## "How do I clone a local Git Repository?
+## How do I clone a local Git Repository?
 
 This worked for me:
 
