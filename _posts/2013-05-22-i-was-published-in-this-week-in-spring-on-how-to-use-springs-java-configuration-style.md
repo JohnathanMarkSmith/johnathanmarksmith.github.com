@@ -2,8 +2,8 @@
 layout: post
 title: "I was published in 'This Week in Spring' on how to use Spring's Java Configuration Style"
 description: "I was published in 'This Week in Spring' on how to use Spring's Java Configuration Style"
-categories: [ Java, Spring ]
-tags: [ Java, Spring,  ]
+categories: [ Spring, Java, JavaConfig, Programming ]
+tags: [ Spring, Java, JavaConfig, Programming ]
 comments: false
 ---
 
@@ -133,9 +133,6 @@ LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING....
 
 
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
-
-
-
 
 
 {% include JB/setup %}
