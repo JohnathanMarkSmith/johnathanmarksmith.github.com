@@ -2,8 +2,8 @@
 layout: post
 title: "How to use Spring JavaConfig and not XML files for configuation"
 description: "How to use Spring JavaConfig and not XML files for configuation"
-categories: [ Spring, Java, JavaConfig, Programming, Spring Java Configuration ]
-tags: [ Spring, Java, JavaConfig, Programming, Spring Java Configuration ]
+categories: [ Spring, Java, JavaConfig, Programming ]
+tags: [ Spring, Java, JavaConfig, Programming ]
 comments: false
 ---
 
