@@ -31,7 +31,7 @@ Spring, Spring WebFlow 2, Spring Batch, Servlets, Hibernate, Maven, JUnit, Strut
 JBoss, Tomcat, IBM WebSphere, JRun
 
 ## Databases:
-MYSQL, DB2, Oracle, HyperSQL, Microsoft Access, PL/SQL, SQLLite, Sybase
+MYSQL, MariaDB, DB2, Oracle, HyperSQL, Microsoft Access, PL/SQL, SQLLite, Sybase
 
 ## Directory Services:
 OpenLDAP, Active Directory, NIS, NIS+
@@ -115,6 +115,10 @@ IBM HTTP Server, Netscape and Apache
 - Developed new systems for the New Client Statement group in Microsoft Visual Basic 3.0 for Windows, Borland C/C++ 3.1, Q+E MultiLink/ VB, CodeBasic and ISAM.
 
 <h2>PUBLICATIONS</h2>
+
+<h3>SpringSource – This Week in Spring<br>May 2013</h3>
+
+- Author of the article that was published on how to use Spring's Java Configuration Style.
 
 <h3>The Java Report – Java To Go<br>FEBRUARY 1998</h3>
 

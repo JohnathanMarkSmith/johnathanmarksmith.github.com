@@ -106,7 +106,7 @@ Is this correct yes/no? yes
 Ok that is the basic install of jboss as a standalone for a developer to use.  Now launch your browser to http://127.0.0.1:8080 or http://localhost:8080 and if anything was done righ your output should look like the one below:
 
 <div style="text-align: center">
-<img src="/images/jboss.jpg" alt="Installing Jboss on Linux with Johnathan Mark Smith">
+<img src="/images/jboss.jpg" alt="Installing Jboss on Linux with Johnathan Mark Smith" >
 </div>
 
 
