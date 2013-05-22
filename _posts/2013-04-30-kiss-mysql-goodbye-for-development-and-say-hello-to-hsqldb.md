@@ -2,8 +2,8 @@
 layout: post
 title: "Kiss MySQL goodbye for development and say hello to HSQLDB"
 description: "Kiss MySQL goodbye for development and say hello to HSQLDB"
-categories: [ Spring, Java, JavaConfig, Programming, MySQL, HSQLDB, Databse ]
-tags: [ Spring, Java, JavaConfig, Programming, MySQL, HSDQLDB, Database ]
+categories: [ Spring, Java, JavaConfig, Programming, MySQL, HSQLDB, Databse, Spring Java Configuration ]
+tags: [ Spring, Java, JavaConfig, Programming, MySQL, HSDQLDB, Database, Spring Java Configuration ]
 comments: false
 ---
 
