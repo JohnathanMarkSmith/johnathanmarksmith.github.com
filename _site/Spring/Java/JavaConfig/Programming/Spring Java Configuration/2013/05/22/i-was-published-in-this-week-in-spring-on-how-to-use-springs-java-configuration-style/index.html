@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      
+        I was published in 'This Week in Spring' on how to use Spring's Java Configuration Style - 
+      
+      Johnathan Mark Smith
+    </title>
+    <meta name="description" content="I was published in 'This Week in Spring' on how to use Spring's Java Configuration Style">
+    <meta name="author" content="Johnathan Mark Smith">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="/assets/themes/hooligan/css-social-buttons/css/zocial.stripped.css">
+    <link href="/assets/themes/hooligan/css/pygments.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/hooligan/css/darkstrap.css" rel="stylesheet" type="text/css" media="all">    
+    <link href="/assets/themes/hooligan/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>      
+
+
+          <a class="brand" href="/">Johnathan Mark Smith</a>
+
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              
+              
+              
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/resume.html">Resume</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+
+
+
+            </ul>
+            <ul class="nav pull-right social visible-desktop">
+              <li class="divider-vertical"></li>
+              
+                <li>
+                  <a href="https://github.com/JohnathanMarkSmith" class="zocial github icon" target="_blank">
+                    <span class="hidden-desktop">Github</span>
+                  </a>
+                </li>
+              
+                  
+              
+                <li>
+                  <a href="https://twitter.com/JohnathanMSmith" class="zocial twitter icon" target="_blank">
+                  <span class="hidden-desktop">Twitter</span>
+                  </a>
+                </li>
+                                        
+                         
+              
+                <li>
+                  <a href="http://www.linkedin.com/in/johnathansmith1969" class="zocial linkedin icon" target="_blank">
+                    <span class="hidden-desktop">LinkedIn</span>
+                  </a>
+                </li>
+                                  
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        
+<div class="page-header">
+  <h1>
+    I was published in 'This Week in Spring' on how to use Spring's Java Configuration Style 
+    
+  </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <p>Yahooooooooo&#8230;&#8230; I was published in &#8216;This Week in Spring&#8217; on how to use Spring&#8217;s Java Configuration Style.</p>
+<div style='text-align: center'>
+<img src='/images/springsource.jpg' alt='Installing Jboss on Linux with Johnathan Mark Smith' />
+</div>
+<p>Below is the example that was posted:</p>
+
+<p>Consider replacing Spring XML configuration with JavaConfig</p>
+
+<p>Using Spring XML configuration is so 2000&#8217;s the time has come to push the XML away and look at JavaConfig.</p>
+
+<p>Here is the main code to my sample project</p>
+<div class='highlight'><pre><code class='bash'>public class Main
+<span class='o'>{</span>
+
+    private static final Logger <span class='nv'>LOGGER</span> <span class='o'>=</span> getLogger<span class='o'>(</span>Main.class<span class='o'>)</span>;
+
+    public static void main<span class='o'>(</span>String<span class='o'>[]</span> args<span class='o'>)</span>
+    <span class='o'>{</span>
+        // in this setup, both the main<span class='o'>(</span>String<span class='o'>[])</span> method and the JUnit method both specify that
+        ApplicationContext <span class='nv'>context</span> <span class='o'>=</span> new AnnotationConfigApplicationContext<span class='o'>(</span> HelloWorldConfiguration.class <span class='o'>)</span>;
+        MessageService <span class='nv'>mService</span> <span class='o'>=</span> context.getBean<span class='o'>(</span>MessageService.class<span class='o'>)</span>;
+        HelloWorld <span class='nv'>helloWorld</span> <span class='o'>=</span> context.getBean<span class='o'>(</span>HelloWorld.class<span class='o'>)</span>;
+
+        /**
+         * Displaying default messgae
+         */
+        LOGGER.debug<span class='o'>(</span><span class='s2'>&quot;Message from HelloWorld Bean: &quot;</span> + helloWorld.getMessage<span class='o'>())</span>;
+
+        /**
+         *   Saving Message to database
+         */
+        Message <span class='nv'>message</span> <span class='o'>=</span> new Message<span class='o'>()</span>;
+        message.setMessage<span class='o'>(</span>helloWorld.getMessage<span class='o'>())</span>;
+        mService.SaveMessage<span class='o'>(</span>message<span class='o'>)</span>;
+
+        /**
+         * Settting new message in bean
+         */
+        helloWorld.setMessage<span class='o'>(</span><span class='s2'>&quot;I am in Staten Island, New York&quot;</span><span class='o'>)</span>;
+        LOGGER.debug<span class='o'>(</span><span class='s2'>&quot;Message from HelloWorld Bean: &quot;</span> + helloWorld.getMessage<span class='o'>())</span>;
+
+        /**
+         * Saving Message in database.
+         */
+        message.setMessage<span class='o'>(</span>helloWorld.getMessage<span class='o'>())</span>;
+        mService.SaveMessage<span class='o'>(</span>message<span class='o'>)</span>;
+
+        /**
+         * Getting messages from database
+         *    - display number of message<span class='o'>(</span>s<span class='o'>)</span>
+         *    - display each message in database
+         */
+        List&lt;Message&gt; <span class='nv'>myList</span> <span class='o'>=</span> mService.listMessages<span class='o'>()</span>;
+        LOGGER.debug<span class='o'>(</span><span class='s2'>&quot;You Have &quot;</span> + myList.size<span class='o'>()</span> + <span class='s2'>&quot; Message(s) In The Database&quot;</span><span class='o'>)</span>;
+
+        <span class='k'>for</span> <span class='o'>(</span>Message i : myList<span class='o'>)</span>
+        <span class='o'>{</span>
+            LOGGER.debug<span class='o'>(</span><span class='s2'>&quot;Message: ID: &quot;</span> + i.getId<span class='o'>()</span> + <span class='s2'>&quot;, Message: &quot;</span> + i.getMessage<span class='o'>()</span> + <span class='s2'>&quot;.&quot;</span><span class='o'>)</span>;
+        <span class='o'>}</span>
+    <span class='o'>}</span>
+<span class='o'>}</span>
+</code></pre></div>
+<p>You can see from this code that the ApplicationContext is mapped to a HelloWorldConfig.class file its not using a XML file. Below is the code to the HelloWorldConfig.class.</p>
+<div class='highlight'><pre><code class='bash'>/**
+ * Date:   4/25/13 / 9:37 AM
+ * Author: Johnathan Mark Smith
+ * Email:  john@johnathanmarksmith.com
+ * &lt;p/&gt;
+ * Comments:
+ *    This is the config example of how to use JavaConfig and not XML Files:
+ *
+ *    This Would be the same as the following
+ *    &lt;beans&gt;
+ *       &lt;bean <span class='nv'>id</span><span class='o'>=</span><span class='s2'>&quot;helloWorld&quot;</span> <span class='nv'>class</span><span class='o'>=</span><span class='s2'>&quot;com.johnathanmarksmith.HelloSpringJavaBasedJavaConfig.bean.HelloWorld&quot;</span> /&gt;
+ *    &lt;/beans&gt;
+ *
+ */
+
+@Configuration
+@Import<span class='o'>(</span>DatabaseConfiguration.class<span class='o'>)</span>
+@ComponentScan
+@PropertySource<span class='o'>(</span><span class='s2'>&quot;classpath:application.properties&quot;</span><span class='o'>)</span>
+public class HelloWorldConfiguration <span class='o'>{</span>
+
+    @Bean
+    public HelloWorld getHelloWorld<span class='o'>(</span>Environment env<span class='o'>)</span> <span class='o'>{</span>
+        HelloWorld <span class='nv'>hw</span> <span class='o'>=</span> new HelloWorld<span class='o'>()</span>;
+        hw.setMessage<span class='o'>(</span>env.getProperty<span class='o'>(</span><span class='s2'>&quot;bean.text&quot;</span><span class='o'>))</span>;
+        <span class='k'>return </span>hw;
+    <span class='o'>}</span>
+
+
+<span class='o'>}</span>
+</code></pre></div>
+<p>You can see how easy it is to use JavaConfig and Not XML..</p>
+
+<p>You can download the source code to this at my github project. <a href='https://github.com/JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig'>https://github.com/JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig</a></p>
+
+<p>Now that&#8217;s it. have fun with Spring JavaConfig.</p>
+
+<h3 id='down_and_run_project'>Down and Run Project</h3>
+
+<p>If you would like to download the project from GitHub and run it just follow the following commands:</p>
+<div class='highlight'><pre><code class='bash'>git clone git@github.com:JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig.git
+<span class='nb'>cd </span>HelloSpringJavaBasedJavaConfig
+mvn packge
+<span class='nb'>cd </span>target
+java -jar HelloSpringJavaBasedJavaConfig.jar
+</code></pre></div>
+<p>LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING&#8230;.</p>
+
+<p>If you have any questions or comments please email me at <a href='mailto:john@johnathanmarksmith.com'>john@johnathanmarksmith.com</a></p>
+    <hr>
+    <div class="pagination btn-group">
+      
+        <a class="btn prev" href="/Java/Java%20Interview%20Questions/2013/05/21/java-interview-quesiton-what-is-the-role-of-the-clone-method-in-java" title="Java Interview Quesiton: What is the role of the clone() method in Java">&larr; Previous</a>
+      
+        <a class="btn" href="/archive.html">Archive</a>
+      
+        <a class="btn next" href="/Git/Gitolite/Linux/2013/05/23/how-to-install-gitolite-on-linux" title="How To Install Gitolite on Linux">Next &rarr;</a>
+      
+    </div>
+    <hr>
+    
+  </div>
+  
+  <div class="span4">
+    <section>
+      <h4>Published</h4>
+      <div class="date"><span>22 May 2013</span></div>
+    </section>
+         
+    
+      <section>
+        <h4>Tags</h4>
+        <ul class="tag_box">
+          
+          
+
+
+  
+     
+    	<li><a href="/tags.html#Spring-ref">Spring <span>6</span></a></li>
+     
+    	<li><a href="/tags.html#Java-ref">Java <span>16</span></a></li>
+     
+    	<li><a href="/tags.html#JavaConfig-ref">JavaConfig <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#Programming-ref">Programming <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#Spring Java Configuration-ref">Spring Java Configuration <span>2</span></a></li>
+    
+  
+
+
+
+        </ul>
+      </section>
+             
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 2013 <a href="mailto:john@johnathanmarksmith.com">Johnathan Mark Smith</a>
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a>
+        </p>
+      </footer>
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/themes/hooligan/js/jquery.min.js"><\/script>')</script>
+    <script src="/assets/themes/hooligan/bootstrap/js/bootstrap.min.js"></script>
+
+    
+  </body>
+</html>
+

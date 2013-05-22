@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+        <title>Johnathan Mark Smith</title>
+        <description>Johnathan Mark Smith - Johnathan Mark Smith</description>
+        <link>http://johnathanmarksmith.com</link>
+        <link>http://johnathanmarksmith.com</link>
+        <lastBuildDate>2013-05-22T14:55:00-04:00</lastBuildDate>
+        <pubDate>2013-05-22T14:55:00-04:00</pubDate>
+        <ttl>1800</ttl>
+
+
+        <item>
+                <title>How To Install Gitolite on Linux</title>
+                <description>&lt;h3 id='why_gitolite'&gt;Why Gitolite&lt;/h3&gt;
+
+&lt;p&gt;Git by itself does not do any access control &amp;#8211; it relies on the transport medium to do authentication (&amp;#8220;who are you?&amp;#8221;), and on OS file permissions to do authorisation (&amp;#8220;what are you allowed to do?&amp;#8221;).&lt;/p&gt;
+
+&lt;p&gt;Git also comes with a program called &amp;#8220;git-shell&amp;#8221; which can act as a restricted login shell if you don&amp;#8217;t want users getting a proper shell. Using this and judicious use of Unix groups, you can allow some people read-only access while others get read-write access, etc. This is probably sufficient if your needs are simple and don&amp;#8217;t change too often.&lt;/p&gt;
+
+&lt;p&gt;However, gitolite does this much better, and offers many more features&lt;/p&gt;
+
+&lt;p&gt;Gitolite is useful in any server that is going to host multiple git repositories, each with many developers, where &amp;#8220;anyone can do anything to any repo&amp;#8221; is not a good idea&amp;#8230;.&lt;/p&gt;
+
+&lt;p&gt;Giteolite will let you pick which developers have access to which repositories and which branches and more&amp;#8230;. Gitolite, Gitolite, Gitolite it will save you!!!&lt;/p&gt;
+
+&lt;h3 id='how_to_install_gitolite_on_linux'&gt;How To Install Gitolite on Linux&lt;/h3&gt;
+
+&lt;p&gt;Login in as root&lt;/p&gt;
+
+&lt;p&gt;now you have to create the git(make it git or gitolite) account&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;    useradd git
+    passwd git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now login as git or gitolite&lt;/p&gt;
+
+&lt;p&gt;You need to copy your SSH public key (a file called ~/.ssh/id_rsa.pub) from your workstation, renaming it to yourname.pub (we&amp;#8217;ll use jsmith.pub in our examples).&lt;/p&gt;
+
+&lt;p&gt;From my workstations&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;   scp ~/.ssh/id_rsa.pub git@REGAN:/home/git/jsmith.pub 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now run the following commands from the git account&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;   git clone git://github.com/sitaramc/gitolite
+   mkdir bin
+   gitolite/install -ln
+   gitolite setup -pk jsmith.pub
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id='now_for_testing'&gt;Now for Testing&lt;/h3&gt;
+
+&lt;p&gt;From your workstation enter the following command&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;   ssh git@REGAN info
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;your output should look something like this&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;   hello jsmith, this is git@regan running gitolite3 v3.5.1-4-g2f48a3e on git 1.8.2.3
+
+    R W		gitolite-admin
+    R W		testing
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id='time_to_be_a_gitolite_admin'&gt;Time To Be a Gitolite Admin&lt;/h3&gt;
+
+&lt;p&gt;From your workstation enter the following command&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;   git clone git@&amp;lt;server&amp;gt;:gitolite-admin
+   &lt;span class='nb'&gt;cd &lt;/span&gt;gitolite-admin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;That is everything you have gitolite all setup and ready to go.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Git/Gitolite/Linux/2013/05/23/how-to-install-gitolite-on-linux</link>
+                <guid>http://johnathanmarksmith.com/Git/Gitolite/Linux/2013/05/23/how-to-install-gitolite-on-linux</guid>
+                <pubDate>2013-05-23T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>I was published in 'This Week in Spring' on how to use Spring's Java Configuration Style</title>
+                <description>&lt;p&gt;Yahooooooooo&amp;#8230;&amp;#8230; I was published in &amp;#8216;This Week in Spring&amp;#8217; on how to use Spring&amp;#8217;s Java Configuration Style.&lt;/p&gt;
+&lt;div style='text-align: center'&gt;
+&lt;img src='/images/springsource.jpg' alt='Installing Jboss on Linux with Johnathan Mark Smith' /&gt;
+&lt;/div&gt;
+&lt;p&gt;Below is the example that was posted:&lt;/p&gt;
+
+&lt;p&gt;Consider replacing Spring XML configuration with JavaConfig&lt;/p&gt;
+
+&lt;p&gt;Using Spring XML configuration is so 2000&amp;#8217;s the time has come to push the XML away and look at JavaConfig.&lt;/p&gt;
+
+&lt;p&gt;Here is the main code to my sample project&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;public class Main
+&lt;span class='o'&gt;{&lt;/span&gt;
+
+    private static final Logger &lt;span class='nv'&gt;LOGGER&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; getLogger&lt;span class='o'&gt;(&lt;/span&gt;Main.class&lt;span class='o'&gt;)&lt;/span&gt;;
+
+    public static void main&lt;span class='o'&gt;(&lt;/span&gt;String&lt;span class='o'&gt;[]&lt;/span&gt; args&lt;span class='o'&gt;)&lt;/span&gt;
+    &lt;span class='o'&gt;{&lt;/span&gt;
+        // in this setup, both the main&lt;span class='o'&gt;(&lt;/span&gt;String&lt;span class='o'&gt;[])&lt;/span&gt; method and the JUnit method both specify that
+        ApplicationContext &lt;span class='nv'&gt;context&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; new AnnotationConfigApplicationContext&lt;span class='o'&gt;(&lt;/span&gt; HelloWorldConfiguration.class &lt;span class='o'&gt;)&lt;/span&gt;;
+        MessageService &lt;span class='nv'&gt;mService&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; context.getBean&lt;span class='o'&gt;(&lt;/span&gt;MessageService.class&lt;span class='o'&gt;)&lt;/span&gt;;
+        HelloWorld &lt;span class='nv'&gt;helloWorld&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; context.getBean&lt;span class='o'&gt;(&lt;/span&gt;HelloWorld.class&lt;span class='o'&gt;)&lt;/span&gt;;
+
+        /**
+         * Displaying default messgae
+         */
+        LOGGER.debug&lt;span class='o'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;Message from HelloWorld Bean: &amp;quot;&lt;/span&gt; + helloWorld.getMessage&lt;span class='o'&gt;())&lt;/span&gt;;
+
+        /**
+         *   Saving Message to database
+         */
+        Message &lt;span class='nv'&gt;message&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; new Message&lt;span class='o'&gt;()&lt;/span&gt;;
+        message.setMessage&lt;span class='o'&gt;(&lt;/span&gt;helloWorld.getMessage&lt;span class='o'&gt;())&lt;/span&gt;;
+        mService.SaveMessage&lt;span class='o'&gt;(&lt;/span&gt;message&lt;span class='o'&gt;)&lt;/span&gt;;
+
+        /**
+         * Settting new message in bean
+         */
+        helloWorld.setMessage&lt;span class='o'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;I am in Staten Island, New York&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;)&lt;/span&gt;;
+        LOGGER.debug&lt;span class='o'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;Message from HelloWorld Bean: &amp;quot;&lt;/span&gt; + helloWorld.getMessage&lt;span class='o'&gt;())&lt;/span&gt;;
+
+        /**
+         * Saving Message in database.
+         */
+        message.setMessage&lt;span class='o'&gt;(&lt;/span&gt;helloWorld.getMessage&lt;span class='o'&gt;())&lt;/span&gt;;
+        mService.SaveMessage&lt;span class='o'&gt;(&lt;/span&gt;message&lt;span class='o'&gt;)&lt;/span&gt;;
+
+        /**
+         * Getting messages from database
+         *    - display number of message&lt;span class='o'&gt;(&lt;/span&gt;s&lt;span class='o'&gt;)&lt;/span&gt;
+         *    - display each message in database
+         */
+        List&amp;lt;Message&amp;gt; &lt;span class='nv'&gt;myList&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; mService.listMessages&lt;span class='o'&gt;()&lt;/span&gt;;
+        LOGGER.debug&lt;span class='o'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;You Have &amp;quot;&lt;/span&gt; + myList.size&lt;span class='o'&gt;()&lt;/span&gt; + &lt;span class='s2'&gt;&amp;quot; Message(s) In The Database&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;)&lt;/span&gt;;
+
+        &lt;span class='k'&gt;for&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;Message i : myList&lt;span class='o'&gt;)&lt;/span&gt;
+        &lt;span class='o'&gt;{&lt;/span&gt;
+            LOGGER.debug&lt;span class='o'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;Message: ID: &amp;quot;&lt;/span&gt; + i.getId&lt;span class='o'&gt;()&lt;/span&gt; + &lt;span class='s2'&gt;&amp;quot;, Message: &amp;quot;&lt;/span&gt; + i.getMessage&lt;span class='o'&gt;()&lt;/span&gt; + &lt;span class='s2'&gt;&amp;quot;.&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;)&lt;/span&gt;;
+        &lt;span class='o'&gt;}&lt;/span&gt;
+    &lt;span class='o'&gt;}&lt;/span&gt;
+&lt;span class='o'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can see from this code that the ApplicationContext is mapped to a HelloWorldConfig.class file its not using a XML file. Below is the code to the HelloWorldConfig.class.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;/**
+ * Date:   4/25/13 / 9:37 AM
+ * Author: Johnathan Mark Smith
+ * Email:  john@johnathanmarksmith.com
+ * &amp;lt;p/&amp;gt;
+ * Comments:
+ *    This is the config example of how to use JavaConfig and not XML Files:
+ *
+ *    This Would be the same as the following
+ *    &amp;lt;beans&amp;gt;
+ *       &amp;lt;bean &lt;span class='nv'&gt;id&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;helloWorld&amp;quot;&lt;/span&gt; &lt;span class='nv'&gt;class&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;com.johnathanmarksmith.HelloSpringJavaBasedJavaConfig.bean.HelloWorld&amp;quot;&lt;/span&gt; /&amp;gt;
+ *    &amp;lt;/beans&amp;gt;
+ *
+ */
+
+@Configuration
+@Import&lt;span class='o'&gt;(&lt;/span&gt;DatabaseConfiguration.class&lt;span class='o'&gt;)&lt;/span&gt;
+@ComponentScan
+@PropertySource&lt;span class='o'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;classpath:application.properties&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;)&lt;/span&gt;
+public class HelloWorldConfiguration &lt;span class='o'&gt;{&lt;/span&gt;
+
+    @Bean
+    public HelloWorld getHelloWorld&lt;span class='o'&gt;(&lt;/span&gt;Environment env&lt;span class='o'&gt;)&lt;/span&gt; &lt;span class='o'&gt;{&lt;/span&gt;
+        HelloWorld &lt;span class='nv'&gt;hw&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; new HelloWorld&lt;span class='o'&gt;()&lt;/span&gt;;
+        hw.setMessage&lt;span class='o'&gt;(&lt;/span&gt;env.getProperty&lt;span class='o'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;bean.text&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;))&lt;/span&gt;;
+        &lt;span class='k'&gt;return &lt;/span&gt;hw;
+    &lt;span class='o'&gt;}&lt;/span&gt;
+
+
+&lt;span class='o'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can see how easy it is to use JavaConfig and Not XML..&lt;/p&gt;
+
+&lt;p&gt;You can download the source code to this at my github project. &lt;a href='https://github.com/JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig'&gt;https://github.com/JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that&amp;#8217;s it. have fun with Spring JavaConfig.&lt;/p&gt;
+
+&lt;h3 id='down_and_run_project'&gt;Down and Run Project&lt;/h3&gt;
+
+&lt;p&gt;If you would like to download the project from GitHub and run it just follow the following commands:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;git clone git@github.com:JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig.git
+&lt;span class='nb'&gt;cd &lt;/span&gt;HelloSpringJavaBasedJavaConfig
+mvn packge
+&lt;span class='nb'&gt;cd &lt;/span&gt;target
+java -jar HelloSpringJavaBasedJavaConfig.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING&amp;#8230;.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/2013/05/22/i-was-published-in-this-week-in-spring-on-how-to-use-springs-java-configuration-style</link>
+                <guid>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/2013/05/22/i-was-published-in-this-week-in-spring-on-how-to-use-springs-java-configuration-style</guid>
+                <pubDate>2013-05-22T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Java Interview Quesiton: What is the role of the clone() method in Java</title>
+                <description>&lt;p&gt;Protected Object clone() throws CloneNotSupportedException.&lt;/p&gt;
+
+&lt;p&gt;This method is used to create a copy of an object of a class which implements Cloneable interface.&lt;/p&gt;
+
+&lt;p&gt;By default it does field-by-field copy as the Object class doesn’t have any idea in advance about the members of the particular class whose objects call this method. So, if the class has only primitive data type members then a completely new copy of the object will be created and the reference to the new object copy will be returned. But, if the class contains members of any class type then only the object references to those members are copied and hence the member references in both the original object as well as the cloned object refer to the same object.&lt;/p&gt;
+
+&lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-quesiton-what-is-the-role-of-the-clone-method-in-java</link>
+                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-quesiton-what-is-the-role-of-the-clone-method-in-java</guid>
+                <pubDate>2013-05-21T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Java Interview Quesiton: What is final, finalize() and finally</title>
+                <description>&lt;p&gt;Final : final keyword can be used for class, method and variables. A final class cannot be subclassed and it prevents other programmers from subclassing a secure class to invoke insecure methods. A final method can’t be overridden. A final variable can’t change from its initialized value.&lt;/p&gt;
+
+&lt;p&gt;Finalize() : finalize() method is used just before an object is destroyed and can be called just prior to garbage collection.&lt;/p&gt;
+
+&lt;p&gt;Finally : finally, a key word used in exception handling, creates a block of code that will be executed after a try/catch block has completed and before the code following the try/catch block. The finally block will execute whether or not an exception is thrown. For example, if a method opens a file upon exit, then you will not want the code that closes the file to be bypassed by the exception-handling mechanism. This finally keyword is designed to address this contingency.&lt;/p&gt;
+
+&lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-quesiton-what-is-final-finalize-and-finally</link>
+                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-quesiton-what-is-final-finalize-and-finally</guid>
+                <pubDate>2013-05-21T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Java Interview Quesiton: What is the difference between Array and Vector</title>
+                <description>&lt;p&gt;Array is a set of related data type and static whereas vector is a growable array of objects and dynamic.&lt;/p&gt;
+
+&lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/20/java-interview-quesiton-what-is-the-difference-between-array-and-vector</link>
+                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/20/java-interview-quesiton-what-is-the-difference-between-array-and-vector</guid>
+                <pubDate>2013-05-20T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Java Interview Quesiton: Can a final class have a abstract method</title>
+                <description>&lt;p&gt;No. I final class can not have a abstract method in it because when you declare a method in a class as abstract, then the class must be declared as abstract.&lt;/p&gt;
+
+&lt;p&gt;&amp;#8220;Final&amp;#8221; and &amp;#8220;Abstract&amp;#8221; cannot used at the same time. Any class can be either final or abstract not both!&lt;/p&gt;
+
+&lt;p&gt;Final class means cannot be subclassed. Abstract class means must be subclassed.&lt;/p&gt;
+
+&lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/17/java-interview-quesiton-can-a-final-class-have-a-abstract-method</link>
+                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/17/java-interview-quesiton-can-a-final-class-have-a-abstract-method</guid>
+                <pubDate>2013-05-17T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Java Interview Quesiton: What is the difference between this() and super()</title>
+                <description>&lt;p&gt;this() can be used to invoke a constructor or method of the same class whereas super() can be used to invoke a super class constructor or method.&lt;/p&gt;
+
+&lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/16/java-interview-quesiton-what-is-the-difference-between-this-and-super</link>
+                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/16/java-interview-quesiton-what-is-the-difference-between-this-and-super</guid>
+                <pubDate>2013-05-16T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Java Interview Question: What is the difference between overloading and overriding</title>
+                <description>&lt;p&gt;a) In overloading, there is a relationship between methods available in the same class whereas in overriding, there is relationship between a superclass method and subclass method.&lt;/p&gt;
+
+&lt;p&gt;b) Overloading does not block inheritance from the superclass whereas overriding blocks inheritance from the superclass.&lt;/p&gt;
+
+&lt;p&gt;c) In overloading, separate methods share the same name whereas in overriding, subclass method replaces the superclass.&lt;/p&gt;
+
+&lt;p&gt;d) Overloading must have different method signatures whereas overriding must have same signature.&lt;/p&gt;
+
+&lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/15/java-interview-question-what-is-the-difference-between-overloading-and-overriding</link>
+                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/15/java-interview-question-what-is-the-difference-between-overloading-and-overriding</guid>
+                <pubDate>2013-05-15T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>How to install Git 1.8.2 on Fedora, CentOS, Red Hat and Scientific Linux</title>
+                <description>&lt;p&gt;I always like to use YUM for installing software on Fedora, CentOS, Red Hat and Scientific Linux but someone times the RPM only have old versions of the software I need!&lt;/p&gt;
+
+&lt;p&gt;Just Like Git&amp;#8230; I need Git 1.8 for something (you dont need the details).&lt;/p&gt;
+
+&lt;p&gt;So I had to download the source for Git, Do a make and then install it and all this will only take about 15 mins&amp;#8230; are you ready?&lt;/p&gt;
+
+&lt;h3 id='time_to_download_make_and_install_git'&gt;Time To Download, Make and Install Git&lt;/h3&gt;
+
+&lt;p&gt;To download, make and install Git all you have to do is enter the following commands in a console that your have root access in&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;yum install gettext-devel expat-devel curl-devel zlib-devel openssl-devel
+&lt;span class='nb'&gt;cd&lt;/span&gt; /usr/local/src
+wget https://www.kernel.org/pub/software/scm/git/git-1.8.2.3.tar.gz
+tar xzvf git-1.8.2.3.tar.gz
+&lt;span class='nb'&gt;cd &lt;/span&gt;git-1.8.2.3
+make &lt;span class='nv'&gt;prefix&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;/usr/local all
+make &lt;span class='nv'&gt;prefix&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;/usr/local install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id='time_for_a_test'&gt;Time For a Test&lt;/h3&gt;
+
+&lt;p&gt;After the above is done you should check the version, type in the following command&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git --version&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Your output should look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git version 1.8.2.3&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='your_identity_tell_git_who_you_are'&gt;Your Identity, Tell Git Who You Are&lt;/h3&gt;
+
+&lt;p&gt;You need to tell git who you are, the following commands will setup your name and email address:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config --global user.name &amp;quot;John Doe&amp;quot;
+config --global user.email johndoe@example.com&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That&amp;#8217;s it, your done!&lt;/p&gt;
+
+&lt;p&gt;Here is the video:&lt;/p&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed src='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' width='560' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Linux/Git/Programming/2013/05/15/how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux</link>
+                <guid>http://johnathanmarksmith.com/Linux/Git/Programming/2013/05/15/how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux</guid>
+                <pubDate>2013-05-15T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Java Interview Question: What are Encapsulation, Inheritance and Polymorphism?</title>
+                <description>&lt;p&gt;Encapsulation is the mechanism that binds together code and data it manipulates and keeps both safe from outside interference and misuse. Inheritance is the process by which one object acquires the properties of another object. Polymorphism is the feature that allows one interface to be used for general class actions.&lt;/p&gt;
+
+&lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/14/java-interview-question-what-are-encapsulation-inheritance-and-polymorphism</link>
+                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/14/java-interview-question-what-are-encapsulation-inheritance-and-polymorphism</guid>
+                <pubDate>2013-05-14T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>How to share a local git repository on linux</title>
+                <description>&lt;p&gt;Sometimes you will find the need to share a local git repository with some of your co-workers without putting the reposiotry on a server.&lt;/p&gt;
+
+&lt;h3 id='there_are_five_possibilities_to_set_up_a_repository_for_pull_from'&gt;There are five possibilities to set up a repository for pull from&lt;/h3&gt;
+
+&lt;p&gt;You have a number of ways to share your lcoal git repository with others.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Local filesystem: git clone /path/to/repo or git clone file://path/to/repo. Least work if you have networked filesystem, but not very efficient use of network.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;HTTP protocols: git clone http://example.com/repo. You need any web server, and you also need to run (perhaps automatically, from a hook) git-update-server-info to generate information required for fetching/pulling via &amp;#8220;dumb&amp;#8221; protocols.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;SSH: git clone ssh://example.com/srv/git/repo or git clone example.com:/srv/git/repo. You need to setup SSH server (SSH daemon), and have SSH installed on client (e.g. PuTTY on MS Windows).&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;git protocol: git clone git://example.com/repo. You need to run git-daemon on server; see documentation for details (you can run it as standalone process only for fetching, not necessary run as service). git-daemon is a part of git.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;bundle: You generate bundle on server using git-bundle command, transfer it to a client machine in any way (even via USB), and clone using git clone file.bndl (if clone does not work, you can do &amp;#8220;git init&amp;#8221;, &amp;#8220;git remote add&amp;#8221; and &amp;#8220;git fetch&amp;#8221;).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='how_do_i_share_my_local_git_repository'&gt;How do I share my local git repository&lt;/h3&gt;
+
+&lt;p&gt;I like to share my local git repository but using the git-daemon. First I move to the folder that has all my repo&amp;#8217;s in it and then I issue the following commands:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git daemon --export-all --base-path=$(pwd)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now to clone the shared repository, use&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone git://HOSTNAME/ REPOSITORY_NAME
+# e.g., git clone git://my-machine/ test-project&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That was easy right?&lt;/p&gt;
+
+&lt;p&gt;You can see the full list of &lt;a href='/git-interview-questions.html'&gt;Git Interview Questions Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Linux/Git/Git%20Interview%20Question/2013/05/14/how-to-share-a-local-git-repository-on-linux</link>
+                <guid>http://johnathanmarksmith.com/Linux/Git/Git%20Interview%20Question/2013/05/14/how-to-share-a-local-git-repository-on-linux</guid>
+                <pubDate>2013-05-14T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Replacing MySQL with MariaDB on CentOS 6</title>
+                <description>&lt;p&gt;Replacing MySQL with MariaDB on CentOS 6&lt;/p&gt;
+
+&lt;p&gt;MariaDB is a high performance drop-in replacement for MySQL, developed by some of the original authors of the MySQL project. This will walk you through uninstalling MySQL and then installing MariaDB from their repository using the YUM package manager.&lt;/p&gt;
+
+&lt;h3 id='warning_you_should_always_make_a_backup_of_any_databases_before_remove_mysql'&gt;WARNING: YOU SHOULD ALWAYS MAKE A BACKUP OF ANY DATABASES BEFORE REMOVE MYSQL!!!&lt;/h3&gt;
+
+&lt;p&gt;AND AGAIN&amp;#8230;.. WARNING: YOU SHOULD ALWAYS MAKE A BACKUP OF ANY DATABASES BEFORE REMOVE MYSQL!!!&lt;/p&gt;
+
+&lt;h3 id='stop_mysql'&gt;Stop MySQL&lt;/h3&gt;
+
+&lt;p&gt;If you have MySQL installed and running its time to stop it by entering the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[root@regan ~]# service mysqld stop&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='removing_mysql'&gt;Removing MySQL&lt;/h3&gt;
+
+&lt;p&gt;Now its time to kiss MySQL goodbye by using the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[root@regan ~]# yum remove mysql*&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(The * is a wildcard, and tells YUM to remove all packages starting with the string &amp;#8220;mysql&amp;#8221;.)&lt;/p&gt;
+
+&lt;p&gt;Now let&amp;#8217;s add MariaDBs repository. Create the file /etc/yum.repos.d/MariaDB.repo by opening it in your favorite editor. We will use vi here, but nano might be easier if you are new to Linux (yum install nano, then nano -w filepath).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[root@regan ~]# vi /etc/yum.repos.d/MariaDB.repo&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Within the file we insert the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[mariadb]
+name = MariaDB
+baseurl = http://yum.mariadb.org/5.5/centos6-x86
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+gpgcheck=1&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You should note that the last part of the baseurl needs to match your CentOS version and arch. In my case this would need to be centos6-amd64, for a 64-bit install, but since x86 (32-bit) is more common I&amp;#8217;ve left that in the example above.&lt;/p&gt;
+
+&lt;p&gt;Save the file and exit your editor. (In vi this is done by holding Shif and pressing : (colon), entering &amp;#8220;wq&amp;#8221; (without the quotes) for &amp;#8220;write quit&amp;#8221;, and enter.)&lt;/p&gt;
+
+&lt;h3 id='time_to_install_mariadb'&gt;Time to install MariaDB&lt;/h3&gt;
+
+&lt;p&gt;To install the components using YUM use the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[root@regan ~]# yum install MariaDB-server MariaDB-client&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='that_was_easy'&gt;That Was Easy&lt;/h3&gt;
+
+&lt;p&gt;Now that it is installed, let&amp;#8217;s start the MariaDB service:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[root@regan ~]# service mysql start&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can see that the service is &amp;#8220;mysql&amp;#8221; NOT &amp;#8220;mysqld&amp;#8221; now.&lt;/p&gt;
+
+&lt;h3 id='time_to_loadin_and_seee'&gt;Time to Loadin and Seee&lt;/h3&gt;
+
+&lt;p&gt;Let&amp;#8217;s try to connect, shall we?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[root@regan ~]# mysql -u root -p&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Enter your database root password when promted.&lt;/p&gt;
+
+&lt;p&gt;You should see something like this:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;Welcome to the MariaDB monitor.  Commands end with ; or &lt;span class='se'&gt;\g&lt;/span&gt;.
+Your MariaDB connection id is 1
+Server version: 5.5.30-MariaDB MariaDB Server
+
+Copyright &lt;span class='o'&gt;(&lt;/span&gt;c&lt;span class='o'&gt;)&lt;/span&gt; 2000, 2013, Oracle, Monty Program Ab and others.
+
+Type &lt;span class='s1'&gt;&amp;#39;help;&amp;#39;&lt;/span&gt; or &lt;span class='s1'&gt;&amp;#39;\h&amp;#39;&lt;/span&gt; &lt;span class='k'&gt;for &lt;/span&gt;help. Type &lt;span class='s1'&gt;&amp;#39;\c&amp;#39;&lt;/span&gt; to clear the current input statement.
+
+MariaDB &lt;span class='o'&gt;[(&lt;/span&gt;none&lt;span class='o'&gt;)]&lt;/span&gt;&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;That was easy right?&lt;/p&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed src='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' width='560' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Linux/MySQL/MariaDB/2013/05/13/replacing-mysql-with-mariadb-on-centos-6</link>
+                <guid>http://johnathanmarksmith.com/Linux/MySQL/MariaDB/2013/05/13/replacing-mysql-with-mariadb-on-centos-6</guid>
+                <pubDate>2013-05-13T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Basic install of JBoss for developers on linux</title>
+                <description>&lt;p&gt;Below is a quick and easy way to install JBoss on linux for a developer to test and learn how to use it.&lt;/p&gt;
+
+&lt;p&gt;Please don&amp;#8217;t use this setup for production.&lt;/p&gt;
+
+&lt;h3 id='download_jboss_eap6_as711final_and_untar'&gt;Download JBoss EAP6 (AS7.1.1.Final) and untar&lt;/h3&gt;
+
+&lt;p&gt;To download and untar jboss you need to enter the following commands:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='o'&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class='o'&gt;]&lt;/span&gt; wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
+&lt;span class='o'&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class='o'&gt;]&lt;/span&gt; tar -zxvf jboss-as-7.1.1.Final.tar.gz 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h3 id='start_up_jboss_in_standalone_mode'&gt;Start Up JBoss in standalone mode&lt;/h3&gt;
+
+&lt;p&gt;Now that you have jboss untar on your linux box its time to start it in standalone mode. Just enter the following commands:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='o'&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='nb'&gt;cd &lt;/span&gt;jboss-as-7.1.1.Final/bin
+&lt;span class='o'&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class='o'&gt;]&lt;/span&gt; ./standalone.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;The output should look something like the one below:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='o'&gt;=========================================================================&lt;/span&gt;
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jsmith/jboss-as-7.1.1.Final
+
+  JAVA: java
+
+  JAVA_OPTS:  -server -XX:+UseCompressedOops -XX:+TieredCompilation -Xms64m -Xmx512m -XX:MaxPermSize&lt;span class='o'&gt;=&lt;/span&gt;256m -Djava.net.preferIPv4Stack&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='nb'&gt;true&lt;/span&gt; -Dorg.jboss.resolver.warning&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='nb'&gt;true&lt;/span&gt; -Dsun.rmi.dgc.client.gcInterval&lt;span class='o'&gt;=&lt;/span&gt;3600000 -Dsun.rmi.dgc.server.gcInterval&lt;span class='o'&gt;=&lt;/span&gt;3600000 -Djboss.modules.system.pkgs&lt;span class='o'&gt;=&lt;/span&gt;org.jboss.byteman -Djava.awt.headless&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='nb'&gt;true&lt;/span&gt; -Djboss.server.default.config&lt;span class='o'&gt;=&lt;/span&gt;standalone.xml
+
+&lt;span class='o'&gt;=========================================================================&lt;/span&gt;
+
+14:10:26,029 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.modules&lt;span class='o'&gt;]&lt;/span&gt; JBoss Modules version 1.1.1.GA
+14:10:26,250 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.msc&lt;span class='o'&gt;]&lt;/span&gt; JBoss MSC version 1.0.2.GA
+14:10:26,312 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as&lt;span class='o'&gt;]&lt;/span&gt; JBAS015899: JBoss AS 7.1.1.Final &lt;span class='s2'&gt;&amp;quot;Brontes&amp;quot;&lt;/span&gt; starting
+14:10:27,440 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.xnio&lt;span class='o'&gt;]&lt;/span&gt; XNIO Version 3.0.3.GA
+14:10:27,457 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.server&lt;span class='o'&gt;]&lt;/span&gt; JBAS015888: Creating http management service using socket-binding &lt;span class='o'&gt;(&lt;/span&gt;management-http&lt;span class='o'&gt;)&lt;/span&gt;
+14:10:27,465 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.xnio.nio&lt;span class='o'&gt;]&lt;/span&gt; XNIO NIO Implementation Version 3.0.3.GA
+14:10:27,485 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.remoting&lt;span class='o'&gt;]&lt;/span&gt; JBoss Remoting version 3.2.3.GA
+14:10:27,548 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.logging&lt;span class='o'&gt;]&lt;/span&gt; JBAS011502: Removing bootstrap log handlers
+14:10:27,557 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.configadmin&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;ServerService Thread Pool -- 26&lt;span class='o'&gt;)&lt;/span&gt; JBAS016200: Activating ConfigAdmin Subsystem
+14:10:27,587 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.clustering.infinispan&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;ServerService Thread Pool -- 31&lt;span class='o'&gt;)&lt;/span&gt; JBAS010280: Activating Infinispan subsystem.
+14:10:27,682 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.connector&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;MSC service thread 1-3&lt;span class='o'&gt;)&lt;/span&gt; JBAS010408: Starting JCA Subsystem &lt;span class='o'&gt;(&lt;/span&gt;JBoss IronJacamar 1.0.9.Final&lt;span class='o'&gt;)&lt;/span&gt;
+14:10:27,689 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.naming&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;ServerService Thread Pool -- 38&lt;span class='o'&gt;)&lt;/span&gt; JBAS011800: Activating Naming Subsystem
+14:10:27,720 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.osgi&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;ServerService Thread Pool -- 39&lt;span class='o'&gt;)&lt;/span&gt; JBAS011940: Activating OSGi Subsystem
+14:10:27,735 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.security&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;ServerService Thread Pool -- 44&lt;span class='o'&gt;)&lt;/span&gt; JBAS013101: Activating Security Subsystem
+14:10:27,750 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.connector.subsystems.datasources&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;ServerService Thread Pool -- 27&lt;span class='o'&gt;)&lt;/span&gt; JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver &lt;span class='o'&gt;(&lt;/span&gt;version 1.3&lt;span class='o'&gt;)&lt;/span&gt;
+14:10:27,776 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.security&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;MSC service thread 1-2&lt;span class='o'&gt;)&lt;/span&gt; JBAS013100: Current PicketBox &lt;span class='nv'&gt;version&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;4.0.7.Final
+14:10:27,840 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.webservices&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;ServerService Thread Pool -- 48&lt;span class='o'&gt;)&lt;/span&gt; JBAS015537: Activating WebServices Extension
+14:10:27,871 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.naming&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;MSC service thread 1-4&lt;span class='o'&gt;)&lt;/span&gt; JBAS011802: Starting Naming Service
+14:10:27,924 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.mail.extension&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;MSC service thread 1-1&lt;span class='o'&gt;)&lt;/span&gt; JBAS015400: Bound mail session &lt;span class='o'&gt;[&lt;/span&gt;java:jboss/mail/Default&lt;span class='o'&gt;]&lt;/span&gt;
+14:10:28,183 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.ws.common.management.AbstractServerConfig&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;MSC service thread 1-1&lt;span class='o'&gt;)&lt;/span&gt; JBoss Web Services - Stack CXF Server 4.0.2.GA
+14:10:28,272 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.apache.coyote.http11.Http11Protocol&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;MSC service thread 1-3&lt;span class='o'&gt;)&lt;/span&gt; Starting Coyote HTTP/1.1 on http--127.0.0.1-8080
+14:10:28,746 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.remoting&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;MSC service thread 1-1&lt;span class='o'&gt;)&lt;/span&gt; JBAS017100: Listening on /127.0.0.1:4447
+14:10:28,749 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.remoting&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;MSC service thread 1-3&lt;span class='o'&gt;)&lt;/span&gt; JBAS017100: Listening on /127.0.0.1:9999
+14:10:28,754 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.server.deployment.scanner&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;MSC service thread 1-2&lt;span class='o'&gt;)&lt;/span&gt; JBAS015012: Started FileSystemDeploymentService &lt;span class='k'&gt;for &lt;/span&gt;directory /home/jsmith/jboss-as-7.1.1.Final/standalone/deployments
+14:10:28,896 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as.connector.subsystems.datasources&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;MSC service thread 1-1&lt;span class='o'&gt;)&lt;/span&gt; JBAS010400: Bound data &lt;span class='nb'&gt;source&lt;/span&gt; &lt;span class='o'&gt;[&lt;/span&gt;java:jboss/datasources/ExampleDS&lt;span class='o'&gt;]&lt;/span&gt;
+14:10:29,026 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;Controller Boot Thread&lt;span class='o'&gt;)&lt;/span&gt; JBAS015951: Admin console listening on http://127.0.0.1:9990
+14:10:29,027 INFO  &lt;span class='o'&gt;[&lt;/span&gt;org.jboss.as&lt;span class='o'&gt;]&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;Controller Boot Thread&lt;span class='o'&gt;)&lt;/span&gt; JBAS015874: JBoss AS 7.1.1.Final &lt;span class='s2'&gt;&amp;quot;Brontes&amp;quot;&lt;/span&gt; started in 3281ms - Started 133 of 208 services &lt;span class='o'&gt;(&lt;/span&gt;74 services are passive or on-demand&lt;span class='o'&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id='add_the_admin'&gt;Add the admin&lt;/h3&gt;
+
+&lt;p&gt;Now it&amp;#8217;s time to setup the admin account for jboss. Open a new console and follow the following steps. I am going to make the username &amp;#8220;admin&amp;#8221; and the password &amp;#8220;jboss&amp;#8221; but you can use any username and password you would like, follow the commands below&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='nb'&gt;cd &lt;/span&gt;jboss-as-7.1.1.Final/bin
+./add-user.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Your output should look like this:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;What &lt;span class='nb'&gt;type &lt;/span&gt;of user &lt;span class='k'&gt;do &lt;/span&gt;you wish to add? 
+ a&lt;span class='o'&gt;)&lt;/span&gt; Management User &lt;span class='o'&gt;(&lt;/span&gt;mgmt-users.properties&lt;span class='o'&gt;)&lt;/span&gt; 
+ b&lt;span class='o'&gt;)&lt;/span&gt; Application User &lt;span class='o'&gt;(&lt;/span&gt;application-users.properties&lt;span class='o'&gt;)&lt;/span&gt;
+&lt;span class='o'&gt;(&lt;/span&gt;a&lt;span class='o'&gt;)&lt;/span&gt;: 
+
+Enter the details of the new user to add.
+Realm &lt;span class='o'&gt;(&lt;/span&gt;ManagementRealm&lt;span class='o'&gt;)&lt;/span&gt; : 
+Username : admin
+Password : 
+Re-enter Password : 
+The username &lt;span class='s1'&gt;&amp;#39;admin&amp;#39;&lt;/span&gt; is easy to guess
+Are you sure you want to add user &lt;span class='s1'&gt;&amp;#39;admin&amp;#39;&lt;/span&gt; yes/no? yes
+About to add user &lt;span class='s1'&gt;&amp;#39;admin&amp;#39;&lt;/span&gt; &lt;span class='k'&gt;for &lt;/span&gt;realm &lt;span class='s1'&gt;&amp;#39;ManagementRealm&amp;#39;&lt;/span&gt;
+Is this correct yes/no? yes
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id='jboss_is_up_and_running'&gt;JBoss is up and running.&lt;/h3&gt;
+
+&lt;p&gt;Ok that is the basic install of jboss as a standalone for a developer to use. Now launch your browser to http://127.0.0.1:8080 or http://localhost:8080 and if anything was done righ your output should look like the one below:&lt;/p&gt;
+&lt;div style='text-align: center'&gt;
+&lt;img src='/images/jboss.jpg' alt='Installing Jboss on Linux with Johnathan Mark Smith' /&gt;
+&lt;/div&gt;
+&lt;p&gt;Here is the video if you would like to watch it:&lt;/p&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed src='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' width='560' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Linux/Java/JBoss/AS7/2013/05/13/basic-install-of-jboss-for-developers-on-linux</link>
+                <guid>http://johnathanmarksmith.com/Linux/Java/JBoss/AS7/2013/05/13/basic-install-of-jboss-for-developers-on-linux</guid>
+                <pubDate>2013-05-13T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>How to load MySQL Database from Command Line in Linux</title>
+                <description>&lt;p&gt;I been getting asked, How can I load my MySQL database from the command line?&lt;/p&gt;
+
+&lt;p&gt;So I am going to make this quick and easy&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;First cd in the folder where your sql file is, for this demo I am using a file called &amp;#8220;backup.mysql&amp;#8221;. Then use the following command&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;mysql --user root --password regandb &amp;lt; backup.mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;MySQL will prompt you for a password then your mysql will be loaded depending on how big your backup/file is it may take some time. You could add a -f flag if your database is very big, it will prevent it from stopping if there is error.&lt;/p&gt;
+
+&lt;p&gt;ITS THAT EASY!!! :)&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/MySQL/Linux/Database/2013/05/03/how-to-load-mysql-database-from-command-line-in-linux</link>
+                <guid>http://johnathanmarksmith.com/MySQL/Linux/Database/2013/05/03/how-to-load-mysql-database-from-command-line-in-linux</guid>
+                <pubDate>2013-05-03T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Working with Git stash, Stashing Your Changes</title>
+                <description>&lt;p&gt;Stashing is a great way to pause what you’re currently working on and come back to it later. For example, if you working on that awesome, brand new feature but someone just found a bug that you need to fix. Add your changes to the index using&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git add .&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or add individual files to the index, your pick. Stash your changes away with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git stash&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And boom! You’re back to your original working state. Got that bug fixed? Bring your work back with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git stash apply&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also do multiple layers of stashes, so make sure to use&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git stash list&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To check out all of your current ones. If you need to apply a stash from deeper in the stack, that’s easy too. Here’s how to apply the second stash you’ve got:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git stash apply stash@{1}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also easily apply the top stash on the stack by using:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git stash pop&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A note with this command, it deletes that stash for good, while apply does not. You can manually delete stashes with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git stash drop &amp;lt;id&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or delete all of the stored stashes with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git stash clear&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Git/Programming/2013/05/01/working-with-git-stash-stashing-your-changes</link>
+                <guid>http://johnathanmarksmith.com/Git/Programming/2013/05/01/working-with-git-stash-stashing-your-changes</guid>
+                <pubDate>2013-05-01T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Kiss MySQL goodbye for development and say hello to HSQLDB</title>
+                <description>&lt;p&gt;The days of using MySQL, DB2, PostgreSQL etc for development is over.. I don&amp;#8217;t know why any programmer would be developing using them..&lt;/p&gt;
+
+&lt;p&gt;Every deveroper should be running some in memory database like HSQLDB as part of the project for development and testing then move the a full size database for unit testing, staging and production.&lt;/p&gt;
+
+&lt;p&gt;This is a sample Spring Project to show how to use JavaConfig and HSQLDB. This example also will show how to use @PropertySource for reading properties and using the Environment Object to add properties to your objects.&lt;/p&gt;
+
+&lt;h3 id='how_to_use_spring_javaconfig_and_not_xml_files_for_configuation'&gt;How to use Spring JavaConfig and not XML files for configuation&lt;/h3&gt;
+
+&lt;p&gt;Consider replacing Spring XML configuration with JavaConfig&lt;/p&gt;
+
+&lt;p&gt;Using Spring XML configuration is so 2000’s the time has come to push the XML away and look at JavaConfig.&lt;/p&gt;
+
+&lt;p&gt;Here is the main code to my sample project&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class Main
+{
+
+    private static final Logger LOGGER = getLogger(Main.class);
+
+    public static void main(String[] args)
+    {
+        // in this setup, both the main(String[]) method and the JUnit method both specify that
+        ApplicationContext context = new AnnotationConfigApplicationContext( DatabaseConfiguration.class );
+
+        MessageService mService = context.getBean(MessageService.class);
+
+        /**
+         *   Saving Message to database
+         */
+        Message message = new Message();
+        message.setMessage(&amp;quot;Hello World&amp;quot;);
+        mService.SaveMessage(message);
+
+
+        /**
+         * Saving 2nd Message in database.
+         */
+        message.setMessage(&amp;quot;I love NYC&amp;quot;);
+        mService.SaveMessage(message);
+
+        /**
+         * Getting messages from database
+         *    - display number of message(s)
+         *    - display each message in database
+         */
+        List&amp;lt;Message&amp;gt; myList = mService.listMessages();
+        LOGGER.debug(&amp;quot;You Have &amp;quot; + myList.size() + &amp;quot; Message(s) In The Database&amp;quot;);
+
+        for (Message i : myList)
+        {
+            LOGGER.debug(&amp;quot;Message: ID: &amp;quot; + i.getId() + &amp;quot;, Message: &amp;quot; + i.getMessage() + &amp;quot;.&amp;quot;);
+        }
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now lets take a look at how I setup the database in JavaConfig and not in a XML file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@Configuration
+@EnableTransactionManagement
+@ComponentScan(basePackageClasses = {Main.class})
+@PropertySource(&amp;quot;classpath:application.properties&amp;quot;)
+public class DatabaseConfiguration
+{
+
+
+@Bean
+public DataSourceInitializer dataSourceInitializer(DataSource dataSource) {
+    ResourceDatabasePopulator resourceDatabasePopulator = new ResourceDatabasePopulator();
+    resourceDatabasePopulator.addScript(new ClassPathResource(&amp;quot;/schema.sql&amp;quot;));
+
+        DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
+        dataSourceInitializer.setDataSource(dataSource);
+        dataSourceInitializer.setDatabasePopulator(resourceDatabasePopulator);
+        return dataSourceInitializer;
+    }
+
+    @Bean
+    public DataSource hsqlDataSource() {
+        BasicDataSource basicDataSource = new BasicDataSource();
+        basicDataSource.setDriverClassName(org.hsqldb.jdbcDriver.class.getName());
+        basicDataSource.setUsername(&amp;quot;sa&amp;quot;);
+        basicDataSource.setPassword(&amp;quot;&amp;quot;);
+        basicDataSource.setUrl(&amp;quot;jdbc:hsqldb:mem:mydb&amp;quot;);
+        return basicDataSource;
+    }
+
+    @Bean
+    public LocalSessionFactoryBean sessionFactory(Environment environment,
+                                              DataSource dataSource) {
+
+        String packageOfModelBeans = Message.class.getPackage().getName();
+        LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
+        factoryBean.setDataSource(dataSource);
+        factoryBean.setHibernateProperties(buildHibernateProperties(environment));
+        factoryBean.setPackagesToScan(packageOfModelBeans);
+        return factoryBean;
+    }
+
+    protected Properties buildHibernateProperties(Environment env) {
+        Properties hibernateProperties = new Properties();
+
+        hibernateProperties.setProperty(&amp;quot;hibernate.dialect&amp;quot;, env.getProperty(&amp;quot;hibernate.dialect&amp;quot;));
+        hibernateProperties.setProperty(&amp;quot;hibernate.show_sql&amp;quot;, env.getProperty(&amp;quot;hibernate.show_sql&amp;quot;));
+        hibernateProperties.setProperty(&amp;quot;hibernate.use_sql_comments&amp;quot;, env.getProperty(&amp;quot;hibernate.use_sql_comments&amp;quot;));
+        hibernateProperties.setProperty(&amp;quot;hibernate.format_sql&amp;quot;, env.getProperty(&amp;quot;hibernate.format_sql&amp;quot;));
+        hibernateProperties.setProperty(&amp;quot;hibernate.hbm2ddl.auto&amp;quot;, env.getProperty(&amp;quot;hibernate.hbm2ddl.auto&amp;quot;));
+
+        hibernateProperties.setProperty(&amp;quot;hibernate.generate_statistics&amp;quot;, env.getProperty(&amp;quot;hibernate.generate_statistics&amp;quot;));
+
+        hibernateProperties.setProperty(&amp;quot;javax.persistence.validation.mode&amp;quot;, env.getProperty(&amp;quot;javax.persistence.validation.mode&amp;quot;));
+
+        //Audit History flags
+        hibernateProperties.setProperty(&amp;quot;org.hibernate.envers.store_data_at_delete&amp;quot;, env.getProperty(&amp;quot;org.hibernate.envers.store_data_at_delete&amp;quot;));
+        hibernateProperties.setProperty(&amp;quot;org.hibernate.envers.global_with_modified_flag&amp;quot;, env.getProperty(&amp;quot;org.hibernate.envers.global_with_modified_flag&amp;quot;));
+
+        return hibernateProperties;
+    }
+
+    @Bean
+    public HibernateTransactionManager hibernateTransactionManager(SessionFactory sessionFactory) {
+        return new HibernateTransactionManager(sessionFactory);
+    }
+
+
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can see how easy it is to use JavaConfig and Not XML.. The time of using XML files with Springs is over&amp;#8230;&lt;/p&gt;
+
+&lt;h3 id='down_and_run_project'&gt;Down and Run Project&lt;/h3&gt;
+
+&lt;p&gt;If you would like to download the project from GitHub and run it just follow the following commands:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;git clone git@github.com:JohnathanMarkSmith/NoMySQL.git
+&lt;span class='nb'&gt;cd &lt;/span&gt;NoMySQL
+mvn package
+&lt;span class='nb'&gt;cd &lt;/span&gt;target
+java -jar NoMySQL.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Thats it and you should see the following line on the console:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;2013-04-30 10:47:17,790 [main] DEBUG com.johnathanmarksmith.noMySQL.Main - You Have 2 Message(s) In The Database
+2013-04-30 10:47:17,790 [main] DEBUG com.johnathanmarksmith.noMySQL.Main - Message: ID: 1, Message: Hello World.
+2013-04-30 10:47:17,790 [main] DEBUG com.johnathanmarksmith.noMySQL.Main - Message: ID: 2, Message: I love NYC.&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This Project is using Java, Spring, Hibernate, Maven, jUnit, Log4J, HSQLDB and Github.&lt;/p&gt;
+
+&lt;p&gt;LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING&amp;#8230;.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/MySQL/HSQLDB/Databse/Spring%20Java%20Configuration/2013/04/30/kiss-mysql-goodbye-for-development-and-say-hello-to-hsqldb</link>
+                <guid>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/MySQL/HSQLDB/Databse/Spring%20Java%20Configuration/2013/04/30/kiss-mysql-goodbye-for-development-and-say-hello-to-hsqldb</guid>
+                <pubDate>2013-04-30T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>How to use Spring JavaConfig and not XML files for configuation</title>
+                <description>&lt;p&gt;Consider replacing Spring XML configuration with JavaConfig&lt;/p&gt;
+
+&lt;p&gt;Using Spring XML configuration is so 2000&amp;#8217;s the time has come to push the XML away and look at JavaConfig.&lt;/p&gt;
+
+&lt;p&gt;Here is the main code to my sample project&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;public class Main
+&lt;span class='o'&gt;{&lt;/span&gt;
+
+    private static final Logger &lt;span class='nv'&gt;LOGGER&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; getLogger&lt;span class='o'&gt;(&lt;/span&gt;Main.class&lt;span class='o'&gt;)&lt;/span&gt;;
+
+    public static void main&lt;span class='o'&gt;(&lt;/span&gt;String&lt;span class='o'&gt;[]&lt;/span&gt; args&lt;span class='o'&gt;)&lt;/span&gt;
+    &lt;span class='o'&gt;{&lt;/span&gt;
+        // in this setup, both the main&lt;span class='o'&gt;(&lt;/span&gt;String&lt;span class='o'&gt;[])&lt;/span&gt; method and the JUnit method both specify that
+        ApplicationContext &lt;span class='nv'&gt;context&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; new AnnotationConfigApplicationContext&lt;span class='o'&gt;(&lt;/span&gt; HelloWorldConfiguration.class &lt;span class='o'&gt;)&lt;/span&gt;;
+        MessageService &lt;span class='nv'&gt;mService&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; context.getBean&lt;span class='o'&gt;(&lt;/span&gt;MessageService.class&lt;span class='o'&gt;)&lt;/span&gt;;
+        HelloWorld &lt;span class='nv'&gt;helloWorld&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; context.getBean&lt;span class='o'&gt;(&lt;/span&gt;HelloWorld.class&lt;span class='o'&gt;)&lt;/span&gt;;
+
+        /**
+         * Displaying default messgae
+         */
+        LOGGER.debug&lt;span class='o'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;Message from HelloWorld Bean: &amp;quot;&lt;/span&gt; + helloWorld.getMessage&lt;span class='o'&gt;())&lt;/span&gt;;
+
+        /**
+         *   Saving Message to database
+         */
+        Message &lt;span class='nv'&gt;message&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; new Message&lt;span class='o'&gt;()&lt;/span&gt;;
+        message.setMessage&lt;span class='o'&gt;(&lt;/span&gt;helloWorld.getMessage&lt;span class='o'&gt;())&lt;/span&gt;;
+        mService.SaveMessage&lt;span class='o'&gt;(&lt;/span&gt;message&lt;span class='o'&gt;)&lt;/span&gt;;
+
+        /**
+         * Settting new message in bean
+         */
+        helloWorld.setMessage&lt;span class='o'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;I am in Staten Island, New York&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;)&lt;/span&gt;;
+        LOGGER.debug&lt;span class='o'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;Message from HelloWorld Bean: &amp;quot;&lt;/span&gt; + helloWorld.getMessage&lt;span class='o'&gt;())&lt;/span&gt;;
+
+        /**
+         * Saving Message in database.
+         */
+        message.setMessage&lt;span class='o'&gt;(&lt;/span&gt;helloWorld.getMessage&lt;span class='o'&gt;())&lt;/span&gt;;
+        mService.SaveMessage&lt;span class='o'&gt;(&lt;/span&gt;message&lt;span class='o'&gt;)&lt;/span&gt;;
+
+        /**
+         * Getting messages from database
+         *    - display number of message&lt;span class='o'&gt;(&lt;/span&gt;s&lt;span class='o'&gt;)&lt;/span&gt;
+         *    - display each message in database
+         */
+        List&amp;lt;Message&amp;gt; &lt;span class='nv'&gt;myList&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; mService.listMessages&lt;span class='o'&gt;()&lt;/span&gt;;
+        LOGGER.debug&lt;span class='o'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;You Have &amp;quot;&lt;/span&gt; + myList.size&lt;span class='o'&gt;()&lt;/span&gt; + &lt;span class='s2'&gt;&amp;quot; Message(s) In The Database&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;)&lt;/span&gt;;
+
+        &lt;span class='k'&gt;for&lt;/span&gt; &lt;span class='o'&gt;(&lt;/span&gt;Message i : myList&lt;span class='o'&gt;)&lt;/span&gt;
+        &lt;span class='o'&gt;{&lt;/span&gt;
+            LOGGER.debug&lt;span class='o'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;Message: ID: &amp;quot;&lt;/span&gt; + i.getId&lt;span class='o'&gt;()&lt;/span&gt; + &lt;span class='s2'&gt;&amp;quot;, Message: &amp;quot;&lt;/span&gt; + i.getMessage&lt;span class='o'&gt;()&lt;/span&gt; + &lt;span class='s2'&gt;&amp;quot;.&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;)&lt;/span&gt;;
+        &lt;span class='o'&gt;}&lt;/span&gt;
+    &lt;span class='o'&gt;}&lt;/span&gt;
+&lt;span class='o'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can see from this code that the ApplicationContext is mapped to a HelloWorldConfig.class file its not using a XML file. Below is the code to the HelloWorldConfig.class.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;/**
+ * Date:   4/25/13 / 9:37 AM
+ * Author: Johnathan Mark Smith
+ * Email:  john@johnathanmarksmith.com
+ * &amp;lt;p/&amp;gt;
+ * Comments:
+ *    This is the config example of how to use JavaConfig and not XML Files:
+ *
+ *    This Would be the same as the following
+ *    &amp;lt;beans&amp;gt;
+ *       &amp;lt;bean &lt;span class='nv'&gt;id&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;helloWorld&amp;quot;&lt;/span&gt; &lt;span class='nv'&gt;class&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;com.johnathanmarksmith.HelloSpringJavaBasedJavaConfig.bean.HelloWorld&amp;quot;&lt;/span&gt; /&amp;gt;
+ *    &amp;lt;/beans&amp;gt;
+ *
+ */
+
+@Configuration
+@Import&lt;span class='o'&gt;(&lt;/span&gt;DatabaseConfiguration.class&lt;span class='o'&gt;)&lt;/span&gt;
+@ComponentScan
+@PropertySource&lt;span class='o'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;classpath:application.properties&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;)&lt;/span&gt;
+public class HelloWorldConfiguration &lt;span class='o'&gt;{&lt;/span&gt;
+
+    @Bean
+    public HelloWorld getHelloWorld&lt;span class='o'&gt;(&lt;/span&gt;Environment env&lt;span class='o'&gt;)&lt;/span&gt; &lt;span class='o'&gt;{&lt;/span&gt;
+        HelloWorld &lt;span class='nv'&gt;hw&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; new HelloWorld&lt;span class='o'&gt;()&lt;/span&gt;;
+        hw.setMessage&lt;span class='o'&gt;(&lt;/span&gt;env.getProperty&lt;span class='o'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;bean.text&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;))&lt;/span&gt;;
+        &lt;span class='k'&gt;return &lt;/span&gt;hw;
+    &lt;span class='o'&gt;}&lt;/span&gt;
+
+
+&lt;span class='o'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can see how easy it is to use JavaConfig and Not XML..&lt;/p&gt;
+
+&lt;p&gt;You can download the source code to this at my github project. &lt;a href='https://github.com/JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig'&gt;https://github.com/JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that&amp;#8217;s it. have fun with Spring JavaConfig.&lt;/p&gt;
+
+&lt;h3 id='down_and_run_project'&gt;Down and Run Project&lt;/h3&gt;
+
+&lt;p&gt;If you would like to download the project from GitHub and run it just follow the following commands:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;git clone git@github.com:JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig.git
+&lt;span class='nb'&gt;cd &lt;/span&gt;HelloSpringJavaBasedJavaConfig
+mvn packge
+&lt;span class='nb'&gt;cd &lt;/span&gt;target
+java -jar HelloSpringJavaBasedJavaConfig.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING&amp;#8230;.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/2013/04/25/how-to-use-spring-javaconfig-and-not-xml-files-for-configuation</link>
+                <guid>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/2013/04/25/how-to-use-spring-javaconfig-and-not-xml-files-for-configuation</guid>
+                <pubDate>2013-04-25T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>How to install MySQL on Fedora, CentOS, Red Hat and Scientific Linux</title>
+                <description>&lt;p&gt;If you are using Fedora, CentOS, Red Hat or Scientific Linux I am going to show you the basic install of MySQL using yum.&lt;/p&gt;
+
+&lt;h3 id='install_mysql_client_and_server_software'&gt;Install MySQL Client and Server software&lt;/h3&gt;
+
+&lt;p&gt;To install MySQL Client and Server enter the following commands:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='o'&gt;[&lt;/span&gt;root@regan ~&lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='c'&gt;# yum groupinstall &amp;quot;MySQL Database server&amp;quot;&lt;/span&gt;
+&lt;span class='o'&gt;[&lt;/span&gt;root@regan ~&lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='c'&gt;# yum groupinstall &amp;quot;MySQL Database client&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h3 id='to_install_mysql_system_tables_and_setup_mysql_to_start_on_boot'&gt;To install MySQL system tables and Setup MySQL to start on boot&lt;/h3&gt;
+
+&lt;p&gt;To install the MySQL system tables and setup MySQL to start on boot you need to enter the following commands:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='o'&gt;[&lt;/span&gt;root@regan ~&lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='c'&gt;# /usr/bin/mysql_install_db --user=mysql&lt;/span&gt;
+&lt;span class='o'&gt;[&lt;/span&gt;root@regan ~&lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='c'&gt;# chkconfig --level 2345 mysqld on; service mysqld start&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h3 id='set_admin_password'&gt;Set Admin Password&lt;/h3&gt;
+
+&lt;p&gt;To set the admin password for the MySQL databse you need to enter the following commands:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='o'&gt;[&lt;/span&gt;root@regan ~&lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='c'&gt;# /usr/bin/mysqladmin -u root password &amp;#39;new-password&amp;#39;&lt;/span&gt;
+&lt;span class='o'&gt;[&lt;/span&gt;root@regan ~&lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='c'&gt;# /usr/bin/mysqladmin -u root -h regan password &amp;#39;new-password&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that&amp;#8217;s it. have fun with MySQL.&lt;/p&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed src='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' width='560' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Linux/MySQL/2013/04/24/how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux</link>
+                <guid>http://johnathanmarksmith.com/Linux/MySQL/2013/04/24/how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux</guid>
+                <pubDate>2013-04-24T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>How to see the last time a developer commited work and also the number of commits your developer made in your Git repository</title>
+                <description>&lt;p&gt;How would you like to check-up on your developers and see that last time your developers commited work to your Git repository. I do this all the time to check on the developers on my projects.&lt;/p&gt;
+
+&lt;p&gt;The best way to see who is commiting work to your Git repository and the last time is easy. Just go into one of your Git repositories and type the following:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;git shortlog -sne |awk &lt;span class='s1'&gt;&amp;#39;{print $1,$2,$3,system(&amp;quot;git log -n1 --format=%cd --author=&amp;quot; $2)}&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and your output should look like:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;Wed Apr 10 11:35:41 2013 -0400
+3 Johnathan Smith 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will show you who is doing all the work and the last time work was commited&amp;#8230;..&lt;/p&gt;
+
+&lt;p&gt;Now that&amp;#8217;s it. have fun with Git.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Linux/Git/2013/04/23/how-to-see-the-last-time-a-developer-commited-work-and-also-the-number-of-commits-your-developer-made-in-your-git-repository</link>
+                <guid>http://johnathanmarksmith.com/Linux/Git/2013/04/23/how-to-see-the-last-time-a-developer-commited-work-and-also-the-number-of-commits-your-developer-made-in-your-git-repository</guid>
+                <pubDate>2013-04-23T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>How to see the number of commits your developers made in your Git repository</title>
+                <description>&lt;p&gt;It looks like everyone is starting to use Git for version control and I get asked from managers &amp;#8220;How can I check who is commiting work and doing all the work?&amp;#8221;&lt;/p&gt;
+
+&lt;p&gt;The best way to see who is commiting work to your Git repository is easy. Just go into one of your Git repositories and type the following:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;git shortlog -s -n -e --all
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and your output should look like:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;    10	Johnathan Smith &amp;lt;johnathansmith1969@gmail.com&amp;gt;
+    10	Yuya Saito &amp;lt;studiomohawk@gmail.com&amp;gt;
+     4	Andrea Schiavini &amp;lt;andrea.schiavini@gmail.com&amp;gt;
+     3	Anton Vattay &amp;lt;3martini@gmail.com&amp;gt;
+     2	Abhijeet Kumar &amp;lt;abhijeet.kumar.ak@gmail.com&amp;gt;
+     2	David Joos &amp;lt;david.joos@gmail.com&amp;gt;
+     2	Laura Cabrera &amp;lt;lzcabrera@gmail.com&amp;gt;
+     2	jayraj &amp;lt;jogjayr@gmail.com&amp;gt;
+     1	Adam Kerney &amp;lt;adam.w.kerney@gmail.com&amp;gt;
+     1	Alessio Caiazza &amp;lt;nolith@abisso.org&amp;gt;
+     1	Alistair Hutchison &amp;lt;github@alistairh.co.uk&amp;gt;
+     1	Andrew Kraut &amp;lt;akraut@gmail.com&amp;gt;
+     1	Brandon Philips &amp;lt;brandon@ifup.org&amp;gt;
+     1	Darren Jeacocke &amp;lt;dazonic@me.com&amp;gt;
+     1	Hong Xu &amp;lt;xuhdev@gmail.com&amp;gt;
+     1	Ian Li &amp;lt;i@techotaku.net&amp;gt;
+     1	James Fleeting &amp;lt;twofivethreetwo@gmail.com&amp;gt;
+     1	Jeff Kuchta &amp;lt;jkuchta@gmail.com&amp;gt;
+     1	Jesse Chan-Norris &amp;lt;jcn@pith.org&amp;gt;
+     1	Kori Roys &amp;lt;kori@koriroys.com&amp;gt;
+     1	Liu Lantao &amp;lt;liulantao@gmail.com&amp;gt;
+     1	Loren Sands-Ramshaw &amp;lt;lorensr@gmail.com&amp;gt;
+     1	Lukas Knuth &amp;lt;mr.luke.187@googlemail.com&amp;gt;
+     1	Marko Bauhardt &amp;lt;marko.bauhardt@googlemail.com&amp;gt;
+     1	Martijn Pieters &amp;lt;mj@zopatista.com&amp;gt;
+     1	Matt Swanson &amp;lt;mdswanson@sep.com&amp;gt;
+     1	Michael-Keith Bernard &amp;lt;mkbernard.dev@gmail.com&amp;gt;
+     1	Pradeep Nayak &amp;lt;pradeep1288@gmail.com&amp;gt;
+     1	Simon Starr &amp;lt;simon@starr.cx&amp;gt;
+     1	Stephen Ball &amp;lt;sdball@gmail.com&amp;gt;
+     1	Tommaso Visconti &amp;lt;tommaso.visconti@gmail.com&amp;gt;
+     1	Victor Widell &amp;lt;victor@topmost.se&amp;gt;
+     1	christine &amp;lt;piroko@gmail.com&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will show you who is doing all the work&amp;#8230;..&lt;/p&gt;
+
+&lt;p&gt;Now that&amp;#8217;s it. have fun with Git.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Linux/Git/2013/04/22/how-to-see-the-number-of-commits-your-developers-made-in-your-git-repository</link>
+                <guid>http://johnathanmarksmith.com/Linux/Git/2013/04/22/how-to-see-the-number-of-commits-your-developers-made-in-your-git-repository</guid>
+                <pubDate>2013-04-22T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>How to install Apache2 and PHP on Fedora, CentOS, Red Hat and Scientific Linux</title>
+                <description>&lt;p&gt;If you are using Fedora, CentOS, Red Hat or Scientific Linux I am going to show you the basic install of Apache2 and PHP using yum.&lt;/p&gt;
+
+&lt;h3 id='install_apache2'&gt;Install Apache2.&lt;/h3&gt;
+
+&lt;p&gt;To install Apache2 just enter the following command:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;yum install httpd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id='install_php'&gt;Install PHP&lt;/h3&gt;
+
+&lt;p&gt;To install PHP just enter the following command:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;yum install php
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id='start_up_apache2'&gt;Start up Apache2&lt;/h3&gt;
+
+&lt;p&gt;The following command is going to setup Apache and set it up to start everytime your workstation or server books.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;chkconfig --level 2345 httpd on; service httpd start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id='test_your_install'&gt;Test Your Install&lt;/h3&gt;
+
+&lt;p&gt;Now its time to test your install of Apache2 and PHP, To Do this we are going to make a small PHP file and run in from your brower.&lt;/p&gt;
+
+&lt;p&gt;The following command will create and index.php file with the PHPInfo command in it:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='nb'&gt;echo&lt;/span&gt; “&amp;lt;?php phpinfo&lt;span class='o'&gt;()&lt;/span&gt;; ?&amp;gt;” &amp;gt; /var/www/html/index.php
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now launch your browser to http://127.0.0.1 or http://localhost if anything was done righ your output should look like the one below:&lt;/p&gt;
+&lt;div style='text-align: center'&gt;
+&lt;img src='/images/php.jpg' alt='Install Apache2 and PHP with Johnathan Mark Smith' /&gt;
+&lt;/div&gt;
+&lt;p&gt;Now that&amp;#8217;s it. have fun with Apache2 and PHP.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Linux/Apache/PHP/2013/04/19/how-to-install-apache2-and-php-on-fedora-centos-red-hat-and-scientific-linux</link>
+                <guid>http://johnathanmarksmith.com/Linux/Apache/PHP/2013/04/19/how-to-install-apache2-and-php-on-fedora-centos-red-hat-and-scientific-linux</guid>
+                <pubDate>2013-04-19T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>How to install Maven on Fedora, CentOS, Red Hat and Scientific Linux</title>
+                <description>&lt;p&gt;If you are using Fedora, CentOS, Red Hat or Scientific Linux sometimes yum does not have the package for the product you would like to install and Maven is one of them at the time of me writing this blog.&lt;/p&gt;
+
+&lt;p&gt;I am going to show you how I install Maven on Fedora, CentOS, Red Hat or Scientific Linux you can do it the same way or find a better way.&lt;/p&gt;
+
+&lt;h3 id='download_maven_and_untar_it'&gt;Download Maven and untar it.&lt;/h3&gt;
+
+&lt;p&gt;The first thing we need to do is to download the Maven tar file and untar it to a shared location on the workstation&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;wget http://mirrors.gigenet.com/apache/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz
+su -c &lt;span class='s2'&gt;&amp;quot;tar -zxvf apache-maven-3.0.5-bin.tar.gz -C /opt/&amp;quot;&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id='setup_the_maven_environment_variables_in_shared_profile'&gt;Setup the Maven Environment Variables in shared profile.&lt;/h3&gt;
+
+&lt;p&gt;The next step is to setup the Maven environment variables in a shared profile so all users on the system will get them import at login time.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;su -c &lt;span class='s2'&gt;&amp;quot;vi /etc/profile.d/maven.sh&amp;quot;&lt;/span&gt;
+
+&lt;span class='c'&gt;# Add the following lines to maven.sh&lt;/span&gt;
+&lt;span class='nb'&gt;export &lt;/span&gt;&lt;span class='nv'&gt;M2_HOME&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;/opt/apache-maven-3.0.5
+&lt;span class='nb'&gt;export &lt;/span&gt;&lt;span class='nv'&gt;M2&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='nv'&gt;$M2_HOME&lt;/span&gt;/bin
+&lt;span class='nv'&gt;PATH&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='nv'&gt;$M2&lt;/span&gt;:&lt;span class='nv'&gt;$PATH&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id='now_test_your_install_of_maven'&gt;Now test your install of Maven.&lt;/h3&gt;
+
+&lt;p&gt;Logout of the system and then log back into it. Enter the following command:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='o'&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='nv'&gt;$ &lt;/span&gt;mvn -version 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;If you did everything right your output should look something like the one below:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;Apache Maven 3.0.5 &lt;span class='o'&gt;(&lt;/span&gt;r01de14724cdef164cd33c7c8c2fe155faf9602da; 2013-02-19 08:51:28-0500&lt;span class='o'&gt;)&lt;/span&gt;
+Maven home: /opt/apache-maven-3.0.5
+Java version: 1.7.0_19, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.19/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: &lt;span class='s2'&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;, version: &lt;span class='s2'&gt;&amp;quot;2.6.32-358.2.1.el6.i686&amp;quot;&lt;/span&gt;, arch: &lt;span class='s2'&gt;&amp;quot;i386&amp;quot;&lt;/span&gt;, family: &lt;span class='s2'&gt;&amp;quot;unix&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now that&amp;#8217;s it. have fun with maven.&lt;/p&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed src='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' width='560' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Linux/Java/Maven/Programming/Project%20Management/2013/04/18/how-to-install-maven-on-fedora-centos-red-hat-and-scientific-linux</link>
+                <guid>http://johnathanmarksmith.com/Linux/Java/Maven/Programming/Project%20Management/2013/04/18/how-to-install-maven-on-fedora-centos-red-hat-and-scientific-linux</guid>
+                <pubDate>2013-04-18T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>How to install Java Open JDK 1.7 on Fedora, CentOS, Red Hat and Scientific Linux</title>
+                <description>&lt;p&gt;I had to install Java Open JDK 1.7 and SDK on a number of linux boxs last night.&lt;/p&gt;
+
+&lt;p&gt;I had some coworkers asking the same question time and time again &amp;#8220;How Do I Install Java Open JDK 1.7?&amp;#8221;.&lt;/p&gt;
+
+&lt;p&gt;So to make it easy once again here is my post and the details on how to do it.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;su -c &lt;span class='s2'&gt;&amp;quot;yum install java-1.7.0-openjdk*&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Thats all you have to do&amp;#8230; stop asking&amp;#8230; :)&lt;/p&gt;
+
+&lt;p&gt;Here is the video&lt;/p&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed src='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' width='560' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Linux/Java/2013/04/17/how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux</link>
+                <guid>http://johnathanmarksmith.com/Linux/Java/2013/04/17/how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux</guid>
+                <pubDate>2013-04-17T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Sounding Smart Gets You Credit</title>
+                <description>&lt;p&gt;I don&amp;#8217;t know what it is but I see it day in and day out. Someone reads a number of websites and learns some buzz words and everyone thinks wow he is so smart he is the best programmer we have.&lt;/p&gt;
+
+&lt;p&gt;Learning all the buzz words and and speaking will is a key thing in the world today but I really feel that the fims have to start to look at the programmers then can develop good code and get good products out. Talking good is not going to get the job done.&lt;/p&gt;
+
+&lt;p&gt;Think about it&amp;#8230; Do you want someone that can really get your projects done on time and the right way or someone that can talk about it day in and day out.&lt;/p&gt;
+
+&lt;p&gt;Hmm..&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Programming/Jobs/2013/04/16/sounding-smart-gets-you-credit</link>
+                <guid>http://johnathanmarksmith.com/Programming/Jobs/2013/04/16/sounding-smart-gets-you-credit</guid>
+                <pubDate>2013-04-16T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>How to clone a local Git Repository</title>
+                <description>&lt;p&gt;I get asked a good number of times &amp;#8220;How do I clone a local Git Repository?&amp;#8221;. So do make it easy I am going to pust it on my blog site so I can just follow the link to in. are you ready??&lt;/p&gt;
+
+&lt;p&gt;This worked for me:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;git clone file:////&amp;lt;host&amp;gt;/&amp;lt;share&amp;gt;/&amp;lt;path&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;For example, if your main machine has the IP 192.168.10.51 and the computer name main, and it has a share named code which itself is a git repository, the both of the following commands should work equally:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;git clone file:////main/code
+git clone file:////192.168.10.51/code
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If the git repository is in a subdirectory, simply append the path.&lt;/p&gt;
+
+&lt;p&gt;You can see the full list of &lt;a href='/git-interview-questions.html'&gt;Git Interview Questions Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Github/Git/Git%20Interview%20Question/2013/04/16/how-to-clone-a-local-git-repository</link>
+                <guid>http://johnathanmarksmith.com/Github/Git/Git%20Interview%20Question/2013/04/16/how-to-clone-a-local-git-repository</guid>
+                <pubDate>2013-04-16T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Mirroring a Git repostory</title>
+                <description>&lt;p&gt;The firm I recently stated working at just moved to Git and I am the only resource then knows Git. I get asked so many times a day on how to mirror a git repostory.&lt;/p&gt;
+
+&lt;p&gt;From the birds eyes very its very easy:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;git clone --mirror git@git.com:project project
+&lt;span class='nb'&gt;cd &lt;/span&gt;project
+git remote add github git@github.com:username/project.git
+
+In cron Job
+&lt;span class='nb'&gt;cd&lt;/span&gt; /pathto/project &lt;span class='o'&gt;&amp;amp;&amp;amp;&lt;/span&gt; git fetch -q &lt;span class='o'&gt;&amp;amp;&amp;amp;&lt;/span&gt; git push -q --mirror github
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Thats how easy it is to mirror a Git Project on to GitHub&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Git/Programming/Github/2013/04/15/mirroring-a-git-repostory</link>
+                <guid>http://johnathanmarksmith.com/Git/Programming/Github/2013/04/15/mirroring-a-git-repostory</guid>
+                <pubDate>2013-04-15T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Working with Spring WebFlow and Dojo by Johnathan Mark Smith</title>
+                <description>&lt;p&gt;Working with Spring WebFlow and Dojo by Johnathan Mark Smith Johnathan Mark Smith will show you how to make your Spring WebFlow projects look better with Dojo.&lt;/p&gt;
+
+&lt;p&gt;FOR IMMEDIATE RELEASE&lt;/p&gt;
+
+&lt;p&gt;Working with Spring and Dojo by Johnathan Mark Smith&lt;/p&gt;
+
+&lt;p&gt;In this video Johnathan Mark Smith will show you how to make better Spring WebFlow project just by adding Dojo with Dijit UI Library(widgets). You will see how easy it is to add tooltips and a lot more to any Spring project.&lt;/p&gt;
+
+&lt;p&gt;Or find Johnathan Mark Smith on Twitter @JohnathanMSmith&lt;/p&gt;
+
+&lt;p&gt;The source code for this demo is at https://github.com/JohnathanMarkSmith/SpringWithDojo&lt;/p&gt;
+&lt;object width='420' height='315'&gt;&lt;param value='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed src='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' width='420' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;p&gt;Who is Johnathan Mark Smith: I am the Chief Information Officer &amp;amp; Founder of StutteringTech and SINY-RealEstate and Our Consulting services has over 25 years experience, specializing in business technology in the areas of web application development and collaborative computing. We only use leading technologies such as Android, Springs, JSP’s, Servlets, XML, Java, Struts, PHP, LDAP and Web Application Servers. We have a very solid background with Java, OOP, Design-Patterns and Multi-Threading. We also have the able to interface with all levels of management.&lt;/p&gt;
+
+&lt;p&gt;Please checkout my website for more tips, tricks and information.. johnathanmsmith.com&lt;/p&gt;
+
+&lt;p&gt;http://www.youtube.com/watch?v=UBPBJgwOzOw&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Spring/Java/WebFlow/2013/04/12/working-with-spring-webflow-and-dojo-by-johnathan-mark-smith</link>
+                <guid>http://johnathanmarksmith.com/Spring/Java/WebFlow/2013/04/12/working-with-spring-webflow-and-dojo-by-johnathan-mark-smith</guid>
+                <pubDate>2013-04-12T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Where is RequestMapping in Spring 3.2.1?</title>
+                <description>&lt;p&gt;Where is RequestMapping in Spring 3.2.1?&lt;/p&gt;
+
+&lt;p&gt;If you are using Spring 3.2.1-Release and Maven you maybe asking where is the Re questMapping Object. The anwser its missing! is a issues in the release of Spri ng 3.2.1 but has been fixed in Spring 3.2.2 that is coming out soon.&lt;/p&gt;
+
+&lt;p&gt;If you can’t wait for the release to come out look at the details of the fix at the following URL&lt;/p&gt;
+
+&lt;p&gt;https://jira.springsource.org/browse/SPR-10218&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Spring/Java/2013/03/26/where-is-requestmapping-in-spring-321</link>
+                <guid>http://johnathanmarksmith.com/Spring/Java/2013/03/26/where-is-requestmapping-in-spring-321</guid>
+                <pubDate>2013-03-26T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Tomcat vs WebSphere vs JBoss Application Servers by Johnathan Mark Smith</title>
+                <description>&lt;p&gt;I don’t understand at all! I am the Chief Information Officer &amp;amp; Founder of StutteringTech and SINY-RealEstate and Our Consulting services has over 22 years experience, specializing in business technology in the areas of web application development and collaborative computing. We only use leading technologies such as Android, Springs, JSP’s, Servlets, XML, Java, Struts, PHP, LDAP and Web Application Servers. We have a very solid background with Java, OOP, Design-Patterns and Multi-Threading. We also have the able to interface with all levels of management but why is it that firms also try to spend money on products and services that the firms dont need.&lt;/p&gt;
+
+&lt;p&gt;JBoss Application Servers is nothing more then Apache Tomcat with some other open source projects, why pay for it? you tell me? Most of the applications that I have seen over the years would run fine in Apache Tomcat so why is everyone spending money on WebSphere or JBoss Application Servers? Can someone please tell me?&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Tomcat/WebSphere/JBoss/2013/03/25/tomcat-vs-jboss</link>
+                <guid>http://johnathanmarksmith.com/Tomcat/WebSphere/JBoss/2013/03/25/tomcat-vs-jboss</guid>
+                <pubDate>2013-03-25T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Why Did The Java Spring Consultant Post His Resume On GitHub.com</title>
+                <description>&lt;p&gt;Let think about this, Why not use a public system like GitHub to post resumes and other documents that you would like to track or make public to others. GitHub can be used for so much more then just source code tracking. Think about it… any document you would like to track or share you can just GitHub and it does not have to be documents. You can keep workstation settings, scripts or anything in it. We need to stop thinking of GitHub if a web0bases hosting service for software development projects. You can make public and private repositories and put anything into them..&lt;/p&gt;
+
+&lt;p&gt;I have over 24 years experience specializing in business technology in the areas of web application development and collaborative computing. I love working as an architect-developer for applications or product development. I am particularly interested in organizations that use leading technologies such as Git, Springs, WebFlow, Maven, JUnit, JSP’s, Servlets, XML, Java, Struts, PHP, LDAP, Android and Web Application Servers. I have a very solid background with Java, OOP, Design-Patterns and Multi-Threading.&lt;/p&gt;
+
+&lt;p&gt;I am also able to interface with all levels of management and by posting my resume on GitHub.com at github.com/JohnathanSmith/resume in a number of formats I open the door to a number of organizations and recruiters looking for Java, Springs Consultants. I can now tell the organization or the recruiter to goto github.com/JohnathanSmith/resume and download my resume in the format the organization or recruiter is looking for.&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Java/Spring/Consultant/Github/2013/03/22/why-post-on-github</link>
+                <guid>http://johnathanmarksmith.com/Java/Spring/Consultant/Github/2013/03/22/why-post-on-github</guid>
+                <pubDate>2013-03-22T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>The Move To GitHub</title>
+                <description>&lt;p&gt;Today is the day that I said goodbye WordPress! Hello GitHub and moved my site to Github. I love Git for version control so why not use it for web hosting..&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Github/WordPress/2013/03/22/the-move-to--github</link>
+                <guid>http://johnathanmarksmith.com/Github/WordPress/2013/03/22/the-move-to--github</guid>
+                <pubDate>2013-03-22T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>My First Post</title>
+                <description></description>
+                <link>http://johnathanmarksmith.com/testing/2013/03/22/my-first-post</link>
+                <guid>http://johnathanmarksmith.com/testing/2013/03/22/my-first-post</guid>
+                <pubDate>2013-03-22T00:00:00-04:00</pubDate>
+        </item>
+
+
+</channel>
+</rss>
