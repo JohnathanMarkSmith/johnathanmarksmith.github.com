@@ -37,6 +37,8 @@ Now to clone the shared repository, use
 
 That was easy right?
 
+<object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
 
 You can see the full list of <a href="/git-interview-questions.html">Git Interview Questions Here</a>
 
