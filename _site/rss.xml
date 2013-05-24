@@ -5,10 +5,214 @@
         <description>Johnathan Mark Smith - Johnathan Mark Smith</description>
         <link>http://johnathanmarksmith.com</link>
         <link>http://johnathanmarksmith.com</link>
-        <lastBuildDate>2013-05-24T07:40:39-04:00</lastBuildDate>
-        <pubDate>2013-05-24T07:40:39-04:00</pubDate>
+        <lastBuildDate>2013-05-24T08:36:18-04:00</lastBuildDate>
+        <pubDate>2013-05-24T08:36:18-04:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>How To Use Spring's Java Configuration (JavaConfig) style with Maven, JUnit, Log4J, Hibernate and HyperSQL (hsqldb)</title>
+                <description>&lt;h3 id='springs_java_configuration_javaconfig_style_with_maven_junit_log4j_hibernate_and_hypersql_hsqldb'&gt;Spring&amp;#8217;s Java Configuration (JavaConfig) style with Maven, JUnit, Log4J, Hibernate and HyperSQL (hsqldb)&lt;/h3&gt;
+
+&lt;p&gt;The days of using MySQL, DB2, PostgreSQL etc for development is over.. I don&amp;#8217;t know why any programmer would be developing using them..&lt;/p&gt;
+
+&lt;p&gt;Every deveroper should be running some in memory database like HSQLDB as part of the project for development and testing then move the a full size database for unit testing, staging and production.&lt;/p&gt;
+
+&lt;p&gt;This is a sample Spring Project to show how to use Spring&amp;#8217;s Java Configuration (JavaConfig) style with Maven, JUnit, Log4J, Hibernate and HyperSQL (hsqldb).&lt;/p&gt;
+
+&lt;p&gt;This example also will show how to use @PropertySource for reading properties and using the Environment Object to add properties to your objects.&lt;/p&gt;
+
+&lt;h3 id='how_to_use_springs_java_configuration_javaconfig_style_and_not_xml_files_for_configuation'&gt;How to use Spring&amp;#8217;s Java Configuration (JavaConfig) style and not XML files for configuation&lt;/h3&gt;
+
+&lt;p&gt;Consider replacing Spring XML configuration with Spring&amp;#8217;s Java Configuration (JavaConfig) style is the right way to go right now.&lt;/p&gt;
+
+&lt;p&gt;Using Spring XML configuration is so 2000’s the time has come to push the XML away and look at Spring&amp;#8217;s Java Configuration (JavaConfig) style.&lt;/p&gt;
+
+&lt;p&gt;Here is the main code to my sample project&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; public static void main(String[] args)
+    {
+        /**
+         *
+         * This is going to setup the database configuration in the applicationContext
+         * you can see that I am using the new Spring&amp;#39;s Java Configuration style and not some OLD XML file
+         *
+         */
+        ApplicationContext context = new AnnotationConfigApplicationContext(DatabaseConfiguration.class);
+
+        MessageService mService = context.getBean(MessageService.class);
+
+        /**
+         *
+         *   This is going to create a message object and set the message to &amp;quot;Hello World&amp;quot; then pass the object to t
+         *   the service layer for inserting into the database
+         *
+         */
+        Message message = new Message();
+        message.setMessage(&amp;quot;Hello World&amp;quot;);
+        mService.SaveMessage(message);
+
+
+        /**
+         *
+         * This is going to do a 2nd Message in database.
+         *
+         */
+        message.setMessage(&amp;quot;I love Regan&amp;quot;);
+        mService.SaveMessage(message);
+
+        /**
+         *
+         * This is going to get the messages from database and do the following:
+         *    - display number of message(s)
+         *    - display each message in database
+         *
+         */
+        List&amp;lt;Message&amp;gt; myList = mService.listMessages();
+        LOGGER.debug(&amp;quot;You Have &amp;quot; + myList.size() + &amp;quot; Message(s) In The Database&amp;quot;);
+
+        for (Message i : myList)
+        {
+            LOGGER.debug(&amp;quot;Message: ID: &amp;quot; + i.getId() + &amp;quot;, Message: &amp;quot; + i.getMessage() + &amp;quot;.&amp;quot;);
+        }
+
+        /**
+         *
+         * This is the end!!!
+         *
+         */
+        LOGGER.debug(&amp;quot;This is the end!!!!&amp;quot;);
+    }&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now lets take a good look at how I setup the database with Spring&amp;#8217;s Java Configuration (JavaConfig) style and not in a XML file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@Configuration
+@EnableTransactionManagement
+@ComponentScan(basePackageClasses = {Main.class})
+@PropertySource(&amp;quot;classpath:application.properties&amp;quot;)
+public class DatabaseConfiguration
+{
+
+
+    /**
+     *
+     * This is used to setup the database. It will load the schema.sql file which does a create table so we have
+     * a table to work with in the project
+     */
+    @Bean
+    public DataSourceInitializer dataSourceInitializer(DataSource dataSource)
+    {
+        ResourceDatabasePopulator resourceDatabasePopulator = new ResourceDatabasePopulator();
+        resourceDatabasePopulator.addScript(new ClassPathResource(&amp;quot;/schema.sql&amp;quot;));
+
+        DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
+        dataSourceInitializer.setDataSource(dataSource);
+        dataSourceInitializer.setDatabasePopulator(resourceDatabasePopulator);
+        return dataSourceInitializer;
+    }
+
+    /**
+     *
+     * This will be setting up a datasource using HyperSQL (hsqldb) in memory
+     */
+    @Bean
+    public DataSource hsqlDataSource()
+    {
+        BasicDataSource basicDataSource = new BasicDataSource();
+        basicDataSource.setDriverClassName(org.hsqldb.jdbcDriver.class.getName());
+        basicDataSource.setUsername(&amp;quot;sa&amp;quot;);
+        basicDataSource.setPassword(&amp;quot;&amp;quot;);
+        basicDataSource.setUrl(&amp;quot;jdbc:hsqldb:mem:mydb&amp;quot;);
+        return basicDataSource;
+    }
+
+    /**
+     *
+     * This setups the session factory
+     */
+    @Bean
+    public LocalSessionFactoryBean sessionFactory(Environment environment,
+                                                  DataSource dataSource)
+    {
+
+        /**
+         *
+         * Getting packageOfModelBean from package of message bean
+         *
+         */
+        String packageOfModelBeans = Message.class.getPackage().getName();
+
+        LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
+
+        factoryBean.setDataSource(dataSource);
+        factoryBean.setHibernateProperties(buildHibernateProperties(environment));
+        factoryBean.setPackagesToScan(packageOfModelBeans);
+        return factoryBean;
+    }
+
+    /**
+     *
+     * Loading all the hibernate properties from a properties file
+     */
+    protected Properties buildHibernateProperties(Environment env)
+    {
+        Properties hibernateProperties = new Properties();
+
+        hibernateProperties.setProperty(&amp;quot;hibernate.dialect&amp;quot;, env.getProperty(&amp;quot;hibernate.dialect&amp;quot;));
+        hibernateProperties.setProperty(&amp;quot;hibernate.show_sql&amp;quot;, env.getProperty(&amp;quot;hibernate.show_sql&amp;quot;));
+        hibernateProperties.setProperty(&amp;quot;hibernate.use_sql_comments&amp;quot;, env.getProperty(&amp;quot;hibernate.use_sql_comments&amp;quot;));
+        hibernateProperties.setProperty(&amp;quot;hibernate.format_sql&amp;quot;, env.getProperty(&amp;quot;hibernate.format_sql&amp;quot;));
+        hibernateProperties.setProperty(&amp;quot;hibernate.hbm2ddl.auto&amp;quot;, env.getProperty(&amp;quot;hibernate.hbm2ddl.auto&amp;quot;));
+
+        hibernateProperties.setProperty(&amp;quot;hibernate.generate_statistics&amp;quot;, env.getProperty(&amp;quot;hibernate.generate_statistics&amp;quot;));
+
+        hibernateProperties.setProperty(&amp;quot;javax.persistence.validation.mode&amp;quot;, env.getProperty(&amp;quot;javax.persistence.validation.mode&amp;quot;));
+
+        //Audit History flags
+        hibernateProperties.setProperty(&amp;quot;org.hibernate.envers.store_data_at_delete&amp;quot;, env.getProperty(&amp;quot;org.hibernate.envers.store_data_at_delete&amp;quot;));
+        hibernateProperties.setProperty(&amp;quot;org.hibernate.envers.global_with_modified_flag&amp;quot;, env.getProperty(&amp;quot;org.hibernate.envers.global_with_modified_flag&amp;quot;));
+
+        return hibernateProperties;
+    }
+
+    /**
+     *
+     * This is setting up the hibernate transaction manager
+     *
+     */
+    @Bean
+    public HibernateTransactionManager hibernateTransactionManager(SessionFactory sessionFactory)
+    {
+        return new HibernateTransactionManager(sessionFactory);
+    }
+
+
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can see how easy it is to use Spring&amp;#8217;s Java Configuration (JavaConfig) style and Not XML.. The time of using XML files with Springs is over&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;checkout the project from github.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone git@github.com:JohnathanMarkSmith/NoMySQL.git
+cd NoMySQL
+mvn package
+cd target
+java -jar NoMySQL.jar&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thats it and you should see the following line on the console:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;2013-05-24 08:28:23,401 [main] DEBUG com.johnathanmarksmith.noMySQL.Main - You Have 2 Message(s) In The Database
+2013-05-24 08:28:23,401 [main] DEBUG com.johnathanmarksmith.noMySQL.Main - Message: ID: 1, Message: Hello World.
+2013-05-24 08:28:23,401 [main] DEBUG com.johnathanmarksmith.noMySQL.Main - Message: ID: 2, Message: I love Regan.
+2013-05-24 08:28:23,401 [main] DEBUG com.johnathanmarksmith.noMySQL.Main - This is the end!!!!&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This Project is using Java, Spring, Hibernate, Maven, jUnit, Log4J, HSQLDB and Github.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions please email me at john@johnathanmarksmith.com&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/Maven/JUnit/Log4J/Hibernate/HyperSQL/2013/05/27/how-to-use-springs-java-configuration-javaconfig-style-with-maven-junit-log4j-hibernate-and-hypersql-hsqldb</link>
+                <guid>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/Maven/JUnit/Log4J/Hibernate/HyperSQL/2013/05/27/how-to-use-springs-java-configuration-javaconfig-style-with-maven-junit-log4j-hibernate-and-hypersql-hsqldb</guid>
+                <pubDate>2013-05-27T00:00:00-04:00</pubDate>
+        </item>
 
         <item>
                 <title>How To Use JQuery Validation Plugin for Field Validatoin</title>
@@ -302,7 +506,7 @@ mvn packge
 java -jar HelloSpringJavaBasedJavaConfig.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING&amp;#8230;.&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' height='315' type='application/x-shockwave-flash' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='560' type='application/x-shockwave-flash' src='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/2013/05/22/i-was-published-in-this-week-in-spring-on-how-to-use-springs-java-configuration-style</link>
                 <guid>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/2013/05/22/i-was-published-in-this-week-in-spring-on-how-to-use-springs-java-configuration-style</guid>
@@ -438,7 +642,7 @@ config --global user.email johndoe@example.com&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;That&amp;#8217;s it, your done!&lt;/p&gt;
 
 &lt;p&gt;Here is the video:&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' height='315' type='application/x-shockwave-flash' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='560' type='application/x-shockwave-flash' src='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Linux/Git/Programming/2013/05/15/how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux</link>
                 <guid>http://johnathanmarksmith.com/Linux/Git/Programming/2013/05/15/how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux</guid>
@@ -499,7 +703,7 @@ config --global user.email johndoe@example.com&lt;/code&gt;&lt;/pre&gt;
 # e.g., git clone git://my-machine/ test-project&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;That was easy right?&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;amp;version=3' height='315' type='application/x-shockwave-flash' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;amp;version=3' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='560' type='application/x-shockwave-flash' src='http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;amp;version=3' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;You can see the full list of &lt;a href='/git-interview-questions.html'&gt;Git Interview Questions Here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
@@ -582,7 +786,7 @@ Type &lt;span class='s1'&gt;&amp;#39;help;&amp;#39;&lt;/span&gt; or &lt;span cla
 MariaDB &lt;span class='o'&gt;[(&lt;/span&gt;none&lt;span class='o'&gt;)]&lt;/span&gt;&amp;gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;That was easy right?&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' height='315' type='application/x-shockwave-flash' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='560' type='application/x-shockwave-flash' src='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Linux/MySQL/MariaDB/2013/05/13/replacing-mysql-with-mariadb-on-centos-6</link>
                 <guid>http://johnathanmarksmith.com/Linux/MySQL/MariaDB/2013/05/13/replacing-mysql-with-mariadb-on-centos-6</guid>
@@ -681,7 +885,7 @@ Is this correct yes/no? yes
 &lt;img alt='Installing Jboss on Linux with Johnathan Mark Smith' src='/images/jboss.jpg' /&gt;
 &lt;/div&gt;
 &lt;p&gt;Here is the video if you would like to watch it:&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' height='315' type='application/x-shockwave-flash' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='560' type='application/x-shockwave-flash' src='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Linux/Java/JBoss/AS7/2013/05/13/basic-install-of-jboss-for-developers-on-linux</link>
                 <guid>http://johnathanmarksmith.com/Linux/Java/JBoss/AS7/2013/05/13/basic-install-of-jboss-for-developers-on-linux</guid>
@@ -1008,7 +1212,7 @@ mvn packge
 java -jar HelloSpringJavaBasedJavaConfig.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING&amp;#8230;.&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' height='315' type='application/x-shockwave-flash' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='560' type='application/x-shockwave-flash' src='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/2013/04/25/how-to-use-spring-javaconfig-and-not-xml-files-for-configuation</link>
                 <guid>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/2013/04/25/how-to-use-spring-javaconfig-and-not-xml-files-for-configuation</guid>
@@ -1044,7 +1248,7 @@ java -jar HelloSpringJavaBasedJavaConfig.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;Now that&amp;#8217;s it. have fun with MySQL.&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' height='315' type='application/x-shockwave-flash' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='560' type='application/x-shockwave-flash' src='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Linux/MySQL/2013/04/24/how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux</link>
                 <guid>http://johnathanmarksmith.com/Linux/MySQL/2013/04/24/how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux</guid>
@@ -1200,7 +1404,7 @@ Default locale: en_US, platform encoding: UTF-8
 OS name: &lt;span class='s2'&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;, version: &lt;span class='s2'&gt;&amp;quot;2.6.32-358.2.1.el6.i686&amp;quot;&lt;/span&gt;, arch: &lt;span class='s2'&gt;&amp;quot;i386&amp;quot;&lt;/span&gt;, family: &lt;span class='s2'&gt;&amp;quot;unix&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now that&amp;#8217;s it. have fun with maven.&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' height='315' type='application/x-shockwave-flash' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='560' type='application/x-shockwave-flash' src='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Linux/Java/Maven/Programming/Project%20Management/2013/04/18/how-to-install-maven-on-fedora-centos-red-hat-and-scientific-linux</link>
                 <guid>http://johnathanmarksmith.com/Linux/Java/Maven/Programming/Project%20Management/2013/04/18/how-to-install-maven-on-fedora-centos-red-hat-and-scientific-linux</guid>
@@ -1219,7 +1423,7 @@ OS name: &lt;span class='s2'&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;, version:
 &lt;p&gt;Thats all you have to do&amp;#8230; stop asking&amp;#8230; :)&lt;/p&gt;
 
 &lt;p&gt;Here is the video&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' height='315' type='application/x-shockwave-flash' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='560' type='application/x-shockwave-flash' src='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Linux/Java/2013/04/17/how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux</link>
                 <guid>http://johnathanmarksmith.com/Linux/Java/2013/04/17/how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux</guid>
@@ -1292,7 +1496,7 @@ In cron Job
 &lt;p&gt;Or find Johnathan Mark Smith on Twitter @JohnathanMSmith&lt;/p&gt;
 
 &lt;p&gt;The source code for this demo is at https://github.com/JohnathanMarkSmith/SpringWithDojo&lt;/p&gt;
-&lt;object height='315' width='420'&gt;&lt;param value='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' height='315' type='application/x-shockwave-flash' width='420' /&gt;&lt;/object&gt;
+&lt;object width='420' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='420' type='application/x-shockwave-flash' src='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;Who is Johnathan Mark Smith: I am the Chief Information Officer &amp;amp; Founder of StutteringTech and SINY-RealEstate and Our Consulting services has over 25 years experience, specializing in business technology in the areas of web application development and collaborative computing. We only use leading technologies such as Android, Springs, JSP’s, Servlets, XML, Java, Struts, PHP, LDAP and Web Application Servers. We have a very solid background with Java, OOP, Design-Patterns and Multi-Threading. We also have the able to interface with all levels of management.&lt;/p&gt;
 
 &lt;p&gt;Please checkout my website for more tips, tricks and information.. johnathanmsmith.com&lt;/p&gt;

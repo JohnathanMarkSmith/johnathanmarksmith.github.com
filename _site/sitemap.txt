@@ -19,6 +19,7 @@ http://johnathanmarksmith.com/SVN-repositories.html
 http://johnathanmarksmith.com/pages.html
 http://johnathanmarksmith.com/technology.html
 
+http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/Maven/JUnit/Log4J/Hibernate/HyperSQL/2013/05/27/how-to-use-springs-java-configuration-javaconfig-style-with-maven-junit-log4j-hibernate-and-hypersql-hsqldb
 http://johnathanmarksmith.com/JQuery/JavaScript/2013/05/24/how-to-use-jquery-validation-plugin-for-field-validatoin
 http://johnathanmarksmith.com/Git/Gitolite/Linux/2013/05/23/how-to-install-gitolite-on-linux
 http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/2013/05/22/i-was-published-in-this-week-in-spring-on-how-to-use-springs-java-configuration-style
