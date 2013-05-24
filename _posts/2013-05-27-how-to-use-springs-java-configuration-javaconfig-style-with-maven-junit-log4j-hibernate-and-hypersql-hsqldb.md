@@ -186,7 +186,12 @@ Now lets take a good look at how I setup the database with Spring's Java Configu
 
 You can see how easy it is to use Spring's Java Configuration (JavaConfig) style and Not XML.. The time of using XML files with Springs is over...
 
-checkout the project from github.
+You can see the project on github at <a href="https://github.com/JohnathanMarkSmith/NoMySQL">https://github.com/JohnathanMarkSmith/NoMySQL/a>
+
+### Download and Run
+
+So now its time to download the project from github and run it, You need to do the following commands:
+
 
     git clone git@github.com:JohnathanMarkSmith/NoMySQL.git
     cd NoMySQL
