@@ -19,6 +19,7 @@ http://johnathanmarksmith.com/SVN-repositories.html
 http://johnathanmarksmith.com/pages.html
 http://johnathanmarksmith.com/technology.html
 
+http://johnathanmarksmith.com/JQuery/JavaScript/2013/05/24/how-to-use-jquery-validation-plugin-for-field-validatoin
 http://johnathanmarksmith.com/Git/Gitolite/Linux/2013/05/23/how-to-install-gitolite-on-linux
 http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/2013/05/22/i-was-published-in-this-week-in-spring-on-how-to-use-springs-java-configuration-style
 http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-quesiton-what-is-the-role-of-the-clone-method-in-java
