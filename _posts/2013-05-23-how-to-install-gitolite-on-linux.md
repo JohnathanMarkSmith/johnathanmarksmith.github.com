@@ -78,6 +78,8 @@ From your workstation enter the following command
 
 That is everything you have gitolite all setup and ready to go.
 
+<object width="420" height="315"><param name="movie" value="http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="420" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
 
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
 
