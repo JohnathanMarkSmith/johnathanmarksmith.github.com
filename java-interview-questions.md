@@ -12,6 +12,19 @@ I am posting this page so programmers/developers can bookmark it and use it.  I 
 
 # The Java Questions
 
+## What is interface and its use?
+
+Interface is similar to a class which may contain method’s signature only but not bodies and it is a formal set of method and constant declarations that must be defined by the class that implements it.
+
+Interfaces are useful for:
+
+    a)Declaring methods that one or more classes are expected to implement
+
+    b)Capturing similarities between unrelated classes without forcing a class relationship.
+
+    c)Determining an object’s programming interface without revealing the actual body of the class.
+
+
 ## Difference Between Interface and Abstract Class?
 
 Main difference is methods of a Java interface are implicitly abstract and cannot have implementations. A Java abstract class can have instance methods that implements a default behavior.
