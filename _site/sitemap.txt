@@ -19,16 +19,16 @@ http://johnathanmarksmith.com/SVN-repositories.html
 http://johnathanmarksmith.com/pages.html
 http://johnathanmarksmith.com/technology.html
 
-http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/28/java-interview-Question-what-is-interface-and-its-use
+http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/28/java-interview-question-what-is-interface-and-its-use
 http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/Maven/JUnit/Log4J/Hibernate/HyperSQL/2013/05/27/how-to-use-springs-java-configuration-javaconfig-style-with-maven-junit-log4j-hibernate-and-hypersql-hsqldb
 http://johnathanmarksmith.com/JQuery/JavaScript/2013/05/24/how-to-use-jquery-validation-plugin-for-field-validatoin
 http://johnathanmarksmith.com/Git/Gitolite/Linux/2013/05/23/how-to-install-gitolite-on-linux
 http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/2013/05/22/i-was-published-in-this-week-in-spring-on-how-to-use-springs-java-configuration-style
-http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-Question-what-is-the-role-of-the-clone-method-in-java
-http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-Question-what-is-final-finalize-and-finally
-http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/20/java-interview-Question-what-is-the-difference-between-array-and-vector
-http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/17/java-interview-Question-can-a-final-class-have-a-abstract-method
-http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/16/java-interview-Question-what-is-the-difference-between-this-and-super
+http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-question-what-is-the-role-of-the-clone-method-in-java
+http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-question-what-is-final-finalize-and-finally
+http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/20/java-interview-question-what-is-the-difference-between-array-and-vector
+http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/17/java-interview-question-can-a-final-class-have-a-abstract-method
+http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/16/java-interview-question-what-is-the-difference-between-this-and-super
 http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/15/java-interview-question-what-is-the-difference-between-overloading-and-overriding
 http://johnathanmarksmith.com/Linux/Git/Programming/2013/05/15/how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux
 http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/14/java-interview-question-what-are-encapsulation-inheritance-and-polymorphism
