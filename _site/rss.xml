@@ -11,7 +11,7 @@
 
 
         <item>
-                <title>Java Interview Quesiton: What is interface and its use</title>
+                <title>Java Interview Question: What is interface and its use</title>
                 <description>&lt;p&gt;Interface is similar to a class which may contain method’s signature only but not bodies and it is a formal set of method and constant declarations that must be defined by the class that implements it.&lt;/p&gt;
 
 &lt;p&gt;Interfaces are useful for:&lt;/p&gt;
@@ -25,8 +25,8 @@ c)Determining an object’s programming interface without revealing the actual b
 &lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
-                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/28/java-interview-quesiton-what-is-interface-and-its-use</link>
-                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/28/java-interview-quesiton-what-is-interface-and-its-use</guid>
+                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/28/java-interview-Question-what-is-interface-and-its-use</link>
+                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/28/java-interview-Question-what-is-interface-and-its-use</guid>
                 <pubDate>2013-05-28T00:00:00-04:00</pubDate>
         </item>
 
@@ -538,7 +538,7 @@ java -jar HelloSpringJavaBasedJavaConfig.jar
         </item>
 
         <item>
-                <title>Java Interview Quesiton: What is the role of the clone() method in Java</title>
+                <title>Java Interview Question: What is the role of the clone() method in Java</title>
                 <description>&lt;p&gt;Protected Object clone() throws CloneNotSupportedException.&lt;/p&gt;
 
 &lt;p&gt;This method is used to create a copy of an object of a class which implements Cloneable interface.&lt;/p&gt;
@@ -548,13 +548,13 @@ java -jar HelloSpringJavaBasedJavaConfig.jar
 &lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
-                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-quesiton-what-is-the-role-of-the-clone-method-in-java</link>
-                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-quesiton-what-is-the-role-of-the-clone-method-in-java</guid>
+                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-Question-what-is-the-role-of-the-clone-method-in-java</link>
+                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-Question-what-is-the-role-of-the-clone-method-in-java</guid>
                 <pubDate>2013-05-21T00:00:00-04:00</pubDate>
         </item>
 
         <item>
-                <title>Java Interview Quesiton: What is final, finalize() and finally</title>
+                <title>Java Interview Question: What is final, finalize() and finally</title>
                 <description>&lt;p&gt;Final : final keyword can be used for class, method and variables. A final class cannot be subclassed and it prevents other programmers from subclassing a secure class to invoke insecure methods. A final method can’t be overridden. A final variable can’t change from its initialized value.&lt;/p&gt;
 
 &lt;p&gt;Finalize() : finalize() method is used just before an object is destroyed and can be called just prior to garbage collection.&lt;/p&gt;
@@ -564,25 +564,25 @@ java -jar HelloSpringJavaBasedJavaConfig.jar
 &lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
-                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-quesiton-what-is-final-finalize-and-finally</link>
-                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-quesiton-what-is-final-finalize-and-finally</guid>
+                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-Question-what-is-final-finalize-and-finally</link>
+                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/21/java-interview-Question-what-is-final-finalize-and-finally</guid>
                 <pubDate>2013-05-21T00:00:00-04:00</pubDate>
         </item>
 
         <item>
-                <title>Java Interview Quesiton: What is the difference between Array and Vector</title>
+                <title>Java Interview Question: What is the difference between Array and Vector</title>
                 <description>&lt;p&gt;Array is a set of related data type and static whereas vector is a growable array of objects and dynamic.&lt;/p&gt;
 
 &lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
-                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/20/java-interview-quesiton-what-is-the-difference-between-array-and-vector</link>
-                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/20/java-interview-quesiton-what-is-the-difference-between-array-and-vector</guid>
+                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/20/java-interview-Question-what-is-the-difference-between-array-and-vector</link>
+                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/20/java-interview-Question-what-is-the-difference-between-array-and-vector</guid>
                 <pubDate>2013-05-20T00:00:00-04:00</pubDate>
         </item>
 
         <item>
-                <title>Java Interview Quesiton: Can a final class have a abstract method</title>
+                <title>Java Interview Question: Can a final class have a abstract method</title>
                 <description>&lt;p&gt;No. I final class can not have a abstract method in it because when you declare a method in a class as abstract, then the class must be declared as abstract.&lt;/p&gt;
 
 &lt;p&gt;&amp;#8220;Final&amp;#8221; and &amp;#8220;Abstract&amp;#8221; cannot used at the same time. Any class can be either final or abstract not both!&lt;/p&gt;
@@ -592,20 +592,20 @@ java -jar HelloSpringJavaBasedJavaConfig.jar
 &lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
-                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/17/java-interview-quesiton-can-a-final-class-have-a-abstract-method</link>
-                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/17/java-interview-quesiton-can-a-final-class-have-a-abstract-method</guid>
+                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/17/java-interview-Question-can-a-final-class-have-a-abstract-method</link>
+                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/17/java-interview-Question-can-a-final-class-have-a-abstract-method</guid>
                 <pubDate>2013-05-17T00:00:00-04:00</pubDate>
         </item>
 
         <item>
-                <title>Java Interview Quesiton: What is the difference between this() and super()</title>
+                <title>Java Interview Question: What is the difference between this() and super()</title>
                 <description>&lt;p&gt;this() can be used to invoke a constructor or method of the same class whereas super() can be used to invoke a super class constructor or method.&lt;/p&gt;
 
 &lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
-                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/16/java-interview-quesiton-what-is-the-difference-between-this-and-super</link>
-                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/16/java-interview-quesiton-what-is-the-difference-between-this-and-super</guid>
+                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/16/java-interview-Question-what-is-the-difference-between-this-and-super</link>
+                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/16/java-interview-Question-what-is-the-difference-between-this-and-super</guid>
                 <pubDate>2013-05-16T00:00:00-04:00</pubDate>
         </item>
 

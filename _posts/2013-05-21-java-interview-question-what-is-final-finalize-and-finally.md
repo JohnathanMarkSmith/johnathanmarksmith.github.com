@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Java Interview Quesiton: What is final, finalize() and finally"
-description: "Java Interview Quesiton: What is final, finalize() and finally"
+title: "Java Interview Question: What is final, finalize() and finally"
+description: "Java Interview Question: What is final, finalize() and finally"
 categories: [ Java, Java Interview Questions ]
 tags: [ Java, Java Interview Questions ]
 comments: false

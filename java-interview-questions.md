@@ -129,12 +129,12 @@ No. I final class can not have a abstract method in it because when you declare 
    Abstract class means must be subclassed.
 
 
-## Java Interview Quesiton: What is the difference between Array and Vector?
+## Java Interview Question: What is the difference between Array and Vector?
 
 Array is a set of related data type and static whereas vector is a growable array of objects and dynamic.
 
 
-## Java Interview Quesiton: What is final, finalize() and finally?
+## Java Interview Question: What is final, finalize() and finally?
 
 Final : final keyword can be used for class, method and variables. A final class cannot be subclassed and it prevents other programmers from subclassing a secure class to invoke insecure methods. A final method can’t be overridden. A final variable can’t change from its initialized value.
 

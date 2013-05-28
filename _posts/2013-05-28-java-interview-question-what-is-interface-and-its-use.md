@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Java Interview Quesiton: What is interface and its use"
-description: "Java Interview Quesiton: What is interface and its use"
+title: "Java Interview Question: What is interface and its use"
+description: "Java Interview Question: What is interface and its use"
 categories: [ Java, Java Interview Questions ]
 tags: [ Java, Java Interview Questions ]
 comments: false
