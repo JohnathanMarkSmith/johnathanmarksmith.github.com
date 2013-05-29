@@ -12,6 +12,12 @@ I am posting this page so programmers/developers can bookmark it and use it.  I 
 
 # The Java Questions
 
+## What is the difference between String and String Buffer?
+
+1) String objects are constants and immutable whereas StringBuffer objects are not.
+
+2) String class supports constant strings whereas StringBuffer class supports growable and modifiable strings.
+
 ## What is interface and its use?
 
 Interface is similar to a class which may contain method’s signature only but not bodies and it is a formal set of method and constant declarations that must be defined by the class that implements it.
