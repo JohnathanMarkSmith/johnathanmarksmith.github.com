@@ -12,6 +12,11 @@ I am posting this page so programmers/developers can bookmark it and use it.  I 
 
 # The Java Questions
 
+## What is the difference between set and list?
+
+Set stores elements in an unordered way but does not contain duplicate elements, whereas list stores elements in an ordered way but may contain duplicate elements.
+
+
 ## Can you have an inner class inside a method and what variables can you access?
 
 Yes, you can have a inner class inside a method and final variables can be accessed.
