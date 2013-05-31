@@ -7,6 +7,16 @@ tagline: CONSULTING AND TECHNOLOGIES FOR BUILDING TOMORROW’S WORLD
 
 
 
+<script type="text/javascript">
+
+$(document).ready(function () {
+ alert('hello');
+ $('#example1').bt();
+ $('#mycomments').bt({
+ });
+});
+</script>
+
 <div id="example1" class="target" title="The content of this tooltip is provided by the 'title' attribute of the target element.">hover </div>
 
 
@@ -46,18 +56,7 @@ If you have any questions or comments please email me at <a href="mailto:john@jo
 </script>
 
 
-<script type="text/javascript">
 
-$(function(){
-
-alert('hello');
-
-$('#example1').bt();
-
-$('#mycomments').bt({
-  });
-
-</script>
 
 
 
