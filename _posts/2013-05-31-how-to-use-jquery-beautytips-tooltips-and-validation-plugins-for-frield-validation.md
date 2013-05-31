@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "How To Use JQuery BeautyTips (ToolTips) and Validation Plugins for Frield Validatoin"
-description: "How To Use JQuery BeautyTips (ToolTips) and Validation Plugins for Frield Validatoin"
+title: "How To Use JQuery BeautyTips (ToolTips) and Validation Plugins for Frield Validation"
+description: "How To Use JQuery BeautyTips (ToolTips) and Validation Plugins for Frield Validation"
 categories: [ JQuery, JavaScript ]
 tags: [ JQuery, JavaScript ]
 comments: false
