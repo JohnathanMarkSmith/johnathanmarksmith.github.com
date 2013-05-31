@@ -4,6 +4,9 @@ title: Johnathan Mark Smith's Blog
 tagline: CONSULTING AND TECHNOLOGIES FOR BUILDING TOMORROW’S WORLD
 ---
 
+
+
+
 After over 25 years specializing in business technology I feel that I have the right to post some information on a blog. The following posts and information are just my views and only my views. If you don't like something that I posted please email me and I will address it.
 
 
