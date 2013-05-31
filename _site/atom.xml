@@ -4,7 +4,7 @@
  <title>Johnathan Mark Smith</title>
  <link href="http://johnathanmarksmith.com/" rel="self"/>
  <link href="http://johnathanmarksmith.com"/>
- <updated>2013-05-31T13:03:23-04:00</updated>
+ <updated>2013-05-31T13:36:49-04:00</updated>
  <id>http://johnathanmarksmith.com</id>
  <author>
    <name>Johnathan Mark Smith</name>
@@ -22,6 +22,185 @@
 &lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>How To Use JQuery BeautyTips (ToolTips) and Validation Plugins for Frield Validatoin</title>
+   <link href="http://johnathanmarksmith.com/JQuery/JavaScript/2013/05/31/how-to-use-jquery-beautytips-tooltips-and-validation-plugins-for-frield-validatoin"/>
+   <updated>2013-05-31T00:00:00-04:00</updated>
+   <id>http://johnathanmarksmith.com/JQuery/JavaScript/2013/05/31/how-to-use-jquery-beautytips-tooltips-and-validation-plugins-for-frield-validatoin</id>
+   <content type="html">&lt;h3 id='jquery_tooltips_and_validation_example'&gt;JQuery ToolTips and Validation Example&lt;/h3&gt;
+
+&lt;p&gt;This is just a one JSP page example that demos some JQuery ToolTips and Validation stuff. Yes I really did not have to use a JSP and tomcat7 but again this is only a one page example so why not&amp;#8230; :)&lt;/p&gt;
+
+&lt;p&gt;in my example I have some HTML code that looks like the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    &amp;lt;div&amp;gt;
+        &amp;lt;form id=&amp;quot;myForm&amp;quot;&amp;gt;
+            &amp;lt;p&amp;gt;
+                Gender:
+                &amp;lt;label for=&amp;quot;male&amp;quot;&amp;gt;Male&amp;lt;/label&amp;gt;
+                &amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;gender&amp;quot; id=&amp;quot;male&amp;quot; class=&amp;quot;target&amp;quot; title=&amp;quot;Please enter your gender.&amp;quot;&amp;gt;
+                &amp;lt;label for=&amp;quot;female&amp;quot;&amp;gt;Female&amp;lt;/label&amp;gt;
+                &amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;gender&amp;quot; id=&amp;quot;female&amp;quot; class=&amp;quot;target&amp;quot; title=&amp;quot;Please enter your gender.&amp;quot;&amp;gt;
+
+            &amp;lt;/p&amp;gt;
+            &amp;lt;p&amp;gt;
+                &amp;lt;label for=&amp;quot;firstName&amp;quot;&amp;gt;First Name:&amp;lt;/label&amp;gt;
+                &amp;lt;input id=&amp;quot;firstName&amp;quot; name=&amp;quot;firstName&amp;quot; class=&amp;quot;target&amp;quot; title=&amp;quot;Please enter your first name.&amp;quot; &amp;gt;&amp;lt;/input&amp;gt;
+            &amp;lt;/p&amp;gt;
+            &amp;lt;p&amp;gt;
+                &amp;lt;label for=&amp;quot;lastName&amp;quot;&amp;gt;Last Name:&amp;lt;/label&amp;gt;
+                &amp;lt;input id=&amp;quot;lastName&amp;quot; name=&amp;quot;lastName&amp;quot; class=&amp;quot;target&amp;quot; title=&amp;quot;Please enter your last name.&amp;quot; &amp;gt;&amp;lt;/input&amp;gt;
+            &amp;lt;/p&amp;gt;
+            &amp;lt;p&amp;gt;
+                &amp;lt;label for=&amp;quot;age&amp;quot;&amp;gt;Age:&amp;lt;/label&amp;gt;
+                &amp;lt;input id=&amp;quot;age&amp;quot; name=&amp;quot;age&amp;quot; class=&amp;quot;target&amp;quot; title=&amp;quot;Please enter your age.&amp;quot; &amp;gt;&amp;lt;/input&amp;gt;
+            &amp;lt;/p&amp;gt;
+            &amp;lt;p&amp;gt;
+                &amp;lt;input type=&amp;quot;submit&amp;quot; value=&amp;quot;Submit&amp;quot; /&amp;gt;
+            &amp;lt;/p&amp;gt;
+        &amp;lt;/form&amp;gt;
+    &amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I wanted to put some validation in to check that data was entered into the fields and why not use JQuery for it..&lt;/p&gt;
+
+&lt;p&gt;I then made the following style sheet code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;        &amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
+                #errorContainer {
+                    display: none;
+                    overflow: auto;
+                    background-color: #FFDDDD;
+                    border: 1px solid #FF2323;
+                    padding-top: 1;
+                }
+
+                #errorContainer label {
+                    float: none;
+                    width: auto;
+                }
+
+                input.error {
+                    border: 1px solid #FF2323;
+                }
+
+         &amp;lt;/style&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is going to setup how the errors will look. I then had to add a place on my page for the errors so I added the following div:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    &amp;lt;div id=&amp;quot;errorContainer&amp;quot;&amp;gt;
+        &amp;lt;p&amp;gt;&amp;amp;nbsp;Please correct the following errors and try again:&amp;lt;/p&amp;gt;
+        &amp;lt;ul /&amp;gt;
+    &amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The above code is where JQuery will be displaying the errors.&lt;/p&gt;
+
+&lt;h3 id='now_its_time_for_the_hard_work_'&gt;Now its time for the HARD work :)&lt;/h3&gt;
+
+&lt;p&gt;You need to add the JQuery, BeautyTips (ToolTips) and the Validate libs into your code by added the following lines:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script src=&amp;quot;js/jquery.bt.min.js&amp;quot; type=&amp;quot;text/javascript&amp;quot; charset=&amp;quot;utf-8&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now lets add the JQuery/JavaScript code that will check the fields on the page. As you can see from the code below I give JQuery the rules which is (field names, ranges) and the error messages to display.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+        $(function(){
+
+            $(&amp;#39;#myForm&amp;#39;).validate({
+                rules: {
+                    firstName: &amp;quot;required&amp;quot;,
+                    lastName: &amp;quot;required&amp;quot;,
+                    age: {
+                        required: true,
+                        range: [18,70]
+                    }
+                },
+                messages: {
+                    firstName: &amp;quot;Please enter your first name.&amp;quot;,
+                    lastName: &amp;quot;Please enter your last name.&amp;quot;,
+                    age: {
+                        required: &amp;quot;Please enter your age.&amp;quot;,
+                        range: &amp;quot;Your age must be between 21 and 55.&amp;quot;
+                    }
+                },
+                errorContainer: $(&amp;#39;#errorContainer&amp;#39;),
+                errorLabelContainer: $(&amp;#39;#errorContainer ul&amp;#39;),
+                wrapper: &amp;#39;li&amp;#39;
+            });
+
+        });
+    &amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now test your code.. It works great but where are the tooltips?&lt;/p&gt;
+
+&lt;h3 id='adding_beautytips_tooltips'&gt;Adding BeautyTips (Tooltips)&lt;/h3&gt;
+
+&lt;p&gt;Rewrite the javascipt code with the code below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    $(function(){
+
+        $(&amp;#39;#firstName&amp;#39;).bt();
+        $(&amp;#39;#lastName&amp;#39;).bt();
+        $(&amp;#39;#age&amp;#39;).bt();
+        $(&amp;#39;#male&amp;#39;).bt();
+        $(&amp;#39;#female&amp;#39;).bt();
+
+        $(&amp;#39;#myForm&amp;#39;).validate({
+            rules: {
+                firstName: &amp;quot;required&amp;quot;,
+                lastName: &amp;quot;required&amp;quot;,
+                gender: &amp;quot;required&amp;quot;,
+                age: {
+                    required: true,
+                    range: [18,70]
+                }
+            },
+            messages: {
+                firstName: &amp;quot;Please enter your first name.&amp;quot;,
+                lastName: &amp;quot;Please enter your last name.&amp;quot;,
+                gender: &amp;quot;Please enter your gender.&amp;quot;,
+                age: {
+                    required: &amp;quot;Please enter your age.&amp;quot;,
+                    range: &amp;quot;Your age must be between 21 and 55.&amp;quot;
+                }
+            },
+            errorContainer: $(&amp;#39;#errorContainer&amp;#39;),
+            errorLabelContainer: $(&amp;#39;#errorContainer ul&amp;#39;),
+            wrapper: &amp;#39;li&amp;#39;
+        });
+
+    });
+&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;you can see all that we added was:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$(&amp;#39;#firstName&amp;#39;).bt();
+$(&amp;#39;#lastName&amp;#39;).bt();
+$(&amp;#39;#age&amp;#39;).bt();
+$(&amp;#39;#male&amp;#39;).bt();
+$(&amp;#39;#female&amp;#39;).bt();&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The above code tells Beautytips to add the tooltips&lt;/p&gt;
+
+&lt;p&gt;You can see how easy it is to use JQuery, BeautyTips(ToolTips) and Validation&amp;#8230;&lt;/p&gt;
+
+&lt;h3 id='how_to_get_the_project_and_run_it'&gt;How To Get The Project and Run It&lt;/h3&gt;
+
+&lt;p&gt;checkout the project from github.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone git@github.com:JohnathanMarkSmith/JQueryToolTipValidation.git
+cd JQueryToolTipValidation
+mvn tomcat7:run&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then open http://localhost:8080/JQueryToolTipValidation.git/ in your browser and play around.. Go have fun&amp;#8230;.&lt;/p&gt;
+
+&lt;p&gt;You can download the source code to this at my github project (https://github.com/JohnathanMarkSmith/JQueryToolTipValidation)&lt;/p&gt;
+
+&lt;p&gt;If you have any questions please email me at john@johnathanmarksmith.com&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -394,7 +573,7 @@ mvn tomcat7:run&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then open http://localhost:8080/JQueryValidation/ in your browser and play around.. Go have fun&amp;#8230;.&lt;/p&gt;
 
 &lt;p&gt;You can download the source code to this at my github project (https://github.com/JohnathanMarkSmith/JQueryValidation)&lt;/p&gt;
-&lt;object height='315' width='420'&gt;&lt;param value='http://www.youtube.com/v/Ju_74SWv1TY?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed height='315' allowscriptaccess='always' src='http://www.youtube.com/v/Ju_74SWv1TY?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' width='420' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='420' height='315'&gt;&lt;param value='http://www.youtube.com/v/Ju_74SWv1TY?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='420' src='http://www.youtube.com/v/Ju_74SWv1TY?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' height='315' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -454,7 +633,7 @@ mvn tomcat7:run&lt;/code&gt;&lt;/pre&gt;
    &lt;span class='nb'&gt;cd &lt;/span&gt;gitolite-admin
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;That is everything you have gitolite all setup and ready to go.&lt;/p&gt;
-&lt;object height='315' width='420'&gt;&lt;param value='http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed height='315' allowscriptaccess='always' src='http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;amp;version=3' type='application/x-shockwave-flash' width='420' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='420' height='315'&gt;&lt;param value='http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='420' src='http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;amp;version=3' type='application/x-shockwave-flash' height='315' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -573,7 +752,7 @@ mvn packge
 java -jar HelloSpringJavaBasedJavaConfig.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING&amp;#8230;.&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed height='315' allowscriptaccess='always' src='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' src='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' height='315' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -709,7 +888,7 @@ config --global user.email johndoe@example.com&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;That&amp;#8217;s it, your done!&lt;/p&gt;
 
 &lt;p&gt;Here is the video:&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed height='315' allowscriptaccess='always' src='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' src='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' height='315' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -770,7 +949,7 @@ config --global user.email johndoe@example.com&lt;/code&gt;&lt;/pre&gt;
 # e.g., git clone git://my-machine/ test-project&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;That was easy right?&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed height='315' allowscriptaccess='always' src='http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;amp;version=3' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' src='http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;amp;version=3' type='application/x-shockwave-flash' height='315' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
 &lt;p&gt;You can see the full list of &lt;a href='/git-interview-questions.html'&gt;Git Interview Questions Here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
@@ -853,7 +1032,7 @@ Type &lt;span class='s1'&gt;&amp;#39;help;&amp;#39;&lt;/span&gt; or &lt;span cla
 MariaDB &lt;span class='o'&gt;[(&lt;/span&gt;none&lt;span class='o'&gt;)]&lt;/span&gt;&amp;gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;That was easy right?&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed height='315' allowscriptaccess='always' src='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' src='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' height='315' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -952,7 +1131,7 @@ Is this correct yes/no? yes
 &lt;img src='/images/jboss.jpg' alt='Installing Jboss on Linux with Johnathan Mark Smith' /&gt;
 &lt;/div&gt;
 &lt;p&gt;Here is the video if you would like to watch it:&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed height='315' allowscriptaccess='always' src='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' src='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' height='315' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -1279,7 +1458,7 @@ mvn packge
 java -jar HelloSpringJavaBasedJavaConfig.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING&amp;#8230;.&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed height='315' allowscriptaccess='always' src='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' src='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' height='315' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -1315,7 +1494,7 @@ java -jar HelloSpringJavaBasedJavaConfig.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;Now that&amp;#8217;s it. have fun with MySQL.&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed height='315' allowscriptaccess='always' src='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' src='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' height='315' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -1471,7 +1650,7 @@ Default locale: en_US, platform encoding: UTF-8
 OS name: &lt;span class='s2'&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;, version: &lt;span class='s2'&gt;&amp;quot;2.6.32-358.2.1.el6.i686&amp;quot;&lt;/span&gt;, arch: &lt;span class='s2'&gt;&amp;quot;i386&amp;quot;&lt;/span&gt;, family: &lt;span class='s2'&gt;&amp;quot;unix&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now that&amp;#8217;s it. have fun with maven.&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed height='315' allowscriptaccess='always' src='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' src='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' type='application/x-shockwave-flash' height='315' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -1490,7 +1669,7 @@ OS name: &lt;span class='s2'&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;, version:
 &lt;p&gt;Thats all you have to do&amp;#8230; stop asking&amp;#8230; :)&lt;/p&gt;
 
 &lt;p&gt;Here is the video&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed height='315' allowscriptaccess='always' src='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' src='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' type='application/x-shockwave-flash' height='315' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -1563,7 +1742,7 @@ In cron Job
 &lt;p&gt;Or find Johnathan Mark Smith on Twitter @JohnathanMSmith&lt;/p&gt;
 
 &lt;p&gt;The source code for this demo is at https://github.com/JohnathanMarkSmith/SpringWithDojo&lt;/p&gt;
-&lt;object height='315' width='420'&gt;&lt;param value='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed height='315' allowscriptaccess='always' src='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' type='application/x-shockwave-flash' width='420' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='420' height='315'&gt;&lt;param value='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='420' src='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' type='application/x-shockwave-flash' height='315' allowscriptaccess='always' allowfullscreen='true' /&gt;&lt;/object&gt;
 &lt;p&gt;Who is Johnathan Mark Smith: I am the Chief Information Officer &amp;amp; Founder of StutteringTech and SINY-RealEstate and Our Consulting services has over 25 years experience, specializing in business technology in the areas of web application development and collaborative computing. We only use leading technologies such as Android, Springs, JSP’s, Servlets, XML, Java, Struts, PHP, LDAP and Web Application Servers. We have a very solid background with Java, OOP, Design-Patterns and Multi-Threading. We also have the able to interface with all levels of management.&lt;/p&gt;
 
 &lt;p&gt;Please checkout my website for more tips, tricks and information.. johnathanmsmith.com&lt;/p&gt;
