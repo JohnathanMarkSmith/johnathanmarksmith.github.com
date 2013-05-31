@@ -12,7 +12,24 @@
     
     <meta name="author" content="Johnathan Mark Smith">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+
+      <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js">
+
+      </script>
+
+
+      <script src="js/jquery.hoverIntent.minified.js" type="text/javascript" charset="utf-8">
+
+      </script>
+
+      <script src="js/jquery.bt.min.js" type="text/javascript" charset="utf-8">
+
+      </script>
+
+      <link href="css/jquery.bt.css" rel="stylesheet" />
+
+
+      <!-- HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -201,11 +218,33 @@
 
 <div class="row">
   <div class="span12">
-    <p>After over 25 years specializing in business technology I feel that I have the right to post some information on a blog. The following posts and information is just my views and only my views. If you don&#8217;t like something that I posted please email me and I will address it.</p>
-
+    <div title='The content of this tooltip is provided by the &apos;title&apos; attribute of the target element.' id='example1' class='target'>hover </div>
+<p>After over 25 years specializing in business technology I feel that I have the right to post some information on a blog. The following posts and information are just my views and only my views. If you don&#8217;t like something that I posted please email me and I will address it.</p>
+<div title='This popup balloon is very configurable.' id='mycomments' class='target'>blue blue blue</div>
 <p>Here are some of my posts (check out the <a href='archive.html'>archive page</a> for more posts):</p>
 <ul class='posts'>
 
+  <div class='post_info'>
+    <li>
+         <a href='/Java/Java%20Interview%20Questions/2013/05/31/java-interview-question-what-is-the-difference-between-set-and-list'>Java Interview Question: What is the difference between set and list?</a> 
+         <span>(2013-05-31)</span>
+    </li>
+    </div>
+  
+  <div class='post_info'>
+    <li>
+         <a href='/Java/Java%20Interview%20Questions/2013/05/30/java-interview-question-can-you-have-an-inner-class-inside-a-method-and-what-variables-can-you-access'>Java Interview Question: Can you have an inner class inside a method and what variables can you access?</a> 
+         <span>(2013-05-30)</span>
+    </li>
+    </div>
+  
+  <div class='post_info'>
+    <li>
+         <a href='/Java/Java%20Interview%20Questions/2013/05/29/java-interview-question-what-is-the-difference-between-string-and-string-buffer'>Java Interview Question: What is the difference between String and String Buffer</a> 
+         <span>(2013-05-29)</span>
+    </li>
+    </div>
+  
   <div class='post_info'>
     <li>
          <a href='/Java/Java%20Interview%20Questions/2013/05/28/java-interview-question-what-is-interface-and-its-use'>Java Interview Question: What is interface and its use</a> 
@@ -325,27 +364,6 @@
     </li>
     </div>
   
-  <div class='post_info'>
-    <li>
-         <a href='/Git/Programming/2013/05/01/working-with-git-stash-stashing-your-changes'>Working with Git stash, Stashing Your Changes</a> 
-         <span>(2013-05-01)</span>
-    </li>
-    </div>
-  
-  <div class='post_info'>
-    <li>
-         <a href='/Spring/Java/JavaConfig/Programming/MySQL/HSQLDB/Databse/Spring%20Java%20Configuration/2013/04/30/kiss-mysql-goodbye-for-development-and-say-hello-to-hsqldb'>Kiss MySQL goodbye for development and say hello to HSQLDB</a> 
-         <span>(2013-04-30)</span>
-    </li>
-    </div>
-  
-  <div class='post_info'>
-    <li>
-         <a href='/Spring/Java/JavaConfig/Programming/2013/04/25/how-to-use-spring-javaconfig-and-not-xml-files-for-configuation'>How to use Spring JavaConfig and not XML files for configuation</a> 
-         <span>(2013-04-25)</span>
-    </li>
-    </div>
-  
 </ul>
 <p>If you have any questions or comments please email me at <a href='mailto:john@johnathanmarksmith.com'>john@johnathanmarksmith.com</a></p>
 <script>
@@ -356,6 +374,17 @@
 
   ga('create', 'UA-40973546-1', 'johnathanmarksmith.com');
   ga('send', 'pageview');
+
+</script><script type='text/javascript'>
+
+$(function(){
+
+alert('hello');
+
+$('#example1').bt();
+
+$('#mycomments').bt({
+  });
 
 </script>
   </div>

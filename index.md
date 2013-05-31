@@ -4,7 +4,17 @@ title: Johnathan Mark Smith's Blog
 tagline: CONSULTING AND TECHNOLOGIES FOR BUILDING TOMORROW’S WORLD
 ---
 
+
+
+
+<div id="example1" class="target" title="The content of this tooltip is provided by the 'title' attribute of the target element.">hover </div>
+
+
+
 After over 25 years specializing in business technology I feel that I have the right to post some information on a blog. The following posts and information are just my views and only my views. If you don't like something that I posted please email me and I will address it.
+
+
+<div id="mycomments" title="This popup balloon is very configurable." class="target">blue blue blue</div>
 
 
 Here are some of my posts (check out the <a href="archive.html">archive page</a> for more posts):
@@ -34,5 +44,21 @@ If you have any questions or comments please email me at <a href="mailto:john@jo
   ga('send', 'pageview');
 
 </script>
+
+
+<script type="text/javascript">
+
+$(function(){
+
+alert('hello');
+
+$('#example1').bt();
+
+$('#mycomments').bt({
+  });
+
+</script>
+
+
 
 

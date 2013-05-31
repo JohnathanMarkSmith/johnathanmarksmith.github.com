@@ -5,10 +5,48 @@
         <description>Johnathan Mark Smith - Johnathan Mark Smith</description>
         <link>http://johnathanmarksmith.com</link>
         <link>http://johnathanmarksmith.com</link>
-        <lastBuildDate>2013-05-28T08:07:56-04:00</lastBuildDate>
-        <pubDate>2013-05-28T08:07:56-04:00</pubDate>
+        <lastBuildDate>2013-05-31T10:16:40-04:00</lastBuildDate>
+        <pubDate>2013-05-31T10:16:40-04:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Java Interview Question: What is the difference between set and list?</title>
+                <description>&lt;p&gt;Set stores elements in an unordered way but does not contain duplicate elements, whereas list stores elements in an ordered way but may contain duplicate elements.&lt;/p&gt;
+
+&lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/31/java-interview-question-what-is-the-difference-between-set-and-list</link>
+                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/31/java-interview-question-what-is-the-difference-between-set-and-list</guid>
+                <pubDate>2013-05-31T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Java Interview Question: Can you have an inner class inside a method and what variables can you access?</title>
+                <description>&lt;p&gt;Yes, you can have a inner class inside a method and final variables can be accessed.&lt;/p&gt;
+
+&lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/30/java-interview-question-can-you-have-an-inner-class-inside-a-method-and-what-variables-can-you-access</link>
+                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/30/java-interview-question-can-you-have-an-inner-class-inside-a-method-and-what-variables-can-you-access</guid>
+                <pubDate>2013-05-30T00:00:00-04:00</pubDate>
+        </item>
+
+        <item>
+                <title>Java Interview Question: What is the difference between String and String Buffer</title>
+                <description>&lt;p&gt;1) String objects are constants and immutable whereas StringBuffer objects are not.&lt;/p&gt;
+
+&lt;p&gt;2) String class supports constant strings whereas StringBuffer class supports growable and modifiable strings.&lt;/p&gt;
+
+&lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
+                <link>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/29/java-interview-question-what-is-the-difference-between-string-and-string-buffer</link>
+                <guid>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/29/java-interview-question-what-is-the-difference-between-string-and-string-buffer</guid>
+                <pubDate>2013-05-29T00:00:00-04:00</pubDate>
+        </item>
 
         <item>
                 <title>Java Interview Question: What is interface and its use</title>
@@ -351,7 +389,7 @@ mvn tomcat7:run&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then open http://localhost:8080/JQueryValidation/ in your browser and play around.. Go have fun&amp;#8230;.&lt;/p&gt;
 
 &lt;p&gt;You can download the source code to this at my github project (https://github.com/JohnathanMarkSmith/JQueryValidation)&lt;/p&gt;
-&lt;object height='315' width='420'&gt;&lt;param value='http://www.youtube.com/v/Ju_74SWv1TY?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' height='315' allowscriptaccess='always' src='http://www.youtube.com/v/Ju_74SWv1TY?version=3&amp;amp;hl=en_US' width='420' /&gt;&lt;/object&gt;
+&lt;object width='420' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/Ju_74SWv1TY?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/Ju_74SWv1TY?version=3&amp;amp;hl=en_US' width='420' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/JQuery/JavaScript/2013/05/24/how-to-use-jquery-validation-plugin-for-field-validatoin</link>
                 <guid>http://johnathanmarksmith.com/JQuery/JavaScript/2013/05/24/how-to-use-jquery-validation-plugin-for-field-validatoin</guid>
@@ -411,7 +449,7 @@ mvn tomcat7:run&lt;/code&gt;&lt;/pre&gt;
    &lt;span class='nb'&gt;cd &lt;/span&gt;gitolite-admin
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;That is everything you have gitolite all setup and ready to go.&lt;/p&gt;
-&lt;object height='315' width='420'&gt;&lt;param value='http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' height='315' allowscriptaccess='always' src='http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;amp;version=3' width='420' /&gt;&lt;/object&gt;
+&lt;object width='420' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;amp;version=3' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;amp;version=3' width='420' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Git/Gitolite/Linux/2013/05/23/how-to-install-gitolite-on-linux</link>
                 <guid>http://johnathanmarksmith.com/Git/Gitolite/Linux/2013/05/23/how-to-install-gitolite-on-linux</guid>
@@ -530,7 +568,7 @@ mvn packge
 java -jar HelloSpringJavaBasedJavaConfig.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING&amp;#8230;.&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' height='315' allowscriptaccess='always' src='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' width='560' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/2013/05/22/i-was-published-in-this-week-in-spring-on-how-to-use-springs-java-configuration-style</link>
                 <guid>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/2013/05/22/i-was-published-in-this-week-in-spring-on-how-to-use-springs-java-configuration-style</guid>
@@ -666,7 +704,7 @@ config --global user.email johndoe@example.com&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;That&amp;#8217;s it, your done!&lt;/p&gt;
 
 &lt;p&gt;Here is the video:&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' height='315' allowscriptaccess='always' src='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' width='560' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Linux/Git/Programming/2013/05/15/how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux</link>
                 <guid>http://johnathanmarksmith.com/Linux/Git/Programming/2013/05/15/how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux</guid>
@@ -727,7 +765,7 @@ config --global user.email johndoe@example.com&lt;/code&gt;&lt;/pre&gt;
 # e.g., git clone git://my-machine/ test-project&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;That was easy right?&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' height='315' allowscriptaccess='always' src='http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;amp;version=3' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;amp;version=3' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;amp;version=3' width='560' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;You can see the full list of &lt;a href='/git-interview-questions.html'&gt;Git Interview Questions Here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
@@ -810,7 +848,7 @@ Type &lt;span class='s1'&gt;&amp;#39;help;&amp;#39;&lt;/span&gt; or &lt;span cla
 MariaDB &lt;span class='o'&gt;[(&lt;/span&gt;none&lt;span class='o'&gt;)]&lt;/span&gt;&amp;gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;That was easy right?&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' height='315' allowscriptaccess='always' src='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' width='560' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Linux/MySQL/MariaDB/2013/05/13/replacing-mysql-with-mariadb-on-centos-6</link>
                 <guid>http://johnathanmarksmith.com/Linux/MySQL/MariaDB/2013/05/13/replacing-mysql-with-mariadb-on-centos-6</guid>
@@ -909,7 +947,7 @@ Is this correct yes/no? yes
 &lt;img alt='Installing Jboss on Linux with Johnathan Mark Smith' src='/images/jboss.jpg' /&gt;
 &lt;/div&gt;
 &lt;p&gt;Here is the video if you would like to watch it:&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' height='315' allowscriptaccess='always' src='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' width='560' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Linux/Java/JBoss/AS7/2013/05/13/basic-install-of-jboss-for-developers-on-linux</link>
                 <guid>http://johnathanmarksmith.com/Linux/Java/JBoss/AS7/2013/05/13/basic-install-of-jboss-for-developers-on-linux</guid>
@@ -1236,7 +1274,7 @@ mvn packge
 java -jar HelloSpringJavaBasedJavaConfig.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING&amp;#8230;.&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' height='315' allowscriptaccess='always' src='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' width='560' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/2013/04/25/how-to-use-spring-javaconfig-and-not-xml-files-for-configuation</link>
                 <guid>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/2013/04/25/how-to-use-spring-javaconfig-and-not-xml-files-for-configuation</guid>
@@ -1272,7 +1310,7 @@ java -jar HelloSpringJavaBasedJavaConfig.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;Now that&amp;#8217;s it. have fun with MySQL.&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' height='315' allowscriptaccess='always' src='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' width='560' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Linux/MySQL/2013/04/24/how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux</link>
                 <guid>http://johnathanmarksmith.com/Linux/MySQL/2013/04/24/how-to-install-mysql-on-fedora-centos-red-hat-and-scientific-linux</guid>
@@ -1428,7 +1466,7 @@ Default locale: en_US, platform encoding: UTF-8
 OS name: &lt;span class='s2'&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;, version: &lt;span class='s2'&gt;&amp;quot;2.6.32-358.2.1.el6.i686&amp;quot;&lt;/span&gt;, arch: &lt;span class='s2'&gt;&amp;quot;i386&amp;quot;&lt;/span&gt;, family: &lt;span class='s2'&gt;&amp;quot;unix&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now that&amp;#8217;s it. have fun with maven.&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' height='315' allowscriptaccess='always' src='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' width='560' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Linux/Java/Maven/Programming/Project%20Management/2013/04/18/how-to-install-maven-on-fedora-centos-red-hat-and-scientific-linux</link>
                 <guid>http://johnathanmarksmith.com/Linux/Java/Maven/Programming/Project%20Management/2013/04/18/how-to-install-maven-on-fedora-centos-red-hat-and-scientific-linux</guid>
@@ -1447,7 +1485,7 @@ OS name: &lt;span class='s2'&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;, version:
 &lt;p&gt;Thats all you have to do&amp;#8230; stop asking&amp;#8230; :)&lt;/p&gt;
 
 &lt;p&gt;Here is the video&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param value='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' height='315' allowscriptaccess='always' src='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' width='560' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' width='560' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://johnathanmarksmith.com/Linux/Java/2013/04/17/how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux</link>
                 <guid>http://johnathanmarksmith.com/Linux/Java/2013/04/17/how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux</guid>
@@ -1520,7 +1558,7 @@ In cron Job
 &lt;p&gt;Or find Johnathan Mark Smith on Twitter @JohnathanMSmith&lt;/p&gt;
 
 &lt;p&gt;The source code for this demo is at https://github.com/JohnathanMarkSmith/SpringWithDojo&lt;/p&gt;
-&lt;object height='315' width='420'&gt;&lt;param value='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' height='315' allowscriptaccess='always' src='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' width='420' /&gt;&lt;/object&gt;
+&lt;object width='420' height='315'&gt;&lt;param name='movie' value='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed type='application/x-shockwave-flash' allowfullscreen='true' allowscriptaccess='always' src='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' width='420' height='315' /&gt;&lt;/object&gt;
 &lt;p&gt;Who is Johnathan Mark Smith: I am the Chief Information Officer &amp;amp; Founder of StutteringTech and SINY-RealEstate and Our Consulting services has over 25 years experience, specializing in business technology in the areas of web application development and collaborative computing. We only use leading technologies such as Android, Springs, JSP’s, Servlets, XML, Java, Struts, PHP, LDAP and Web Application Servers. We have a very solid background with Java, OOP, Design-Patterns and Multi-Threading. We also have the able to interface with all levels of management.&lt;/p&gt;
 
 &lt;p&gt;Please checkout my website for more tips, tricks and information.. johnathanmsmith.com&lt;/p&gt;

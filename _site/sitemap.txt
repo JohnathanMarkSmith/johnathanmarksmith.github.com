@@ -19,6 +19,9 @@ http://johnathanmarksmith.com/SVN-repositories.html
 http://johnathanmarksmith.com/pages.html
 http://johnathanmarksmith.com/technology.html
 
+http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/31/java-interview-question-what-is-the-difference-between-set-and-list
+http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/30/java-interview-question-can-you-have-an-inner-class-inside-a-method-and-what-variables-can-you-access
+http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/29/java-interview-question-what-is-the-difference-between-string-and-string-buffer
 http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/28/java-interview-question-what-is-interface-and-its-use
 http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/Maven/JUnit/Log4J/Hibernate/HyperSQL/2013/05/27/how-to-use-springs-java-configuration-javaconfig-style-with-maven-junit-log4j-hibernate-and-hypersql-hsqldb
 http://johnathanmarksmith.com/JQuery/JavaScript/2013/05/24/how-to-use-jquery-validation-plugin-for-field-validatoin
