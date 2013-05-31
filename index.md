@@ -9,11 +9,10 @@ tagline: CONSULTING AND TECHNOLOGIES FOR BUILDING TOMORROW’S WORLD
 
 <script type="text/javascript">
 
-$(document).ready(function () {
- alert('hello');
+$(document).ready(function ()
+{
  $('#example1').bt();
- $('#mycomments').bt({
- });
+ alert('hey mom');
 });
 </script>
 
@@ -22,9 +21,6 @@ $(document).ready(function () {
 
 
 After over 25 years specializing in business technology I feel that I have the right to post some information on a blog. The following posts and information are just my views and only my views. If you don't like something that I posted please email me and I will address it.
-
-
-<div id="mycomments" title="This popup balloon is very configurable." class="target">blue blue blue</div>
 
 
 Here are some of my posts (check out the <a href="archive.html">archive page</a> for more posts):
