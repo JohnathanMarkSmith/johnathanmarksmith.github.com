@@ -4,22 +4,6 @@ title: Johnathan Mark Smith's Blog
 tagline: CONSULTING AND TECHNOLOGIES FOR BUILDING TOMORROW’S WORLD
 ---
 
-
-
-
-<script type="text/javascript">
-
-$(document).ready(function ()
-{
- $('#example1').bt();
- alert('hey mom');
-});
-</script>
-
-<div id="example1" class="target" title="The content of this tooltip is provided by the 'title' attribute of the target element.">hover </div>
-
-
-
 After over 25 years specializing in business technology I feel that I have the right to post some information on a blog. The following posts and information are just my views and only my views. If you don't like something that I posted please email me and I will address it.
 
 
