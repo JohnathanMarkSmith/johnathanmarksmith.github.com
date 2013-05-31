@@ -11,6 +11,8 @@ comments: false
 
 This is just a one JSP page example that demos some JQuery ToolTips and Validation stuff.  Yes I really did not have to use a JSP and tomcat7 but again this is only a one page example so why not... :)
 
+Before we get started with the coding of this example you can see a running <a href="/jquery-example.html" target="_blank">demo</a>.
+
 in my example I have some HTML code that looks like the following:
 
         <div>
@@ -184,7 +186,7 @@ Then open http://localhost:8080/JQueryToolTipValidation.git/ in your browser and
 You can download the source code to this at my github project (https://github.com/JohnathanMarkSmith/JQueryToolTipValidation)
 
 
-If you have any questions please email me at john@johnathanmarksmith.com
+If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
 
 
 {% include JB/setup %}

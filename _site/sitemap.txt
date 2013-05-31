@@ -20,7 +20,7 @@ http://johnathanmarksmith.com/pages.html
 http://johnathanmarksmith.com/technology.html
 
 http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/31/java-interview-question-what-is-the-difference-between-set-and-list
-http://johnathanmarksmith.com/JQuery/JavaScript/2013/05/31/how-to-use-jquery-beautytips-tooltips-and-validation-plugins-for-frield-validatoin
+http://johnathanmarksmith.com/JQuery/JavaScript/2013/05/31/how-to-use-jquery-beautytips-tooltips-and-validation-plugins-for-field-validation
 http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/30/java-interview-question-can-you-have-an-inner-class-inside-a-method-and-what-variables-can-you-access
 http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/29/java-interview-question-what-is-the-difference-between-string-and-string-buffer
 http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/28/java-interview-question-what-is-interface-and-its-use
