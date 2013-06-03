@@ -7,6 +7,8 @@ tags: [ Java, Java Interview Questions ]
 comments: false
 ---
 
+
+
 Transient: The transient modifier applies to variables only and it is not stored as part of its object’s Persistent state. Transient variables are not serialized.
 
 Volatile: Volatile modifier applies to variables only and it tells the compiler that the variable modified by volatile can be changed unexpectedly by other parts of the program.
