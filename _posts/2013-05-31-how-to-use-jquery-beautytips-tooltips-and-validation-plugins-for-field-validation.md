@@ -186,6 +186,10 @@ Then open http://localhost:8080/JQueryToolTipValidation.git/ in your browser and
 You can download the source code to this at my github project (https://github.com/JohnathanMarkSmith/JQueryToolTipValidation)
 
 
+<object width="420" height="315"><param name="movie" value="http://www.youtube.com/v/DdPHFplp4rI?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/DdPHFplp4rI?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="420" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
+
+
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
 
 

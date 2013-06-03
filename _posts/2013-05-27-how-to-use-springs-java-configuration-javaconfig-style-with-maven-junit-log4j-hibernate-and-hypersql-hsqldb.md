@@ -208,6 +208,9 @@ Thats it and you should see the following line on the console:
 This Project is using Java, Spring, Hibernate, Maven, jUnit, Log4J, HSQLDB and Github.
 
 
+<object width="420" height="315"><param name="movie" value="http://www.youtube.com/v/LC6mnUcnWEg?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/LC6mnUcnWEg?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="420" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
+
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
 
 
