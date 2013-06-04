@@ -12,6 +12,28 @@ I am posting this page so programmers/developers can bookmark it and use it.  I 
 
 # The Java Questions
 
+## What are Vector, Hashtable, LinkedList and Enumeration?
+
+### Vector
+
+The Vector class provides the capability to implement a growable array of objects.
+
+### Hashtabl
+
+The Hashtable class implements a Hashtable data structure. A Hashtable indexes and stores objects in a dictionary using hash codes as the object’s keys.
+Hash codes are integer values that identify objects.
+
+### LinkedList
+
+Removing or inserting elements in the middle of an array can be done using LinkedList. A LinkedList stores each object in a separate link whereas an array stores object references in consecutive locations.
+
+### Enumeration
+
+An object that implements the Enumeration interface generates a series of elements, one at a time. It has two methods, namely hasMoreElements() and nextElement().
+
+HasMoreElemnts() tests if this enumeration has more elements and nextElement method returns successive elements of the series.
+
+
 ## What are Transient and Volatile Modifiers?
 
 Transient: The transient modifier applies to variables only and it is not stored as part of its object’s Persistent state. Transient variables are not serialized.
