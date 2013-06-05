@@ -12,6 +12,13 @@ I am posting this page so programmers/developers can bookmark it and use it.  I 
 
 # The Java Questions
 
+##  What is an Object and how do you allocate memory to it?
+
+Object in Java is an instance of a class and it is a software unit that combines a structured set of data with a set of operations for inspecting and manipulating that data.
+
+When an object is created using new operator, memory is allocated to it.
+
+
 ## What are Vector, Hashtable, LinkedList and Enumeration?
 
 ### Vector
