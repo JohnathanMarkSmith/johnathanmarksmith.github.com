@@ -19,6 +19,8 @@ http://johnathanmarksmith.com/SVN-repositories.html
 http://johnathanmarksmith.com/pages.html
 http://johnathanmarksmith.com/technology.html
 
+http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/Spring%20MVC/Web/2013/06/06/how-to-use-springs-java-configuration-javaconfig-style-with-spring-mvc-web
+http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/06/05/java-interview-question-what-is-an-object-and-how-do-you-allocate-memory-to-it
 http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/06/04/java-interview-question-what-are-vector-hashtable-linkedlist-and-enumeration
 http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/06/03/java-interview-question-what-are-transient-and-volatile-modifiers
 http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/05/31/java-interview-question-what-is-the-difference-between-set-and-list

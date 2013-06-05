@@ -12,7 +12,7 @@ comments: false
 
 The Vector class provides the capability to implement a growable array of objects.
 
-### Hashtabl
+### Hashtable
 
 The Hashtable class implements a Hashtable data structure. A Hashtable indexes and stores objects in a dictionary using hash codes as the object’s keys.
 Hash codes are integer values that identify objects.
