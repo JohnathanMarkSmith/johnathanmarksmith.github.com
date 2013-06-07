@@ -124,6 +124,10 @@ Now open your web brower and goto http://127.0.0.1:8080/springmvc-helloworld/
 
 This its... Have run with it...
 
+Here is the video..
+
+<object width="420" height="315"><param name="movie" value="http://www.youtube.com/v/L7flu2DAi9E?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/L7flu2DAi9E?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="420" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
 
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
 
