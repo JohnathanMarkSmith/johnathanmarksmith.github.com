@@ -8,11 +8,15 @@ comments: false
 ---
 
 
-### Inner class: classes defined in other classes, including those defined in methods are called inner classes.
+### Inner class:
+
+classes defined in other classes, including those defined in methods are called inner classes.
 
 An inner class can have any accessibility including private.
 
-### Anonymous class: Anonymous class is a class defined inside a method without a name and is instantiated and declared in the same place and cannot have explicit constructors.
+### Anonymous class:
+
+Anonymous class is a class defined inside a method without a name and is instantiated and declared in the same place and cannot have explicit constructors.
 
 
 You can see the full list of <a href="/java-interview-questions.html">Java Interview Questions Here</a>

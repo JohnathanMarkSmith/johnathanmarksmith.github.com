@@ -14,7 +14,9 @@ I am posting this page so programmers/developers can bookmark it and use it.  I 
 
 ## What are inner class and anonymous class?
 
-### Inner class: classes defined in other classes, including those defined in methods are called inner classes.
+### Inner class:
+
+classes defined in other classes, including those defined in methods are called inner classes.
 
 An inner class can have any accessibility including private.
 
