@@ -12,6 +12,17 @@ I am posting this page so programmers/developers can bookmark it and use it.  I 
 
 # The Java Questions
 
+## What are inner class and anonymous class?
+
+### Inner class: classes defined in other classes, including those defined in methods are called inner classes.
+
+An inner class can have any accessibility including private.
+
+### Anonymous class:
+
+Anonymous class is a class defined inside a method without a name and is instantiated and declared in the same place and cannot have explicit constructors.
+
+
 ##  What is an Object and how do you allocate memory to it?
 
 Object in Java is an instance of a class and it is a software unit that combines a structured set of data with a set of operations for inspecting and manipulating that data.
