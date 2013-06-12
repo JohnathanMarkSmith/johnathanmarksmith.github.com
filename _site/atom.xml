@@ -4,13 +4,227 @@
  <title>Johnathan Mark Smith</title>
  <link href="http://johnathanmarksmith.com/" rel="self"/>
  <link href="http://johnathanmarksmith.com"/>
- <updated>2013-06-05T12:40:55-04:00</updated>
+ <updated>2013-06-12T08:54:40-04:00</updated>
  <id>http://johnathanmarksmith.com</id>
  <author>
    <name>Johnathan Mark Smith</name>
    <email>johnathansmith1969@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>How To Make a Web Service with Spring MVC and Test with Spring Test Framework</title>
+   <link href="http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/Spring%20MVC/Web/REST/Spring%20Test%20Framework/2013/06/12/how-to-make-a-web-service-with-spring-mvc-and-test-with-spring-test-framework"/>
+   <updated>2013-06-12T00:00:00-04:00</updated>
+   <id>http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/Spring%20MVC/Web/REST/Spring%20Test%20Framework/2013/06/12/how-to-make-a-web-service-with-spring-mvc-and-test-with-spring-test-framework</id>
+   <content type="html">&lt;h3 id='springmvcresttest'&gt;SpringMVC-rest-test&lt;/h3&gt;
+
+&lt;p&gt;This is a very basic example of using Spring MVC, REST and Spring Test Framework using Spring&amp;#8217;s Java configuration.&lt;/p&gt;
+
+&lt;p&gt;The first part of this is to create a configuration class for the web app. below is a sample of the configuration class we are going to use:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@Configuration
+@EnableWebMvc
+@ComponentScan(basePackages = {&amp;quot;com.johnathanmsmith.mvc.web&amp;quot;})
+public class WebMVCConfig extends WebMvcConfigurerAdapter
+{
+
+    private static final Logger logger = LoggerFactory.getLogger(WebMVCConfig.class);
+
+    @Bean
+    public ViewResolver resolver()
+    {
+        UrlBasedViewResolver url = new UrlBasedViewResolver();
+        url.setPrefix(&amp;quot;/views/&amp;quot;);
+        url.setViewClass(JstlView.class);
+        url.setSuffix(&amp;quot;.jsp&amp;quot;);
+        return url;
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry)
+    {
+        logger.debug(&amp;quot;setting up resource handlers&amp;quot;);
+        registry.addResourceHandler(&amp;quot;/resources/&amp;quot;).addResourceLocations(&amp;quot;/resources/**&amp;quot;);
+    }
+
+    @Override
+    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer)
+    {
+        logger.debug(&amp;quot;configureDefaultServletHandling&amp;quot;);
+        configurer.enable();
+    }
+
+    @Bean
+    public SimpleMappingExceptionResolver simpleMappingExceptionResolver()
+    {
+        SimpleMappingExceptionResolver b = new SimpleMappingExceptionResolver();
+
+        Properties mappings = new Properties();
+        mappings.put(&amp;quot;org.springframework.web.servlet.PageNotFound&amp;quot;, &amp;quot;p404&amp;quot;);
+        mappings.put(&amp;quot;org.springframework.dao.DataAccessException&amp;quot;, &amp;quot;dataAccessFailure&amp;quot;);
+        mappings.put(&amp;quot;org.springframework.transaction.TransactionException&amp;quot;, &amp;quot;dataAccessFailure&amp;quot;);
+        b.setExceptionMappings(mappings);
+        return b;
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next you have to setup the web.xml file to use the above configuration class, we do this but setting the contectConfigLocation to the package of the configuration class. see below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;web-app xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+         xmlns=&amp;quot;http://java.sun.com/xml/ns/javaee&amp;quot;
+         xsi:schemaLocation=&amp;quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&amp;quot;
+         version=&amp;quot;2.5&amp;quot;&amp;gt;
+
+    &amp;lt;servlet&amp;gt;
+        &amp;lt;servlet-name&amp;gt;Spring MVC Dispatcher Servlet&amp;lt;/servlet-name&amp;gt;
+        &amp;lt;servlet-class&amp;gt;org.springframework.web.servlet.DispatcherServlet&amp;lt;/servlet-class&amp;gt;
+        &amp;lt;init-param&amp;gt;
+            &amp;lt;param-name&amp;gt;contextClass&amp;lt;/param-name&amp;gt;
+            &amp;lt;param-value&amp;gt;org.springframework.web.context.support.AnnotationConfigWebApplicationContext&amp;lt;/param-value&amp;gt;
+        &amp;lt;/init-param&amp;gt;
+        &amp;lt;init-param&amp;gt;
+            &amp;lt;param-name&amp;gt;contextConfigLocation&amp;lt;/param-name&amp;gt;
+            &amp;lt;param-value&amp;gt;com.johnathanmsmith.mvc.web.config, com.johnathanmsmith.mvc.web.controller&amp;lt;/param-value&amp;gt;
+        &amp;lt;/init-param&amp;gt;
+        &amp;lt;load-on-startup&amp;gt;1&amp;lt;/load-on-startup&amp;gt;
+    &amp;lt;/servlet&amp;gt;
+
+    &amp;lt;servlet-mapping&amp;gt;
+        &amp;lt;servlet-name&amp;gt;Spring MVC Dispatcher Servlet&amp;lt;/servlet-name&amp;gt;
+        &amp;lt;url-pattern&amp;gt;/&amp;lt;/url-pattern&amp;gt;
+    &amp;lt;/servlet-mapping&amp;gt;
+&amp;lt;/web-app&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now lets setup a basic controller to display a page:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@Controller
+@RequestMapping(&amp;quot;/json&amp;quot;)
+class JSonController
+{
+
+    private static final Logger logger = LoggerFactory.getLogger(JSonController.class);
+
+
+    @RequestMapping(value = &amp;quot;/{name}&amp;quot;, method = RequestMethod.GET)
+    @ResponseBody
+    public User getName(@PathVariable String name, ModelMap model) throws ResourceNotFoundException
+    {
+
+        logger.debug(&amp;quot;I am in the controller and got user name: &amp;quot; + name);
+
+        /*
+
+            Simulate a successful lookup for 2 users, this is where your real lookup code would go
+
+         */
+
+        if (&amp;quot;JohnathanMarkSmith&amp;quot;.equals(name))
+        {
+            return new User(&amp;quot;Johnathan Mark Smith&amp;quot;, name);
+        }
+
+        if (&amp;quot;Regan&amp;quot;.equals(name))
+        {
+            return new User(&amp;quot;Regan Smith&amp;quot;, name);
+        }
+
+        throw new ResourceNotFoundException(&amp;quot;User Is Not Found&amp;quot;);
+    }
+
+    @RequestMapping(value = &amp;quot;/&amp;quot;, method = RequestMethod.GET)
+    @ResponseBody
+    public User getDisplayDefault(ModelMap model)
+    {
+        /*
+            you did not enter a name so the default is going to run
+         */
+
+        return new User(&amp;quot;Johnathan Mark Smith&amp;quot;, &amp;quot;JohnathanMarkSmith&amp;quot;);
+    }
+
+    @ExceptionHandler
+    public
+    @ResponseBody
+    ResponseEntity&amp;lt;ErrorHolder&amp;gt; handle(ResourceNotFoundException e)
+    {
+        logger.warn(&amp;quot;The resource was not found&amp;quot;, e);
+        return new ResponseEntity&amp;lt;ErrorHolder&amp;gt;(new ErrorHolder(&amp;quot;The resource was not found&amp;quot;), HttpStatus.NOT_FOUND);
+    }
+
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id='testing_your_web_service'&gt;Testing Your Web Service&lt;/h2&gt;
+
+&lt;p&gt;Below you will see the Spring Test Framework and how to tell your web server with it&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = {WebMVCConfiguration.class})
+@WebAppConfiguration
+public class TestHelloWorldWeb
+{
+    @Autowired
+    private WebApplicationContext wac;
+
+    private MockMvc mockMvc;
+
+    @Before
+    public void setup()
+    {
+        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
+    }
+
+    @Test
+    public void getFoo() throws Exception
+    {
+        /*
+            This following code will do &amp;#39;GET&amp;#39; to the web apps
+            and also that it has a attribute &amp;quot;user&amp;quot; to &amp;quot;JohnathanMarkSmith&amp;quot;
+
+         */
+        this.mockMvc.perform(get(&amp;quot;/json/JohnathanMarkSmith&amp;quot;)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath(&amp;quot;$.user&amp;quot;).value(&amp;quot;Johnathan Mark Smith&amp;quot;));
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thats all it takes..&lt;/p&gt;
+
+&lt;h2 id='getting_the_project_and_running_it'&gt;Getting The Project and Running It&lt;/h2&gt;
+
+&lt;p&gt;To get this project and run it you will need to follow the following steps:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone  git@github.com:JohnathanMarkSmith/springmvc-rest-test.git
+cd springmvc-rest-test/
+mvn tomcat7:run&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now open your web brower and goto http://127.0.0.1:8080/springmvc-rest-test/&lt;/p&gt;
+
+&lt;p&gt;This its&amp;#8230; Have run with it&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Java Interview Question: What are inner class and anonymous class?</title>
+   <link href="http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/06/11/java-interview-question-what-are-inner-class-and-anonymous-class"/>
+   <updated>2013-06-11T00:00:00-04:00</updated>
+   <id>http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/06/11/java-interview-question-what-are-inner-class-and-anonymous-class</id>
+   <content type="html">&lt;h3 id='inner_class'&gt;Inner class:&lt;/h3&gt;
+
+&lt;p&gt;classes defined in other classes, including those defined in methods are called inner classes.&lt;/p&gt;
+
+&lt;p&gt;An inner class can have any accessibility including private.&lt;/p&gt;
+
+&lt;h3 id='anonymous_class'&gt;Anonymous class:&lt;/h3&gt;
+
+&lt;p&gt;Anonymous class is a class defined inside a method without a name and is instantiated and declared in the same place and cannot have explicit constructors.&lt;/p&gt;
+
+&lt;p&gt;You can see the full list of &lt;a href='/java-interview-questions.html'&gt;Java Interview Questions Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>How To Use Spring's Java Configuration (JavaConfig) style with Spring MVC Web</title>
@@ -23,7 +237,7 @@
 
 &lt;p&gt;The first part of this is to create a configuration class for the web app. below is a sample of the configuration class we are going to use:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Configuration
+&lt;pre&gt;&lt;code&gt;@Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = {&amp;quot;com.johnathanmsmith.mvc.web&amp;quot;})
 public class WebMVCConfig extends WebMvcConfigurerAdapter
@@ -35,7 +249,7 @@ public class WebMVCConfig extends WebMvcConfigurerAdapter
     public ViewResolver resolver()
     {
         UrlBasedViewResolver url = new UrlBasedViewResolver();
-        url.setPrefix(&amp;quot;views/&amp;quot;);
+        url.setPrefix(&amp;quot;/views/&amp;quot;);
         url.setViewClass(JstlView.class);
         url.setSuffix(&amp;quot;.jsp&amp;quot;);
         return url;
@@ -133,6 +347,8 @@ mvn tomcat7:run&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This its&amp;#8230; Have run with it&amp;#8230;&lt;/p&gt;
 
+&lt;p&gt;Here is the video..&lt;/p&gt;
+&lt;object width='420' height='315'&gt;&lt;param value='http://www.youtube.com/v/L7flu2DAi9E?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='420' allowfullscreen='true' src='http://www.youtube.com/v/L7flu2DAi9E?version=3&amp;amp;hl=en_US' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -159,7 +375,7 @@ mvn tomcat7:run&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The Vector class provides the capability to implement a growable array of objects.&lt;/p&gt;
 
-&lt;h3 id='hashtabl'&gt;Hashtabl&lt;/h3&gt;
+&lt;h3 id='hashtable'&gt;Hashtable&lt;/h3&gt;
 
 &lt;p&gt;The Hashtable class implements a Hashtable data structure. A Hashtable indexes and stores objects in a dictionary using hash codes as the object’s keys. Hash codes are integer values that identify objects.&lt;/p&gt;
 
@@ -383,7 +599,7 @@ mvn tomcat7:run&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then open http://localhost:8080/JQueryToolTipValidation.git/ in your browser and play around.. Go have fun&amp;#8230;.&lt;/p&gt;
 
 &lt;p&gt;You can download the source code to this at my github project (https://github.com/JohnathanMarkSmith/JQueryToolTipValidation)&lt;/p&gt;
-&lt;object height='315' width='420'&gt;&lt;param name='movie' value='http://www.youtube.com/v/DdPHFplp4rI?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/DdPHFplp4rI?version=3&amp;amp;hl=en_US' allowscriptaccess='always' height='315' type='application/x-shockwave-flash' width='420' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='420' height='315'&gt;&lt;param value='http://www.youtube.com/v/DdPHFplp4rI?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='420' allowfullscreen='true' src='http://www.youtube.com/v/DdPHFplp4rI?version=3&amp;amp;hl=en_US' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -637,7 +853,7 @@ java -jar NoMySQL.jar&lt;/code&gt;&lt;/pre&gt;
 2013-05-24 08:28:23,401 [main] DEBUG com.johnathanmarksmith.noMySQL.Main - This is the end!!!!&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This Project is using Java, Spring, Hibernate, Maven, jUnit, Log4J, HSQLDB and Github.&lt;/p&gt;
-&lt;object height='315' width='420'&gt;&lt;param name='movie' value='http://www.youtube.com/v/LC6mnUcnWEg?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/LC6mnUcnWEg?version=3&amp;amp;hl=en_US' allowscriptaccess='always' height='315' type='application/x-shockwave-flash' width='420' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='420' height='315'&gt;&lt;param value='http://www.youtube.com/v/LC6mnUcnWEg?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='420' allowfullscreen='true' src='http://www.youtube.com/v/LC6mnUcnWEg?version=3&amp;amp;hl=en_US' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -757,7 +973,7 @@ mvn tomcat7:run&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then open http://localhost:8080/JQueryValidation/ in your browser and play around.. Go have fun&amp;#8230;.&lt;/p&gt;
 
 &lt;p&gt;You can download the source code to this at my github project (https://github.com/JohnathanMarkSmith/JQueryValidation)&lt;/p&gt;
-&lt;object height='315' width='420'&gt;&lt;param name='movie' value='http://www.youtube.com/v/Ju_74SWv1TY?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/Ju_74SWv1TY?version=3&amp;amp;hl=en_US' allowscriptaccess='always' height='315' type='application/x-shockwave-flash' width='420' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='420' height='315'&gt;&lt;param value='http://www.youtube.com/v/Ju_74SWv1TY?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='420' allowfullscreen='true' src='http://www.youtube.com/v/Ju_74SWv1TY?version=3&amp;amp;hl=en_US' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -817,7 +1033,7 @@ mvn tomcat7:run&lt;/code&gt;&lt;/pre&gt;
    &lt;span class='nb'&gt;cd &lt;/span&gt;gitolite-admin
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;That is everything you have gitolite all setup and ready to go.&lt;/p&gt;
-&lt;object height='315' width='420'&gt;&lt;param name='movie' value='http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;amp;version=3' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;amp;version=3' allowscriptaccess='always' height='315' type='application/x-shockwave-flash' width='420' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='420' height='315'&gt;&lt;param value='http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='420' allowfullscreen='true' src='http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;amp;version=3' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -936,7 +1152,7 @@ mvn packge
 java -jar HelloSpringJavaBasedJavaConfig.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING&amp;#8230;.&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param name='movie' value='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' allowscriptaccess='always' height='315' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' allowfullscreen='true' src='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -1072,7 +1288,7 @@ config --global user.email johndoe@example.com&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;That&amp;#8217;s it, your done!&lt;/p&gt;
 
 &lt;p&gt;Here is the video:&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param name='movie' value='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' allowscriptaccess='always' height='315' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' allowfullscreen='true' src='http://www.youtube.com/v/oxI5vzil840?version=3&amp;amp;hl=en_US' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -1133,7 +1349,7 @@ config --global user.email johndoe@example.com&lt;/code&gt;&lt;/pre&gt;
 # e.g., git clone git://my-machine/ test-project&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;That was easy right?&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param name='movie' value='http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;amp;version=3' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;amp;version=3' allowscriptaccess='always' height='315' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' allowfullscreen='true' src='http://www.youtube.com/v/fCWVg6cmXyY?hl=en_US&amp;amp;version=3' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' /&gt;&lt;/object&gt;
 &lt;p&gt;You can see the full list of &lt;a href='/git-interview-questions.html'&gt;Git Interview Questions Here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
@@ -1216,7 +1432,7 @@ Type &lt;span class='s1'&gt;&amp;#39;help;&amp;#39;&lt;/span&gt; or &lt;span cla
 MariaDB &lt;span class='o'&gt;[(&lt;/span&gt;none&lt;span class='o'&gt;)]&lt;/span&gt;&amp;gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;That was easy right?&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param name='movie' value='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' allowscriptaccess='always' height='315' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' allowfullscreen='true' src='http://www.youtube.com/v/EZe140Gj1qA?version=3&amp;amp;hl=en_US' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -1315,7 +1531,7 @@ Is this correct yes/no? yes
 &lt;img src='/images/jboss.jpg' alt='Installing Jboss on Linux with Johnathan Mark Smith' /&gt;
 &lt;/div&gt;
 &lt;p&gt;Here is the video if you would like to watch it:&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param name='movie' value='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' allowscriptaccess='always' height='315' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' allowfullscreen='true' src='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;amp;hl=en_US' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -1642,7 +1858,7 @@ mvn packge
 java -jar HelloSpringJavaBasedJavaConfig.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING&amp;#8230;.&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param name='movie' value='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' allowscriptaccess='always' height='315' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' allowfullscreen='true' src='http://www.youtube.com/v/cfTY4LpZtf4?version=3&amp;amp;hl=en_US' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -1678,7 +1894,7 @@ java -jar HelloSpringJavaBasedJavaConfig.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;Now that&amp;#8217;s it. have fun with MySQL.&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param name='movie' value='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' allowscriptaccess='always' height='315' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' allowfullscreen='true' src='http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;amp;hl=en_US' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -1834,7 +2050,7 @@ Default locale: en_US, platform encoding: UTF-8
 OS name: &lt;span class='s2'&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;, version: &lt;span class='s2'&gt;&amp;quot;2.6.32-358.2.1.el6.i686&amp;quot;&lt;/span&gt;, arch: &lt;span class='s2'&gt;&amp;quot;i386&amp;quot;&lt;/span&gt;, family: &lt;span class='s2'&gt;&amp;quot;unix&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now that&amp;#8217;s it. have fun with maven.&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param name='movie' value='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' allowscriptaccess='always' height='315' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' allowfullscreen='true' src='http://www.youtube.com/v/Rs1Y5-vqCx0?hl=en_US&amp;amp;version=3' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -1853,7 +2069,7 @@ OS name: &lt;span class='s2'&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;, version:
 &lt;p&gt;Thats all you have to do&amp;#8230; stop asking&amp;#8230; :)&lt;/p&gt;
 
 &lt;p&gt;Here is the video&lt;/p&gt;
-&lt;object height='315' width='560'&gt;&lt;param name='movie' value='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' allowscriptaccess='always' height='315' type='application/x-shockwave-flash' width='560' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='560' height='315'&gt;&lt;param value='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='560' allowfullscreen='true' src='http://www.youtube.com/v/bZ7McZJZQ0o?hl=en_US&amp;amp;version=3' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' /&gt;&lt;/object&gt;
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href='mailto:john@johnathanmarksmith.com'&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
@@ -1926,7 +2142,7 @@ In cron Job
 &lt;p&gt;Or find Johnathan Mark Smith on Twitter @JohnathanMSmith&lt;/p&gt;
 
 &lt;p&gt;The source code for this demo is at https://github.com/JohnathanMarkSmith/SpringWithDojo&lt;/p&gt;
-&lt;object height='315' width='420'&gt;&lt;param name='movie' value='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' allowscriptaccess='always' height='315' type='application/x-shockwave-flash' width='420' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;object width='420' height='315'&gt;&lt;param value='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed width='420' allowfullscreen='true' src='http://www.youtube.com/v/UBPBJgwOzOw?hl=en_US&amp;amp;version=3' height='315' type='application/x-shockwave-flash' allowscriptaccess='always' /&gt;&lt;/object&gt;
 &lt;p&gt;Who is Johnathan Mark Smith: I am the Chief Information Officer &amp;amp; Founder of StutteringTech and SINY-RealEstate and Our Consulting services has over 25 years experience, specializing in business technology in the areas of web application development and collaborative computing. We only use leading technologies such as Android, Springs, JSP’s, Servlets, XML, Java, Struts, PHP, LDAP and Web Application Servers. We have a very solid background with Java, OOP, Design-Patterns and Multi-Threading. We also have the able to interface with all levels of management.&lt;/p&gt;
 
 &lt;p&gt;Please checkout my website for more tips, tricks and information.. johnathanmsmith.com&lt;/p&gt;
