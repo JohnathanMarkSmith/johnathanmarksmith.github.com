@@ -135,9 +135,8 @@ Now lets setup a basic controller to display a page:
         }
 
         @ExceptionHandler
-        public
         @ResponseBody
-        ResponseEntity<ErrorHolder> handle(ResourceNotFoundException e)
+        public ResponseEntity<ErrorHolder> handle(ResourceNotFoundException e)
         {
             logger.warn("The resource was not found", e);
             return new ResponseEntity<ErrorHolder>(new ErrorHolder("The resource was not found"), HttpStatus.NOT_FOUND);
