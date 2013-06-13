@@ -12,6 +12,14 @@ I am posting this page so programmers/developers can bookmark it and use it.  I 
 
 # The Java Questions
 
+## What are the types of the transaction management Spring supports?
+
+Spring Framework supports:
+
+* Programmatic transaction management.
+* Declarative transaction management.
+
+
 ## What are inner class and anonymous class?
 
 ### Inner class:
