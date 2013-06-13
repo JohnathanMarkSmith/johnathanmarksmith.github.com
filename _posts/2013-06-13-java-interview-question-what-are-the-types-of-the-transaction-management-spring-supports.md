@@ -4,6 +4,7 @@ title: "Java Interview Question: What are the types of the transaction managemen
 description: "Java Interview Question: What are the types of the transaction management Spring supports?"
 categories: [ Java, Java Interview Questions, Spring Interview Questions ]
 tags: [ Java, Java Interview Questions, Spring Interview Questions ]
+comments: false
 ---
 
 Spring Framework supports:
