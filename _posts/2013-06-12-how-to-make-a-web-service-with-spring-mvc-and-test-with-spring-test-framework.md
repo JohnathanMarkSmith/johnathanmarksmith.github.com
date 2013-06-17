@@ -189,6 +189,8 @@ Now open your web brower and goto http://127.0.0.1:8080/springmvc-rest-test/
 
 This its... Have run with it...
 
+<object width="640" height="480"><param name="movie" value="http://www.youtube.com/v/fcMI6HsBPvk?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/fcMI6HsBPvk?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="640" height="480" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
 
 
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
