@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "How To Use Spring RESTTeample To Post Data to a Web Service"
-description: "How To Use Spring RESTTeample To Post Data to a Web Service"
+title: "How To Use Spring RESTTemplate To Post Data to a Web Service"
+description: "How To Use Spring RESTTemplate To Post Data to a Web Service"
 categories: [ Spring, Java, JavaConfig, Programming, Spring Java Configuration, Spring MVC, Web, REST, RESTTemplate ]
 tags: [ Spring, Java, JavaConfig, Programming, Spring Java Configuration, Spring MVC, Web, REST, RESTTemplate ]
 comments: false
