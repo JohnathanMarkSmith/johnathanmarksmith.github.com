@@ -116,6 +116,10 @@ IBM HTTP Server, Netscape and Apache
 
 <h2>PUBLICATIONS</h2>
 
+<h3>SpringSource – This Week in Spring<br>June 2013</h3>
+
+- Author of the article that was published on how to use Spring MVC and Spring MVC Test.
+
 <h3>SpringSource – This Week in Spring<br>May 2013</h3>
 
 - Author of the article that was published on how to use Spring's Java Configuration Style.
