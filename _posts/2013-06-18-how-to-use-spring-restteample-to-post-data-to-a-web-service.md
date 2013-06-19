@@ -39,6 +39,49 @@ Let's take a quick look at the Spring MVC Web Service code on the server:
 
 As you can see from the code above the web service is goign to what for a ID and user object to be passed in and then its going to create a new User Object and send it back to the client.
 
+Lets take a quick look inside the User Object
+
+    public class User
+    {
+        private String user;
+        private String name;
+
+
+        public User()
+        {
+        }
+
+        public User(String user, String name)
+        {
+            this.user = user;
+            this.name = name;
+        }
+
+        public String getUser()
+        {
+            return user;
+        }
+
+        public void setUser(String user)
+        {
+            this.user = user;
+        }
+
+        public String getName()
+        {
+            return name;
+        }
+
+        public void setName(String name)
+        {
+            this.name = name;
+        }
+    }
+
+So you can see from the above code that the user object has to fields user and name.
+
+
+
 ### Time For The Client Code
 
 You can see from the client code below is that we are using Spring RESTTemaple and going to post an User Object to a web server and get one back.

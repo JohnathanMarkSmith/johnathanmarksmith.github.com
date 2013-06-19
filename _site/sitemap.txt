@@ -3,6 +3,7 @@ http://johnathanmarksmith.com/social-networking.html
 http://johnathanmarksmith.com/categories.html
 http://johnathanmarksmith.com/archive.html
 http://johnathanmarksmith.com/java-interview-questions.html
+http://johnathanmarksmith.com/publications.html
 http://johnathanmarksmith.com/git-interview-questions.html
 http://johnathanmarksmith.com/about.html
 http://johnathanmarksmith.com/alternative-marketing.html
@@ -10,6 +11,7 @@ http://johnathanmarksmith.com/resume.html
 http://johnathanmarksmith.com/rss.xml
 http://johnathanmarksmith.com/GIT-reposutiries.html
 http://johnathanmarksmith.com/custom-design-and-development.html
+http://johnathanmarksmith.com/java-interview.html
 http://johnathanmarksmith.com/social-media.html
 http://johnathanmarksmith.com/index.html
 http://johnathanmarksmith.com/atom.xml
