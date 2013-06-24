@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      
+        How To Use Spring's Java Configuration (JavaConfig) style with Spring MVC Web - 
+      
+      Johnathan Mark Smith
+    </title>
+    <meta name="description" content="How To Use Spring's Java Configuration (JavaConfig) style with Spring MVC Web">
+    <meta name="author" content="Johnathan Mark Smith">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+      <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="/assets/themes/hooligan/css-social-buttons/css/zocial.stripped.css">
+    <link href="/assets/themes/hooligan/css/pygments.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/hooligan/css/darkstrap.css" rel="stylesheet" type="text/css" media="all">    
+    <link href="/assets/themes/hooligan/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>      
+
+
+          <a class="brand" href="/">Johnathan Mark Smith</a>
+
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              
+              
+              
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/resume.html">Resume</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+
+
+
+            </ul>
+            <ul class="nav pull-right social visible-desktop">
+              <li class="divider-vertical"></li>
+              
+                <li>
+                  <a href="https://github.com/JohnathanMarkSmith" class="zocial github icon" target="_blank">
+                    <span class="hidden-desktop">Github</span>
+                  </a>
+                </li>
+              
+                  
+              
+                <li>
+                  <a href="https://twitter.com/JohnathanMSmith" class="zocial twitter icon" target="_blank">
+                  <span class="hidden-desktop">Twitter</span>
+                  </a>
+                </li>
+                                        
+                         
+              
+                <li>
+                  <a href="http://www.linkedin.com/in/johnathansmith1969" class="zocial linkedin icon" target="_blank">
+                    <span class="hidden-desktop">LinkedIn</span>
+                  </a>
+                </li>
+                                  
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        
+<div class="page-header">
+  <h1>
+    How To Use Spring's Java Configuration (JavaConfig) style with Spring MVC Web 
+    
+  </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <h3 id='springmvchelloworld'>SpringMVC-helloworld</h3>
+
+<p>This is a very basic example of using Spring MVC with JavaConfig to make a helloworld web apps.</p>
+
+<p>The first part of this is to create a configuration class for the web app. below is a sample of the configuration class we are going to use:</p>
+
+<pre><code>@Configuration
+@EnableWebMvc
+@ComponentScan(basePackages = {&quot;com.johnathanmsmith.mvc.web&quot;})
+public class WebMVCConfig extends WebMvcConfigurerAdapter
+{
+
+    private static final Logger logger = LoggerFactory.getLogger(WebMVCConfig.class);
+
+    @Bean
+    public ViewResolver resolver()
+    {
+        UrlBasedViewResolver url = new UrlBasedViewResolver();
+        url.setPrefix(&quot;/views/&quot;);
+        url.setViewClass(JstlView.class);
+        url.setSuffix(&quot;.jsp&quot;);
+        return url;
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry)
+    {
+        logger.debug(&quot;setting up resource handlers&quot;);
+        registry.addResourceHandler(&quot;/resources/&quot;).addResourceLocations(&quot;/resources/**&quot;);
+    }
+
+    @Override
+    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer)
+    {
+        logger.debug(&quot;configureDefaultServletHandling&quot;);
+        configurer.enable();
+    }
+
+    @Bean
+    public SimpleMappingExceptionResolver simpleMappingExceptionResolver()
+    {
+        SimpleMappingExceptionResolver b = new SimpleMappingExceptionResolver();
+
+        Properties mappings = new Properties();
+        mappings.put(&quot;org.springframework.web.servlet.PageNotFound&quot;, &quot;p404&quot;);
+        mappings.put(&quot;org.springframework.dao.DataAccessException&quot;, &quot;dataAccessFailure&quot;);
+        mappings.put(&quot;org.springframework.transaction.TransactionException&quot;, &quot;dataAccessFailure&quot;);
+        b.setExceptionMappings(mappings);
+        return b;
+    }
+}</code></pre>
+
+<p>Next you have to setup the web.xml file to use the above configuration class, we do this but setting the contectConfigLocation to the package of the configuration class. see below:</p>
+
+<pre><code>&lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot;
+         xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;
+         version=&quot;2.5&quot;&gt;
+
+    &lt;servlet&gt;
+        &lt;servlet-name&gt;Spring MVC Dispatcher Servlet&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+        &lt;init-param&gt;
+            &lt;param-name&gt;contextClass&lt;/param-name&gt;
+            &lt;param-value&gt;org.springframework.web.context.support.AnnotationConfigWebApplicationContext&lt;/param-value&gt;
+        &lt;/init-param&gt;
+        &lt;init-param&gt;
+            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+            &lt;param-value&gt;com.johnathanmsmith.mvc.web.config, com.johnathanmsmith.mvc.web.controller&lt;/param-value&gt;
+        &lt;/init-param&gt;
+        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+    &lt;/servlet&gt;
+
+    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;Spring MVC Dispatcher Servlet&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+&lt;/web-app&gt;</code></pre>
+
+<p>Now lets setup a basic controller to display a page:</p>
+
+<pre><code>@Controller
+@RequestMapping(&quot;/ask&quot;)
+class IndexController
+{
+
+    private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
+
+    @RequestMapping(method = RequestMethod.GET)
+    public String displayRequestPage()
+    {
+        /*
+           I am going to display the helloworld.jsp page now :)
+         */
+        logger.debug(&quot;made it to controller&quot;);
+        return &quot;helloworld&quot;;
+
+    }
+
+
+}</code></pre>
+
+<p>Thats all it takes..</p>
+
+<h2 id='getting_the_project_and_running_it'>Getting The Project and Running It</h2>
+
+<p>To get this project and run it you will need to follow the following steps:</p>
+
+<pre><code>git clone  git@github.com:JohnathanMarkSmith/springmvc-helloworld.git
+cd springmvc-helloworld/
+mvn tomcat7:run</code></pre>
+
+<p>Now open your web brower and goto http://127.0.0.1:8080/springmvc-helloworld/</p>
+
+<p>This its&#8230; Have run with it&#8230;</p>
+
+<p>Here is the video..</p>
+<object width='420' height='315'><param name='movie' value='http://www.youtube.com/v/L7flu2DAi9E?version=3&amp;hl=en_US' /><param name='allowFullScreen' value='true' /><param name='allowscriptaccess' value='always' /><embed width='420' type='application/x-shockwave-flash' height='315' allowfullscreen='true' src='http://www.youtube.com/v/L7flu2DAi9E?version=3&amp;hl=en_US' allowscriptaccess='always' /></object>
+<p>If you have any questions or comments please email me at <a href='mailto:john@johnathanmarksmith.com'>john@johnathanmarksmith.com</a></p>
+    <hr>
+    <div class="pagination btn-group">
+      
+        <a class="btn prev" href="/Java/Java%20Interview%20Questions/2013/06/05/java-interview-question-what-is-an-object-and-how-do-you-allocate-memory-to-it" title="Java Interview Question: What is an Object and how do you allocate memory to it?">&larr; Previous</a>
+      
+        <a class="btn" href="/archive.html">Archive</a>
+      
+        <a class="btn next" href="/Java/Java%20Interview%20Questions/2013/06/11/java-interview-question-what-are-inner-class-and-anonymous-class" title="Java Interview Question: What are inner class and anonymous class?">Next &rarr;</a>
+      
+    </div>
+    <hr>
+    
+  </div>
+  
+  <div class="span4">
+    <section>
+      <h4>Published</h4>
+      <div class="date"><span>06 June 2013</span></div>
+    </section>
+         
+    
+      <section>
+        <h4>Tags</h4>
+        <ul class="tag_box">
+          
+          
+
+
+  
+     
+    	<li><a href="/tags.html#Spring-ref">Spring <span>11</span></a></li>
+     
+    	<li><a href="/tags.html#Java-ref">Java <span>30</span></a></li>
+     
+    	<li><a href="/tags.html#JavaConfig-ref">JavaConfig <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#Programming-ref">Programming <span>13</span></a></li>
+     
+    	<li><a href="/tags.html#Spring Java Configuration-ref">Spring Java Configuration <span>7</span></a></li>
+     
+    	<li><a href="/tags.html#Spring MVC-ref">Spring MVC <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#Web-ref">Web <span>4</span></a></li>
+    
+  
+
+
+
+        </ul>
+      </section>
+             
+  </div>
+</div>
+
+
+      </div>
+        <p>
+
+            <!-- Place this tag where you want the +1 button to render. -->
+        <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+
+        <!-- Place this tag after the last +1 button tag. -->
+        <script type="text/javascript">
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+        </p>
+
+
+
+        <p>
+        <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-8842842164201164";
+        /* First Ad */
+        google_ad_slot = "3974497337";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        //-->
+        </script>
+        <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+        <br>
+        </p>
+
+        <footer>
+        <p>&copy; 2013 <a href="mailto:john@johnathanmarksmith.com">Johnathan Mark Smith</a>
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a>
+        </p>
+      </footer>
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/themes/hooligan/js/jquery.min.js"><\/script>')</script>
+    <script src="/assets/themes/hooligan/bootstrap/js/bootstrap.min.js"></script>
+
+    
+  </body>
+</html>
+
