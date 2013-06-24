@@ -2,7 +2,7 @@
 layout: post
 title: "How can I check the last time someone commited code in my git repo"
 description: "How can I check the last time someone commited code in my git repo"
-categories: [ Git, Gitub, Linux ]
+categories: [ Git, Github, Linux ]
 tags: [ Git, Github, Linux ]
 comments: false
 ---
