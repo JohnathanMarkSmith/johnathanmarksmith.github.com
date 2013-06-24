@@ -8,6 +8,7 @@ tags: [publications, java, spring, maven, programming]
 
 <h2>PUBLICATIONS</h2>
 
+
 <h3>DZone – Javalobby<br>June 2013</h3>
 - Author of the article that was published on How to Use Spring MVC with HSQLDB.
 - Author of the article that was published on How to Use Spring's JavaConfig Style with Maven, JUnit, Log4J, Hibernate and HyperSQL.
