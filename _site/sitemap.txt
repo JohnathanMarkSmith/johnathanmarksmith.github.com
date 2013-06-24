@@ -7,11 +7,11 @@ http://johnathanmarksmith.com/publications.html
 http://johnathanmarksmith.com/git-interview-questions.html
 http://johnathanmarksmith.com/about.html
 http://johnathanmarksmith.com/alternative-marketing.html
+http://johnathanmarksmith.com/accomplishments.html
 http://johnathanmarksmith.com/resume.html
 http://johnathanmarksmith.com/rss.xml
 http://johnathanmarksmith.com/GIT-reposutiries.html
 http://johnathanmarksmith.com/custom-design-and-development.html
-http://johnathanmarksmith.com/java-interview.html
 http://johnathanmarksmith.com/social-media.html
 http://johnathanmarksmith.com/index.html
 http://johnathanmarksmith.com/atom.xml
@@ -21,7 +21,7 @@ http://johnathanmarksmith.com/SVN-repositories.html
 http://johnathanmarksmith.com/pages.html
 http://johnathanmarksmith.com/technology.html
 
-http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/Spring%20MVC/Web/REST/RESTTemplate/2013/06/18/how-to-use-spring-restteample-to-post-data-to-a-web-service
+http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/Spring%20MVC/Web/REST/RESTTemplate/2013/06/18/how-to-use-spring-resttemplate-to-post-data-to-a-web-service
 http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/Spring%20Interview%20Questions/2013/06/13/java-interview-question-what-are-the-types-of-the-transaction-management-spring-supports
 http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/Spring%20MVC/Web/REST/Spring%20Test%20Framework/2013/06/12/how-to-make-a-web-service-with-spring-mvc-and-test-with-spring-test-framework
 http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/2013/06/11/java-interview-question-what-are-inner-class-and-anonymous-class
