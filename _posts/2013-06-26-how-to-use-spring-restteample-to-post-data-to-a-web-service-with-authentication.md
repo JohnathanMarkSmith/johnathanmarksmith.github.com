@@ -162,7 +162,7 @@ You can see from the above code how easy it is to use RESTTeample to post data t
 
 You can see how easy it is to use Spring's Java Configuration (JavaConfig) style and Not XML.. The time of using XML files with Springs is over...
 
-### We Can I Get The Sourcec Code
+### Download and Run
 
 You can checkout the project from github.
 
