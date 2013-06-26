@@ -18,13 +18,13 @@ My frameworks and accelerators are an integral part of our methodology to delive
 Java, JavaScript, HTML, PHP, SQL, PL/SQL, CSS, Perl, Korn Shell, Visual Basic, COBOL
 
 ## Standards and Frameworks:
-Spring, Spring WebFlow 2, Spring Batch, Servlets, Hibernate, Maven, JUnit, Struts 1 & 2, AJAX, DOM, Dojo, DHML, XML, J2EE, JSP’s, JSF, JME, JDBC, JSON, JQuery, PHP, SAX, RESTful, Android SDK 
+Spring, Spring WebFlow 2, Spring Batch, Spring Data Mongo, Servlets, Hibernate, Maven, JUnit, Struts 1 & 2, AJAX, DOM, Dojo, DHML, XML, J2EE, JSP’s, JSF, JME, JDBC, JSON, JQuery, PHP, SAX, RESTful, Android SDK
 
 ## Application Servers:
 JBoss, Tomcat, IBM WebSphere, JRun 
 
 ## Databases:
-MYSQL, DB2, Oracle, HyperSQL, Microsoft Access, PL/SQL, SQLLite, Sybase 
+MYSQL, DB2, Mongo, Oracle, HyperSQL, Microsoft Access, PL/SQL, SQLLite, Sybase
 
 ## Directory Services:
 OpenLDAP, Active Directory, NIS, NIS+
