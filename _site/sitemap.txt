@@ -21,6 +21,8 @@ http://johnathanmarksmith.com/SVN-repositories.html
 http://johnathanmarksmith.com/pages.html
 http://johnathanmarksmith.com/technology.html
 
+http://johnathanmarksmith.com/Spring/Spring%20Data/0MongoDB/Java/JavaConfig/Programming/Spring%20Java%20Configuration/2013/06/27/how-to-use-spring-data-with-mongodb-and-springs-java-configuration-javaconfig-style-with-maven-junit-log4j
+http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/Spring%20MVC/Web/REST/RESTTemplate/2013/06/26/how-to-use-spring-restteample-to-post-data-to-a-web-service-with-authentication
 http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/Spring%20MVC/Web/REST/RESTTemplate/2013/06/24/how-to-setup-basic-authentication-with-spring-web-services
 http://johnathanmarksmith.com/Spring/Java/JavaConfig/Programming/Spring%20Java%20Configuration/Spring%20MVC/Web/REST/RESTTemplate/2013/06/18/how-to-use-spring-resttemplate-to-post-data-to-a-web-service
 http://johnathanmarksmith.com/Java/Java%20Interview%20Questions/Spring%20Interview%20Questions/2013/06/13/java-interview-question-what-are-the-types-of-the-transaction-management-spring-supports
@@ -68,4 +70,3 @@ http://johnathanmarksmith.com/Spring/Java/2013/03/26/where-is-requestmapping-in-
 http://johnathanmarksmith.com/Tomcat/WebSphere/JBoss/2013/03/25/tomcat-vs-jboss
 http://johnathanmarksmith.com/Java/Spring/Consultant/Github/2013/03/22/why-post-on-github
 http://johnathanmarksmith.com/Github/WordPress/2013/03/22/the-move-to--github
-http://johnathanmarksmith.com/testing/2013/03/22/my-first-post

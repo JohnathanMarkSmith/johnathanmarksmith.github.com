@@ -24,7 +24,7 @@ Spring, Spring WebFlow 2, Spring Batch, Spring Data Mongo, Servlets, Hibernate, 
 JBoss, Tomcat, IBM WebSphere, JRun 
 
 ## Databases:
-MYSQL, DB2, Mongo, Oracle, HyperSQL, Microsoft Access, PL/SQL, SQLLite, Sybase
+MYSQL, DB2, MongoDB, Oracle, HyperSQL, Microsoft Access, PL/SQL, SQLLite, Sybase
 
 ## Directory Services:
 OpenLDAP, Active Directory, NIS, NIS+
