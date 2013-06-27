@@ -210,8 +210,7 @@ You can checkout the project from github.
     mvn clean package
     mvn exec:java
 
-
-<object width="640" height="480"><param name="movie" value="//www.youtube.com/v/Y99HwxBzI-4?hl=en_US&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube.com/v/Y99HwxBzI-4?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="640" height="480" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+<object width="640" height="480"><param name="movie" value="//www.youtube.com/v/aY_JsfJM2eU?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube.com/v/aY_JsfJM2eU?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="640" height="480" allowscriptaccess="always" allowfullscreen="true"></embed></object>
 
 
 Please keep in mind to be able to run this demo application start your MongoDB instance, Yes you need MongoDB.
