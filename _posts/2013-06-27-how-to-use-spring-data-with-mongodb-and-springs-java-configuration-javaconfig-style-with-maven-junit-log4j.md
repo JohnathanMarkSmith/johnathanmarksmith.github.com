@@ -2,8 +2,8 @@
 layout: post
 title: "How To Use Spring Data with MongoDB and Spring's Java Configuration (JavaConfig) style with Maven, JUnit, Log4J"
 description: "How To Use Spring Data with MongoDB and Spring's Java Configuration (JavaConfig) style with Maven, JUnit, Log4J"
-categories: [ Spring, Spring Data, 0MongoDB, Java, JavaConfig, Programming, Spring Java Configuration]
-tags: [ Spring, Spring Data, 0MongoDB, Java, JavaConfig, Programming, Spring Java Configuration]
+categories: [ Spring, Spring Data, MongoDB, Java, JavaConfig, Programming, Spring Java Configuration]
+tags: [ Spring, Spring Data, MongoDB, Java, JavaConfig, Programming, Spring Java Configuration]
 comments: false
 ---
 
