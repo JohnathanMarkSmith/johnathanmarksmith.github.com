@@ -212,7 +212,7 @@ You can checkout the project from github.
 
 Please keep in mind to be able to run this demo application start your MongoDB instance, Yes you need MongoDB.
 
-If you have any questions please email me at john@johnathanmarksmith.com
+If you have any questions or comments please email me at john@johnathanmarksmith.com or checkout my web site http://JohnathanMarkSmith.com
 
 For a MongoDB guide see http://www.mongodb.org/display/DOCS/Quickstart
 
