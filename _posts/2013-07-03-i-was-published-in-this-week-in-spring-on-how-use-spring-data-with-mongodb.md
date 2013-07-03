@@ -3,7 +3,8 @@ layout: post
 title: "I was published in 'This Week in Spring' on how use Spring Data with MongoDB"
 description: "I was published in 'This Week in Spring' on how use Spring Data with MongoDB"
 categories: [ Spring, Java, Spring Data, Programming, MongoDB, Spring Java Configuration ]
-tags: [ [ Spring, Java, Spring Data, Programming, MongoDB, Spring Java Configuration  ]
+tags:  [ Spring, Java, Spring Data, Programming, MongoDB, Spring Java Configuration  ]
+tags:  [ Spring, Java, Spring Data, Programming, MongoDB, Spring Java Configuration  ]
 comments: false
 ---
 
