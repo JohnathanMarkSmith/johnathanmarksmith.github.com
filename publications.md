@@ -8,6 +8,10 @@ tags: [publications, java, spring, maven, programming]
 
 <h2>PUBLICATIONS</h2>
 
+<h3>SpringSource – This Week in Spring<br>July 2013</h3>
+
+- Author of the article that was published on how to use Spring Data with MongoDB.
+
 <h3>SpringSource – This Week in Spring<br>June 2013</h3>
 
 - Author of the article that was published on how to Use Spring RESTTemplate To Post Data to a Web Service.
