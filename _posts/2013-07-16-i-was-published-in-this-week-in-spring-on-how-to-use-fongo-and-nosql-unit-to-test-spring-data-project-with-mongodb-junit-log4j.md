@@ -2,8 +2,8 @@
 layout: post
 title: "I was published in 'This Week in Spring' on How to use Fongo and nosql unit to test Spring Data project with MongoDB, JUnit, Log4J"
 description: "I was published in 'This Week in Spring' on How to use Fongo and nosql unit to test Spring Data project with MongoDB, JUnit, Log4J"
-categories: [ Spring, Java, JavaConfig, Programming, Spring Java Configuration, Fongo, NoSQL, Spring-Data, MongoDB ]
-tags: [  Spring, Java, JavaConfig, Programming, Spring Java Configuration, Fongo, NoSQL, Spring-Data, MongoDB  ]
+categories: [ Spring, Java, JavaConfig, Programming, Spring Java Configuration, Fongo, NoSQL, Spring Data, MongoDB ]
+tags: [  Spring, Java, JavaConfig, Programming, Spring Java Configuration, Fongo, NoSQL, Spring Data, MongoDB  ]
 comments: false
 ---
 
