@@ -2,7 +2,7 @@
 layout: post
 title: "I was published in 'This Week in Spring' on how to use Spring's Java Configuration Style"
 description: "I was published in 'This Week in Spring' on how to use Spring's Java Configuration Style"
-categories: [ Spring, Java, JavaConfig, Programming, Spring Java Configuration ]
+categories: [ Spring,0 Java, JavaConfig, Programming, Spring Java Configuration ]
 tags: [ Spring, Java, JavaConfig, Programming, Spring Java Configuration ]
 comments: false
 ---
