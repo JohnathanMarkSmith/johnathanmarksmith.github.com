@@ -53,7 +53,7 @@ IBM HTTP Server, Netscape and Apache
 <h3>PSCU ~ Analyst / Senior Programmer<br>SEPTEMBER 2013 – PRESENT</h3>
 
 - Project lead on the CallPro3 project, Debugged and fixed production issues in Java.
-- Established continuous integration (CI) practices and standards for the UFTWF. Set up Jenkins server and build jobs to provide continuous automated builds based on polling the Git source control system during the day and periodic scheduled builds overnight to support development needs using Jenkins, Git and JUnit.
+- Established continuous integration (CI) practices and standards for the CallPro3 project. Set up Jenkins server and build jobs to provide continuous automated builds based on polling the Git source control system during the day and periodic scheduled builds overnight to support development needs using Jenkins, Git and JUnit.
 
 <h3>United Federation of Teachers ~ Architect / Senior Programmer<br>OCTOBER 2011 – AUGUEST 2013</h3>
 
