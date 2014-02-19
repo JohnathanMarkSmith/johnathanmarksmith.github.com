@@ -21,6 +21,6 @@ Every project that I work on,  we will set-up a free GIT repository so you will 
 * See your web pages as soon as you commit them to the repository with the View as Web Page feature.
 * NEW! – Easily “Fork” an existing project into your own repository, and merge back with the original once you’ve completed your work ( Assembla Exclusive! )
 * Easily Import/Export GIT Dump files in just a few clicks
-</ul>
+
 
 {% include JB/setup %}
