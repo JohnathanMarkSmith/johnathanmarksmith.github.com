@@ -50,7 +50,7 @@ IBM HTTP Server, Netscape and Apache
 
 <h2>EXPERIENCE</h2>
 
-<h3>PSCU ~ Analyst / Senior Programmer<br>SEPTEMBER 2013 – PRESENT</h3>
+<h3>PSCU ~ Engineer, Software Development<br>SEPTEMBER 2013 – PRESENT</h3>
 
 - Project lead on the CallPro3 project, Debugged and fixed production issues in Java.
 - Established continuous integration (CI) practices and standards for the CallPro3 project. Set up Jenkins server and build jobs to provide continuous automated builds based on polling the Git source control system during the day and periodic scheduled builds overnight to support development needs using Jenkins, Git and JUnit.
