@@ -73,7 +73,6 @@ release once QA has tested it and has signed off:
 	$ git merge --no-ff myfeature
 
 	$ git branch -d myfeature
-	Deleted branch myfeature (was 05e9557)
 	
 NEVER PUSH YOUR CODE TO THE CENTRAL REPOSITORY UNTIL QA SIGNED OFF AND TESTED YOUR CHANGE!!!!!!
 
@@ -108,13 +107,10 @@ It is exactly at the start of a release branch that the upcoming release gets as
 Release branches are created from the develop branch. For example, say version 1.1.5 is the current production release and we have a big release coming up. The state of develop is ready for the “next release” and we have decided that this will become version 1.2 (rather than 1.1.6 or 2.0). So we branch off and give the release branch a name reflecting the new version number:
 	
 	$ git checkout -b release-v1.2 develop
-	Switched to a new branch "release-v1.2"
 	
 Modify some files?
 
 	$ git commit -a -m "Bumped version number to 1.2"
-	[release-1.2 74d9424] Bumped version number to 1.2
-	1 files changed, 1 insertions(+), 1 deletions(-)
 
 After creating a new branch and switching to it, we bump the version number. Here we make some changes to some files in the working copy to reflect the new version. (This can of course be a manual change—the point being that some files change.) ?
 
@@ -127,11 +123,7 @@ When the state of the release branch is ready to become a real release, some act
 The first two steps in Git:
 
 	$ git checkout master
-	Switched to branch 'master'
-
 	$ git merge --no-ff release-v1.2
-	Merge made by recursive.
-
 	$ git tag -a v1.2
 
 The release is now done, and tagged for future reference.
@@ -140,18 +132,13 @@ To keep the changes made in the release branch, we need to merge those back into
 though. In Git:
 
 	$ git checkout develop
-	Switched to branch 'develop'
-
 	$ git merge --no-ff release-v1.2
-	Merge made by recursive.
 
 This step may well lead to a merge conflict (probably even, since we have changed the version number). If so, fix it and commit.
 
 Now we are really done and the release branch may be removed, since we don’t need it any more:
 
 	$ git branch -d release-v1.2
-	Deleted branch release-v1.2 (was ff452fe).
-
 	
 # Hotfix branches
 
@@ -169,23 +156,14 @@ TRY TO NEVER DO A HOTFIX.
 Hotfix branches are created from the master branch. For example, say version 1.2 is the current production release running live and causing troubles due to a severe bug. But changes on develop are yet unstable. We may then branch off a hotfix branch and start fixing the problem:
 
 	$ git checkout -b hotfix-1.2.1 master
-	Switched to a new branch "hotfix-1.2.1"
-
 	$ ./bump-version.sh 1.2.1
-	Files modified successfully, version bumped to 1.2.1.
-
 	$ git commit -a -m "Bumped version number to 1.2.1"
-
-	[hotfix-1.2.1 41e61bb] Bumped version number to 1.2.1
-	1 files changed, 1 insertions(+), 1 deletions(-)
 
 Don’t forget to bump the version number after branching off!
 
 Then, fix the bug and commit the fix in one or more separate commits.
 
 	$ git commit -m "Fixed severe production problem"
-	[hotfix-1.2.1 abbe5d6] Fixed severe production problem
-	5 files changed, 32 insertions(+), 17 deletions(-)
 
 # Finishing a hotfix branch
 
@@ -195,34 +173,24 @@ When finished, the bugfix needs to be merged back into master, but also needs to
 
 First, update master and tag the release.
 	$ git checkout master
-	Switched to branch 'master'
-	
 	$ git merge --no-ff hotfix-1.2.1
-	Merge made by recursive.
-	
 	$ git tag -a v1.2.1
 
 Next, include the bugfix in develop, too:
 
 	$ git checkout develop
-	Switched to branch 'develop'
-	
 	$ git merge --no-ff hotfix-1.2.1
-	Merge made by recursive.
-
 	The one exception to the rule here is that, when a release branch currently exists, the hotfix changes need to be merged into that release branch, instead of develop. Back-merging the bugfix into the release branch will eventually result in the bugfix being merged into develop too, when the release branch is finished. (If work in develop immediately requires this bugfix and cannot wait for the release branch to be finished, you may safely merge the bugfix into develop now already as well.)
 
 Finally, remove the temporary branch:
 
 	$ git branch -d hotfix-1.2.1
-	Deleted branch hotfix-1.2.1 (was abbe5d6).
 
 ## NEVER PUSH YOUR CODE TO THE CENTRAL REPOSITORYUNTIL QA SIGNED OFF AND TESTED YOUR CHANGE!!!!!!
 
 	$ git push origin develop
 
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
-
 
 Thanks, Johnathan Mark Smith
 {% include JB/setup %}
