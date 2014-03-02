@@ -16,8 +16,8 @@ This document is going to give you the basic commands you need to develop code f
 # Overview of the branches in the central repository
 At the core, the development model is greatly inspired by existing models out there. The central repo holds two main branches with an infinite lifetime:
 
-* master
-* develop
+master
+develop
 
 The master branch at origin should be familiar to every Git user. Parallel to the master branch, another branch exists called develop.
 
@@ -29,29 +29,22 @@ When the source code in the develop branch reaches a stable point and is ready t
 Therefore, each time when changes are merged back into master, this is a new production release by definition. We tend to be very strict at this, so that theoretically, we could use a Git hook script to automatically build and roll-out our software to our production servers every time there was a commit on master.
 
 ## The different types of branches we may use are:
-* Feature / Fix branches
-* Release branches
-* Hotfix branches
+Feature / Fix branches
+Release branches
+Hotfix branches
 
 Each of these branches have a specific purpose and are bound to strict rules as to which branches may be their originating branch and which branches must be their merge targets. We will walk through them in a minute.
 
 By no means are these branches “special” from a technical perspective. The branch types are categorized by how we use them. They are of course plain old Git branches.
 
-# Getting ProjectX from the central repository
-
-Once your git admin has give you access to the ProjectX repository all your have to do to clone
-
-the repository is type the following command:
-	$ git clone ssh://git@<server>/ProjectX
-	
 Before you keep reading please keep in mind that no one should merge code into the master branch but the lead developer on the project...
 
 
 # Feature / Fix branches
 
-* May branch off from: develop
-* Must merge back into: develop
-* Branch naming convention: anything except master, develop, release-*, or hotfix-*
+May branch off from: develop
+Must merge back into: develop
+Branch naming convention: anything except master, develop, release-x, or hotfix-x
 
 Feature branches (or sometimes called topic branches) are used to develop new features for the upcoming or a distant future release. When starting development of a feature or fix, the target release in which this feature will be incorporated may well be unknown at that point. The essence of a feature branch is that it exists as long as the feature is in development, but will eventually be merged back into develop (to definitely add the new feature to the upcoming release) or discarded (in case of a disappointing experiment).
 
@@ -92,9 +85,9 @@ Yes, it will create a few more (empty) commit objects, but the gain is much bigg
 
 # Release branches
 
-* May branch off from: develop
-* Must merge back into: develop and master
-* Branch naming convention: release-v*
+May branch off from: develop
+Must merge back into: develop and master
+Branch naming convention: release-v
 
 Release branches support preparation of a new production release. They allow for last-minute dotting of i’s and crossing t’s. Furthermore, they allow for minor bug fixes and preparing metadata for a release (version number, build dates, etc.). By doing all of this work on a release branch, the develop branch is cleared to receive features for the next big release.
 
@@ -142,9 +135,9 @@ Now we are really done and the release branch may be removed, since we don’t n
 	
 # Hotfix branches
 
-* May branch off from: master
-* Must merge back into: develop and master(only lead developer)
-* Branch naming convention: hotfix-*
+May branch off from: master
+Must merge back into: develop and master(only lead developer)
+Branch naming convention: hotfix-
 
 Hotfix branches are very much like release branches in that they are also meant to prepare for a new production release, albeit unplanned. They arise from the necessity to act immediately upon an undesired state of a live production version. When a critical bug in a production version must be resolved immediately, a hotfix branch may be branched off from the corresponding tag on the master branch that marks the production version.
 
