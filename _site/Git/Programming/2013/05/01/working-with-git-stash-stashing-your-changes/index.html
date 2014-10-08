@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      
+        Working with Git stash, Stashing Your Changes - 
+      
+      Johnathan Mark Smith
+    </title>
+    <meta name="description" content="Working with Git stash, Stashing Your Changes">
+    <meta name="author" content="Johnathan Mark Smith">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+      <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="/assets/themes/hooligan/css-social-buttons/css/zocial.stripped.css">
+    <link href="/assets/themes/hooligan/css/pygments.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/hooligan/css/darkstrap.css" rel="stylesheet" type="text/css" media="all">    
+    <link href="/assets/themes/hooligan/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>      
+
+
+          <a class="brand" href="/">Johnathan Mark Smith</a>
+
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              
+              
+              
+
+
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/resume.html">Resume</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+
+
+
+            </ul>
+            <ul class="nav pull-right social visible-desktop">
+              <li class="divider-vertical"></li>
+              
+                <li>
+                  <a href="https://github.com/JohnathanMarkSmith" class="zocial github icon" target="_blank">
+                    <span class="hidden-desktop">Github</span>
+                  </a>
+                </li>
+              
+                  
+              
+                <li>
+                  <a href="https://twitter.com/JohnathanMSmith" class="zocial twitter icon" target="_blank">
+                  <span class="hidden-desktop">Twitter</span>
+                  </a>
+                </li>
+                                        
+                         
+              
+                <li>
+                  <a href="http://www.linkedin.com/in/johnathansmith1969" class="zocial linkedin icon" target="_blank">
+                    <span class="hidden-desktop">LinkedIn</span>
+                  </a>
+                </li>
+                                  
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        
+<div class="page-header">
+  <h1>
+    Working with Git stash, Stashing Your Changes 
+    
+  </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <p>Stashing is a great way to pause what you’re currently working on and come back to it later. For example, if you working on that awesome, brand new feature but someone just found a bug that you need to fix. Add your changes to the index using</p>
+
+<pre><code>git add .</code></pre>
+
+<p>Or add individual files to the index, your pick. Stash your changes away with:</p>
+
+<pre><code>git stash</code></pre>
+
+<p>And boom! You’re back to your original working state. Got that bug fixed? Bring your work back with:</p>
+
+<pre><code>git stash apply</code></pre>
+
+<p>You can also do multiple layers of stashes, so make sure to use</p>
+
+<pre><code>git stash list</code></pre>
+
+<p>To check out all of your current ones. If you need to apply a stash from deeper in the stack, that’s easy too. Here’s how to apply the second stash you’ve got:</p>
+
+<pre><code>git stash apply stash@{1}</code></pre>
+
+<p>You can also easily apply the top stash on the stack by using:</p>
+
+<pre><code>git stash pop</code></pre>
+
+<p>A note with this command, it deletes that stash for good, while apply does not. You can manually delete stashes with:</p>
+
+<pre><code>git stash drop &lt;id&gt;</code></pre>
+
+<p>Or delete all of the stored stashes with:</p>
+
+<pre><code>git stash clear</code></pre>
+
+<p>If you have any questions or comments please email me at <a href='mailto:john@johnathanmarksmith.com'>john@johnathanmarksmith.com</a></p>
+    <hr>
+    <div class="pagination btn-group">
+      
+        <a class="btn prev" href="/Spring/Java/JavaConfig/Programming/MySQL/HSQLDB/Databse/Spring%20Java%20Configuration/2013/04/30/kiss-mysql-goodbye-for-development-and-say-hello-to-hsqldb" title="Kiss MySQL goodbye for development and say hello to HSQLDB">&larr; Previous</a>
+      
+        <a class="btn" href="/archive.html">Archive</a>
+      
+        <a class="btn next" href="/MySQL/Linux/Database/2013/05/03/how-to-load-mysql-database-from-command-line-in-linux" title="How to load MySQL Database from Command Line in Linux">Next &rarr;</a>
+      
+    </div>
+    <hr>
+    
+  </div>
+  
+  <div class="span4">
+    <section>
+      <h4>Published</h4>
+      <div class="date"><span>01 May 2013</span></div>
+    </section>
+         
+    
+      <section>
+        <h4>Tags</h4>
+        <ul class="tag_box">
+          
+          
+
+
+  
+     
+    	<li><a href="/tags.html#Git-ref">Git <span>10</span></a></li>
+     
+    	<li><a href="/tags.html#Programming-ref">Programming <span>20</span></a></li>
+    
+  
+
+
+
+        </ul>
+      </section>
+             
+  </div>
+</div>
+
+
+      </div>
+        <p>
+
+            <!-- Place this tag where you want the +1 button to render. -->
+        <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+
+        <!-- Place this tag after the last +1 button tag. -->
+        <script type="text/javascript">
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+        </p>
+
+
+
+        <p>
+        <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-8842842164201164";
+        /* First Ad */
+        google_ad_slot = "3974497337";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        //-->
+        </script>
+        <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+        <br>
+        </p>
+
+        <footer>
+        <p>&copy; 2014 <a href="mailto:john@johnathanmarksmith.com">Johnathan Mark Smith</a>
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a>
+        </p>
+      </footer>
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/themes/hooligan/js/jquery.min.js"><\/script>')</script>
+    <script src="/assets/themes/hooligan/bootstrap/js/bootstrap.min.js"></script>
+
+    
+  </body>
+</html>
+

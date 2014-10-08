@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      
+        How To Install Gitolite on Linux - 
+      
+      Johnathan Mark Smith
+    </title>
+    <meta name="description" content="How To Install Gitolite on Linux">
+    <meta name="author" content="Johnathan Mark Smith">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+      <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="/assets/themes/hooligan/css-social-buttons/css/zocial.stripped.css">
+    <link href="/assets/themes/hooligan/css/pygments.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/hooligan/css/darkstrap.css" rel="stylesheet" type="text/css" media="all">    
+    <link href="/assets/themes/hooligan/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>      
+
+
+          <a class="brand" href="/">Johnathan Mark Smith</a>
+
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              
+              
+              
+
+
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/resume.html">Resume</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+
+
+
+            </ul>
+            <ul class="nav pull-right social visible-desktop">
+              <li class="divider-vertical"></li>
+              
+                <li>
+                  <a href="https://github.com/JohnathanMarkSmith" class="zocial github icon" target="_blank">
+                    <span class="hidden-desktop">Github</span>
+                  </a>
+                </li>
+              
+                  
+              
+                <li>
+                  <a href="https://twitter.com/JohnathanMSmith" class="zocial twitter icon" target="_blank">
+                  <span class="hidden-desktop">Twitter</span>
+                  </a>
+                </li>
+                                        
+                         
+              
+                <li>
+                  <a href="http://www.linkedin.com/in/johnathansmith1969" class="zocial linkedin icon" target="_blank">
+                    <span class="hidden-desktop">LinkedIn</span>
+                  </a>
+                </li>
+                                  
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        
+<div class="page-header">
+  <h1>
+    How To Install Gitolite on Linux 
+    
+  </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <h3 id='why_gitolite'>Why Gitolite</h3>
+
+<p>Git by itself does not do any access control &#8211; it relies on the transport medium to do authentication (&#8220;who are you?&#8221;), and on OS file permissions to do authorisation (&#8220;what are you allowed to do?&#8221;).</p>
+
+<p>Git also comes with a program called &#8220;git-shell&#8221; which can act as a restricted login shell if you don&#8217;t want users getting a proper shell. Using this and judicious use of Unix groups, you can allow some people read-only access while others get read-write access, etc. This is probably sufficient if your needs are simple and don&#8217;t change too often.</p>
+
+<p>However, gitolite does this much better, and offers many more features</p>
+
+<p>Gitolite is useful in any server that is going to host multiple git repositories, each with many developers, where &#8220;anyone can do anything to any repo&#8221; is not a good idea&#8230;.</p>
+
+<p>Giteolite will let you pick which developers have access to which repositories and which branches and more&#8230;. Gitolite, Gitolite, Gitolite it will save you!!!</p>
+
+<h3 id='how_to_install_gitolite_on_linux'>How To Install Gitolite on Linux</h3>
+
+<p>Login in as root</p>
+
+<p>now you have to create the git(make it git or gitolite) account</p>
+<div class='highlight'><pre><code class='bash'>    useradd git
+    passwd git
+</code></pre></div>
+<p>Now login as git or gitolite</p>
+
+<p>You need to copy your SSH public key (a file called ~/.ssh/id_rsa.pub) from your workstation, renaming it to yourname.pub (we&#8217;ll use jsmith.pub in our examples).</p>
+
+<p>From my workstations</p>
+<div class='highlight'><pre><code class='bash'>   scp ~/.ssh/id_rsa.pub git@REGAN:/home/git/jsmith.pub 
+</code></pre></div>
+<p>Now run the following commands from the git account</p>
+<div class='highlight'><pre><code class='bash'>   git clone git://github.com/sitaramc/gitolite
+   mkdir bin
+   gitolite/install -ln
+   gitolite setup -pk jsmith.pub
+</code></pre></div>
+<h3 id='now_for_testing'>Now for Testing</h3>
+
+<p>From your workstation enter the following command</p>
+<div class='highlight'><pre><code class='bash'>   ssh git@REGAN info
+</code></pre></div>
+<p>your output should look something like this</p>
+<div class='highlight'><pre><code class='bash'>   hello jsmith, this is git@regan running gitolite3 v3.5.1-4-g2f48a3e on git 1.8.2.3
+
+    R W		gitolite-admin
+    R W		testing
+</code></pre></div>
+<h3 id='time_to_be_a_gitolite_admin'>Time To Be a Gitolite Admin</h3>
+
+<p>From your workstation enter the following command</p>
+<div class='highlight'><pre><code class='bash'>   git clone git@&lt;server&gt;:gitolite-admin
+   <span class='nb'>cd </span>gitolite-admin
+</code></pre></div>
+<p>That is everything you have gitolite all setup and ready to go.</p>
+<object width='420' height='315'><param value='http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;version=3' name='movie' /><param value='true' name='allowFullScreen' /><param value='always' name='allowscriptaccess' /><embed width='420' type='application/x-shockwave-flash' allowscriptaccess='always' src='http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;version=3' allowfullscreen='true' height='315' /></object>
+<p>If you have any questions or comments please email me at <a href='mailto:john@johnathanmarksmith.com'>john@johnathanmarksmith.com</a></p>
+    <hr>
+    <div class="pagination btn-group">
+      
+        <a class="btn prev" href="/Spring,0%20Java/JavaConfig/Programming/Spring%20Java%20Configuration/2013/05/22/i-was-published-in-this-week-in-spring-on-how-to-use-springs-java-configuration-style" title="I was published in 'This Week in Spring' on how to use Spring's Java Configuration Style">&larr; Previous</a>
+      
+        <a class="btn" href="/archive.html">Archive</a>
+      
+        <a class="btn next" href="/JQuery/JavaScript/2013/05/24/how-to-use-jquery-validation-plugin-for-field-validatoin" title="How To Use JQuery Validation Plugin for Field Validatoin">Next &rarr;</a>
+      
+    </div>
+    <hr>
+    
+  </div>
+  
+  <div class="span4">
+    <section>
+      <h4>Published</h4>
+      <div class="date"><span>23 May 2013</span></div>
+    </section>
+         
+    
+      <section>
+        <h4>Tags</h4>
+        <ul class="tag_box">
+          
+          
+
+
+  
+     
+    	<li><a href="/tags.html#Git-ref">Git <span>10</span></a></li>
+     
+    	<li><a href="/tags.html#Gitolite-ref">Gitolite <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#Linux-ref">Linux <span>12</span></a></li>
+    
+  
+
+
+
+        </ul>
+      </section>
+             
+  </div>
+</div>
+
+
+      </div>
+        <p>
+
+            <!-- Place this tag where you want the +1 button to render. -->
+        <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+
+        <!-- Place this tag after the last +1 button tag. -->
+        <script type="text/javascript">
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+        </p>
+
+
+
+        <p>
+        <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-8842842164201164";
+        /* First Ad */
+        google_ad_slot = "3974497337";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        //-->
+        </script>
+        <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+        <br>
+        </p>
+
+        <footer>
+        <p>&copy; 2014 <a href="mailto:john@johnathanmarksmith.com">Johnathan Mark Smith</a>
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a>
+        </p>
+      </footer>
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/themes/hooligan/js/jquery.min.js"><\/script>')</script>
+    <script src="/assets/themes/hooligan/bootstrap/js/bootstrap.min.js"></script>
+
+    
+  </body>
+</html>
+

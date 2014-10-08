@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      
+        How To Use Spring's Java Configuration (JavaConfig) style with Maven, JUnit, Log4J, Hibernate and HyperSQL (hsqldb) - 
+      
+      Johnathan Mark Smith
+    </title>
+    <meta name="description" content="How To Use Spring's Java Configuration (JavaConfig) style with Maven, JUnit, Log4J, Hibernate and HyperSQL (hsqldb)">
+    <meta name="author" content="Johnathan Mark Smith">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+      <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="/assets/themes/hooligan/css-social-buttons/css/zocial.stripped.css">
+    <link href="/assets/themes/hooligan/css/pygments.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/hooligan/css/darkstrap.css" rel="stylesheet" type="text/css" media="all">    
+    <link href="/assets/themes/hooligan/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>      
+
+
+          <a class="brand" href="/">Johnathan Mark Smith</a>
+
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              
+              
+              
+
+
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/resume.html">Resume</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+
+
+
+            </ul>
+            <ul class="nav pull-right social visible-desktop">
+              <li class="divider-vertical"></li>
+              
+                <li>
+                  <a href="https://github.com/JohnathanMarkSmith" class="zocial github icon" target="_blank">
+                    <span class="hidden-desktop">Github</span>
+                  </a>
+                </li>
+              
+                  
+              
+                <li>
+                  <a href="https://twitter.com/JohnathanMSmith" class="zocial twitter icon" target="_blank">
+                  <span class="hidden-desktop">Twitter</span>
+                  </a>
+                </li>
+                                        
+                         
+              
+                <li>
+                  <a href="http://www.linkedin.com/in/johnathansmith1969" class="zocial linkedin icon" target="_blank">
+                    <span class="hidden-desktop">LinkedIn</span>
+                  </a>
+                </li>
+                                  
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        
+<div class="page-header">
+  <h1>
+    How To Use Spring's Java Configuration (JavaConfig) style with Maven, JUnit, Log4J, Hibernate and HyperSQL (hsqldb) 
+    
+  </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <h3 id='springs_java_configuration_javaconfig_style_with_maven_junit_log4j_hibernate_and_hypersql_hsqldb'>Spring&#8217;s Java Configuration (JavaConfig) style with Maven, JUnit, Log4J, Hibernate and HyperSQL (hsqldb)</h3>
+
+<p>The days of using MySQL, DB2, PostgreSQL etc for development is over.. I don&#8217;t know why any programmer would be developing using them..</p>
+
+<p>Every deveroper should be running some in memory database like HSQLDB as part of the project for development and testing then move the a full size database for unit testing, staging and production.</p>
+
+<p>This is a sample Spring Project to show how to use Spring&#8217;s Java Configuration (JavaConfig) style with Maven, JUnit, Log4J, Hibernate and HyperSQL (hsqldb).</p>
+
+<p>This example also will show how to use @PropertySource for reading properties and using the Environment Object to add properties to your objects.</p>
+
+<h3 id='how_to_use_springs_java_configuration_javaconfig_style_and_not_xml_files_for_configuation'>How to use Spring&#8217;s Java Configuration (JavaConfig) style and not XML files for configuation</h3>
+
+<p>Consider replacing Spring XML configuration with Spring&#8217;s Java Configuration (JavaConfig) style is the right way to go right now.</p>
+
+<p>Using Spring XML configuration is so 2000’s the time has come to push the XML away and look at Spring&#8217;s Java Configuration (JavaConfig) style.</p>
+
+<p>Here is the main code to my sample project</p>
+
+<pre><code> public static void main(String[] args)
+    {
+        /**
+         *
+         * This is going to setup the database configuration in the applicationContext
+         * you can see that I am using the new Spring&#39;s Java Configuration style and not some OLD XML file
+         *
+         */
+        ApplicationContext context = new AnnotationConfigApplicationContext(DatabaseConfiguration.class);
+
+        MessageService mService = context.getBean(MessageService.class);
+
+        /**
+         *
+         *   This is going to create a message object and set the message to &quot;Hello World&quot; then pass the object to t
+         *   the service layer for inserting into the database
+         *
+         */
+        Message message = new Message();
+        message.setMessage(&quot;Hello World&quot;);
+        mService.SaveMessage(message);
+
+
+        /**
+         *
+         * This is going to do a 2nd Message in database.
+         *
+         */
+        message.setMessage(&quot;I love Regan&quot;);
+        mService.SaveMessage(message);
+
+        /**
+         *
+         * This is going to get the messages from database and do the following:
+         *    - display number of message(s)
+         *    - display each message in database
+         *
+         */
+        List&lt;Message&gt; myList = mService.listMessages();
+        LOGGER.debug(&quot;You Have &quot; + myList.size() + &quot; Message(s) In The Database&quot;);
+
+        for (Message i : myList)
+        {
+            LOGGER.debug(&quot;Message: ID: &quot; + i.getId() + &quot;, Message: &quot; + i.getMessage() + &quot;.&quot;);
+        }
+
+        /**
+         *
+         * This is the end!!!
+         *
+         */
+        LOGGER.debug(&quot;This is the end!!!!&quot;);
+    }</code></pre>
+
+<p>Now lets take a good look at how I setup the database with Spring&#8217;s Java Configuration (JavaConfig) style and not in a XML file.</p>
+
+<pre><code>@Configuration
+@EnableTransactionManagement
+@ComponentScan(basePackageClasses = {Main.class})
+@PropertySource(&quot;classpath:application.properties&quot;)
+public class DatabaseConfiguration
+{
+
+
+    /**
+     *
+     * This is used to setup the database. It will load the schema.sql file which does a create table so we have
+     * a table to work with in the project
+     */
+    @Bean
+    public DataSourceInitializer dataSourceInitializer(DataSource dataSource)
+    {
+        ResourceDatabasePopulator resourceDatabasePopulator = new ResourceDatabasePopulator();
+        resourceDatabasePopulator.addScript(new ClassPathResource(&quot;/schema.sql&quot;));
+
+        DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
+        dataSourceInitializer.setDataSource(dataSource);
+        dataSourceInitializer.setDatabasePopulator(resourceDatabasePopulator);
+        return dataSourceInitializer;
+    }
+
+    /**
+     *
+     * This will be setting up a datasource using HyperSQL (hsqldb) in memory
+     */
+    @Bean
+    public DataSource hsqlDataSource()
+    {
+        BasicDataSource basicDataSource = new BasicDataSource();
+        basicDataSource.setDriverClassName(org.hsqldb.jdbcDriver.class.getName());
+        basicDataSource.setUsername(&quot;sa&quot;);
+        basicDataSource.setPassword(&quot;&quot;);
+        basicDataSource.setUrl(&quot;jdbc:hsqldb:mem:mydb&quot;);
+        return basicDataSource;
+    }
+
+    /**
+     *
+     * This setups the session factory
+     */
+    @Bean
+    public LocalSessionFactoryBean sessionFactory(Environment environment,
+                                                  DataSource dataSource)
+    {
+
+        /**
+         *
+         * Getting packageOfModelBean from package of message bean
+         *
+         */
+        String packageOfModelBeans = Message.class.getPackage().getName();
+
+        LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
+
+        factoryBean.setDataSource(dataSource);
+        factoryBean.setHibernateProperties(buildHibernateProperties(environment));
+        factoryBean.setPackagesToScan(packageOfModelBeans);
+        return factoryBean;
+    }
+
+    /**
+     *
+     * Loading all the hibernate properties from a properties file
+     */
+    protected Properties buildHibernateProperties(Environment env)
+    {
+        Properties hibernateProperties = new Properties();
+
+        hibernateProperties.setProperty(&quot;hibernate.dialect&quot;, env.getProperty(&quot;hibernate.dialect&quot;));
+        hibernateProperties.setProperty(&quot;hibernate.show_sql&quot;, env.getProperty(&quot;hibernate.show_sql&quot;));
+        hibernateProperties.setProperty(&quot;hibernate.use_sql_comments&quot;, env.getProperty(&quot;hibernate.use_sql_comments&quot;));
+        hibernateProperties.setProperty(&quot;hibernate.format_sql&quot;, env.getProperty(&quot;hibernate.format_sql&quot;));
+        hibernateProperties.setProperty(&quot;hibernate.hbm2ddl.auto&quot;, env.getProperty(&quot;hibernate.hbm2ddl.auto&quot;));
+
+        hibernateProperties.setProperty(&quot;hibernate.generate_statistics&quot;, env.getProperty(&quot;hibernate.generate_statistics&quot;));
+
+        hibernateProperties.setProperty(&quot;javax.persistence.validation.mode&quot;, env.getProperty(&quot;javax.persistence.validation.mode&quot;));
+
+        //Audit History flags
+        hibernateProperties.setProperty(&quot;org.hibernate.envers.store_data_at_delete&quot;, env.getProperty(&quot;org.hibernate.envers.store_data_at_delete&quot;));
+        hibernateProperties.setProperty(&quot;org.hibernate.envers.global_with_modified_flag&quot;, env.getProperty(&quot;org.hibernate.envers.global_with_modified_flag&quot;));
+
+        return hibernateProperties;
+    }
+
+    /**
+     *
+     * This is setting up the hibernate transaction manager
+     *
+     */
+    @Bean
+    public HibernateTransactionManager hibernateTransactionManager(SessionFactory sessionFactory)
+    {
+        return new HibernateTransactionManager(sessionFactory);
+    }
+
+
+}</code></pre>
+
+<p>You can see how easy it is to use Spring&#8217;s Java Configuration (JavaConfig) style and Not XML.. The time of using XML files with Springs is over&#8230;</p>
+
+<p>You can see the project on github at <a href='https://github.com/JohnathanMarkSmith/NoMySQL'>https://github.com/JohnathanMarkSmith/NoMySQL</a></p>
+
+<h3 id='download_and_run'>Download and Run</h3>
+
+<p>So now its time to download the project from github and run it, You need to do the following commands:</p>
+
+<pre><code>git clone git@github.com:JohnathanMarkSmith/NoMySQL.git
+cd NoMySQL
+mvn package
+cd target
+java -jar NoMySQL.jar</code></pre>
+
+<p>Thats it and you should see the following line on the console:</p>
+
+<pre><code>2013-05-24 08:28:23,401 [main] DEBUG com.johnathanmarksmith.noMySQL.Main - You Have 2 Message(s) In The Database
+2013-05-24 08:28:23,401 [main] DEBUG com.johnathanmarksmith.noMySQL.Main - Message: ID: 1, Message: Hello World.
+2013-05-24 08:28:23,401 [main] DEBUG com.johnathanmarksmith.noMySQL.Main - Message: ID: 2, Message: I love Regan.
+2013-05-24 08:28:23,401 [main] DEBUG com.johnathanmarksmith.noMySQL.Main - This is the end!!!!</code></pre>
+
+<p>This Project is using Java, Spring, Hibernate, Maven, jUnit, Log4J, HSQLDB and Github.</p>
+<object width='420' height='315'><param value='http://www.youtube.com/v/LC6mnUcnWEg?version=3&amp;hl=en_US' name='movie' /><param value='true' name='allowFullScreen' /><param value='always' name='allowscriptaccess' /><embed allowfullscreen='true' width='420' src='http://www.youtube.com/v/LC6mnUcnWEg?version=3&amp;hl=en_US' height='315' allowscriptaccess='always' type='application/x-shockwave-flash' /></object>
+<p>If you have any questions or comments please email me at <a href='mailto:john@johnathanmarksmith.com'>john@johnathanmarksmith.com</a></p>
+    <hr>
+    <div class="pagination btn-group">
+      
+        <a class="btn prev" href="/JQuery/JavaScript/2013/05/24/how-to-use-jquery-validation-plugin-for-field-validatoin" title="How To Use JQuery Validation Plugin for Field Validatoin">&larr; Previous</a>
+      
+        <a class="btn" href="/archive.html">Archive</a>
+      
+        <a class="btn next" href="/Java/Java%20Interview%20Questions/2013/05/28/java-interview-question-what-is-interface-and-its-use" title="Java Interview Question: What is interface and its use">Next &rarr;</a>
+      
+    </div>
+    <hr>
+    
+  </div>
+  
+  <div class="span4">
+    <section>
+      <h4>Published</h4>
+      <div class="date"><span>27 May 2013</span></div>
+    </section>
+         
+    
+      <section>
+        <h4>Tags</h4>
+        <ul class="tag_box">
+          
+          
+
+
+  
+     
+    	<li><a href="/tags.html#Spring-ref">Spring <span>16</span></a></li>
+     
+    	<li><a href="/tags.html#Java-ref">Java <span>36</span></a></li>
+     
+    	<li><a href="/tags.html#JavaConfig-ref">JavaConfig <span>12</span></a></li>
+     
+    	<li><a href="/tags.html#Programming-ref">Programming <span>19</span></a></li>
+     
+    	<li><a href="/tags.html#Spring Java Configuration-ref">Spring Java Configuration <span>12</span></a></li>
+     
+    	<li><a href="/tags.html#Maven-ref">Maven <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#JUnit-ref">JUnit <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#Log4J-ref">Log4J <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#Hibernate-ref">Hibernate <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#HyperSQL-ref">HyperSQL <span>1</span></a></li>
+    
+  
+
+
+
+        </ul>
+      </section>
+             
+  </div>
+</div>
+
+
+      </div>
+        <p>
+
+            <!-- Place this tag where you want the +1 button to render. -->
+        <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+
+        <!-- Place this tag after the last +1 button tag. -->
+        <script type="text/javascript">
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+        </p>
+
+
+
+        <p>
+        <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-8842842164201164";
+        /* First Ad */
+        google_ad_slot = "3974497337";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        //-->
+        </script>
+        <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+        <br>
+        </p>
+
+        <footer>
+        <p>&copy; 2014 <a href="mailto:john@johnathanmarksmith.com">Johnathan Mark Smith</a>
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a>
+        </p>
+      </footer>
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/themes/hooligan/js/jquery.min.js"><\/script>')</script>
+    <script src="/assets/themes/hooligan/bootstrap/js/bootstrap.min.js"></script>
+
+    
+  </body>
+</html>
+

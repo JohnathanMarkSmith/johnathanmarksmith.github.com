@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      
+        Basic install of JBoss for developers on linux - 
+      
+      Johnathan Mark Smith
+    </title>
+    <meta name="description" content="Basic install of JBoss for developers on linux">
+    <meta name="author" content="Johnathan Mark Smith">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+      <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="/assets/themes/hooligan/css-social-buttons/css/zocial.stripped.css">
+    <link href="/assets/themes/hooligan/css/pygments.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/hooligan/css/darkstrap.css" rel="stylesheet" type="text/css" media="all">    
+    <link href="/assets/themes/hooligan/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>      
+
+
+          <a class="brand" href="/">Johnathan Mark Smith</a>
+
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              
+              
+              
+
+
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/resume.html">Resume</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+
+
+
+            </ul>
+            <ul class="nav pull-right social visible-desktop">
+              <li class="divider-vertical"></li>
+              
+                <li>
+                  <a href="https://github.com/JohnathanMarkSmith" class="zocial github icon" target="_blank">
+                    <span class="hidden-desktop">Github</span>
+                  </a>
+                </li>
+              
+                  
+              
+                <li>
+                  <a href="https://twitter.com/JohnathanMSmith" class="zocial twitter icon" target="_blank">
+                  <span class="hidden-desktop">Twitter</span>
+                  </a>
+                </li>
+                                        
+                         
+              
+                <li>
+                  <a href="http://www.linkedin.com/in/johnathansmith1969" class="zocial linkedin icon" target="_blank">
+                    <span class="hidden-desktop">LinkedIn</span>
+                  </a>
+                </li>
+                                  
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        
+<div class="page-header">
+  <h1>
+    Basic install of JBoss for developers on linux 
+    
+  </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <p>Below is a quick and easy way to install JBoss on linux for a developer to test and learn how to use it.</p>
+
+<p>Please don&#8217;t use this setup for production.</p>
+
+<h3 id='download_jboss_eap6_as711final_and_untar'>Download JBoss EAP6 (AS7.1.1.Final) and untar</h3>
+
+<p>To download and untar jboss you need to enter the following commands:</p>
+
+<p><div class='highlight'><pre><code class='bash'><span class='o'>[</span>jsmith@regan ~<span class='o'>]</span> wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
+<span class='o'>[</span>jsmith@regan ~<span class='o'>]</span> tar -zxvf jboss-as-7.1.1.Final.tar.gz 
+</code></pre></div></p>
+
+<h3 id='start_up_jboss_in_standalone_mode'>Start Up JBoss in standalone mode</h3>
+
+<p>Now that you have jboss untar on your linux box its time to start it in standalone mode. Just enter the following commands:</p>
+
+<p><div class='highlight'><pre><code class='bash'><span class='o'>[</span>jsmith@regan ~<span class='o'>]</span> <span class='nb'>cd </span>jboss-as-7.1.1.Final/bin
+<span class='o'>[</span>jsmith@regan ~<span class='o'>]</span> ./standalone.sh
+</code></pre></div></p>
+
+<p>The output should look something like the one below:</p>
+<div class='highlight'><pre><code class='bash'><span class='o'>=========================================================================</span>
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jsmith/jboss-as-7.1.1.Final
+
+  JAVA: java
+
+  JAVA_OPTS:  -server -XX:+UseCompressedOops -XX:+TieredCompilation -Xms64m -Xmx512m -XX:MaxPermSize<span class='o'>=</span>256m -Djava.net.preferIPv4Stack<span class='o'>=</span><span class='nb'>true</span> -Dorg.jboss.resolver.warning<span class='o'>=</span><span class='nb'>true</span> -Dsun.rmi.dgc.client.gcInterval<span class='o'>=</span>3600000 -Dsun.rmi.dgc.server.gcInterval<span class='o'>=</span>3600000 -Djboss.modules.system.pkgs<span class='o'>=</span>org.jboss.byteman -Djava.awt.headless<span class='o'>=</span><span class='nb'>true</span> -Djboss.server.default.config<span class='o'>=</span>standalone.xml
+
+<span class='o'>=========================================================================</span>
+
+14:10:26,029 INFO  <span class='o'>[</span>org.jboss.modules<span class='o'>]</span> JBoss Modules version 1.1.1.GA
+14:10:26,250 INFO  <span class='o'>[</span>org.jboss.msc<span class='o'>]</span> JBoss MSC version 1.0.2.GA
+14:10:26,312 INFO  <span class='o'>[</span>org.jboss.as<span class='o'>]</span> JBAS015899: JBoss AS 7.1.1.Final <span class='s2'>&quot;Brontes&quot;</span> starting
+14:10:27,440 INFO  <span class='o'>[</span>org.xnio<span class='o'>]</span> XNIO Version 3.0.3.GA
+14:10:27,457 INFO  <span class='o'>[</span>org.jboss.as.server<span class='o'>]</span> JBAS015888: Creating http management service using socket-binding <span class='o'>(</span>management-http<span class='o'>)</span>
+14:10:27,465 INFO  <span class='o'>[</span>org.xnio.nio<span class='o'>]</span> XNIO NIO Implementation Version 3.0.3.GA
+14:10:27,485 INFO  <span class='o'>[</span>org.jboss.remoting<span class='o'>]</span> JBoss Remoting version 3.2.3.GA
+14:10:27,548 INFO  <span class='o'>[</span>org.jboss.as.logging<span class='o'>]</span> JBAS011502: Removing bootstrap log handlers
+14:10:27,557 INFO  <span class='o'>[</span>org.jboss.as.configadmin<span class='o'>]</span> <span class='o'>(</span>ServerService Thread Pool -- 26<span class='o'>)</span> JBAS016200: Activating ConfigAdmin Subsystem
+14:10:27,587 INFO  <span class='o'>[</span>org.jboss.as.clustering.infinispan<span class='o'>]</span> <span class='o'>(</span>ServerService Thread Pool -- 31<span class='o'>)</span> JBAS010280: Activating Infinispan subsystem.
+14:10:27,682 INFO  <span class='o'>[</span>org.jboss.as.connector<span class='o'>]</span> <span class='o'>(</span>MSC service thread 1-3<span class='o'>)</span> JBAS010408: Starting JCA Subsystem <span class='o'>(</span>JBoss IronJacamar 1.0.9.Final<span class='o'>)</span>
+14:10:27,689 INFO  <span class='o'>[</span>org.jboss.as.naming<span class='o'>]</span> <span class='o'>(</span>ServerService Thread Pool -- 38<span class='o'>)</span> JBAS011800: Activating Naming Subsystem
+14:10:27,720 INFO  <span class='o'>[</span>org.jboss.as.osgi<span class='o'>]</span> <span class='o'>(</span>ServerService Thread Pool -- 39<span class='o'>)</span> JBAS011940: Activating OSGi Subsystem
+14:10:27,735 INFO  <span class='o'>[</span>org.jboss.as.security<span class='o'>]</span> <span class='o'>(</span>ServerService Thread Pool -- 44<span class='o'>)</span> JBAS013101: Activating Security Subsystem
+14:10:27,750 INFO  <span class='o'>[</span>org.jboss.as.connector.subsystems.datasources<span class='o'>]</span> <span class='o'>(</span>ServerService Thread Pool -- 27<span class='o'>)</span> JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver <span class='o'>(</span>version 1.3<span class='o'>)</span>
+14:10:27,776 INFO  <span class='o'>[</span>org.jboss.as.security<span class='o'>]</span> <span class='o'>(</span>MSC service thread 1-2<span class='o'>)</span> JBAS013100: Current PicketBox <span class='nv'>version</span><span class='o'>=</span>4.0.7.Final
+14:10:27,840 INFO  <span class='o'>[</span>org.jboss.as.webservices<span class='o'>]</span> <span class='o'>(</span>ServerService Thread Pool -- 48<span class='o'>)</span> JBAS015537: Activating WebServices Extension
+14:10:27,871 INFO  <span class='o'>[</span>org.jboss.as.naming<span class='o'>]</span> <span class='o'>(</span>MSC service thread 1-4<span class='o'>)</span> JBAS011802: Starting Naming Service
+14:10:27,924 INFO  <span class='o'>[</span>org.jboss.as.mail.extension<span class='o'>]</span> <span class='o'>(</span>MSC service thread 1-1<span class='o'>)</span> JBAS015400: Bound mail session <span class='o'>[</span>java:jboss/mail/Default<span class='o'>]</span>
+14:10:28,183 INFO  <span class='o'>[</span>org.jboss.ws.common.management.AbstractServerConfig<span class='o'>]</span> <span class='o'>(</span>MSC service thread 1-1<span class='o'>)</span> JBoss Web Services - Stack CXF Server 4.0.2.GA
+14:10:28,272 INFO  <span class='o'>[</span>org.apache.coyote.http11.Http11Protocol<span class='o'>]</span> <span class='o'>(</span>MSC service thread 1-3<span class='o'>)</span> Starting Coyote HTTP/1.1 on http--127.0.0.1-8080
+14:10:28,746 INFO  <span class='o'>[</span>org.jboss.as.remoting<span class='o'>]</span> <span class='o'>(</span>MSC service thread 1-1<span class='o'>)</span> JBAS017100: Listening on /127.0.0.1:4447
+14:10:28,749 INFO  <span class='o'>[</span>org.jboss.as.remoting<span class='o'>]</span> <span class='o'>(</span>MSC service thread 1-3<span class='o'>)</span> JBAS017100: Listening on /127.0.0.1:9999
+14:10:28,754 INFO  <span class='o'>[</span>org.jboss.as.server.deployment.scanner<span class='o'>]</span> <span class='o'>(</span>MSC service thread 1-2<span class='o'>)</span> JBAS015012: Started FileSystemDeploymentService <span class='k'>for </span>directory /home/jsmith/jboss-as-7.1.1.Final/standalone/deployments
+14:10:28,896 INFO  <span class='o'>[</span>org.jboss.as.connector.subsystems.datasources<span class='o'>]</span> <span class='o'>(</span>MSC service thread 1-1<span class='o'>)</span> JBAS010400: Bound data <span class='nb'>source</span> <span class='o'>[</span>java:jboss/datasources/ExampleDS<span class='o'>]</span>
+14:10:29,026 INFO  <span class='o'>[</span>org.jboss.as<span class='o'>]</span> <span class='o'>(</span>Controller Boot Thread<span class='o'>)</span> JBAS015951: Admin console listening on http://127.0.0.1:9990
+14:10:29,027 INFO  <span class='o'>[</span>org.jboss.as<span class='o'>]</span> <span class='o'>(</span>Controller Boot Thread<span class='o'>)</span> JBAS015874: JBoss AS 7.1.1.Final <span class='s2'>&quot;Brontes&quot;</span> started in 3281ms - Started 133 of 208 services <span class='o'>(</span>74 services are passive or on-demand<span class='o'>)</span>
+</code></pre></div>
+<h3 id='add_the_admin'>Add the admin</h3>
+
+<p>Now it&#8217;s time to setup the admin account for jboss. Open a new console and follow the following steps. I am going to make the username &#8220;admin&#8221; and the password &#8220;jboss&#8221; but you can use any username and password you would like, follow the commands below</p>
+<div class='highlight'><pre><code class='bash'><span class='nb'>cd </span>jboss-as-7.1.1.Final/bin
+./add-user.sh
+</code></pre></div>
+<p>Your output should look like this:</p>
+<div class='highlight'><pre><code class='bash'>What <span class='nb'>type </span>of user <span class='k'>do </span>you wish to add? 
+ a<span class='o'>)</span> Management User <span class='o'>(</span>mgmt-users.properties<span class='o'>)</span> 
+ b<span class='o'>)</span> Application User <span class='o'>(</span>application-users.properties<span class='o'>)</span>
+<span class='o'>(</span>a<span class='o'>)</span>: 
+
+Enter the details of the new user to add.
+Realm <span class='o'>(</span>ManagementRealm<span class='o'>)</span> : 
+Username : admin
+Password : 
+Re-enter Password : 
+The username <span class='s1'>&#39;admin&#39;</span> is easy to guess
+Are you sure you want to add user <span class='s1'>&#39;admin&#39;</span> yes/no? yes
+About to add user <span class='s1'>&#39;admin&#39;</span> <span class='k'>for </span>realm <span class='s1'>&#39;ManagementRealm&#39;</span>
+Is this correct yes/no? yes
+</code></pre></div>
+<h3 id='jboss_is_up_and_running'>JBoss is up and running.</h3>
+
+<p>Ok that is the basic install of jboss as a standalone for a developer to use. Now launch your browser to http://127.0.0.1:8080 or http://localhost:8080 and if anything was done righ your output should look like the one below:</p>
+<div style='text-align: center'>
+<img src='/images/jboss.jpg' alt='Installing Jboss on Linux with Johnathan Mark Smith' />
+</div>
+<p>Here is the video if you would like to watch it:</p>
+<object width='560' height='315'><param value='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;hl=en_US' name='movie' /><param value='true' name='allowFullScreen' /><param value='always' name='allowscriptaccess' /><embed width='560' type='application/x-shockwave-flash' allowscriptaccess='always' src='http://www.youtube.com/v/mDMbRRtNBZg?version=3&amp;hl=en_US' allowfullscreen='true' height='315' /></object>
+<p>If you have any questions or comments please email me at <a href='mailto:john@johnathanmarksmith.com'>john@johnathanmarksmith.com</a></p>
+    <hr>
+    <div class="pagination btn-group">
+      
+        <a class="btn prev" href="/MySQL/Linux/Database/2013/05/03/how-to-load-mysql-database-from-command-line-in-linux" title="How to load MySQL Database from Command Line in Linux">&larr; Previous</a>
+      
+        <a class="btn" href="/archive.html">Archive</a>
+      
+        <a class="btn next" href="/Linux/MySQL/MariaDB/2013/05/13/replacing-mysql-with-mariadb-on-centos-6" title="Replacing MySQL with MariaDB on CentOS 6">Next &rarr;</a>
+      
+    </div>
+    <hr>
+    
+  </div>
+  
+  <div class="span4">
+    <section>
+      <h4>Published</h4>
+      <div class="date"><span>13 May 2013</span></div>
+    </section>
+         
+    
+      <section>
+        <h4>Tags</h4>
+        <ul class="tag_box">
+          
+          
+
+
+  
+     
+    	<li><a href="/tags.html#Linux-ref">Linux <span>12</span></a></li>
+     
+    	<li><a href="/tags.html#Java-ref">Java <span>36</span></a></li>
+     
+    	<li><a href="/tags.html#JBoss-ref">JBoss <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#AS7-ref">AS7 <span>1</span></a></li>
+    
+  
+
+
+
+        </ul>
+      </section>
+             
+  </div>
+</div>
+
+
+      </div>
+        <p>
+
+            <!-- Place this tag where you want the +1 button to render. -->
+        <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+
+        <!-- Place this tag after the last +1 button tag. -->
+        <script type="text/javascript">
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+        </p>
+
+
+
+        <p>
+        <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-8842842164201164";
+        /* First Ad */
+        google_ad_slot = "3974497337";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        //-->
+        </script>
+        <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+        <br>
+        </p>
+
+        <footer>
+        <p>&copy; 2014 <a href="mailto:john@johnathanmarksmith.com">Johnathan Mark Smith</a>
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a>
+        </p>
+      </footer>
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/themes/hooligan/js/jquery.min.js"><\/script>')</script>
+    <script src="/assets/themes/hooligan/bootstrap/js/bootstrap.min.js"></script>
+
+    
+  </body>
+</html>
+
