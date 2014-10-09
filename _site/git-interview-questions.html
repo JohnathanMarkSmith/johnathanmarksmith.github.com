@@ -74,6 +74,14 @@
   
     
       
+    
+  
+    
+      
+    
+  
+    
+      
       	
       	<li><a href="/archive.html">Archive</a></li>
       	
@@ -110,10 +118,6 @@
   
     
       
-    
-  
-    
-      
       	
       	<li><a href="/pages.html">Pages</a></li>
       	
@@ -129,10 +133,6 @@
       	
       	<li><a href="/resume.html">Resume</a></li>
       	
-      
-    
-  
-    
       
     
   
@@ -211,24 +211,29 @@
 
 <div class="row">
   <div class="span12">
-    <h2 id='git_interview_questions'>Git Interview Questions</h2>
+    <h2 id="git-interview-questions">Git Interview Questions</h2>
 
 <p>I really like working with Git and but I really dont like going on interviews and getting asked questions on it.. As developers we really dont have to know EVERYTHING but hard but we should know how to find the anwsers.</p>
 
-<h2 id='how_do_i_clone_a_local_git_repository'>How do I clone a local Git Repository?</h2>
+<h2 id="how-do-i-clone-a-local-git-repository">How do I clone a local Git Repository?</h2>
 
 <p>This worked for me:</p>
-<div class='highlight'><pre><code class='bash'>git clone file:////&lt;host&gt;/&lt;share&gt;/&lt;path&gt;
-</code></pre></div>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clone file:////&lt;host&gt;/&lt;share&gt;/&lt;path&gt;</code></pre></div>
+
 <p>For example, if your main machine has the IP 192.168.10.51 and the computer name main, and it has a share named code which itself is a git repository, the both of the following commands should work equally:</p>
-<div class='highlight'><pre><code class='bash'>git clone file:////main/code
-git clone file:////192.168.10.51/code
-</code></pre></div>
-<h2 id='how_do_you_share_a_local_git_repository'>How do you share a local Git repository?</h2>
 
-<pre><code> git daemon --export-all --base-path=$(pwd)</code></pre>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clone file:////main/code
+git clone file:////192.168.10.51/code</code></pre></div>
 
-<p>If you have any questions or comments please email me at <a href='mailto:john@johnathanmarksmith.com'>john@johnathanmarksmith.com</a></p>
+<h2 id="how-do-you-share-a-local-git-repository">How do you share a local Git repository?</h2>
+
+<pre><code> git daemon --export-all --base-path=$(pwd)
+</code></pre>
+
+<p>If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a></p>
+
+
   </div>
 </div>
 
