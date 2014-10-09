@@ -18,7 +18,7 @@ The first thing we need to do is to download the Maven tar file and untar it to 
 
 {% highlight bash %}
 wget http://mirrors.gigenet.com/apache/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
-su -c "tar -zxvf apache-maven-3.2.3-bin.tar.gz -C /usr/local“ 
+su -c "tar -zxvf apache-maven-3.2.3-bin.tar.gz -C /usr/local��� 
 cd /usr/local
 sudo ln -s apache-maven-3.2.3 maven
 {% endhighlight %}
@@ -45,9 +45,9 @@ Logout of the system and then log back into it. Enter the following command:
 {% endhighlight %}
 
 
-
 Now that's it. have fun with maven.
 
+<object width="640" height="480"><param name="movie" value="//www.youtube.com/v/5TvTwH8q2EI?hl=en_US&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube.com/v/5TvTwH8q2EI?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="640" height="480" allowscriptaccess="always" allowfullscreen="true"></embed></object>
 
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
 
