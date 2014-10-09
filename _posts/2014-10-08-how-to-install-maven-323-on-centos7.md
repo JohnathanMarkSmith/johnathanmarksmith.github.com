@@ -2,8 +2,8 @@
 layout: post
 title: "How to install Maven 3.2.3 on CentOS7"
 description: "How to install Maven 3.2.3 on CentOS7"
-categories: [ Linux, Java, Maven, Programming, Project Management]
-tags: [ Linux, Java, Maven, Programming, Project Management ]
+categories: [ Linux, CentOS7, Java, Maven, Programming, Project Management]
+tags: [ Linux, CentOS7, Java, Maven, Programming, Project Management ]
 comments: false
 ---
 
