@@ -29,6 +29,8 @@ Now direct your browser to http://127.0.0.1 and you should see the apache2 home 
 
 Now that's it. have fun with Apache2.
 
+<object width="640" height="480"><param name="movie" value="//www.youtube.com/v/Box8TnzRKjA?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube.com/v/Box8TnzRKjA?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="640" height="480" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
 
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
 {% include JB/setup %}
