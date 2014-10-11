@@ -5,10 +5,31 @@
         <description>Johnathan Mark Smith - Johnathan Mark Smith</description>
         <link>http://johnathanmarksmith.com</link>
         <link>http://johnathanmarksmith.com</link>
-        <lastBuildDate>2014-10-09T08:10:54-07:00</lastBuildDate>
-        <pubDate>2014-10-09T08:10:54-07:00</pubDate>
+        <lastBuildDate>2014-10-10T16:58:14-07:00</lastBuildDate>
+        <pubDate>2014-10-10T16:58:14-07:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>How to disable firewalld on CentOS7 and RHEL7 By Johnathan Mark Smith</title>
+                <description>&lt;p&gt;CentOS7 and RHEL7 use Firewalld which is a bit complicated so I am going to show you how to disable it.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-stop-and-disable-firewalld&quot;&gt;How to stop and disable firewalld&lt;/h3&gt;
+
+&lt;p&gt;The following two commands will first disable firewalld and then stop it.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo systemctl mask firewalld
+sudo systemctl stop firewalld&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Thats it so you box now has NO firewalld running.. you should maybe think about iptables.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
+
+</description>
+                <link>http://johnathanmarksmith.com/linux/firewalld/centos7/rhel7/2014/10/10/how-to-disable-firewalld-on-centos7</link>
+                <guid>http://johnathanmarksmith.com/linux/firewalld/centos7/rhel7/2014/10/10/how-to-disable-firewalld-on-centos7</guid>
+                <pubDate>2014-10-10T00:00:00-07:00</pubDate>
+        </item>
 
         <item>
                 <title>How to install Apache2 on CentOS7</title>
@@ -22,12 +43,14 @@
 
 &lt;p&gt;Now lets configure your system to start apache on boot&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;systemctl start httpd.service
-systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;httpd.service&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo systemctl start httpd.service
+sudo systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;httpd.service&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now direct your browser to http://127.0.0.1 and you should see the apache2 home page&lt;/p&gt;
 
 &lt;p&gt;Now that’s it. have fun with Apache2.&lt;/p&gt;
+
+&lt;object width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;//www.youtube.com/v/Box8TnzRKjA?version=3&amp;amp;hl=en_US&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;embed src=&quot;//www.youtube.com/v/Box8TnzRKjA?version=3&amp;amp;hl=en_US&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;640&quot; height=&quot;480&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
 
@@ -48,7 +71,7 @@ systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;httpd.service&lt;
 &lt;p&gt;The first thing we need to do is to download the Maven tar file and untar it to a shared location on the workstation&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget http://mirrors.gigenet.com/apache/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
-su -c &lt;span class=&quot;err&quot;&gt;&amp;quot;&lt;/span&gt;tar -zxvf apache-maven-3.2.3-bin.tar.gz -C /usr/local“ 
+su -c &lt;span class=&quot;err&quot;&gt;&amp;quot;&lt;/span&gt;tar -zxvf apache-maven-3.2.3-bin.tar.gz -C /usr/local��� 
 &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/local
 sudo ln -s apache-maven-3.2.3 maven&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -71,11 +94,13 @@ sudo ln -s apache-maven-3.2.3 maven&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now that’s it. have fun with maven.&lt;/p&gt;
 
+&lt;object width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;//www.youtube.com/v/5TvTwH8q2EI?hl=en_US&amp;amp;version=3&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;embed src=&quot;//www.youtube.com/v/5TvTwH8q2EI?hl=en_US&amp;amp;version=3&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;640&quot; height=&quot;480&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;
+
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
 
 </description>
-                <link>http://johnathanmarksmith.com/linux/java/maven/programming/project%20management/2014/10/08/how-to-install-maven-323-on-centos7</link>
-                <guid>http://johnathanmarksmith.com/linux/java/maven/programming/project%20management/2014/10/08/how-to-install-maven-323-on-centos7</guid>
+                <link>http://johnathanmarksmith.com/linux/centos7/java/maven/programming/project%20management/2014/10/08/how-to-install-maven-323-on-centos7</link>
+                <guid>http://johnathanmarksmith.com/linux/centos7/java/maven/programming/project%20management/2014/10/08/how-to-install-maven-323-on-centos7</guid>
                 <pubDate>2014-10-08T00:00:00-07:00</pubDate>
         </item>
 

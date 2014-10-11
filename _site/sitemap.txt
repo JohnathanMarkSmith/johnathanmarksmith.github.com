@@ -21,8 +21,9 @@ http://johnathanmarksmith.com/social-networking.html
 http://johnathanmarksmith.com/tags.html
 http://johnathanmarksmith.com/technology.html
 
+http://johnathanmarksmith.com/linux/firewalld/centos7/rhel7/2014/10/10/how-to-disable-firewalld-on-centos7
 http://johnathanmarksmith.com/linux/apache2/centos7/2014/10/09/how-to-install-apache2-on-centos7
-http://johnathanmarksmith.com/linux/java/maven/programming/project%20management/2014/10/08/how-to-install-maven-323-on-centos7
+http://johnathanmarksmith.com/linux/centos7/java/maven/programming/project%20management/2014/10/08/how-to-install-maven-323-on-centos7
 http://johnathanmarksmith.com/git/2014/02/26/how-i-use-git-with-my-projects
 http://johnathanmarksmith.com/git/cygwin/windows/2013/11/09/how-to-install-git-client-on-windows-using-cygwin
 http://johnathanmarksmith.com/spring/java/javaconfig/programming/spring%20java%20configuration/fongo/nosql/spring%20data/mongodb/2013/07/16/i-was-published-in-this-week-in-spring-on-how-to-use-fongo-and-nosql-unit-to-test-spring-data-project-with-mongodb-junit-log4j
