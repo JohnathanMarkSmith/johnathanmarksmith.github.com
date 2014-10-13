@@ -5,10 +5,63 @@
         <description>Johnathan Mark Smith - Johnathan Mark Smith</description>
         <link>http://johnathanmarksmith.com</link>
         <link>http://johnathanmarksmith.com</link>
-        <lastBuildDate>2014-10-10T16:58:14-07:00</lastBuildDate>
-        <pubDate>2014-10-10T16:58:14-07:00</pubDate>
+        <lastBuildDate>2014-10-13T09:11:49-07:00</lastBuildDate>
+        <pubDate>2014-10-13T09:11:49-07:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>How to install MongoDB server on CentOS7 and RHEL7</title>
+                <description>&lt;p&gt;So I am going to show you how to install MongoDB on CentOS7 and RHEL7 today.&lt;/p&gt;
+
+&lt;p&gt;First thing we need to do is to add the MongoDB repo to yum.&lt;/p&gt;
+
+&lt;h3 id=&quot;adding-mongodb-repo-to-yum&quot;&gt;Adding MongoDB repo to Yum&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vim /etc/yum.repos.d/mongodb.repo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Next insert the following lines into the repo file you just created.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;mongodb&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;MongoDB repo
+&lt;span class=&quot;nv&quot;&gt;baseurl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://downloads-distro.mongodb.org/repo/redhat/os/x86_64/
+&lt;span class=&quot;nv&quot;&gt;gpgcheck&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+&lt;span class=&quot;nv&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After you saved the file with the repo information you will need to install the MongoDB packages using yum.&lt;/p&gt;
+
+&lt;h3 id=&quot;installing-mongodb-packages&quot;&gt;Installing MongoDB packages&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yum install mongodb-org&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now that you have MongoDB packages installed you will need to start the MongoDB service using systemd.&lt;/p&gt;
+
+&lt;h3 id=&quot;starting-mongodb-server&quot;&gt;Starting MongoDB Server&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo systemctl start mongod.service&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt; 
+Now lets check to see if MongoDB is running and also open up the firewall so we can access it.&lt;/p&gt;
+
+&lt;h3 id=&quot;checking-to-see-if-mongodb-is-running&quot;&gt;Checking to see if mongoDB is running&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ps -ef  &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;  grep   mongo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;opening-up-the-ports-on-the-firewall&quot;&gt;Opening up the ports on the firewall&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo firewall-cmd --zone&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;public --add-port&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;27017/tcp --permanent
+sudo firewall-cmd --reload&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Now that’s it. have fun with MongoDB.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
+</description>
+                <link>http://johnathanmarksmith.com/linux/mongodb/centos7/rhel7/2014/10/13/how-to-install-mongodb-on-centos7</link>
+                <guid>http://johnathanmarksmith.com/linux/mongodb/centos7/rhel7/2014/10/13/how-to-install-mongodb-on-centos7</guid>
+                <pubDate>2014-10-13T00:00:00-07:00</pubDate>
+        </item>
 
         <item>
                 <title>How to disable firewalld on CentOS7 and RHEL7 By Johnathan Mark Smith</title>

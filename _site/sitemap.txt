@@ -21,6 +21,7 @@ http://johnathanmarksmith.com/social-networking.html
 http://johnathanmarksmith.com/tags.html
 http://johnathanmarksmith.com/technology.html
 
+http://johnathanmarksmith.com/linux/mongodb/centos7/rhel7/2014/10/13/how-to-install-mongodb-on-centos7
 http://johnathanmarksmith.com/linux/firewalld/centos7/rhel7/2014/10/10/how-to-disable-firewalld-on-centos7
 http://johnathanmarksmith.com/linux/apache2/centos7/2014/10/09/how-to-install-apache2-on-centos7
 http://johnathanmarksmith.com/linux/centos7/java/maven/programming/project%20management/2014/10/08/how-to-install-maven-323-on-centos7
