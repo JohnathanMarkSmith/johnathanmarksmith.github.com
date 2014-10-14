@@ -43,7 +43,7 @@ Now that you have MongoDB packages installed you will need to start the MongoDB 
 {% highlight bash %}
 sudo systemctl start mongod.service
 {% endhighlight %}
- 
+��
 Now lets check to see if MongoDB is running and also open up the firewall so we can access it.
 
 ### Checking to see if mongoDB is running
@@ -61,9 +61,14 @@ sudo firewall-cmd --zone=public --add-port=27017/tcp --permanent
 sudo firewall-cmd --reload
 {% endhighlight %}
 
- 
+��
 
 Now that's it. have fun with MongoDB.
+
+
+<object width="640" height="480"><param name="movie" value="//www.youtube-nocookie.com/v/m22E2x1c2I0?hl=en_US&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube-nocookie.com/v/m22E2x1c2I0?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="640" height="480" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
+
 
 
 
