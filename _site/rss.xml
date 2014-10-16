@@ -5,10 +5,80 @@
         <description>Johnathan Mark Smith - Johnathan Mark Smith</description>
         <link>http://johnathanmarksmith.com</link>
         <link>http://johnathanmarksmith.com</link>
-        <lastBuildDate>2014-10-13T09:11:49-07:00</lastBuildDate>
-        <pubDate>2014-10-13T09:11:49-07:00</pubDate>
+        <lastBuildDate>2014-10-16T09:48:51-07:00</lastBuildDate>
+        <pubDate>2014-10-16T09:48:51-07:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>How to install MariaDB on CentOS7</title>
+                <description>&lt;p&gt;Centos 7 comes with MariaDB instead of MySQL. MariaDB is a open source equivalent to MySQL and I am going to show you how to install it right now. &lt;/p&gt;
+
+&lt;p&gt;If you must have MySQL you need to add the mysql-community repo by using the following command&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo rpm -Uvh http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and then you can install MySQL like you normally…&lt;/p&gt;
+
+&lt;p&gt;Now let me show you how to install MariaDB on CentOS7. The first step is to install the MariaDB server and client&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo yum -y install mariadb-server mariadb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After running the above command we need to start the MariaDB server and enable it in systemd&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo systemctl start mariadb.service
+sud systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;mariadb.service&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now that MariaDB server is enable and running you need to run the install script. Run the following command and anwser the questions&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo mysql_secure_installation&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now that you did everything you are all done… you can now login to the MariaDB server by using the client command&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mysql&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now that’s it. have fun with MariaDB on CentOS7.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
+
+</description>
+                <link>http://johnathanmarksmith.com/linux/mariadb/mysql/centos7/rhel7/2014/10/16/how-to-install-mariadb-on-centos7</link>
+                <guid>http://johnathanmarksmith.com/linux/mariadb/mysql/centos7/rhel7/2014/10/16/how-to-install-mariadb-on-centos7</guid>
+                <pubDate>2014-10-16T00:00:00-07:00</pubDate>
+        </item>
+
+        <item>
+                <title>How to install Adobe Flash Player on CentOS7</title>
+                <description>&lt;p&gt;In this post I am going to show you how to install the Adobe Flash player on CentOS7 and RHEL7.&lt;/p&gt;
+
+&lt;p&gt;Adobe provided yum repository that contains RPM packages of Adobe Linux Software. &lt;/p&gt;
+
+&lt;p&gt;You use yum command to install either 32 or 64 bit flash player on a CentOS7 Linux operating system.&lt;/p&gt;
+
+&lt;h3 id=&quot;adding-adobe-repository-to-yum-and-insall&quot;&gt;Adding Adobe repository to Yum and Insall&lt;/h3&gt;
+&lt;p&gt;To add the adobe repository to Yum you have to enter the following command.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After you add the repositor to yum you need to run the install command to now install the flash-plugin&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yum install flash-plugin&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now that everything is installed you need to test it!&lt;/p&gt;
+
+&lt;p&gt;Open Firefox and type the following URL:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;about:plugins&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now that’s it. have fun with Flash on CentOS7 now.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
+
+</description>
+                <link>http://johnathanmarksmith.com/linux/flash/centos7/rhel7/2014/10/14/how-to-install-adobe-flash-player-on-centos7</link>
+                <guid>http://johnathanmarksmith.com/linux/flash/centos7/rhel7/2014/10/14/how-to-install-adobe-flash-player-on-centos7</guid>
+                <pubDate>2014-10-14T00:00:00-07:00</pubDate>
+        </item>
 
         <item>
                 <title>How to install MongoDB server on CentOS7 and RHEL7</title>
@@ -40,8 +110,7 @@
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo systemctl start mongod.service&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt; 
-Now lets check to see if MongoDB is running and also open up the firewall so we can access it.&lt;/p&gt;
+&lt;p&gt;Now lets check to see if MongoDB is running and also open up the firewall so we can access it.&lt;/p&gt;
 
 &lt;h3 id=&quot;checking-to-see-if-mongodb-is-running&quot;&gt;Checking to see if mongoDB is running&lt;/h3&gt;
 
@@ -52,9 +121,9 @@ Now lets check to see if MongoDB is running and also open up the firewall so we 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo firewall-cmd --zone&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;public --add-port&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;27017/tcp --permanent
 sudo firewall-cmd --reload&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt; &lt;/p&gt;
-
 &lt;p&gt;Now that’s it. have fun with MongoDB.&lt;/p&gt;
+
+&lt;object width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;//www.youtube-nocookie.com/v/m22E2x1c2I0?hl=en_US&amp;amp;version=3&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;embed src=&quot;//www.youtube-nocookie.com/v/m22E2x1c2I0?hl=en_US&amp;amp;version=3&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;640&quot; height=&quot;480&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
 </description>
