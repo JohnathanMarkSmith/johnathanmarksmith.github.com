@@ -27,7 +27,7 @@ After running the above command we need to start the MariaDB server and enable i
 
 {% highlight bash %}
 sudo systemctl start mariadb.service
-sud systemctl enable mariadb.service
+sudo systemctl enable mariadb.service
 {% endhighlight %}
 
 Now that MariaDB server is enable and running you need to run the install script. Run the following command and anwser the questions
@@ -44,6 +44,8 @@ mysql
 
 
 Now that's it. have fun with MariaDB on CentOS7.
+
+<object width="640" height="480"><param name="movie" value="//www.youtube-nocookie.com/v/ZTxYgPahmUU?hl=en_US&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube-nocookie.com/v/ZTxYgPahmUU?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="640" height="480" allowscriptaccess="always" allowfullscreen="true"></embed></object>
 
 
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
