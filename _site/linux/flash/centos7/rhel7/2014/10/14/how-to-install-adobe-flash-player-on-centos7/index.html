@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <title>
       
-        How to install MySQL on Fedora, CentOS, Red Hat and Scientific Linux - 
+        How to install Adobe Flash Player on CentOS7 - 
       
       Johnathan Mark Smith
     </title>
-    <meta name="description" content="How to install MySQL on Fedora, CentOS, Red Hat and Scientific Linux">
+    <meta name="description" content="How to install Adobe Flash Player on CentOS7">
     <meta name="author" content="Johnathan Mark Smith">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -205,39 +205,35 @@
         
 <div class="page-header">
   <h1>
-    How to install MySQL on Fedora, CentOS, Red Hat and Scientific Linux 
+    How to install Adobe Flash Player on CentOS7 
     
   </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <p>If you are using Fedora, CentOS, Red Hat or Scientific Linux I am going to show you the basic install of MySQL using yum.</p>
+    <p>In this post I am going to show you how to install the Adobe Flash player on CentOS7 and RHEL7.</p>
 
-<h3 id="install-mysql-client-and-server-software">Install MySQL Client and Server software</h3>
+<p>Adobe provided yum repository that contains RPM packages of Adobe Linux Software. </p>
 
-<p>To install MySQL Client and Server enter the following commands:</p>
+<p>You use yum command to install either 32 or 64 bit flash player on a CentOS7 Linux operating system.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># yum groupinstall &quot;MySQL Database server&quot;</span>
-<span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># yum groupinstall &quot;MySQL Database client&quot;</span></code></pre></div>
+<h3 id="adding-adobe-repository-to-yum-and-insall">Adding Adobe repository to Yum and Insall</h3>
+<p>To add the adobe repository to Yum you have to enter the following command.</p>
 
-<h3 id="to-install-mysql-system-tables-and-setup-mysql-to-start-on-boot">To install MySQL system tables and Setup MySQL to start on boot</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm</code></pre></div>
 
-<p>To install the MySQL system tables and setup MySQL to start on boot you need to enter the following commands:</p>
+<p>After you add the repositor to yum you need to run the install command to now install the flash-plugin</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># /usr/bin/mysql_install_db --user=mysql</span>
-<span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># chkconfig --level 2345 mysqld on; service mysqld start</span></code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">yum install flash-plugin</code></pre></div>
 
-<h3 id="set-admin-password">Set Admin Password</h3>
+<p>Now that everything is installed you need to test it!</p>
 
-<p>To set the admin password for the MySQL databse you need to  enter the following commands:</p>
+<p>Open Firefox and type the following URL:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># /usr/bin/mysqladmin -u root password &#39;new-password&#39;</span>
-<span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># /usr/bin/mysqladmin -u root -h regan password &#39;new-password&#39;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">about:plugins</code></pre></div>
 
-<p>Now that’s it. have fun with MySQL.</p>
-
-<object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;hl=en_US" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true" /></object>
+<p>Now that’s it. have fun with Flash on CentOS7 now.</p>
 
 <p>If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a></p>
 
@@ -245,11 +241,11 @@
     <hr>
     <div class="pagination btn-group">
       
-        <a class="btn prev" href="/linux/git/2013/04/23/how-to-see-the-last-time-a-developer-commited-work-and-also-the-number-of-commits-your-developer-made-in-your-git-repository" title="How to see the last time a developer commited work and also the number of commits your developer made in your Git repository">&larr; Previous</a>
+        <a class="btn prev" href="/linux/mongodb/centos7/rhel7/2014/10/13/how-to-install-mongodb-on-centos7" title="How to install MongoDB server on CentOS7 and RHEL7">&larr; Previous</a>
       
         <a class="btn" href="/archive.html">Archive</a>
       
-        <a class="btn next" href="/spring/java/javaconfig/programming/2013/04/25/how-to-use-spring-javaconfig-and-not-xml-files-for-configuation" title="How to use Spring JavaConfig and not XML files for configuation">Next &rarr;</a>
+        <a class="btn next" href="/linux/mariadb/mysql/centos7/rhel7/2014/10/16/how-to-install-mariadb-on-centos7" title="How to install MariaDB on CentOS7">Next &rarr;</a>
       
     </div>
     <hr>
@@ -259,7 +255,7 @@
   <div class="span4">
     <section>
       <h4>Published</h4>
-      <div class="date"><span>24 April 2013</span></div>
+      <div class="date"><span>14 October 2014</span></div>
     </section>
          
     
@@ -274,7 +270,11 @@
      
     	<li><a href="/tags.html#Linux-ref">Linux <span>19</span></a></li>
      
-    	<li><a href="/tags.html#MySQL-ref">MySQL <span>5</span></a></li>
+    	<li><a href="/tags.html#Flash-ref">Flash <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#CentOS7-ref">CentOS7 <span>7</span></a></li>
+     
+    	<li><a href="/tags.html#RHEL7-ref">RHEL7 <span>4</span></a></li>
     
   
 

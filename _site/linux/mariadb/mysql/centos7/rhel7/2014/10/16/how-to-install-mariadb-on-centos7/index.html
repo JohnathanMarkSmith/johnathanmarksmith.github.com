@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <title>
       
-        How to install MySQL on Fedora, CentOS, Red Hat and Scientific Linux - 
+        How to install MariaDB on CentOS7 - 
       
       Johnathan Mark Smith
     </title>
-    <meta name="description" content="How to install MySQL on Fedora, CentOS, Red Hat and Scientific Linux">
+    <meta name="description" content="How to install MariaDB on CentOS7">
     <meta name="author" content="Johnathan Mark Smith">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -205,39 +205,41 @@
         
 <div class="page-header">
   <h1>
-    How to install MySQL on Fedora, CentOS, Red Hat and Scientific Linux 
+    How to install MariaDB on CentOS7 
     
   </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <p>If you are using Fedora, CentOS, Red Hat or Scientific Linux I am going to show you the basic install of MySQL using yum.</p>
+    <p>Centos 7 comes with MariaDB instead of MySQL. MariaDB is a open source equivalent to MySQL and I am going to show you how to install it right now. </p>
 
-<h3 id="install-mysql-client-and-server-software">Install MySQL Client and Server software</h3>
+<p>If you must have MySQL you need to add the mysql-community repo by using the following command</p>
 
-<p>To install MySQL Client and Server enter the following commands:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo rpm -Uvh http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm</code></pre></div>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># yum groupinstall &quot;MySQL Database server&quot;</span>
-<span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># yum groupinstall &quot;MySQL Database client&quot;</span></code></pre></div>
+<p>and then you can install MySQL like you normally…</p>
 
-<h3 id="to-install-mysql-system-tables-and-setup-mysql-to-start-on-boot">To install MySQL system tables and Setup MySQL to start on boot</h3>
+<p>Now let me show you how to install MariaDB on CentOS7. The first step is to install the MariaDB server and client</p>
 
-<p>To install the MySQL system tables and setup MySQL to start on boot you need to enter the following commands:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo yum -y install mariadb-server mariadb</code></pre></div>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># /usr/bin/mysql_install_db --user=mysql</span>
-<span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># chkconfig --level 2345 mysqld on; service mysqld start</span></code></pre></div>
+<p>After running the above command we need to start the MariaDB server and enable it in systemd</p>
 
-<h3 id="set-admin-password">Set Admin Password</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo systemctl start mariadb.service
+sudo systemctl <span class="nb">enable </span>mariadb.service</code></pre></div>
 
-<p>To set the admin password for the MySQL databse you need to  enter the following commands:</p>
+<p>Now that MariaDB server is enable and running you need to run the install script. Run the following command and anwser the questions</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># /usr/bin/mysqladmin -u root password &#39;new-password&#39;</span>
-<span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># /usr/bin/mysqladmin -u root -h regan password &#39;new-password&#39;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo mysql_secure_installation</code></pre></div>
 
-<p>Now that’s it. have fun with MySQL.</p>
+<p>Now that you did everything you are all done… you can now login to the MariaDB server by using the client command</p>
 
-<object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;hl=en_US" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="http://www.youtube.com/v/RFbrw0HivUo?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true" /></object>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">mysql</code></pre></div>
+
+<p>Now that’s it. have fun with MariaDB on CentOS7.</p>
+
+<object width="640" height="480"><param name="movie" value="//www.youtube-nocookie.com/v/ZTxYgPahmUU?hl=en_US&amp;version=3" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="//www.youtube-nocookie.com/v/ZTxYgPahmUU?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="640" height="480" allowscriptaccess="always" allowfullscreen="true" /></object>
 
 <p>If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a></p>
 
@@ -245,11 +247,11 @@
     <hr>
     <div class="pagination btn-group">
       
-        <a class="btn prev" href="/linux/git/2013/04/23/how-to-see-the-last-time-a-developer-commited-work-and-also-the-number-of-commits-your-developer-made-in-your-git-repository" title="How to see the last time a developer commited work and also the number of commits your developer made in your Git repository">&larr; Previous</a>
+        <a class="btn prev" href="/linux/flash/centos7/rhel7/2014/10/14/how-to-install-adobe-flash-player-on-centos7" title="How to install Adobe Flash Player on CentOS7">&larr; Previous</a>
       
         <a class="btn" href="/archive.html">Archive</a>
       
-        <a class="btn next" href="/spring/java/javaconfig/programming/2013/04/25/how-to-use-spring-javaconfig-and-not-xml-files-for-configuation" title="How to use Spring JavaConfig and not XML files for configuation">Next &rarr;</a>
+        <a class="btn next" href="/linux/php5/centos7/2014/11/03/how-to-install-php5-on-centos7" title="How to install PHP5 on CentOS7">Next &rarr;</a>
       
     </div>
     <hr>
@@ -259,7 +261,7 @@
   <div class="span4">
     <section>
       <h4>Published</h4>
-      <div class="date"><span>24 April 2013</span></div>
+      <div class="date"><span>16 October 2014</span></div>
     </section>
          
     
@@ -274,7 +276,13 @@
      
     	<li><a href="/tags.html#Linux-ref">Linux <span>19</span></a></li>
      
+    	<li><a href="/tags.html#MariaDB-ref">MariaDB <span>2</span></a></li>
+     
     	<li><a href="/tags.html#MySQL-ref">MySQL <span>5</span></a></li>
+     
+    	<li><a href="/tags.html#CentOS7-ref">CentOS7 <span>7</span></a></li>
+     
+    	<li><a href="/tags.html#RHEL7-ref">RHEL7 <span>4</span></a></li>
     
   
 
