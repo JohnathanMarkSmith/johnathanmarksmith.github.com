@@ -21,6 +21,7 @@ http://johnathanmarksmith.com/social-networking.html
 http://johnathanmarksmith.com/tags.html
 http://johnathanmarksmith.com/technology.html
 
+http://johnathanmarksmith.com/linux/mint/linuxmint/ssh/2014/11/17/how-to-enable-ssh-on-mint
 http://johnathanmarksmith.com/linux/php5/centos7/2014/11/03/how-to-install-php5-on-centos7
 http://johnathanmarksmith.com/linux/mariadb/mysql/centos7/rhel7/2014/10/16/how-to-install-mariadb-on-centos7
 http://johnathanmarksmith.com/linux/flash/centos7/rhel7/2014/10/14/how-to-install-adobe-flash-player-on-centos7

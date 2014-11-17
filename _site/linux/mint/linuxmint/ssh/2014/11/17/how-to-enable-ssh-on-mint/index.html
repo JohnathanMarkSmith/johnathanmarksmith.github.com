@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <title>
       
-        How to install PHP5 on CentOS7 - 
+        How to Enable SSH on Mint - 
       
       Johnathan Mark Smith
     </title>
-    <meta name="description" content="How to install PHP5 on CentOS7">
+    <meta name="description" content="">
     <meta name="author" content="Johnathan Mark Smith">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -205,18 +205,23 @@
         
 <div class="page-header">
   <h1>
-    How to install PHP5 on CentOS7 
+    How to Enable SSH on Mint 
     
   </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <p>CentOS 7 ships with PHP5 so it is directly avaliable as a CentOS 7 package. So we can install it just like this</p>
+    <p>I been getting a number of emails from people that do not know how to enable SSH on Linux Mint systems, so I decided to make this post.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo yum install php</code></pre></div>
+<p>To enable SSH (secure shell) on Linux Mint all you have to do is install the SSH package which is openssh-server</p>
 
-<p>By default PHP5 should be installed</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get update
+sudo apt-get install openssh-server</code></pre></div>
+
+<p>After doing the install you can test that it works by connecting to the localhost </p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">ssh 127.0.0.1</code></pre></div>
 
 <p>If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a></p>
 
@@ -224,11 +229,11 @@
     <hr>
     <div class="pagination btn-group">
       
-        <a class="btn prev" href="/linux/mariadb/mysql/centos7/rhel7/2014/10/16/how-to-install-mariadb-on-centos7" title="How to install MariaDB on CentOS7">&larr; Previous</a>
+        <a class="btn prev" href="/linux/php5/centos7/2014/11/03/how-to-install-php5-on-centos7" title="How to install PHP5 on CentOS7">&larr; Previous</a>
       
         <a class="btn" href="/archive.html">Archive</a>
       
-        <a class="btn next" href="/linux/mint/linuxmint/ssh/2014/11/17/how-to-enable-ssh-on-mint" title="How to Enable SSH on Mint">Next &rarr;</a>
+        <a class="btn next disabled">Next &rarr;</a>
       
     </div>
     <hr>
@@ -238,7 +243,7 @@
   <div class="span4">
     <section>
       <h4>Published</h4>
-      <div class="date"><span>03 November 2014</span></div>
+      <div class="date"><span>17 November 2014</span></div>
     </section>
          
     
@@ -253,9 +258,11 @@
      
     	<li><a href="/tags.html#Linux-ref">Linux <span>20</span></a></li>
      
-    	<li><a href="/tags.html#PHP5-ref">PHP5 <span>1</span></a></li>
+    	<li><a href="/tags.html#Mint-ref">Mint <span>1</span></a></li>
      
-    	<li><a href="/tags.html#CentOS7-ref">CentOS7 <span>7</span></a></li>
+    	<li><a href="/tags.html#LinuxMint-ref">LinuxMint <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#SSH-ref">SSH <span>1</span></a></li>
     
   
 
