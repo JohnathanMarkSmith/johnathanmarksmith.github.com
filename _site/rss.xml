@@ -5,10 +5,54 @@
         <description>Johnathan Mark Smith - Johnathan Mark Smith</description>
         <link>http://johnathanmarksmith.com</link>
         <link>http://johnathanmarksmith.com</link>
-        <lastBuildDate>2014-11-17T12:08:43-07:00</lastBuildDate>
-        <pubDate>2014-11-17T12:08:43-07:00</pubDate>
+        <lastBuildDate>2014-11-17T16:39:34-07:00</lastBuildDate>
+        <pubDate>2014-11-17T16:39:34-07:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>How to install Maven 3.2.3 on Linux Mint</title>
+                <description>&lt;p&gt;If you are using Linux Mint sometimes the package manager does not have the package for the product you would like to install and Maven is one of them at the time of me writing this blog.  So lets do the install on Linux Mint.&lt;/p&gt;
+
+&lt;p&gt;I am going to show you how I install Maven 3.2.3 on Linux Mint you can do it the same way or find a better way.&lt;/p&gt;
+
+&lt;h3 id=&quot;download-maven-and-untar-it&quot;&gt;Download Maven and untar it.&lt;/h3&gt;
+
+&lt;p&gt;The first thing we need to do is to download the Maven tar file and untar it to a shared location on the workstation&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget http://mirrors.gigenet.com/apache/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
+su -c &lt;span class=&quot;err&quot;&gt;&amp;quot;&lt;/span&gt;tar -zxvf apache-maven-3.2.3-bin.tar.gz -C /usr/local 
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/local
+sudo ln -s apache-maven-3.2.3 maven&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;setup-the-maven-environment-variables-in-shared-profile&quot;&gt;Setup the Maven Environment Variables in shared profile.&lt;/h3&gt;
+
+&lt;p&gt;The next step is to setup the Maven environment variables in a shared profile so all users on the system will get them import at login time.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;vi /etc/profile.d/maven.sh&amp;quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Add the following lines to maven.sh&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;M2_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/maven
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;M2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2_HOME&lt;/span&gt;/bin
+&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;now-test-your-install-of-maven&quot;&gt;Now test your install of Maven.&lt;/h3&gt;
+
+&lt;p&gt;Logout of the system and then log back into it. Enter the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mvn -version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now that’s it. have fun with maven.&lt;/p&gt;
+
+&lt;object width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;//www.youtube.com/v/5TvTwH8q2EI?hl=en_US&amp;amp;version=3&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;embed src=&quot;//www.youtube.com/v/5TvTwH8q2EI?hl=en_US&amp;amp;version=3&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;640&quot; height=&quot;480&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
+
+</description>
+                <link>http://johnathanmarksmith.com/linux/linux%20mint/mint/java/maven/programming/project%20management/2014/11/17/how-to-install-maven-323-on-linux-mint</link>
+                <guid>http://johnathanmarksmith.com/linux/linux%20mint/mint/java/maven/programming/project%20management/2014/11/17/how-to-install-maven-323-on-linux-mint</guid>
+                <pubDate>2014-11-17T00:00:00-07:00</pubDate>
+        </item>
 
         <item>
                 <title>How to Enable SSH on Mint</title>
@@ -22,6 +66,8 @@ sudo apt-get install openssh-server&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;After doing the install you can test that it works by connecting to the localhost &lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ssh 127.0.0.1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;object width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;//www.youtube.com/v/z4Ci9NX_ej8?version=3&amp;amp;hl=en_US&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;embed src=&quot;//www.youtube.com/v/z4Ci9NX_ej8?version=3&amp;amp;hl=en_US&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;640&quot; height=&quot;480&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
 
