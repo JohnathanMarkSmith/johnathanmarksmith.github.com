@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <title>
       
-        How to install Maven 3.2.3 on Linux Mint - 
+        How to backup your linux dot files using Git - 
       
       Johnathan Mark Smith
     </title>
-    <meta name="description" content="How to install Maven 3.2.3 on Linux Mint">
+    <meta name="description" content="How to backup your linux dot files using Git">
     <meta name="author" content="Johnathan Mark Smith">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -205,46 +205,51 @@
         
 <div class="page-header">
   <h1>
-    How to install Maven 3.2.3 on Linux Mint 
+    How to backup your linux dot files using Git 
     
   </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <p>If you are using Linux Mint sometimes the package manager does not have the package for the product you would like to install and Maven is one of them at the time of me writing this blog.  So lets do the install on Linux Mint.</p>
+    <p>As you may or may not know that I love working on a Linux OS and I also love working with Git so why not use them both in a blog post??  </p>
 
-<p>I am going to show you how I install Maven 3.2.3 on Linux Mint you can do it the same way or find a better way.</p>
+<p>What can I do with Linux and Git that I have not seen anywhere else?  </p>
 
-<h3 id="download-maven-and-untar-it">Download Maven and untar it.</h3>
+<p>I got it! How about how to backup your Linux dot files like “.bash_profile” using Git and putting them on github so If I move to a new Linux workstation I can just do a pull of all my files..</p>
 
-<p>The first thing we need to do is to download the Maven tar file and untar it to a shared location on the workstation</p>
+<h3 id="clone-my-project-to-start">Clone My Project to Start</h3>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">wget http://mirrors.gigenet.com/apache/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
-su -c <span class="err">&quot;</span>tar -zxvf apache-maven-3.2.3-bin.tar.gz -C /usr/local 
-<span class="nb">cd</span> /usr/local
-sudo ln -s apache-maven-3.2.3 maven</code></pre></div>
+<p>so the first thing we are going to do is to clone my dot files project and move them into a folder called dotfiles</p>
 
-<h3 id="setup-the-maven-environment-variables-in-shared-profile">Setup the Maven Environment Variables in shared profile.</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/Documents
+mkdir dotfiles
+git clone git@github.com:JohnathanMarkSmith/mintdotfiles.git
+cp mintdotfiles/* dotfiles</code></pre></div>
 
-<p>The next step is to setup the Maven environment variables in a shared profile so all users on the system will get them import at login time.</p>
+<p>No after you do that you should copy all your dot files into the same folder</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">su -c <span class="s2">&quot;vi /etc/profile.d/maven.sh&quot;</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">cp ~/.bash_profile ~/Documents/dotfiles/bash_profle
+cp ~/.bashrc ~/Documents/dotfiles/bashrc
+cp ~/.gitconfig ~/Documents/dotfiles/gitconfig
+cp ~/.gitignore ~/Documents/dotfiles/gitignore
+cp ~/.vimrc ~/Documents/dotfiles/vimrc</code></pre></div>
 
-<span class="c"># Add the following lines to maven.sh</span>
-<span class="nb">export </span><span class="nv">M2_HOME</span><span class="o">=</span>/usr/local/maven
-<span class="nb">export </span><span class="nv">M2</span><span class="o">=</span><span class="nv">$M2_HOME</span>/bin
-<span class="nv">PATH</span><span class="o">=</span><span class="nv">$M2</span>:<span class="nv">$PATH</span></code></pre></div>
+<p>No lets change the file rights and run the scripte</p>
 
-<h3 id="now-test-your-install-of-maven">Now test your install of Maven.</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/Documents/dotfiles
+chmod +x makesymlinks.sh
+./makesymlinks.sh</code></pre></div>
 
-<p>Logout of the system and then log back into it. Enter the following command:</p>
+<p>Now you need to change the remote serhttp://www.linuxmint.com/start/qiana/ver to your git repo.. create a git repo and get ready to push your files to it</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>jsmith@regan ~<span class="o">]</span><span class="nv">$ </span>mvn -version</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git init
+git add --all
+git commit -am <span class="s2">&quot;first time load&quot;</span>
+git remote add origin ssh://newhost.com/usr/local/gitroot/myproject.git
+git push -u origin master</code></pre></div>
 
-<p>Now that’s it. have fun with maven.</p>
-
-<object width="640" height="480"><param name="movie" value="//www.youtube.com/v/5TvTwH8q2EI?hl=en_US&amp;version=3" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="//www.youtube.com/v/5TvTwH8q2EI?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="640" height="480" allowscriptaccess="always" allowfullscreen="true" /></object>
+<p>No you have a backup of all your dot linux files and you can all ways update your backup.</p>
 
 <p>If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a></p>
 
@@ -252,11 +257,11 @@ sudo ln -s apache-maven-3.2.3 maven</code></pre></div>
     <hr>
     <div class="pagination btn-group">
       
-        <a class="btn prev" href="/linux/mint/linuxmint/ssh/2014/11/17/how-to-enable-ssh-on-mint" title="How to Enable SSH on Mint">&larr; Previous</a>
+        <a class="btn prev" href="/linux/mint/linuxmint/jekyll/2014/11/18/how-to-install-jekyll-on-linux-mint" title="How to install Jekyll on Linux Mint">&larr; Previous</a>
       
         <a class="btn" href="/archive.html">Archive</a>
       
-        <a class="btn next" href="/linux/mint/linuxmint/jekyll/2014/11/18/how-to-install-jekyll-on-linux-mint" title="How to install Jekyll on Linux Mint">Next &rarr;</a>
+        <a class="btn next disabled">Next &rarr;</a>
       
     </div>
     <hr>
@@ -266,7 +271,7 @@ sudo ln -s apache-maven-3.2.3 maven</code></pre></div>
   <div class="span4">
     <section>
       <h4>Published</h4>
-      <div class="date"><span>17 November 2014</span></div>
+      <div class="date"><span>21 November 2014</span></div>
     </section>
          
     
@@ -281,17 +286,13 @@ sudo ln -s apache-maven-3.2.3 maven</code></pre></div>
      
     	<li><a href="/tags.html#Linux-ref">Linux <span>23</span></a></li>
      
-    	<li><a href="/tags.html#Linux Mint-ref">Linux Mint <span>1</span></a></li>
-     
     	<li><a href="/tags.html#Mint-ref">Mint <span>4</span></a></li>
      
-    	<li><a href="/tags.html#Java-ref">Java <span>38</span></a></li>
+    	<li><a href="/tags.html#Git-ref">Git <span>11</span></a></li>
      
-    	<li><a href="/tags.html#Maven-ref">Maven <span>4</span></a></li>
+    	<li><a href="/tags.html#Github-ref">Github <span>5</span></a></li>
      
-    	<li><a href="/tags.html#Programming-ref">Programming <span>21</span></a></li>
-     
-    	<li><a href="/tags.html#Project Management-ref">Project Management <span>3</span></a></li>
+    	<li><a href="/tags.html#Backup-ref">Backup <span>1</span></a></li>
     
   
 

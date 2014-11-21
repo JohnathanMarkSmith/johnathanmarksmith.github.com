@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Enable SSH on Mint"
-description: ""
+description: "How to Enable SSH on Mint"
 categories: [ Linux, Mint, LinuxMint, SSH ]
 tags: [ Linux, Mint, LinuxMint, SSH ]
 comments: false 

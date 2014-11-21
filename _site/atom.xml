@@ -4,13 +4,84 @@
  <title>Johnathan Mark Smith</title>
  <link href="http://johnathanmarksmith.com/" rel="self"/>
  <link href="http://johnathanmarksmith.com"/>
- <updated>2014-11-17T16:39:34-07:00</updated>
+ <updated>2014-11-21T08:59:46-07:00</updated>
  <id>http://johnathanmarksmith.com</id>
  <author>
    <name>Johnathan Mark Smith</name>
    <email>johnathansmith1969@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>How to backup your linux dot files using Git</title>
+   <link href="http://johnathanmarksmith.com/linux/mint/git/github/backup/2014/11/21/how-to-backup-your-linux-dot-files-using-git"/>
+   <updated>2014-11-21T00:00:00-07:00</updated>
+   <id>http://johnathanmarksmith.com/linux/mint/git/github/backup/2014/11/21/how-to-backup-your-linux-dot-files-using-git</id>
+   <content type="html">&lt;p&gt;As you may or may not know that I love working on a Linux OS and I also love working with Git so why not use them both in a blog post??  &lt;/p&gt;
+
+&lt;p&gt;What can I do with Linux and Git that I have not seen anywhere else?  &lt;/p&gt;
+
+&lt;p&gt;I got it! How about how to backup your Linux dot files like “.bash_profile” using Git and putting them on github so If I move to a new Linux workstation I can just do a pull of all my files..&lt;/p&gt;
+
+&lt;h3 id=&quot;clone-my-project-to-start&quot;&gt;Clone My Project to Start&lt;/h3&gt;
+
+&lt;p&gt;so the first thing we are going to do is to clone my dot files project and move them into a folder called dotfiles&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/Documents
+mkdir dotfiles
+git clone git@github.com:JohnathanMarkSmith/mintdotfiles.git
+cp mintdotfiles/* dotfiles&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;No after you do that you should copy all your dot files into the same folder&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cp ~/.bash_profile ~/Documents/dotfiles/bash_profle
+cp ~/.bashrc ~/Documents/dotfiles/bashrc
+cp ~/.gitconfig ~/Documents/dotfiles/gitconfig
+cp ~/.gitignore ~/Documents/dotfiles/gitignore
+cp ~/.vimrc ~/Documents/dotfiles/vimrc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;No lets change the file rights and run the scripte&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/Documents/dotfiles
+chmod +x makesymlinks.sh
+./makesymlinks.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now you need to change the remote serhttp://www.linuxmint.com/start/qiana/ver to your git repo.. create a git repo and get ready to push your files to it&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git init
+git add --all
+git commit -am &lt;span class=&quot;s2&quot;&gt;&amp;quot;first time load&amp;quot;&lt;/span&gt;
+git remote add origin ssh://newhost.com/usr/local/gitroot/myproject.git
+git push -u origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;No you have a backup of all your dot linux files and you can all ways update your backup.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>How to install Jekyll on Linux Mint</title>
+   <link href="http://johnathanmarksmith.com/linux/mint/linuxmint/jekyll/2014/11/18/how-to-install-jekyll-on-linux-mint"/>
+   <updated>2014-11-18T00:00:00-07:00</updated>
+   <id>http://johnathanmarksmith.com/linux/mint/linuxmint/jekyll/2014/11/18/how-to-install-jekyll-on-linux-mint</id>
+   <content type="html">&lt;p&gt;I found using Jekyll for websites and blogging is great but sometimes its not so easy getting your OS up and running with it.  &lt;/p&gt;
+
+&lt;p&gt;Linux Mint makes it very easy to work with.  All you have to do is install ruby, rake, jekyll, nodejs and you are all ready to blog, Some OS’s dont make it easy to get everything install but with Linux Mint it is very easy all you have to do is following the 3 commands below.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install ruby ruby-dev make rake
+sudo gem install jekyll --no-rdoc --no-ri
+sudo apt-get install nodejs&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After doing the install you are all ready to start to use jekyll on Linux Mint.&lt;/p&gt;
+
+&lt;object width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;//www.youtube.com/v/twe5XkLGsUU?version=3&amp;amp;hl=en_US&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;embed src=&quot;//www.youtube.com/v/twe5XkLGsUU?version=3&amp;amp;hl=en_US&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;640&quot; height=&quot;480&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>How to install Maven 3.2.3 on Linux Mint</title>
