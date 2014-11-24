@@ -5,8 +5,8 @@
         <description>Johnathan Mark Smith - Johnathan Mark Smith</description>
         <link>http://johnathanmarksmith.com</link>
         <link>http://johnathanmarksmith.com</link>
-        <lastBuildDate>2014-11-21T08:59:46-07:00</lastBuildDate>
-        <pubDate>2014-11-21T08:59:46-07:00</pubDate>
+        <lastBuildDate>2014-11-24T11:20:50-07:00</lastBuildDate>
+        <pubDate>2014-11-24T11:20:50-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -41,7 +41,7 @@ cp ~/.vimrc ~/Documents/dotfiles/vimrc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 chmod +x makesymlinks.sh
 ./makesymlinks.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Now you need to change the remote serhttp://www.linuxmint.com/start/qiana/ver to your git repo.. create a git repo and get ready to push your files to it&lt;/p&gt;
+&lt;p&gt;Now you need to go into github or bitbucket and create a new repository, once you created one on the server you then use the following commands to setup your local repository and push it to the server&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git init
 git add --all
