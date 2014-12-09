@@ -21,6 +21,7 @@ http://johnathanmarksmith.com/social-networking.html
 http://johnathanmarksmith.com/tags.html
 http://johnathanmarksmith.com/technology.html
 
+http://johnathanmarksmith.com/git/github/2014/12/09/how-to-list-git-branches-in-most-recent-committed-order
 http://johnathanmarksmith.com/linux/mint/git/github/backup/2014/11/21/how-to-backup-your-linux-dot-files-using-git
 http://johnathanmarksmith.com/linux/mint/linuxmint/jekyll/2014/11/18/how-to-install-jekyll-on-linux-mint
 http://johnathanmarksmith.com/linux/linux%20mint/mint/java/maven/programming/project%20management/2014/11/17/how-to-install-maven-323-on-linux-mint

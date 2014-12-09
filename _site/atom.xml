@@ -4,13 +4,42 @@
  <title>Johnathan Mark Smith</title>
  <link href="http://johnathanmarksmith.com/" rel="self"/>
  <link href="http://johnathanmarksmith.com"/>
- <updated>2014-11-24T11:20:50-07:00</updated>
+ <updated>2014-12-09T07:30:47-07:00</updated>
  <id>http://johnathanmarksmith.com</id>
  <author>
    <name>Johnathan Mark Smith</name>
    <email>johnathansmith1969@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>How to list Git branches in most recent committed order</title>
+   <link href="http://johnathanmarksmith.com/git/github/2014/12/09/how-to-list-git-branches-in-most-recent-committed-order"/>
+   <updated>2014-12-09T00:00:00-07:00</updated>
+   <id>http://johnathanmarksmith.com/git/github/2014/12/09/how-to-list-git-branches-in-most-recent-committed-order</id>
+   <content type="html">&lt;p&gt;I been getting asked a lot on how to find the most updated branch in Git.   Below I am going to show you 3 commands that will help you.&lt;/p&gt;
+
+&lt;h3 id=&quot;lets-get-to-the-commands&quot;&gt;Lets Get To The Commands&lt;/h3&gt;
+
+&lt;p&gt;This first command is only going to show you the commits and the order of them&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;-each-ref --sort&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;-committerdate refs/heads/
+4afeb5072c9667b4aef6d5c4fe17ae686b83fbd8 commit refs/heads/master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This command is better it will show you the branch, date of commit and author&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;-each-ref --sort&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;-committerdate refs/heads/ --format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;%(refname) %(committerdate) %(authorname)&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sed &lt;span class=&quot;s1&quot;&gt;&amp;#39;s/refs\/heads\///g&amp;#39;&lt;/span&gt;
+master Thu Oct &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt; 08:56:32 &lt;span class=&quot;m&quot;&gt;2014&lt;/span&gt; -0700 Johnathan Mark Smith&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now for the command I like the best, This one will show you the date, author and then the branch&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;-each-ref --sort&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;-committerdate refs/heads/ --format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;%(committerdate:short) %(authorname) %(refname:short)&amp;#39;&lt;/span&gt;
+2014-10-02 Johnathan Mark Smith master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>How to backup your linux dot files using Git</title>
