@@ -7,7 +7,9 @@ tags: [ Linux, Mint, LinuxMint, Chrome Broswer, Chromium  ]
 comments: false 
 ---
 
-I found installing Chrome(Chromium) Broswer on the new version of Linux Mint easy, To install it all that I had to do was to enter the following command
+I found installing Chrome(Chromium) Broswer on the new version of Linux Mint easy.
+
+To install it all that I had to do was to enter the following command
 
 {% highlight bash %}
 sudo apt-get install chromium-browser 
