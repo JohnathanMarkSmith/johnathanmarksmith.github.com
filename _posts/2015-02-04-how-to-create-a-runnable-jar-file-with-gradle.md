@@ -56,7 +56,7 @@ vi com/johnathanmarksmith/gradle/HelloWorld.java
 package com.johnathanmarksmith.gradle;
 public class HelloWorld
 {
-    spublic static void main(String[] args) 
+    public static void main(String[] args) 
     { 
         System.out.println("Hello World!"); 
     } 
@@ -85,7 +85,13 @@ Now add the following lines:
 {% endhighlight %}
 
 Building the project and creating the JAR 
-To build the project and to create the JAR you need to run the following command gradle build Executeing the JAR 
+To build the project and to create the JAR you need to run the following command
+
+{% highlight bash %}
+gradle build
+{% endhighlight %}
+
+Now to run the JAR file you enter the following command
 
 {% highlight bash %}
 java -jar ./build/libs/smith-1.0.jar   
