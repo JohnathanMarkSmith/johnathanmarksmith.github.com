@@ -98,6 +98,10 @@ java -jar ./build/libs/smith-1.0.jar
 {% endhighlight %}
 
 
+
+<object width="640" height="480"><param name="movie" value="//www.youtube.com/v/p3acEuRzyJA?hl=en_US&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube.com/v/p3acEuRzyJA?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="640" height="480" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
+
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
 
 {% include JB/setup %}
