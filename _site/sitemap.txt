@@ -21,6 +21,12 @@ http://johnathanmarksmith.com/social-networking.html
 http://johnathanmarksmith.com/tags.html
 http://johnathanmarksmith.com/technology.html
 
+http://johnathanmarksmith.com/git/stash/atlassian/2015/04/08/how-to-upgrade-to-atlassian-stash-380
+http://johnathanmarksmith.com/git/ssl/2015/02/06/quick-fix-for-git-ssl-certificates-problem
+http://johnathanmarksmith.com/java/gradle/2015/02/04/how-to-create-a-runnable-jar-file-with-gradle
+http://johnathanmarksmith.com/linux/git/git%20interview%20question/2014/12/16/how-to-show-who-authored-a-line-in-a-file-in-git
+http://johnathanmarksmith.com/linux/git/git%20interview%20question/2014/12/15/how-to-reset-git-branch-to-origin-version
+http://johnathanmarksmith.com/linux/mint/linuxmint/chrome%20broswer/chromium/2014/12/12/how-to-install-chrome-browser
 http://johnathanmarksmith.com/git/github/2014/12/09/how-to-list-git-branches-in-most-recent-committed-order
 http://johnathanmarksmith.com/linux/mint/git/github/backup/2014/11/21/how-to-backup-your-linux-dot-files-using-git
 http://johnathanmarksmith.com/linux/mint/linuxmint/jekyll/2014/11/18/how-to-install-jekyll-on-linux-mint
