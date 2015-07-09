@@ -5,10 +5,39 @@
         <description>Johnathan Mark Smith - Johnathan Mark Smith</description>
         <link>http://johnathanmarksmith.com</link>
         <link>http://johnathanmarksmith.com</link>
-        <lastBuildDate>2015-04-08T11:09:22-07:00</lastBuildDate>
-        <pubDate>2015-04-08T11:09:22-07:00</pubDate>
+        <lastBuildDate>2015-07-09T10:11:16-07:00</lastBuildDate>
+        <pubDate>2015-07-09T10:11:16-07:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>How to install grails on a linux machine</title>
+                <description>&lt;p&gt;In this post I am going to show you a quick and easy way to install grails 2.2.2 on a linux machine.  You can install grails many ways but I like to do it this way so its install and running under my profile.&lt;/p&gt;
+
+&lt;p&gt;The first thing we are going to do is to download and unzip grails&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget http://dist.springframework.org.s3.amazonaws.com/release/GRAILS/grails-2.2.2.zip
+unzip grails-2.2.2.zip&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now that we have it all ready to use (downloaded and unzip) we need to setup the environment variables.  Add the following environment variables to your .bashrc (I assume you are using bash as your shell)  &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GRAILS_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/jxsmith/grails-2.2.2
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/lib/jvm/java-6-openjdk-amd64
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$JAVA_HOME&lt;/span&gt;/bin:&lt;span class=&quot;nv&quot;&gt;$GRAILS_HOME&lt;/span&gt;/bin&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now logout of your profile and running the following command (you should see the version number)&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;grails -version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you see the version number your all done and its ready to use.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
+
+</description>
+                <link>http://johnathanmarksmith.com/linux/mint/linuxmint/grails/2015/07/09/how-to-install-grails-on-a-linux-machine</link>
+                <guid>http://johnathanmarksmith.com/linux/mint/linuxmint/grails/2015/07/09/how-to-install-grails-on-a-linux-machine</guid>
+                <pubDate>2015-07-09T00:00:00-07:00</pubDate>
+        </item>
 
         <item>
                 <title>How to Upgrade to Atlassian Stash 3.8.0</title>

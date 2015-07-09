@@ -21,6 +21,7 @@ http://johnathanmarksmith.com/social-networking.html
 http://johnathanmarksmith.com/tags.html
 http://johnathanmarksmith.com/technology.html
 
+http://johnathanmarksmith.com/linux/mint/linuxmint/grails/2015/07/09/how-to-install-grails-on-a-linux-machine
 http://johnathanmarksmith.com/git/stash/atlassian/2015/04/08/how-to-upgrade-to-atlassian-stash-380
 http://johnathanmarksmith.com/git/ssl/2015/02/06/quick-fix-for-git-ssl-certificates-problem
 http://johnathanmarksmith.com/java/gradle/2015/02/04/how-to-create-a-runnable-jar-file-with-gradle
