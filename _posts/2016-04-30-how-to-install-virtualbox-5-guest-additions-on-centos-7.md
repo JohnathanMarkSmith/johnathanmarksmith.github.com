@@ -3,7 +3,7 @@ layout: post
 title: "How to install VirtualBox 5 Guest Additions on CentOS 7"
 description: "How to install VirtualBox 5 Guest Additions on CentOS 7"
 categories: [ Linux, VirtualBox, CentOS 7, How-To ]
-tags: [ inux, VirtualBox, CentOS 7, How-To  ]
+tags: [ Linux, VirtualBox, CentOS 7, How-To  ]
 comments: false 
 ---
 
