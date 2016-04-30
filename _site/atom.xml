@@ -4,7 +4,7 @@
  <title>Johnathan Mark Smith</title>
  <link href="http://johnathanmarksmith.com/" rel="self"/>
  <link href="http://johnathanmarksmith.com"/>
- <updated>2015-07-09T10:11:16-07:00</updated>
+ <updated>2016-04-30T07:04:19-07:00</updated>
  <id>http://johnathanmarksmith.com</id>
  <author>
    <name>Johnathan Mark Smith</name>
@@ -21,18 +21,18 @@
 
 &lt;p&gt;The first thing we are going to do is to download and unzip grails&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget http://dist.springframework.org.s3.amazonaws.com/release/GRAILS/grails-2.2.2.zip
-unzip grails-2.2.2.zip&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget http://dist.springframework.org.s3.amazonaws.com/release/GRAILS/grails-2.2.2.zip
+unzip grails-2.2.2.zip&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Now that we have it all ready to use (downloaded and unzip) we need to setup the environment variables.  Add the following environment variables to your .bashrc (I assume you are using bash as your shell)  &lt;/p&gt;
+&lt;p&gt;Now that we have it all ready to use (downloaded and unzip) we need to setup the environment variables.  Add the following environment variables to your .bashrc (I assume you are using bash as your shell)&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GRAILS_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/jxsmith/grails-2.2.2
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GRAILS_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/jxsmith/grails-2.2.2
 &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/lib/jvm/java-6-openjdk-amd64
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$JAVA_HOME&lt;/span&gt;/bin:&lt;span class=&quot;nv&quot;&gt;$GRAILS_HOME&lt;/span&gt;/bin&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$JAVA_HOME&lt;/span&gt;/bin:&lt;span class=&quot;nv&quot;&gt;$GRAILS_HOME&lt;/span&gt;/bin&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now logout of your profile and running the following command (you should see the version number)&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;grails -version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;grails -version&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;If you see the version number your all done and its ready to use.&lt;/p&gt;
 
@@ -46,7 +46,7 @@ unzip grails-2.2.2.zip&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
    <link href="http://johnathanmarksmith.com/git/stash/atlassian/2015/04/08/how-to-upgrade-to-atlassian-stash-380"/>
    <updated>2015-04-08T00:00:00-07:00</updated>
    <id>http://johnathanmarksmith.com/git/stash/atlassian/2015/04/08/how-to-upgrade-to-atlassian-stash-380</id>
-   <content type="html">&lt;p&gt;What I did for this post is that I made a HD video for you to watch.. you can watch the video and see the steps on the details of the video.  &lt;/p&gt;
+   <content type="html">&lt;p&gt;What I did for this post is that I made a HD video for you to watch.. you can watch the video and see the steps on the details of the video.&lt;/p&gt;
 
 &lt;object width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;//www.youtube.com/v/mWqFYCtQgEY?hl=en_US&amp;amp;version=3&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;embed src=&quot;//www.youtube.com/v/mWqFYCtQgEY?hl=en_US&amp;amp;version=3&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;640&quot; height=&quot;480&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;
 
@@ -66,7 +66,7 @@ unzip grails-2.2.2.zip&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Simply use the git global preferences to turn off SSL  verification:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git config --global http.sslVerify &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git config --global http.sslVerify &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;The downside is? Well what is the point in using https if you have turned off SSL verification… This solution is not recommended as it leaves you vulnerable to man-in-the-middle attacks, but it is a quick fix and it works. So if you are not going to a repo over the internet then this is a quick fixed that is fine.&lt;/p&gt;
 
@@ -86,74 +86,74 @@ unzip grails-2.2.2.zip&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;project-layout-&quot;&gt;Project Layout  &lt;/h3&gt;
 
-&lt;p&gt;The default project layout of a Java project with Gradle is following (just like Maven): &lt;/p&gt;
+&lt;p&gt;The default project layout of a Java project with Gradle is following (just like Maven):&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;- The src/main/java directory contains the &lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;code.
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;- The src/main/java directory contains the &lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;code.
 - The src/main/resources directory contains the resources &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;such as properties files&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.
 - The src/test/java directory contains the &lt;span class=&quot;nb&quot;&gt;test &lt;/span&gt;classes.
-- The src/test/resources directory contains the &lt;span class=&quot;nb&quot;&gt;test &lt;/span&gt;resources.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+- The src/test/resources directory contains the &lt;span class=&quot;nb&quot;&gt;test &lt;/span&gt;resources.  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;So now make a new folder where you would like the project to start:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir runnablejar
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;runnablejar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir runnablejar
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;runnablejar  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt; Let’s create the project layout by using the following commands:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir -p src/main/java
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir -p src/main/java
 mkdir -p src/main/resources
 mkdir -p src/test/java
-mkdir -p src/test/resources&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+mkdir -p src/test/resources  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;As you can see from above the project layout looks just like a Maven project. &lt;/p&gt;
+&lt;p&gt;As you can see from above the project layout looks just like a Maven project.&lt;/p&gt;
 
 &lt;h3 id=&quot;creating-the-main-class-&quot;&gt;Creating the Main Class  &lt;/h3&gt;
 
 &lt;p&gt;Let’s create the main class for this project and make it display “Hello World” 
-cd into src/main/java and create the package layout. &lt;/p&gt;
+cd into src/main/java and create the package layout.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir -p com/johnathanmarksmith/gradle&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir -p com/johnathanmarksmith/gradle  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;We have the project layout created and also the package layout so now it’s time to create the Main Class &lt;/p&gt;
+&lt;p&gt;We have the project layout created and also the package layout so now it’s time to create the Main Class&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vi com/johnathanmarksmith/gradle/HelloWorld.java&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vi com/johnathanmarksmith/gradle/HelloWorld.java  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;and insert the following lines:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;package com.johnathanmarksmith.gradle&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;package com.johnathanmarksmith.gradle&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 public class HelloWorld
 &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
     public static void main&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;String&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; args&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
     &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
         System.out.println&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;   &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;creating-the-gradle-build-file-&quot;&gt;Creating the Gradle Build File..  &lt;/h3&gt;
 
-&lt;p&gt;The next step is to create the Gralde Build file, Go back to the root of the project.   cd ../../.. And create the build file &lt;/p&gt;
+&lt;p&gt;The next step is to create the Gralde Build file, Go back to the root of the project.   cd ../../.. And create the build file&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vi build.gradle&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vi build.gradle   &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now add the following lines:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;apply plugin: &lt;span class=&quot;s1&quot;&gt;&amp;#39;java&amp;#39;&lt;/span&gt; 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; apply plugin: &lt;span class=&quot;s1&quot;&gt;&amp;#39;java&amp;#39;&lt;/span&gt; 
  
  jar &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
         &lt;span class=&quot;nv&quot;&gt;baseName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;smith&amp;#39;&lt;/span&gt; 
         &lt;span class=&quot;nv&quot;&gt;version&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;1.0&amp;#39;&lt;/span&gt; 
         manifest &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
                      attributes &lt;span class=&quot;s1&quot;&gt;&amp;#39;Main-Class&amp;#39;&lt;/span&gt;: &lt;span class=&quot;s1&quot;&gt;&amp;#39;com.johnathanmarksmith.gradle.HelloWorld&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Building the project and creating the JAR 
 To build the project and to create the JAR you need to run the following command&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gradle build&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gradle build&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now to run the JAR file you enter the following command&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java -jar ./build/libs/smith-1.0.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java -jar ./build/libs/smith-1.0.jar   &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;object width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;//www.youtube.com/v/p3acEuRzyJA?hl=en_US&amp;amp;version=3&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;embed src=&quot;//www.youtube.com/v/p3acEuRzyJA?hl=en_US&amp;amp;version=3&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;640&quot; height=&quot;480&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;
 
@@ -173,7 +173,7 @@ To build the project and to create the JAR you need to run the following command
 
 &lt;p&gt;Git once again will make your life easy… All you have to do it enter the following command!&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git blame &amp;lt;filename&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git blame &amp;lt;filename&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
 
@@ -187,8 +187,8 @@ To build the project and to create the JAR you need to run the following command
    <id>http://johnathanmarksmith.com/linux/git/git%20interview%20question/2014/12/15/how-to-reset-git-branch-to-origin-version</id>
    <content type="html">&lt;p&gt;I get asked a lot from the developers “how do I reset a branch in Git”, This is very easy to do if you did not pushed the branch to the origin yet.  You can reset the branch to the upstream branch by using the following commands.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git checkout thebranch
-git reset --hard origin/thebranch&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git checkout thebranch
+git reset --hard origin/thebranch&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
 
@@ -204,7 +204,7 @@ git reset --hard origin/thebranch&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;To install it all that I had to do was to enter the following command&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install chromium-browser&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install chromium-browser &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
 
@@ -222,18 +222,18 @@ git reset --hard origin/thebranch&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This first command is only going to show you the commits and the order of them&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;-each-ref --sort&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;-committerdate refs/heads/
-4afeb5072c9667b4aef6d5c4fe17ae686b83fbd8 commit refs/heads/master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;-each-ref --sort&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;-committerdate refs/heads/
+4afeb5072c9667b4aef6d5c4fe17ae686b83fbd8 commit refs/heads/master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;This command is better it will show you the branch, date of commit and author&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;-each-ref --sort&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;-committerdate refs/heads/ --format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;%(refname) %(committerdate) %(authorname)&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sed &lt;span class=&quot;s1&quot;&gt;&amp;#39;s/refs\/heads\///g&amp;#39;&lt;/span&gt;
-master Thu Oct &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt; 08:56:32 &lt;span class=&quot;m&quot;&gt;2014&lt;/span&gt; -0700 Johnathan Mark Smith&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;-each-ref --sort&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;-committerdate refs/heads/ --format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;%(refname) %(committerdate) %(authorname)&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sed &lt;span class=&quot;s1&quot;&gt;&amp;#39;s/refs\/heads\///g&amp;#39;&lt;/span&gt;
+master Thu Oct &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt; 08:56:32 &lt;span class=&quot;m&quot;&gt;2014&lt;/span&gt; -0700 Johnathan Mark Smith&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now for the command I like the best, This one will show you the date, author and then the branch&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;-each-ref --sort&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;-committerdate refs/heads/ --format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;%(committerdate:short) %(authorname) %(refname:short)&amp;#39;&lt;/span&gt;
-2014-10-02 Johnathan Mark Smith master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;-each-ref --sort&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;-committerdate refs/heads/ --format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;%(committerdate:short) %(authorname) %(refname:short)&amp;#39;&lt;/span&gt;
+2014-10-02 Johnathan Mark Smith master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
 
@@ -245,9 +245,9 @@ master Thu Oct &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt; 08:56:32 &lt;span 
    <link href="http://johnathanmarksmith.com/linux/mint/git/github/backup/2014/11/21/how-to-backup-your-linux-dot-files-using-git"/>
    <updated>2014-11-21T00:00:00-07:00</updated>
    <id>http://johnathanmarksmith.com/linux/mint/git/github/backup/2014/11/21/how-to-backup-your-linux-dot-files-using-git</id>
-   <content type="html">&lt;p&gt;As you may or may not know that I love working on a Linux OS and I also love working with Git so why not use them both in a blog post??  &lt;/p&gt;
+   <content type="html">&lt;p&gt;As you may or may not know that I love working on a Linux OS and I also love working with Git so why not use them both in a blog post??&lt;/p&gt;
 
-&lt;p&gt;What can I do with Linux and Git that I have not seen anywhere else?  &lt;/p&gt;
+&lt;p&gt;What can I do with Linux and Git that I have not seen anywhere else?&lt;/p&gt;
 
 &lt;p&gt;I got it! How about how to backup your Linux dot files like “.bash_profile” using Git and putting them on github so If I move to a new Linux workstation I can just do a pull of all my files..&lt;/p&gt;
 
@@ -255,32 +255,32 @@ master Thu Oct &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt; 08:56:32 &lt;span 
 
 &lt;p&gt;so the first thing we are going to do is to clone my dot files project and move them into a folder called dotfiles&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/Documents
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/Documents
 mkdir dotfiles
 git clone git@github.com:JohnathanMarkSmith/mintdotfiles.git
-cp mintdotfiles/* dotfiles&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+cp mintdotfiles/* dotfiles&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;No after you do that you should copy all your dot files into the same folder&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cp ~/.bash_profile ~/Documents/dotfiles/bash_profle
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cp ~/.bash_profile ~/Documents/dotfiles/bash_profle
 cp ~/.bashrc ~/Documents/dotfiles/bashrc
 cp ~/.gitconfig ~/Documents/dotfiles/gitconfig
 cp ~/.gitignore ~/Documents/dotfiles/gitignore
-cp ~/.vimrc ~/Documents/dotfiles/vimrc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+cp ~/.vimrc ~/Documents/dotfiles/vimrc&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;No lets change the file rights and run the scripte&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/Documents/dotfiles
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/Documents/dotfiles
 chmod +x makesymlinks.sh
-./makesymlinks.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+./makesymlinks.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now you need to go into github or bitbucket and create a new repository, once you created one on the server you then use the following commands to setup your local repository and push it to the server&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git init
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git init
 git add --all
 git commit -am &lt;span class=&quot;s2&quot;&gt;&amp;quot;first time load&amp;quot;&lt;/span&gt;
 git remote add origin ssh://newhost.com/usr/local/gitroot/myproject.git
-git push -u origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+git push -u origin master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;No you have a backup of all your dot linux files and you can all ways update your backup.&lt;/p&gt;
 
@@ -294,13 +294,13 @@ git push -u origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
    <link href="http://johnathanmarksmith.com/linux/mint/linuxmint/jekyll/2014/11/18/how-to-install-jekyll-on-linux-mint"/>
    <updated>2014-11-18T00:00:00-07:00</updated>
    <id>http://johnathanmarksmith.com/linux/mint/linuxmint/jekyll/2014/11/18/how-to-install-jekyll-on-linux-mint</id>
-   <content type="html">&lt;p&gt;I found using Jekyll for websites and blogging is great but sometimes its not so easy getting your OS up and running with it.  &lt;/p&gt;
+   <content type="html">&lt;p&gt;I found using Jekyll for websites and blogging is great but sometimes its not so easy getting your OS up and running with it.&lt;/p&gt;
 
 &lt;p&gt;Linux Mint makes it very easy to work with.  All you have to do is install ruby, rake, jekyll, nodejs and you are all ready to blog, Some OS’s dont make it easy to get everything install but with Linux Mint it is very easy all you have to do is following the 3 commands below.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install ruby ruby-dev make rake
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install ruby ruby-dev make rake
 sudo gem install jekyll --no-rdoc --no-ri
-sudo apt-get install nodejs&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+sudo apt-get install nodejs &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;After doing the install you are all ready to start to use jekyll on Linux Mint.&lt;/p&gt;
 
@@ -324,27 +324,27 @@ sudo apt-get install nodejs&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The first thing we need to do is to download the Maven tar file and untar it to a shared location on the workstation&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget http://mirrors.gigenet.com/apache/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget http://mirrors.gigenet.com/apache/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
 su -c &lt;span class=&quot;err&quot;&gt;&amp;quot;&lt;/span&gt;tar -zxvf apache-maven-3.2.3-bin.tar.gz -C /usr/local 
 &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/local
-sudo ln -s apache-maven-3.2.3 maven&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+sudo ln -s apache-maven-3.2.3 maven&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;setup-the-maven-environment-variables-in-shared-profile&quot;&gt;Setup the Maven Environment Variables in shared profile.&lt;/h3&gt;
 
 &lt;p&gt;The next step is to setup the Maven environment variables in a shared profile so all users on the system will get them import at login time.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;vi /etc/profile.d/maven.sh&amp;quot;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;vi /etc/profile.d/maven.sh&amp;quot;&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;# Add the following lines to maven.sh&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;M2_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/maven
 &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;M2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2_HOME&lt;/span&gt;/bin
-&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;now-test-your-install-of-maven&quot;&gt;Now test your install of Maven.&lt;/h3&gt;
 
 &lt;p&gt;Logout of the system and then log back into it. Enter the following command:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mvn -version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mvn -version &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that’s it. have fun with maven.&lt;/p&gt;
 
@@ -364,12 +364,12 @@ sudo ln -s apache-maven-3.2.3 maven&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;To enable SSH (secure shell) on Linux Mint all you have to do is install the SSH package which is openssh-server&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get update
-sudo apt-get install openssh-server&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get update
+sudo apt-get install openssh-server&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;After doing the install you can test that it works by connecting to the localhost &lt;/p&gt;
+&lt;p&gt;After doing the install you can test that it works by connecting to the localhost&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ssh 127.0.0.1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ssh 127.0.0.1&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;object width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;//www.youtube.com/v/z4Ci9NX_ej8?version=3&amp;amp;hl=en_US&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;embed src=&quot;//www.youtube.com/v/z4Ci9NX_ej8?version=3&amp;amp;hl=en_US&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;640&quot; height=&quot;480&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;
 
@@ -385,7 +385,7 @@ sudo apt-get install openssh-server&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
    <id>http://johnathanmarksmith.com/linux/php5/centos7/2014/11/03/how-to-install-php5-on-centos7</id>
    <content type="html">&lt;p&gt;CentOS 7 ships with PHP5 so it is directly avaliable as a CentOS 7 package. So we can install it just like this&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo yum install php&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo yum install php&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;By default PHP5 should be installed&lt;/p&gt;
 
@@ -399,30 +399,30 @@ sudo apt-get install openssh-server&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
    <link href="http://johnathanmarksmith.com/linux/mariadb/mysql/centos7/rhel7/2014/10/16/how-to-install-mariadb-on-centos7"/>
    <updated>2014-10-16T00:00:00-07:00</updated>
    <id>http://johnathanmarksmith.com/linux/mariadb/mysql/centos7/rhel7/2014/10/16/how-to-install-mariadb-on-centos7</id>
-   <content type="html">&lt;p&gt;Centos 7 comes with MariaDB instead of MySQL. MariaDB is a open source equivalent to MySQL and I am going to show you how to install it right now. &lt;/p&gt;
+   <content type="html">&lt;p&gt;Centos 7 comes with MariaDB instead of MySQL. MariaDB is a open source equivalent to MySQL and I am going to show you how to install it right now.&lt;/p&gt;
 
 &lt;p&gt;If you must have MySQL you need to add the mysql-community repo by using the following command&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo rpm -Uvh http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo rpm -Uvh http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;and then you can install MySQL like you normally…&lt;/p&gt;
 
 &lt;p&gt;Now let me show you how to install MariaDB on CentOS7. The first step is to install the MariaDB server and client&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo yum -y install mariadb-server mariadb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo yum -y install mariadb-server mariadb&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;After running the above command we need to start the MariaDB server and enable it in systemd&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo systemctl start mariadb.service
-sudo systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;mariadb.service&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo systemctl start mariadb.service
+sudo systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;mariadb.service&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that MariaDB server is enable and running you need to run the install script. Run the following command and anwser the questions&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo mysql_secure_installation&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo mysql_secure_installation&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that you did everything you are all done… you can now login to the MariaDB server by using the client command&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mysql&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mysql&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that’s it. have fun with MariaDB on CentOS7.&lt;/p&gt;
 
@@ -440,24 +440,24 @@ sudo systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;mariadb.serv
    <id>http://johnathanmarksmith.com/linux/flash/centos7/rhel7/2014/10/14/how-to-install-adobe-flash-player-on-centos7</id>
    <content type="html">&lt;p&gt;In this post I am going to show you how to install the Adobe Flash player on CentOS7 and RHEL7.&lt;/p&gt;
 
-&lt;p&gt;Adobe provided yum repository that contains RPM packages of Adobe Linux Software. &lt;/p&gt;
+&lt;p&gt;Adobe provided yum repository that contains RPM packages of Adobe Linux Software.&lt;/p&gt;
 
 &lt;p&gt;You use yum command to install either 32 or 64 bit flash player on a CentOS7 Linux operating system.&lt;/p&gt;
 
 &lt;h3 id=&quot;adding-adobe-repository-to-yum-and-insall&quot;&gt;Adding Adobe repository to Yum and Insall&lt;/h3&gt;
 &lt;p&gt;To add the adobe repository to Yum you have to enter the following command.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;After you add the repositor to yum you need to run the install command to now install the flash-plugin&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yum install flash-plugin&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yum install flash-plugin&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that everything is installed you need to test it!&lt;/p&gt;
 
 &lt;p&gt;Open Firefox and type the following URL:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;about:plugins&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;about:plugins&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that’s it. have fun with Flash on CentOS7 now.&lt;/p&gt;
 
@@ -477,38 +477,38 @@ sudo systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;mariadb.serv
 
 &lt;h3 id=&quot;adding-mongodb-repo-to-yum&quot;&gt;Adding MongoDB repo to Yum&lt;/h3&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vim /etc/yum.repos.d/mongodb.repo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vim /etc/yum.repos.d/mongodb.repo&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Next insert the following lines into the repo file you just created.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;mongodb&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;mongodb&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;MongoDB repo
 &lt;span class=&quot;nv&quot;&gt;baseurl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://downloads-distro.mongodb.org/repo/redhat/os/x86_64/
 &lt;span class=&quot;nv&quot;&gt;gpgcheck&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
-&lt;span class=&quot;nv&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nv&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;After you saved the file with the repo information you will need to install the MongoDB packages using yum.&lt;/p&gt;
 
 &lt;h3 id=&quot;installing-mongodb-packages&quot;&gt;Installing MongoDB packages&lt;/h3&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yum install mongodb-org&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yum install mongodb-org&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that you have MongoDB packages installed you will need to start the MongoDB service using systemd.&lt;/p&gt;
 
 &lt;h3 id=&quot;starting-mongodb-server&quot;&gt;Starting MongoDB Server&lt;/h3&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo systemctl start mongod.service&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo systemctl start mongod.service&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now lets check to see if MongoDB is running and also open up the firewall so we can access it.&lt;/p&gt;
 
 &lt;h3 id=&quot;checking-to-see-if-mongodb-is-running&quot;&gt;Checking to see if mongoDB is running&lt;/h3&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ps -ef  &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;  grep   mongo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ps -ef  &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;  grep   mongo&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;opening-up-the-ports-on-the-firewall&quot;&gt;Opening up the ports on the firewall&lt;/h3&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo firewall-cmd --zone&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;public --add-port&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;27017/tcp --permanent
-sudo firewall-cmd --reload&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo firewall-cmd --zone&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;public --add-port&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;27017/tcp --permanent
+sudo firewall-cmd --reload&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that’s it. have fun with MongoDB.&lt;/p&gt;
 
@@ -529,8 +529,8 @@ sudo firewall-cmd --reload&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The following two commands will first disable firewalld and then stop it.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo systemctl mask firewalld
-sudo systemctl stop firewalld&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo systemctl mask firewalld
+sudo systemctl stop firewalld&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Thats it so you box now has NO firewalld running.. you should maybe think about iptables.&lt;/p&gt;
 
@@ -546,7 +546,7 @@ sudo systemctl stop firewalld&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
    <id>http://johnathanmarksmith.com/linux/apache2/centos7/2014/10/09/how-to-install-apache2-on-centos7</id>
    <content type="html">&lt;p&gt;CentOS 7 ships with Apache 2.4 so it is directly avaliable as a CentOS 7 package. So we can install it just like this&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo yum install httpd&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo yum install httpd&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;By default apache should be installed, if not then install it as shown above&lt;/p&gt;
 
@@ -554,8 +554,8 @@ sudo systemctl stop firewalld&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now lets configure your system to start apache on boot&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo systemctl start httpd.service
-sudo systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;httpd.service&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo systemctl start httpd.service
+sudo systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;httpd.service&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now direct your browser to http://127.0.0.1 and you should see the apache2 home page&lt;/p&gt;
 
@@ -581,27 +581,27 @@ sudo systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;httpd.servic
 
 &lt;p&gt;The first thing we need to do is to download the Maven tar file and untar it to a shared location on the workstation&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget http://mirrors.gigenet.com/apache/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget http://mirrors.gigenet.com/apache/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
 su -c &lt;span class=&quot;err&quot;&gt;&amp;quot;&lt;/span&gt;tar -zxvf apache-maven-3.2.3-bin.tar.gz -C /usr/local��� 
 &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/local
-sudo ln -s apache-maven-3.2.3 maven&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+sudo ln -s apache-maven-3.2.3 maven&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;setup-the-maven-environment-variables-in-shared-profile&quot;&gt;Setup the Maven Environment Variables in shared profile.&lt;/h3&gt;
 
 &lt;p&gt;The next step is to setup the Maven environment variables in a shared profile so all users on the system will get them import at login time.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;vi /etc/profile.d/maven.sh&amp;quot;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;vi /etc/profile.d/maven.sh&amp;quot;&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;# Add the following lines to maven.sh&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;M2_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/maven
 &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;M2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2_HOME&lt;/span&gt;/bin
-&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;now-test-your-install-of-maven&quot;&gt;Now test your install of Maven.&lt;/h3&gt;
 
 &lt;p&gt;Logout of the system and then log back into it. Enter the following command:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mvn -version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mvn -version &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that’s it. have fun with maven.&lt;/p&gt;
 
@@ -632,7 +632,7 @@ develop&lt;/p&gt;
 &lt;p&gt;The master branch at origin should be familiar to every Git user. Parallel to the master branch, another branch exists called develop.&lt;/p&gt;
 
 &lt;p&gt;We consider origin/master to be the main branch where the source code of HEAD always reflects a production-ready state.
-We consider origin/develop to be the main branch where the source code of HEAD always reflects a state with the latest delivered development changes for the next release. Some would call this the “integration branch”. This is where any automatic nightly builds are built from. &lt;/p&gt;
+We consider origin/develop to be the main branch where the source code of HEAD always reflects a state with the latest delivered development changes for the next release. Some would call this the “integration branch”. This is where any automatic nightly builds are built from.&lt;/p&gt;
 
 &lt;p&gt;When the source code in the develop branch reaches a stable point and is ready to be released, all of the changes should be merged back into master somehow and then tagged with a release number. How this is done in detail will be discussed further on.&lt;/p&gt;
 
@@ -1860,7 +1860,7 @@ class JSonController
        /**
         *
         * This is going to setup the REST server configuration in the applicationContext
-        * you can see that I am using the new Spring's Java Configuration style and not some OLD XML file
+        * you can see that I am using the new Spring&#39;s Java Configuration style and not some OLD XML file
         *
         */
        ApplicationContext context = new AnnotationConfigApplicationContext(RESTConfiguration.class);
@@ -2097,8 +2097,8 @@ public class WebMVCConfig extends WebMvcConfigurerAdapter
     &amp;lt;global-method-security pre-post-annotations=&quot;enabled&quot;/&amp;gt;
 
     &amp;lt;http use-expressions=&quot;true&quot;&amp;gt;
-        &amp;lt;intercept-url access=&quot;hasRole('ROLE_VERIFIED')&quot; pattern=&quot;/json/*&quot;/&amp;gt;
-        &amp;lt;intercept-url pattern='/*' access='permitAll'/&amp;gt;
+        &amp;lt;intercept-url access=&quot;hasRole(&#39;ROLE_VERIFIED&#39;)&quot; pattern=&quot;/json/*&quot;/&amp;gt;
+        &amp;lt;intercept-url pattern=&#39;/*&#39; access=&#39;permitAll&#39;/&amp;gt;
 
         &amp;lt;logout logout-success-url=&quot;/&quot;/&amp;gt;
 
@@ -2303,7 +2303,7 @@ public class Main
         /**
          *
          * This is going to setup the REST server configuration in the applicationContext
-         * you can see that I am using the new Spring's Java Configuration style and not some OLD XML file
+         * you can see that I am using the new Spring&#39;s Java Configuration style and not some OLD XML file
          *
          */
         ApplicationContext context = new AnnotationConfigApplicationContext(RESTConfiguration.class);
@@ -2587,7 +2587,7 @@ public class TestHelloWorldWeb
     public void getFoo() throws Exception
     {
         /*
-            This following code will do 'GET' to the web apps
+            This following code will do &#39;GET&#39; to the web apps
             and also that it has a attribute &quot;user&quot; to &quot;JohnathanMarkSmith&quot;
 
          */
@@ -2947,7 +2947,7 @@ Hash codes are integer values that identify objects.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    &amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
         $(function(){
 
-            $('#myForm').validate({
+            $(&#39;#myForm&#39;).validate({
                 rules: {
                     firstName: &quot;required&quot;,
                     lastName: &quot;required&quot;,
@@ -2964,9 +2964,9 @@ Hash codes are integer values that identify objects.&lt;/p&gt;
                         range: &quot;Your age must be between 21 and 55.&quot;
                     }
                 },
-                errorContainer: $('#errorContainer'),
-                errorLabelContainer: $('#errorContainer ul'),
-                wrapper: 'li'
+                errorContainer: $(&#39;#errorContainer&#39;),
+                errorLabelContainer: $(&#39;#errorContainer ul&#39;),
+                wrapper: &#39;li&#39;
             });
 
         });
@@ -2982,13 +2982,13 @@ Hash codes are integer values that identify objects.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
     $(function(){
 
-        $('#firstName').bt();
-        $('#lastName').bt();
-        $('#age').bt();
-        $('#male').bt();
-        $('#female').bt();
+        $(&#39;#firstName&#39;).bt();
+        $(&#39;#lastName&#39;).bt();
+        $(&#39;#age&#39;).bt();
+        $(&#39;#male&#39;).bt();
+        $(&#39;#female&#39;).bt();
 
-        $('#myForm').validate({
+        $(&#39;#myForm&#39;).validate({
             rules: {
                 firstName: &quot;required&quot;,
                 lastName: &quot;required&quot;,
@@ -3007,9 +3007,9 @@ Hash codes are integer values that identify objects.&lt;/p&gt;
                     range: &quot;Your age must be between 21 and 55.&quot;
                 }
             },
-            errorContainer: $('#errorContainer'),
-            errorLabelContainer: $('#errorContainer ul'),
-            wrapper: 'li'
+            errorContainer: $(&#39;#errorContainer&#39;),
+            errorLabelContainer: $(&#39;#errorContainer ul&#39;),
+            wrapper: &#39;li&#39;
         });
 
     });
@@ -3018,11 +3018,11 @@ Hash codes are integer values that identify objects.&lt;/p&gt;
 
 &lt;p&gt;you can see all that we added was:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$('#firstName').bt();
-$('#lastName').bt();
-$('#age').bt();
-$('#male').bt();
-$('#female').bt();
+&lt;pre&gt;&lt;code&gt;$(&#39;#firstName&#39;).bt();
+$(&#39;#lastName&#39;).bt();
+$(&#39;#age&#39;).bt();
+$(&#39;#male&#39;).bt();
+$(&#39;#female&#39;).bt();
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The above code tells Beautytips to add the tooltips&lt;/p&gt;
@@ -3130,7 +3130,7 @@ c)Determining an object’s programming interface without revealing the actual b
         /**
          *
          * This is going to setup the database configuration in the applicationContext
-         * you can see that I am using the new Spring's Java Configuration style and not some OLD XML file
+         * you can see that I am using the new Spring&#39;s Java Configuration style and not some OLD XML file
          *
          */
         ApplicationContext context = new AnnotationConfigApplicationContext(DatabaseConfiguration.class);
@@ -3396,7 +3396,7 @@ java -jar NoMySQL.jar
 &lt;pre&gt;&lt;code&gt;    &amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
         $(function(){
 
-            $('#myForm').validate({
+            $(&#39;#myForm&#39;).validate({
                 rules: {
                     firstName: &quot;required&quot;,
                     lastName: &quot;required&quot;,
@@ -3413,9 +3413,9 @@ java -jar NoMySQL.jar
                         range: &quot;Your age must be between 21 and 55.&quot;
                     }
                 },
-                errorContainer: $('#errorContainer'),
-                errorLabelContainer: $('#errorContainer ul'),
-                wrapper: 'li'
+                errorContainer: $(&#39;#errorContainer&#39;),
+                errorLabelContainer: $(&#39;#errorContainer ul&#39;),
+                wrapper: &#39;li&#39;
             });
 
         });
@@ -3469,8 +3469,8 @@ mvn tomcat7:run
 
 &lt;p&gt;now you have to create the git(make it git or gitolite) account&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;useradd git
-    passwd git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    useradd git
+    passwd git&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now login as git or gitolite&lt;/p&gt;
 
@@ -3478,34 +3478,34 @@ mvn tomcat7:run
 
 &lt;p&gt;From my workstations&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;scp ~/.ssh/id_rsa.pub git@REGAN:/home/git/jsmith.pub&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;   scp ~/.ssh/id_rsa.pub git@REGAN:/home/git/jsmith.pub &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now run the following commands from the git account&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone git://github.com/sitaramc/gitolite
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;   git clone git://github.com/sitaramc/gitolite
    mkdir bin
    gitolite/install -ln
-   gitolite setup -pk jsmith.pub&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+   gitolite setup -pk jsmith.pub&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;now-for-testing&quot;&gt;Now for Testing&lt;/h3&gt;
 
 &lt;p&gt;From your workstation enter the following command&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ssh git@REGAN info&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;   ssh git@REGAN info&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;your output should look something like this&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;hello jsmith, this is git@regan running gitolite3 v3.5.1-4-g2f48a3e on git 1.8.2.3
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;   hello jsmith, this is git@regan running gitolite3 v3.5.1-4-g2f48a3e on git 1.8.2.3
 
     R W		gitolite-admin
-    R W		testing&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    R W		testing&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;time-to-be-a-gitolite-admin&quot;&gt;Time To Be a Gitolite Admin&lt;/h3&gt;
 
 &lt;p&gt;From your workstation enter the following command&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone git@&amp;lt;server&amp;gt;:gitolite-admin
-   &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;gitolite-admin&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;   git clone git@&amp;lt;server&amp;gt;:gitolite-admin
+   &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;gitolite-admin&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;That is everything you have gitolite all setup and ready to go.&lt;/p&gt;
 
@@ -3535,7 +3535,7 @@ mvn tomcat7:run
 
 &lt;p&gt;Here is the main code to my sample project&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;public class Main
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;public class Main
 &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 
     private static final Logger &lt;span class=&quot;nv&quot;&gt;LOGGER&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; getLogger&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Main.class&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -3584,11 +3584,11 @@ mvn tomcat7:run
             LOGGER.debug&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Message: ID: &amp;quot;&lt;/span&gt; + i.getId&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;, Message: &amp;quot;&lt;/span&gt; + i.getMessage&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;.&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;You can see from this code that the ApplicationContext is mapped to a HelloWorldConfig.class file its not using a XML file.  Below is the code to the HelloWorldConfig.class.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/**
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/**
  * Date:   4/25/13 / 9:37 AM
  * Author: Johnathan Mark Smith
  * Email:  john@johnathanmarksmith.com
@@ -3617,7 +3617,7 @@ public class HelloWorldConfiguration &lt;span class=&quot;o&quot;&gt;{&lt;/span&
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
 
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;You can see how easy it is to use JavaConfig and Not XML..&lt;/p&gt;
 
@@ -3630,11 +3630,11 @@ public class HelloWorldConfiguration &lt;span class=&quot;o&quot;&gt;{&lt;/span&
 
 &lt;p&gt;If you would like to download the project from GitHub and run it just follow the following commands:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone git@github.com:JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig.git
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone git@github.com:JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig.git
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;HelloSpringJavaBasedJavaConfig
 mvn packge
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;target
-java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING….&lt;/p&gt;
 
@@ -3733,11 +3733,11 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt
    <link href="http://johnathanmarksmith.com/java/java%20interview%20questions/2013/05/15/java-interview-question-what-is-the-difference-between-overloading-and-overriding"/>
    <updated>2013-05-15T00:00:00-07:00</updated>
    <id>http://johnathanmarksmith.com/java/java%20interview%20questions/2013/05/15/java-interview-question-what-is-the-difference-between-overloading-and-overriding</id>
-   <content type="html">&lt;p&gt;a) In overloading, there is a relationship between methods available in the same class whereas in overriding, there is relationship between a superclass method and subclass method. &lt;/p&gt;
+   <content type="html">&lt;p&gt;a) In overloading, there is a relationship between methods available in the same class whereas in overriding, there is relationship between a superclass method and subclass method.&lt;/p&gt;
 
-&lt;p&gt;b) Overloading does not block inheritance from the superclass whereas overriding blocks inheritance from the superclass. &lt;/p&gt;
+&lt;p&gt;b) Overloading does not block inheritance from the superclass whereas overriding blocks inheritance from the superclass.&lt;/p&gt;
 
-&lt;p&gt;c) In overloading, separate methods share the same name whereas in overriding, subclass method replaces the superclass. &lt;/p&gt;
+&lt;p&gt;c) In overloading, separate methods share the same name whereas in overriding, subclass method replaces the superclass.&lt;/p&gt;
 
 &lt;p&gt;d) Overloading must have different method signatures whereas overriding must have same signature.&lt;/p&gt;
 
@@ -3755,7 +3755,7 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt
    <id>http://johnathanmarksmith.com/linux/git/programming/2013/05/15/how-to-install-git-182-on-fedora-centos-red-hat-and-scientific-linux</id>
    <content type="html">&lt;p&gt;I always like to use YUM for installing software on Fedora, CentOS, Red Hat and Scientific Linux but someone times the RPM only have old versions of the software I need!&lt;/p&gt;
 
-&lt;p&gt;Just Like Git… I need Git 1.8 for something (you dont need the details).  &lt;/p&gt;
+&lt;p&gt;Just Like Git… I need Git 1.8 for something (you dont need the details).&lt;/p&gt;
 
 &lt;p&gt;So I had to download the source for Git, Do a make and then install it and all this will only take about 15 mins… are you ready?&lt;/p&gt;
 
@@ -3763,13 +3763,13 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt
 
 &lt;p&gt;To download, make and install Git all you have to do is enter the following commands in a console that your have root access in&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yum install gettext-devel expat-devel curl-devel zlib-devel openssl-devel
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yum install gettext-devel expat-devel curl-devel zlib-devel openssl-devel
 &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/local/src
 wget https://www.kernel.org/pub/software/scm/git/git-1.8.2.3.tar.gz
 tar xzvf git-1.8.2.3.tar.gz
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;git-1.8.2.3
 make &lt;span class=&quot;nv&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local all
-make &lt;span class=&quot;nv&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+make &lt;span class=&quot;nv&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local install&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;time-for-a-test&quot;&gt;Time For a Test&lt;/h3&gt;
 
@@ -3829,7 +3829,7 @@ config --global user.email johndoe@example.com
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Local filesystem: git clone /path/to/repo or git clone file://path/to/repo. Least work if you have networked filesystem, but not very efficient use of network. &lt;/p&gt;
+    &lt;p&gt;Local filesystem: git clone /path/to/repo or git clone file://path/to/repo. Least work if you have networked filesystem, but not very efficient use of network.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;HTTP protocols: git clone http://example.com/repo. You need any web server, and you also need to run (perhaps automatically, from a hook) git-update-server-info to generate information required for fetching/pulling via “dumb” protocols.&lt;/p&gt;
@@ -3915,7 +3915,7 @@ gpgcheck=1
 
 &lt;p&gt;You should note that the last part of the baseurl needs to match your CentOS version and arch. In my case this would need to be centos6-amd64, for a 64-bit install, but since x86 (32-bit) is more common I’ve left that in the example above.&lt;/p&gt;
 
-&lt;p&gt;Save the file and exit your editor. (In vi this is done by holding Shif and pressing : (colon), entering “wq” (without the quotes) for “write quit”, and enter.) &lt;/p&gt;
+&lt;p&gt;Save the file and exit your editor. (In vi this is done by holding Shif and pressing : (colon), entering “wq” (without the quotes) for “write quit”, and enter.)&lt;/p&gt;
 
 &lt;h3 id=&quot;time-to-install-mariadb&quot;&gt;Time to install MariaDB&lt;/h3&gt;
 
@@ -3944,7 +3944,7 @@ gpgcheck=1
 
 &lt;p&gt;You should see something like this:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Welcome to the MariaDB monitor.  Commands end with &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; or &lt;span class=&quot;se&quot;&gt;\g&lt;/span&gt;.
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Welcome to the MariaDB monitor.  Commands end with &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; or &lt;span class=&quot;se&quot;&gt;\g&lt;/span&gt;.
 Your MariaDB connection id is 1
 Server version: 5.5.30-MariaDB MariaDB Server
 
@@ -3952,7 +3952,7 @@ Copyright &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;o&
 
 Type &lt;span class=&quot;s1&quot;&gt;&amp;#39;help;&amp;#39;&lt;/span&gt; or &lt;span class=&quot;s1&quot;&gt;&amp;#39;\h&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; help. Type &lt;span class=&quot;s1&quot;&gt;&amp;#39;\c&amp;#39;&lt;/span&gt; to clear the current input statement.
 
-MariaDB &lt;span class=&quot;o&quot;&gt;[(&lt;/span&gt;none&lt;span class=&quot;o&quot;&gt;)]&lt;/span&gt;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+MariaDB &lt;span class=&quot;o&quot;&gt;[(&lt;/span&gt;none&lt;span class=&quot;o&quot;&gt;)]&lt;/span&gt;&amp;gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;That was easy right?&lt;/p&gt;
 
@@ -3968,7 +3968,7 @@ MariaDB &lt;span class=&quot;o&quot;&gt;[(&lt;/span&gt;none&lt;span class=&quot;
    <link href="http://johnathanmarksmith.com/linux/java/jboss/as7/2013/05/13/basic-install-of-jboss-for-developers-on-linux"/>
    <updated>2013-05-13T00:00:00-07:00</updated>
    <id>http://johnathanmarksmith.com/linux/java/jboss/as7/2013/05/13/basic-install-of-jboss-for-developers-on-linux</id>
-   <content type="html">&lt;p&gt;Below is a quick and easy way to install JBoss on linux for a developer to test and learn how to use it.  &lt;/p&gt;
+   <content type="html">&lt;p&gt;Below is a quick and easy way to install JBoss on linux for a developer to test and learn how to use it.&lt;/p&gt;
 
 &lt;p&gt;Please don’t use this setup for production.&lt;/p&gt;
 
@@ -3976,19 +3976,19 @@ MariaDB &lt;span class=&quot;o&quot;&gt;[(&lt;/span&gt;none&lt;span class=&quot;
 
 &lt;p&gt;To download and untar jboss you need to enter the following commands:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; tar -zxvf jboss-as-7.1.1.Final.tar.gz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; tar -zxvf jboss-as-7.1.1.Final.tar.gz &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;start-up-jboss-in-standalone-mode&quot;&gt;Start Up JBoss in standalone mode&lt;/h3&gt;
 
 &lt;p&gt;Now that you have jboss untar on your linux box its time to start it in standalone mode. Just enter the following commands:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;jboss-as-7.1.1.Final/bin
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; ./standalone.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;jboss-as-7.1.1.Final/bin
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; ./standalone.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;The output should look something like the one below:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;=========================================================================&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;=========================================================================&lt;/span&gt;
 
   JBoss Bootstrap Environment
 
@@ -4026,18 +4026,18 @@ MariaDB &lt;span class=&quot;o&quot;&gt;[(&lt;/span&gt;none&lt;span class=&quot;
 14:10:28,754 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.server.deployment.scanner&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;MSC service thread 1-2&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS015012: Started FileSystemDeploymentService &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; directory /home/jsmith/jboss-as-7.1.1.Final/standalone/deployments
 14:10:28,896 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.connector.subsystems.datasources&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;MSC service thread 1-1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS010400: Bound data &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;java:jboss/datasources/ExampleDS&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
 14:10:29,026 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Controller Boot Thread&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS015951: Admin console listening on http://127.0.0.1:9990
-14:10:29,027 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Controller Boot Thread&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS015874: JBoss AS 7.1.1.Final &lt;span class=&quot;s2&quot;&gt;&amp;quot;Brontes&amp;quot;&lt;/span&gt; started in 3281ms - Started &lt;span class=&quot;m&quot;&gt;133&lt;/span&gt; of &lt;span class=&quot;m&quot;&gt;208&lt;/span&gt; services &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;74&lt;/span&gt; services are passive or on-demand&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+14:10:29,027 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Controller Boot Thread&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS015874: JBoss AS 7.1.1.Final &lt;span class=&quot;s2&quot;&gt;&amp;quot;Brontes&amp;quot;&lt;/span&gt; started in 3281ms - Started &lt;span class=&quot;m&quot;&gt;133&lt;/span&gt; of &lt;span class=&quot;m&quot;&gt;208&lt;/span&gt; services &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;74&lt;/span&gt; services are passive or on-demand&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;add-the-admin&quot;&gt;Add the admin&lt;/h3&gt;
 
 &lt;p&gt;Now it’s time to setup the admin account for jboss. Open a new console and follow the following steps. I am going to make the username “admin” and the password “jboss” but you can use any username and password you would like, follow the commands below&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;jboss-as-7.1.1.Final/bin
-./add-user.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;jboss-as-7.1.1.Final/bin
+./add-user.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Your output should look like this:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;What &lt;span class=&quot;nb&quot;&gt;type &lt;/span&gt;of user &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; you wish to add? 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;What &lt;span class=&quot;nb&quot;&gt;type &lt;/span&gt;of user &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; you wish to add? 
  a&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Management User &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;mgmt-users.properties&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
  b&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Application User &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;application-users.properties&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: 
@@ -4050,7 +4050,7 @@ Re-enter Password :
 The username &lt;span class=&quot;s1&quot;&gt;&amp;#39;admin&amp;#39;&lt;/span&gt; is easy to guess
 Are you sure you want to add user &lt;span class=&quot;s1&quot;&gt;&amp;#39;admin&amp;#39;&lt;/span&gt; yes/no? yes
 About to add user &lt;span class=&quot;s1&quot;&gt;&amp;#39;admin&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; realm &lt;span class=&quot;s1&quot;&gt;&amp;#39;ManagementRealm&amp;#39;&lt;/span&gt;
-Is this correct yes/no? yes&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+Is this correct yes/no? yes&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;jboss-is-up-and-running&quot;&gt;JBoss is up and running.&lt;/h3&gt;
 
@@ -4074,15 +4074,15 @@ Is this correct yes/no? yes&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
    <link href="http://johnathanmarksmith.com/mysql/linux/database/2013/05/03/how-to-load-mysql-database-from-command-line-in-linux"/>
    <updated>2013-05-03T00:00:00-07:00</updated>
    <id>http://johnathanmarksmith.com/mysql/linux/database/2013/05/03/how-to-load-mysql-database-from-command-line-in-linux</id>
-   <content type="html">&lt;p&gt;I been getting asked, How can I load my MySQL database from the command line? &lt;/p&gt;
+   <content type="html">&lt;p&gt;I been getting asked, How can I load my MySQL database from the command line?&lt;/p&gt;
 
 &lt;p&gt;So I am going to make this quick and easy…&lt;/p&gt;
 
 &lt;p&gt;First cd in the folder where your sql file is, for this demo I am using a file called “backup.mysql”. Then use the following command&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mysql --user root --password regandb &amp;lt; backup.mysql&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mysql --user root --password regandb &amp;lt; backup.mysql&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;MySQL will prompt you for a password then your mysql will be loaded depending on how big your backup/file is it may take some time. You could add a -f flag if your database is very big, it will prevent it from stopping if there is error. &lt;/p&gt;
+&lt;p&gt;MySQL will prompt you for a password then your mysql will be loaded depending on how big your backup/file is it may take some time. You could add a -f flag if your database is very big, it will prevent it from stopping if there is error.&lt;/p&gt;
 
 &lt;p&gt;ITS THAT EASY!!! :)&lt;/p&gt;
 
@@ -4280,11 +4280,11 @@ public DataSourceInitializer dataSourceInitializer(DataSource dataSource) {
 
 &lt;p&gt;If you would like to download the project from GitHub and run it just follow the following commands:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone git@github.com:JohnathanMarkSmith/NoMySQL.git
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone git@github.com:JohnathanMarkSmith/NoMySQL.git
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;NoMySQL
 mvn package
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;target
-java -jar NoMySQL.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+java -jar NoMySQL.jar&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Thats it and you should see the following line on the console:&lt;/p&gt;
 
@@ -4313,7 +4313,7 @@ java -jar NoMySQL.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Here is the main code to my sample project&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;public class Main
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;public class Main
 &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 
     private static final Logger &lt;span class=&quot;nv&quot;&gt;LOGGER&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; getLogger&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Main.class&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -4362,11 +4362,11 @@ java -jar NoMySQL.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
             LOGGER.debug&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Message: ID: &amp;quot;&lt;/span&gt; + i.getId&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;, Message: &amp;quot;&lt;/span&gt; + i.getMessage&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;.&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;You can see from this code that the ApplicationContext is mapped to a HelloWorldConfig.class file its not using a XML file.  Below is the code to the HelloWorldConfig.class.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/**
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/**
  * Date:   4/25/13 / 9:37 AM
  * Author: Johnathan Mark Smith
  * Email:  john@johnathanmarksmith.com
@@ -4395,24 +4395,24 @@ public class HelloWorldConfiguration &lt;span class=&quot;o&quot;&gt;{&lt;/span&
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
 
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;You can see how easy it is to use JavaConfig and Not XML.. &lt;/p&gt;
+&lt;p&gt;You can see how easy it is to use JavaConfig and Not XML..&lt;/p&gt;
 
 &lt;p&gt;You can download the source code to this at my github project. 
 &lt;a href=&quot;https://github.com/JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig&quot;&gt;https://github.com/JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Now that’s it. have fun with Spring JavaConfig. &lt;/p&gt;
+&lt;p&gt;Now that’s it. have fun with Spring JavaConfig.&lt;/p&gt;
 
 &lt;h3 id=&quot;down-and-run-project&quot;&gt;Down and Run Project&lt;/h3&gt;
 
 &lt;p&gt;If you would like to download the project from GitHub and run it just follow the following commands:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone git@github.com:JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig.git
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone git@github.com:JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig.git
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;HelloSpringJavaBasedJavaConfig
 mvn packge
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;target
-java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING….&lt;/p&gt;
 
@@ -4434,22 +4434,22 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt
 
 &lt;p&gt;To install MySQL Client and Server enter the following commands:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# yum groupinstall &amp;quot;MySQL Database server&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# yum groupinstall &amp;quot;MySQL Database client&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# yum groupinstall &amp;quot;MySQL Database server&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# yum groupinstall &amp;quot;MySQL Database client&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;to-install-mysql-system-tables-and-setup-mysql-to-start-on-boot&quot;&gt;To install MySQL system tables and Setup MySQL to start on boot&lt;/h3&gt;
 
 &lt;p&gt;To install the MySQL system tables and setup MySQL to start on boot you need to enter the following commands:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# /usr/bin/mysql_install_db --user=mysql&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# chkconfig --level 2345 mysqld on; service mysqld start&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# /usr/bin/mysql_install_db --user=mysql&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# chkconfig --level 2345 mysqld on; service mysqld start&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;set-admin-password&quot;&gt;Set Admin Password&lt;/h3&gt;
 
 &lt;p&gt;To set the admin password for the MySQL databse you need to  enter the following commands:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# /usr/bin/mysqladmin -u root password &amp;#39;new-password&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# /usr/bin/mysqladmin -u root -h regan password &amp;#39;new-password&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# /usr/bin/mysqladmin -u root password &amp;#39;new-password&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# /usr/bin/mysqladmin -u root -h regan password &amp;#39;new-password&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that’s it. have fun with MySQL.&lt;/p&gt;
 
@@ -4465,20 +4465,20 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt
    <link href="http://johnathanmarksmith.com/linux/git/2013/04/23/how-to-see-the-last-time-a-developer-commited-work-and-also-the-number-of-commits-your-developer-made-in-your-git-repository"/>
    <updated>2013-04-23T00:00:00-07:00</updated>
    <id>http://johnathanmarksmith.com/linux/git/2013/04/23/how-to-see-the-last-time-a-developer-commited-work-and-also-the-number-of-commits-your-developer-made-in-your-git-repository</id>
-   <content type="html">&lt;p&gt;How would you like to check-up on your developers and see that last time your developers commited work to your Git repository.  I do this all the time to check on the developers on my projects. &lt;/p&gt;
+   <content type="html">&lt;p&gt;How would you like to check-up on your developers and see that last time your developers commited work to your Git repository.  I do this all the time to check on the developers on my projects.&lt;/p&gt;
 
 &lt;p&gt;The best way to see who is commiting work to your Git repository and the last time is easy.  Just go into one of your Git repositories and type the following:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git shortlog -sne &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{print $1,$2,$3,system(&amp;quot;git log -n1 --format=%cd --author=&amp;quot; $2)}&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git shortlog -sne &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{print $1,$2,$3,system(&amp;quot;git log -n1 --format=%cd --author=&amp;quot; $2)}&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;and your output should look like:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Wed Apr &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; 11:35:41 &lt;span class=&quot;m&quot;&gt;2013&lt;/span&gt; -0400
-&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; Johnathan Smith 0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Wed Apr &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; 11:35:41 &lt;span class=&quot;m&quot;&gt;2013&lt;/span&gt; -0400
+&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; Johnathan Smith 0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;This will show you who is doing all the work and the last time work was commited….. &lt;/p&gt;
+&lt;p&gt;This will show you who is doing all the work and the last time work was commited…..&lt;/p&gt;
 
-&lt;p&gt;Now that’s it. have fun with Git. &lt;/p&gt;
+&lt;p&gt;Now that’s it. have fun with Git.&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
 
@@ -4494,11 +4494,11 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt
 
 &lt;p&gt;The best way to see who is commiting work to your Git repository is easy.  Just go into one of your Git repositories and type the following:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git shortlog -s -n -e --all&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git shortlog -s -n -e --all&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;and your output should look like:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;10	Johnathan Smith &amp;lt;johnathansmith1969@gmail.com&amp;gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    10	Johnathan Smith &amp;lt;johnathansmith1969@gmail.com&amp;gt;
     10	Yuya Saito &amp;lt;studiomohawk@gmail.com&amp;gt;
      4	Andrea Schiavini &amp;lt;andrea.schiavini@gmail.com&amp;gt;
      3	Anton Vattay &amp;lt;3martini@gmail.com&amp;gt;
@@ -4530,11 +4530,11 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt
      1	Stephen Ball &amp;lt;sdball@gmail.com&amp;gt;
      1	Tommaso Visconti &amp;lt;tommaso.visconti@gmail.com&amp;gt;
      1	Victor Widell &amp;lt;victor@topmost.se&amp;gt;
-     1	christine &amp;lt;piroko@gmail.com&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+     1	christine &amp;lt;piroko@gmail.com&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;This will show you who is doing all the work….. &lt;/p&gt;
+&lt;p&gt;This will show you who is doing all the work…..&lt;/p&gt;
 
-&lt;p&gt;Now that’s it. have fun with Git. &lt;/p&gt;
+&lt;p&gt;Now that’s it. have fun with Git.&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
 
@@ -4552,19 +4552,19 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt
 
 &lt;p&gt;To install Apache2 just enter the following command:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yum install httpd&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yum install httpd&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;install-php&quot;&gt;Install PHP&lt;/h3&gt;
 
 &lt;p&gt;To install PHP just enter the following command:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yum install php&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yum install php&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;start-up-apache2&quot;&gt;Start up Apache2&lt;/h3&gt;
 
 &lt;p&gt;The following command is going to setup Apache and set it up to start everytime your workstation or server books.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;chkconfig --level &lt;span class=&quot;m&quot;&gt;2345&lt;/span&gt; httpd on&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; service httpd start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;chkconfig --level &lt;span class=&quot;m&quot;&gt;2345&lt;/span&gt; httpd on&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; service httpd start&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;test-your-install&quot;&gt;Test Your Install&lt;/h3&gt;
 
@@ -4572,7 +4572,7 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt
 
 &lt;p&gt;The following command will create and index.php file with the PHPInfo command in it:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; “&amp;lt;?php phpinfo&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; ?&amp;gt;” &amp;gt; /var/www/html/index.php&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; “&amp;lt;?php phpinfo&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; ?&amp;gt;” &amp;gt; /var/www/html/index.php&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now launch your browser to http://127.0.0.1 or http://localhost if anything was done righ your output should look like the one below:&lt;/p&gt;
 
@@ -4580,7 +4580,7 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt
 &lt;img src=&quot;/images/php.jpg&quot; alt=&quot;Install Apache2 and PHP with Johnathan Mark Smith&quot; /&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Now that’s it. have fun with Apache2 and PHP. &lt;/p&gt;
+&lt;p&gt;Now that’s it. have fun with Apache2 and PHP.&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
 
@@ -4600,34 +4600,34 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt
 
 &lt;p&gt;The first thing we need to do is to download the Maven tar file and untar it to a shared location on the workstation&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget http://mirrors.gigenet.com/apache/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz
-su -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;tar -zxvf apache-maven-3.0.5-bin.tar.gz -C /opt/&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget http://mirrors.gigenet.com/apache/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz
+su -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;tar -zxvf apache-maven-3.0.5-bin.tar.gz -C /opt/&amp;quot;&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;setup-the-maven-environment-variables-in-shared-profile&quot;&gt;Setup the Maven Environment Variables in shared profile.&lt;/h3&gt;
 
 &lt;p&gt;The next step is to setup the Maven environment variables in a shared profile so all users on the system will get them import at login time.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;vi /etc/profile.d/maven.sh&amp;quot;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;vi /etc/profile.d/maven.sh&amp;quot;&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;# Add the following lines to maven.sh&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;M2_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/opt/apache-maven-3.0.5
 &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;M2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2_HOME&lt;/span&gt;/bin
-&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;now-test-your-install-of-maven&quot;&gt;Now test your install of Maven.&lt;/h3&gt;
 
 &lt;p&gt;Logout of the system and then log back into it. Enter the following command:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mvn -version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mvn -version &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;If you did everything right your output should look something like the one below:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Apache Maven 3.0.5 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;r01de14724cdef164cd33c7c8c2fe155faf9602da&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 2013-02-19 08:51:28-0500&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Apache Maven 3.0.5 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;r01de14724cdef164cd33c7c8c2fe155faf9602da&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 2013-02-19 08:51:28-0500&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 Maven home: /opt/apache-maven-3.0.5
 Java version: 1.7.0_19, vendor: Oracle Corporation
 Java home: /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.19/jre
 Default locale: en_US, platform encoding: UTF-8
-OS name: &lt;span class=&quot;s2&quot;&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;, version: &lt;span class=&quot;s2&quot;&gt;&amp;quot;2.6.32-358.2.1.el6.i686&amp;quot;&lt;/span&gt;, arch: &lt;span class=&quot;s2&quot;&gt;&amp;quot;i386&amp;quot;&lt;/span&gt;, family: &lt;span class=&quot;s2&quot;&gt;&amp;quot;unix&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+OS name: &lt;span class=&quot;s2&quot;&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;, version: &lt;span class=&quot;s2&quot;&gt;&amp;quot;2.6.32-358.2.1.el6.i686&amp;quot;&lt;/span&gt;, arch: &lt;span class=&quot;s2&quot;&gt;&amp;quot;i386&amp;quot;&lt;/span&gt;, family: &lt;span class=&quot;s2&quot;&gt;&amp;quot;unix&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that’s it. have fun with maven.&lt;/p&gt;
 
@@ -4643,13 +4643,13 @@ OS name: &lt;span class=&quot;s2&quot;&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;
    <link href="http://johnathanmarksmith.com/linux/java/2013/04/17/how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux"/>
    <updated>2013-04-17T00:00:00-07:00</updated>
    <id>http://johnathanmarksmith.com/linux/java/2013/04/17/how-to-install-java-open-jdk-17-on-fedora-centos-red-hat-and-scientific-linux</id>
-   <content type="html">&lt;p&gt;I had to install Java Open JDK 1.7 and SDK on a number of linux boxs last night.  &lt;/p&gt;
+   <content type="html">&lt;p&gt;I had to install Java Open JDK 1.7 and SDK on a number of linux boxs last night.&lt;/p&gt;
 
-&lt;p&gt;I had some coworkers asking the same question time and time again “How Do I Install Java Open JDK 1.7?”. &lt;/p&gt;
+&lt;p&gt;I had some coworkers asking the same question time and time again “How Do I Install Java Open JDK 1.7?”.&lt;/p&gt;
 
 &lt;p&gt;So to make it easy once again here is my post and the details on how to do it.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;yum install java-1.7.0-openjdk*&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;yum install java-1.7.0-openjdk*&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Thats all you have to do… stop asking… :)&lt;/p&gt;
 
@@ -4669,11 +4669,11 @@ OS name: &lt;span class=&quot;s2&quot;&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;
    <id>http://johnathanmarksmith.com/programming/jobs/2013/04/16/sounding-smart-gets-you-credit</id>
    <content type="html">&lt;p&gt;I don’t know what it is but I see it day in and day out. Someone reads a number of websites and learns some buzz words and everyone thinks wow he is so smart he is the best programmer we have.&lt;/p&gt;
 
-&lt;p&gt;Learning all the buzz words and and speaking will is a key thing in the world today but I really feel that the fims have to start to look at the programmers then can develop good code and get good products out. Talking good is not going to get the job done. &lt;/p&gt;
+&lt;p&gt;Learning all the buzz words and and speaking will is a key thing in the world today but I really feel that the fims have to start to look at the programmers then can develop good code and get good products out. Talking good is not going to get the job done.&lt;/p&gt;
 
 &lt;p&gt;Think about it… Do you want someone that can really get your projects done on time and the right way or someone that can talk about it day in and day out.&lt;/p&gt;
 
-&lt;p&gt;Hmm.. &lt;/p&gt;
+&lt;p&gt;Hmm..&lt;/p&gt;
 
 </content>
  </entry>
@@ -4687,12 +4687,12 @@ OS name: &lt;span class=&quot;s2&quot;&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;
 
 &lt;p&gt;This worked for me:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone file:////&amp;lt;host&amp;gt;/&amp;lt;share&amp;gt;/&amp;lt;path&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone file:////&amp;lt;host&amp;gt;/&amp;lt;share&amp;gt;/&amp;lt;path&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;For example, if your main machine has the IP 192.168.10.51 and the computer name main, and it has a share named code which itself is a git repository, the both of the following commands should work equally:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone file:////main/code
-git clone file:////192.168.10.51/code&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone file:////main/code
+git clone file:////192.168.10.51/code&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;If the git repository is in a subdirectory, simply append the path.&lt;/p&gt;
 
@@ -4712,12 +4712,12 @@ git clone file:////192.168.10.51/code&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;From the birds eyes very its very easy:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone --mirror git@git.com:project project
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone --mirror git@git.com:project project
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;project
 git remote add github git@github.com:username/project.git
 
 In cron Job
-&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /pathto/project &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git fetch -q &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git push -q --mirror github&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /pathto/project &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git fetch -q &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git push -q --mirror github&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Thats how easy it is to mirror a Git Project on to GitHub&lt;/p&gt;
 
@@ -4802,7 +4802,7 @@ the following URL&lt;/p&gt;
  
  <entry>
    <title>The Move To GitHub</title>
-   <link href="http://johnathanmarksmith.com/github/wordpress/2013/03/22/the-move-to--github"/>
+   <link href="http://johnathanmarksmith.com/github/wordpress/2013/03/22/the-move-to-github"/>
    <updated>2013-03-22T00:00:00-07:00</updated>
    <id>http://johnathanmarksmith.com/github/wordpress/2013/03/22/the-move-to--github</id>
    <content type="html">&lt;p&gt;Today is the day that I said goodbye WordPress! Hello GitHub and moved my site to Github.  I love Git for version control so why not use it for web hosting..&lt;/p&gt;

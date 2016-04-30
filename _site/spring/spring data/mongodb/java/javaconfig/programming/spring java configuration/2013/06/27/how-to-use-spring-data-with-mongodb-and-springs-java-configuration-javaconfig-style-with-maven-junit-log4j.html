@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      
+        How To Use Spring Data with MongoDB and Spring's Java Configuration (JavaConfig) style with Maven, JUnit, Log4J - 
+      
+      Johnathan Mark Smith
+    </title>
+    <meta name="description" content="How To Use Spring Data with MongoDB and Spring's Java Configuration (JavaConfig) style with Maven, JUnit, Log4J">
+    <meta name="author" content="Johnathan Mark Smith">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+      <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <link href="/assets/themes//bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes//bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="/assets/themes//css-social-buttons/css/zocial.stripped.css">
+    <link href="/assets/themes//css/pygments.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes//css/darkstrap.css" rel="stylesheet" type="text/css" media="all">    
+    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>      
+
+
+          <a class="brand" href="/">Johnathan Mark Smith</a>
+
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              
+              
+              
+
+
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/resume">Resume</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+
+
+
+            </ul>
+            <ul class="nav pull-right social visible-desktop">
+              <li class="divider-vertical"></li>
+              
+                <li>
+                  <a href="https://github.com/JohnathanMarkSmith" class="zocial github icon" target="_blank">
+                    <span class="hidden-desktop">Github</span>
+                  </a>
+                </li>
+              
+                  
+              
+                <li>
+                  <a href="https://twitter.com/JohnathanMSmith" class="zocial twitter icon" target="_blank">
+                  <span class="hidden-desktop">Twitter</span>
+                  </a>
+                </li>
+                                        
+                         
+              
+                <li>
+                  <a href="http://www.linkedin.com/in/johnathansmith1969" class="zocial linkedin icon" target="_blank">
+                    <span class="hidden-desktop">LinkedIn</span>
+                  </a>
+                </li>
+                                  
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        
+<div class="page-header">
+  <h1>
+    How To Use Spring Data with MongoDB and Spring's Java Configuration (JavaConfig) style with Maven, JUnit, Log4J 
+    
+  </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <p>In this example I am going to show you how to post data to a MongoDB database using Spring Data Mongo
+in Java using Spring, Spring Java Configuration, Maven and Log4J.</p>
+
+<h3 id="spring-java-configuration">Spring Java Configuration</h3>
+
+<p>Let’s take a quick look at the Spring Java Configuration file that the project is going to be using</p>
+
+<pre><code>@Configuration
+@EnableMongoRepositories
+@ComponentScan(basePackageClasses = {MongoDBApp.class})
+@PropertySource("classpath:application.properties")
+public class MongoConfiguration extends AbstractMongoConfiguration
+{
+
+
+    @Override
+    protected String getDatabaseName() {
+        return "demo";
+    }
+
+    @Override
+    public Mongo mongo() throws Exception {
+        return new Mongo();
+    }
+
+    @Override
+    protected String getMappingBasePackage() {
+        return "com.johnathanmarksmith.mongodb.example.domain";
+    }
+
+}
+</code></pre>
+
+<p>As you can see from the above code the trick to all this is to use @EnableMongoRepositories and to
+ extend your class from AbstractMongoConfiguration.</p>
+
+<h3 id="the-person-object">The Person Object</h3>
+
+<p>Now we are going to take a look at the object that we are going to be inserting into the database.</p>
+
+<pre><code>    @Document
+    public class Person {
+
+    @Id
+    private String personId;
+
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getPersonId() {
+        return personId;
+    }
+
+    public void setPersonId(final String personId) {
+        this.personId = personId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(final String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(final int age) {
+        this.age = age;
+    }
+    @Override
+    public String toString() {
+        return "Person [id=" + personId + ", name=" + name
+                + ", age=" + age +  "]";
+    }
+
+}
+</code></pre>
+
+<p>You see we use the @Document and the @Id.</p>
+
+<h3 id="the-repository">The Repository</h3>
+
+<p>Now its time to see the source code in the repository</p>
+
+<pre><code>@Repository
+public class PersonRepository {
+
+    static final Logger logger = LoggerFactory.getLogger(PersonRepository.class);
+
+    @Autowired
+    MongoTemplate mongoTemplate;
+
+    public void countUnderAge() {
+        List&lt;Person&gt; results = null;
+
+        Query query = new Query();
+        Criteria criteria = new Criteria();
+        criteria = criteria.and("age").lte(21);
+
+        query.addCriteria(criteria);
+        results = mongoTemplate.find(query, Person.class);
+
+        logger.info("Total number of under age in database: {}", results.size());
+    }
+
+    /**
+     * This will count how many Person Objects I have
+     */
+    public void countAllPersons() {
+        List&lt;Person&gt; results = mongoTemplate.findAll(Person.class);
+        logger.info("Total number in database: {}", results.size());
+    }
+
+    /**
+     * This will install a new Person object with my
+     * name and random age
+     */
+    public void insertPersonWithNameJohnathanAndRandomAge() {
+
+        double age = Math.ceil(Math.random() * 100);
+        Person p = new Person("Johnathan", (int) age);
+
+        mongoTemplate.insert(p);
+    }
+
+    /**
+     * this will create a {@link Person} collection if the collection does not already exists
+     */
+    public void createPersonCollection() {
+        if (!mongoTemplate.collectionExists(Person.class)) {
+            mongoTemplate.createCollection(Person.class);
+        }
+    }
+
+    /**
+     * this will drop the {@link Person} collection if the collection does already exists
+     */
+    public void dropPersonCollection() {
+        if (mongoTemplate.collectionExists(Person.class)) {
+            mongoTemplate.dropCollection(Person.class);
+        }
+    }
+}
+</code></pre>
+
+<h2 id="the-main-class">The Main Class</h2>
+
+<p>Time for the main class now.. are you ready for all this code??</p>
+
+<pre><code>    public static void main(String[] args) {
+        logger.info("MongoDemo application");
+
+        ApplicationContext context = new AnnotationConfigApplicationContext(MongoConfiguration.class);
+
+        PersonRepository personRepository = context.getBean(PersonRepository.class);
+
+        // cleanup person collection before insertion
+        personRepository.dropPersonCollection();
+
+        //create person collection
+        personRepository.createPersonCollection();
+
+        for (int i = 0; i &lt; 10000; i++) {
+            personRepository.insertPersonWithNameJohnathanAndRandomAge();
+        }
+
+        personRepository.countAllPersons();
+
+
+        /***
+         *
+         * Added Under Age Test For someone to see
+         *
+         */
+        personRepository.countUnderAge();
+
+
+        logger.info("MongoDemo application");
+    }
+}
+</code></pre>
+
+<p>You can see from the above code how easy it is to use Spring Data Mongo to post data to a MongoDB.</p>
+
+<h3 id="download-and-run-code">Download and Run Code</h3>
+
+<p>You can checkout the project from github.</p>
+
+<pre><code>git clone git@github.com:JohnathanMarkSmith/spring-mongo-demo.git
+cd spring-mongo-demo
+mvn clean package
+mvn exec:java
+</code></pre>
+
+<object width="640" height="480"><param name="movie" value="//www.youtube.com/v/aY_JsfJM2eU?version=3&amp;hl=en_US" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="//www.youtube.com/v/aY_JsfJM2eU?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="640" height="480" allowscriptaccess="always" allowfullscreen="true" /></object>
+
+<p>Please keep in mind to be able to run this demo application start your MongoDB instance, Yes you need MongoDB.</p>
+
+<p>If you have any questions or comments please email me at john@johnathanmarksmith.com or checkout my web site http://JohnathanMarkSmith.com</p>
+
+<p>For a MongoDB guide see http://www.mongodb.org/display/DOCS/Quickstart</p>
+
+<p>Thanks, Johnathan Mark Smith</p>
+
+
+    <hr>
+    <div class="pagination btn-group">
+      
+        <a class="btn prev" href="/spring/java/javaconfig/programming/spring%20java%20configuration/spring%20mvc/web/rest/resttemplate/2013/06/26/how-to-use-spring-restteample-to-post-data-to-a-web-service-with-authentication" title="How To Use Spring RESTTeample To Post Data to a Web Service with Authentication">&larr; Previous</a>
+      
+        <a class="btn" href="/archive.html">Archive</a>
+      
+        <a class="btn next" href="/spring/spring%20data/mongodb/fongo/java/javaconfig/programming/spring%20java%20configuration/2013/06/28/how-to-use-fongo-and-nosql-unit-to-test-spring-data-project-with-mongodb-junit-log4j" title="How to use Fongo and nosql unit to test Spring Data project with MongoDB, JUnit, Log4J">Next &rarr;</a>
+      
+    </div>
+    <hr>
+    
+  </div>
+  
+  <div class="span4">
+    <section>
+      <h4>Published</h4>
+      <div class="date"><span>27 June 2013</span></div>
+    </section>
+         
+    
+      <section>
+        <h4>Tags</h4>
+        <ul class="tag_box">
+          
+          
+
+
+  
+     
+    	<li><a href="/tags.html#Spring-ref">Spring <span>16</span></a></li>
+     
+    	<li><a href="/tags.html#Spring Data-ref">Spring Data <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#MongoDB-ref">MongoDB <span>5</span></a></li>
+     
+    	<li><a href="/tags.html#Java-ref">Java <span>39</span></a></li>
+     
+    	<li><a href="/tags.html#JavaConfig-ref">JavaConfig <span>12</span></a></li>
+     
+    	<li><a href="/tags.html#Programming-ref">Programming <span>21</span></a></li>
+     
+    	<li><a href="/tags.html#Spring Java Configuration-ref">Spring Java Configuration <span>12</span></a></li>
+    
+  
+
+
+
+        </ul>
+      </section>
+             
+  </div>
+</div>
+
+
+      </div>
+        <p>
+
+            <!-- Place this tag where you want the +1 button to render. -->
+        <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+
+        <!-- Place this tag after the last +1 button tag. -->
+        <script type="text/javascript">
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+        </p>
+
+
+
+        <p>
+        <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-8842842164201164";
+        /* First Ad */
+        google_ad_slot = "3974497337";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        //-->
+        </script>
+        <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+        <br>
+        </p>
+
+        <footer>
+        <p>&copy; 2016 <a href="mailto:john@johnathanmarksmith.com">Johnathan Mark Smith</a>
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a>
+        </p>
+      </footer>
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/themes//js/jquery.min.js"><\/script>')</script>
+    <script src="/assets/themes//bootstrap/js/bootstrap.min.js"></script>
+
+    
+  </body>
+</html>
+

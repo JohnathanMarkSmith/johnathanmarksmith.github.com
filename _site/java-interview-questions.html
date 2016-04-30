@@ -20,12 +20,12 @@
     <![endif]-->
 
 
-    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">    
-    <link rel="stylesheet" type="text/css" href="/assets/themes/hooligan/css-social-buttons/css/zocial.stripped.css">
-    <link href="/assets/themes/hooligan/css/pygments.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/assets/themes/hooligan/css/darkstrap.css" rel="stylesheet" type="text/css" media="all">    
-    <link href="/assets/themes/hooligan/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes//bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes//bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="/assets/themes//css-social-buttons/css/zocial.stripped.css">
+    <link href="/assets/themes//css/pygments.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes//css/darkstrap.css" rel="stylesheet" type="text/css" media="all">    
+    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     
     <!-- fav and touch icons -->
@@ -83,7 +83,7 @@
     
       
       	
-      	<li><a href="/archive.html">Archive</a></li>
+      	<li><a href="/archive">Archive</a></li>
       	
       
     
@@ -95,43 +95,7 @@
     
       
       	
-      	<li><a href="/categories.html">Categories</a></li>
-      	
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages.html">Pages</a></li>
-      	
-      
-    
-  
-    
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/resume.html">Resume</a></li>
+      	<li><a href="/categories">Categories</a></li>
       	
       
     
@@ -155,7 +119,43 @@
     
       
       	
-      	<li><a href="/tags.html">Tags</a></li>
+      	<li><a href="/pages">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/resume">Resume</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
       	
       
     
@@ -213,7 +213,7 @@
   <div class="span12">
     <h2 id="java-interview-questions">Java Interview Questions</h2>
 
-<p>After over 25 years I still don’t like going on interview and getting asked questions that a good programmer/developer dont have to know off the top of his/her head. I good programmer/developer should NOT know all the anwsers but should know how to find them and where to search.  </p>
+<p>After over 25 years I still don’t like going on interview and getting asked questions that a good programmer/developer dont have to know off the top of his/her head. I good programmer/developer should NOT know all the anwsers but should know how to find them and where to search.</p>
 
 <p>I am posting this page so programmers/developers can bookmark it and use it.  I am going to be posting some questions that I think everyone will ask.  If you have any questions that I am missing please email me.</p>
 
@@ -318,11 +318,11 @@ c)Determining an object’s programming interface without revealing the actual b
 
 <h2 id="what-is-difference-between-overloading-and-overriding">What is difference between overloading and overriding?</h2>
 
-<p>a) In overloading, there is a relationship between methods available in the same class whereas in overriding, there is relationship between a superclass method and subclass method. </p>
+<p>a) In overloading, there is a relationship between methods available in the same class whereas in overriding, there is relationship between a superclass method and subclass method.</p>
 
-<p>b) Overloading does not block inheritance from the superclass whereas overriding blocks inheritance from the superclass. </p>
+<p>b) Overloading does not block inheritance from the superclass whereas overriding blocks inheritance from the superclass.</p>
 
-<p>c) In overloading, separate methods share the same name whereas in overriding, subclass method replaces the superclass. </p>
+<p>c) In overloading, separate methods share the same name whereas in overriding, subclass method replaces the superclass.</p>
 
 <p>d) Overloading must have different method signatures whereas overriding must have same signature.</p>
 
@@ -347,7 +347,7 @@ c)Determining an object’s programming interface without revealing the actual b
 <p>Confused? Well, here are some very helpful examples of where overloading would be both valid and invalid:
 Examples of Method Overloading in Java – both valid and invalid:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">//compiler error - can<span class="s1">&#39;t overload based on the   </span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">//compiler error - can<span class="s1">&#39;t overload based on the   </span>
 <span class="s1">//type returned -</span>
 <span class="s1">//(one method returns int, the other returns a float):    </span>
 
@@ -370,11 +370,11 @@ int changeDate<span class="o">(</span>int Year<span class="o">)</span><span clas
 //parameters are of different types:    
 
 int changeDate<span class="o">(</span>float Year<span class="o">)</span> <span class="p">;</span>  
-int changeDate<span class="o">(</span>int Year<span class="o">)</span><span class="p">;</span></code></pre></div>
+int changeDate<span class="o">(</span>int Year<span class="o">)</span><span class="p">;</span>  </code></pre></figure>
 
 <p>Overriding methods is completely different from overloading methods. If a derived class requires a different definition for an inherited method, then that method can be redefined in the derived class. This would be considered overriding. An overridden method would have the exact same method name, return type, number of parameters, and types of parameters as the method in the parent class, and the only difference would be the definition of the method.</p>
 
-<p>Let’s summarize the differences between overloading and overriding. When overloading, one must change either the type or the number of parameters for a method that belongs to the same class. But, overriding a method means that a method inherited from a base class is what’s being changed. </p>
+<p>Let’s summarize the differences between overloading and overriding. When overloading, one must change either the type or the number of parameters for a method that belongs to the same class. But, overriding a method means that a method inherited from a base class is what’s being changed.</p>
 
 <h2 id="what-is-the-role-of-the-clone-method-in-java">What is the role of the clone() method in Java?</h2>
 
@@ -450,7 +450,7 @@ int changeDate<span class="o">(</span>int Year<span class="o">)</span><span clas
         </p>
 
         <footer>
-        <p>&copy; 2015 <a href="mailto:john@johnathanmarksmith.com">Johnathan Mark Smith</a>
+        <p>&copy; 2016 <a href="mailto:john@johnathanmarksmith.com">Johnathan Mark Smith</a>
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
           and <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a>
         </p>
@@ -458,8 +458,8 @@ int changeDate<span class="o">(</span>int Year<span class="o">)</span><span clas
     </div> <!-- /container -->
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/assets/themes/hooligan/js/jquery.min.js"><\/script>')</script>
-    <script src="/assets/themes/hooligan/bootstrap/js/bootstrap.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/themes//js/jquery.min.js"><\/script>')</script>
+    <script src="/assets/themes//bootstrap/js/bootstrap.min.js"></script>
 
     
   </body>
