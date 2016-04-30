@@ -7,9 +7,11 @@ tags: [ Linux, VirtualBox, CentOS 7, How-To  ]
 comments: false 
 ---
 
-So last night I had to upgate to VirtualBox 5 due to installing the new MAC os.  After installing VirutalBox5 I wanted to setup my guest linux which I like to use CentOS 7. 
+So last night I had to upgate to VirtualBox 5 due to installing the new MAC os.  After installing VirtualBox 5 I wanted to setup my guest linux which I like to use CentOS 7. 
 
-I did the basic install of CentOS7 but then wanted to add the VirtualBox Guest Additions but I was going so many errors. After doing some research and playing around I found all the packages that you need to have installed on CentOS7 before trying to install the VirtualBox Guest Addition.
+I did the basic install of CentOS7 but then wanted to add the VirtualBox Guest Additions but I was getting so many errors trying to get the Virtual Box Guest Additions to install.
+
+After doing some research and playing around I found all the packages that you need to have installed on CentOS7 before trying to install the VirtualBox Guest Addition.
 
 In this post I am going to show you a quick and easy way to install everything you need.
 
