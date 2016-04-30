@@ -5,8 +5,8 @@
         <description>Johnathan Mark Smith - Johnathan Mark Smith</description>
         <link>http://johnathanmarksmith.com</link>
         <link>http://johnathanmarksmith.com</link>
-        <lastBuildDate>2016-04-30T07:49:38-07:00</lastBuildDate>
-        <pubDate>2016-04-30T07:49:38-07:00</pubDate>
+        <lastBuildDate>2016-04-30T07:53:32-07:00</lastBuildDate>
+        <pubDate>2016-04-30T07:53:32-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -28,11 +28,6 @@ sudo yum install epel-release&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;Now that we have everything we need to do the VirtualBox Guest install you should not have any issues..&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;description: “”
-categories: 
-tags: []
-—&lt;/p&gt;
 
 </description>
                 <link>http://johnathanmarksmith.com/linux/virtualbox/centos%207/how-to/2016/04/30/how-to-install-virtualbox-5-guest-additions-on-centos-7</link>

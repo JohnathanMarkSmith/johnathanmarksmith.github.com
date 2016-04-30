@@ -26,6 +26,5 @@ sudo yum install epel-release
 Now that we have everything we need to do the VirtualBox Guest install you should not have any issues..
 
 
-
 If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a>
 {% include JB/setup %}

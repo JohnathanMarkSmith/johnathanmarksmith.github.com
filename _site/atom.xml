@@ -4,7 +4,7 @@
  <title>Johnathan Mark Smith</title>
  <link href="http://johnathanmarksmith.com/" rel="self"/>
  <link href="http://johnathanmarksmith.com"/>
- <updated>2016-04-30T07:49:38-07:00</updated>
+ <updated>2016-04-30T07:53:32-07:00</updated>
  <id>http://johnathanmarksmith.com</id>
  <author>
    <name>Johnathan Mark Smith</name>
@@ -33,11 +33,6 @@ sudo yum install epel-release&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;Now that we have everything we need to do the VirtualBox Guest install you should not have any issues..&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;description: “”
-categories: 
-tags: []
-—&lt;/p&gt;
 
 </content>
  </entry>
