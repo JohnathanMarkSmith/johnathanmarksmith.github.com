@@ -5,10 +5,40 @@
         <description>Johnathan Mark Smith - Johnathan Mark Smith</description>
         <link>http://johnathanmarksmith.com</link>
         <link>http://johnathanmarksmith.com</link>
-        <lastBuildDate>2016-04-30T07:04:19-07:00</lastBuildDate>
-        <pubDate>2016-04-30T07:04:19-07:00</pubDate>
+        <lastBuildDate>2016-04-30T07:47:34-07:00</lastBuildDate>
+        <pubDate>2016-04-30T07:47:34-07:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>How to install VirtualBox 5 Guest Additions on CentOS 7</title>
+                <description>&lt;p&gt;So last night I had to upgate to VirtualBox 5 due to installing the new MAC os.  After installing VirutalBox5 I wanted to setup my guest linux which I like to use CentOS 7.&lt;/p&gt;
+
+&lt;p&gt;I did the basic install of CentOS7 but then wanted to add the VirtualBox Guest Additions but I was going so many errors. After doing some research and playing around I found all the packages that you need to have installed on CentOS7 before trying to install the VirtualBox Guest Addition.&lt;/p&gt;
+
+&lt;p&gt;In this post I am going to show you a quick and easy way to install everything you need.&lt;/p&gt;
+
+&lt;p&gt;Just run the following commands:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo yum install kernel-devel-3.10.0-327.el7.x86_64
+sudo yum install kernel-devel
+sudo yum install gcc*
+sudo yum install epel-release&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now that we have everything we need to do the VirtualBox Guest install you should not have any issues..&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;description: “”
+categories: 
+tags: []
+—&lt;/p&gt;
+
+</description>
+                <link>http://johnathanmarksmith.com/linux/virtualbox/centos%207/how-to/2016/04/30/how-to-install-virtualbox-5-guest-additions-on-centos-7</link>
+                <guid>http://johnathanmarksmith.com/linux/virtualbox/centos%207/how-to/2016/04/30/how-to-install-virtualbox-5-guest-additions-on-centos-7</guid>
+                <pubDate>2016-04-30T00:00:00-07:00</pubDate>
+        </item>
 
         <item>
                 <title>How to install grails on a linux machine</title>
@@ -21,9 +51,9 @@ unzip grails-2.2.2.zip&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that we have it all ready to use (downloaded and unzip) we need to setup the environment variables.  Add the following environment variables to your .bashrc (I assume you are using bash as your shell)&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GRAILS_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/jxsmith/grails-2.2.2
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/lib/jvm/java-6-openjdk-amd64
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$JAVA_HOME&lt;/span&gt;/bin:&lt;span class=&quot;nv&quot;&gt;$GRAILS_HOME&lt;/span&gt;/bin&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;export GRAILS_HOME=/home/jxsmith/grails-2.2.2
+export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME/bin:$GRAILS_HOME/bin&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now logout of your profile and running the following command (you should see the version number)&lt;/p&gt;
 
@@ -61,7 +91,7 @@ unzip grails-2.2.2.zip&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Simply use the git global preferences to turn off SSL  verification:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git config --global http.sslVerify &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git config --global http.sslVerify false&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;The downside is? Well what is the point in using https if you have turned off SSL verification… This solution is not recommended as it leaves you vulnerable to man-in-the-middle attacks, but it is a quick fix and it works. So if you are not going to a repo over the internet then this is a quick fixed that is fine.&lt;/p&gt;
 
@@ -83,22 +113,22 @@ unzip grails-2.2.2.zip&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;The default project layout of a Java project with Gradle is following (just like Maven):&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;- The src/main/java directory contains the &lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;code.
-- The src/main/resources directory contains the resources &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;such as properties files&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.
-- The src/test/java directory contains the &lt;span class=&quot;nb&quot;&gt;test &lt;/span&gt;classes.
-- The src/test/resources directory contains the &lt;span class=&quot;nb&quot;&gt;test &lt;/span&gt;resources.  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;- The src/main/java directory contains the source code.
+- The src/main/resources directory contains the resources (such as properties files).
+- The src/test/java directory contains the test classes.
+- The src/test/resources directory contains the test resources.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;So now make a new folder where you would like the project to start:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir runnablejar
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;runnablejar  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+cd runnablejar&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt; Let’s create the project layout by using the following commands:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir -p src/main/java
 mkdir -p src/main/resources
 mkdir -p src/test/java
-mkdir -p src/test/resources  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+mkdir -p src/test/resources&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;As you can see from above the project layout looks just like a Maven project.&lt;/p&gt;
 
@@ -107,39 +137,39 @@ mkdir -p src/test/resources  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;Let’s create the main class for this project and make it display “Hello World” 
 cd into src/main/java and create the package layout.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir -p com/johnathanmarksmith/gradle  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir -p com/johnathanmarksmith/gradle&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;We have the project layout created and also the package layout so now it’s time to create the Main Class&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vi com/johnathanmarksmith/gradle/HelloWorld.java  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vi com/johnathanmarksmith/gradle/HelloWorld.java&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;and insert the following lines:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;package com.johnathanmarksmith.gradle&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;package com.johnathanmarksmith.gradle;
 public class HelloWorld
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    public static void main&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;String&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; args&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
-    &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-        System.out.println&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;   &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+{
+    public static void main(String[] args) 
+    { 
+        System.out.println(&amp;quot;Hello World!&amp;quot;); 
+    } 
+}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;creating-the-gradle-build-file-&quot;&gt;Creating the Gradle Build File..  &lt;/h3&gt;
 
 &lt;p&gt;The next step is to create the Gralde Build file, Go back to the root of the project.   cd ../../.. And create the build file&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vi build.gradle   &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vi build.gradle&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now add the following lines:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; apply plugin: &lt;span class=&quot;s1&quot;&gt;&amp;#39;java&amp;#39;&lt;/span&gt; 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;apply plugin: &amp;#39;java&amp;#39; 
  
- jar &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-        &lt;span class=&quot;nv&quot;&gt;baseName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;smith&amp;#39;&lt;/span&gt; 
-        &lt;span class=&quot;nv&quot;&gt;version&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;1.0&amp;#39;&lt;/span&gt; 
-        manifest &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-                     attributes &lt;span class=&quot;s1&quot;&gt;&amp;#39;Main-Class&amp;#39;&lt;/span&gt;: &lt;span class=&quot;s1&quot;&gt;&amp;#39;com.johnathanmarksmith.gradle.HelloWorld&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+ jar { 
+        baseName = &amp;#39;smith&amp;#39; 
+        version = &amp;#39;1.0&amp;#39; 
+        manifest { 
+                     attributes &amp;#39;Main-Class&amp;#39;: &amp;#39;com.johnathanmarksmith.gradle.HelloWorld&amp;#39; } 
+     }&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Building the project and creating the JAR 
 To build the project and to create the JAR you need to run the following command&lt;/p&gt;
@@ -148,7 +178,7 @@ To build the project and to create the JAR you need to run the following command
 
 &lt;p&gt;Now to run the JAR file you enter the following command&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java -jar ./build/libs/smith-1.0.jar   &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java -jar ./build/libs/smith-1.0.jar&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;object width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;//www.youtube.com/v/p3acEuRzyJA?hl=en_US&amp;amp;version=3&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;embed src=&quot;//www.youtube.com/v/p3acEuRzyJA?hl=en_US&amp;amp;version=3&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;640&quot; height=&quot;480&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;
 
@@ -199,7 +229,7 @@ git reset --hard origin/thebranch&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;To install it all that I had to do was to enter the following command&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install chromium-browser &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install chromium-browser&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
 
@@ -217,17 +247,17 @@ git reset --hard origin/thebranch&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;This first command is only going to show you the commits and the order of them&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;-each-ref --sort&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;-committerdate refs/heads/
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;$ git for-each-ref --sort=-committerdate refs/heads/
 4afeb5072c9667b4aef6d5c4fe17ae686b83fbd8 commit refs/heads/master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;This command is better it will show you the branch, date of commit and author&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;-each-ref --sort&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;-committerdate refs/heads/ --format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;%(refname) %(committerdate) %(authorname)&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sed &lt;span class=&quot;s1&quot;&gt;&amp;#39;s/refs\/heads\///g&amp;#39;&lt;/span&gt;
-master Thu Oct &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt; 08:56:32 &lt;span class=&quot;m&quot;&gt;2014&lt;/span&gt; -0700 Johnathan Mark Smith&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;$ git for-each-ref --sort=-committerdate refs/heads/ --format=&amp;#39;%(refname) %(committerdate) %(authorname)&amp;#39; | sed &amp;#39;s/refs\/heads\///g&amp;#39;
+master Thu Oct 2 08:56:32 2014 -0700 Johnathan Mark Smith&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now for the command I like the best, This one will show you the date, author and then the branch&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;-each-ref --sort&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;-committerdate refs/heads/ --format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;%(committerdate:short) %(authorname) %(refname:short)&amp;#39;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;$ git for-each-ref --sort=-committerdate refs/heads/ --format=&amp;#39;%(committerdate:short) %(authorname) %(refname:short)&amp;#39;
 2014-10-02 Johnathan Mark Smith master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
@@ -250,7 +280,7 @@ master Thu Oct &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt; 08:56:32 &lt;span 
 
 &lt;p&gt;so the first thing we are going to do is to clone my dot files project and move them into a folder called dotfiles&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/Documents
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cd ~/Documents
 mkdir dotfiles
 git clone git@github.com:JohnathanMarkSmith/mintdotfiles.git
 cp mintdotfiles/* dotfiles&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -265,7 +295,7 @@ cp ~/.vimrc ~/Documents/dotfiles/vimrc&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;No lets change the file rights and run the scripte&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/Documents/dotfiles
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cd ~/Documents/dotfiles
 chmod +x makesymlinks.sh
 ./makesymlinks.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -273,7 +303,7 @@ chmod +x makesymlinks.sh
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git init
 git add --all
-git commit -am &lt;span class=&quot;s2&quot;&gt;&amp;quot;first time load&amp;quot;&lt;/span&gt;
+git commit -am &amp;quot;first time load&amp;quot;
 git remote add origin ssh://newhost.com/usr/local/gitroot/myproject.git
 git push -u origin master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -295,7 +325,7 @@ git push -u origin master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install ruby ruby-dev make rake
 sudo gem install jekyll --no-rdoc --no-ri
-sudo apt-get install nodejs &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+sudo apt-get install nodejs&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;After doing the install you are all ready to start to use jekyll on Linux Mint.&lt;/p&gt;
 
@@ -320,26 +350,26 @@ sudo apt-get install nodejs &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;The first thing we need to do is to download the Maven tar file and untar it to a shared location on the workstation&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget http://mirrors.gigenet.com/apache/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
-su -c &lt;span class=&quot;err&quot;&gt;&amp;quot;&lt;/span&gt;tar -zxvf apache-maven-3.2.3-bin.tar.gz -C /usr/local 
-&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/local
+su -c &amp;quot;tar -zxvf apache-maven-3.2.3-bin.tar.gz -C /usr/local 
+cd /usr/local
 sudo ln -s apache-maven-3.2.3 maven&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;setup-the-maven-environment-variables-in-shared-profile&quot;&gt;Setup the Maven Environment Variables in shared profile.&lt;/h3&gt;
 
 &lt;p&gt;The next step is to setup the Maven environment variables in a shared profile so all users on the system will get them import at login time.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;vi /etc/profile.d/maven.sh&amp;quot;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &amp;quot;vi /etc/profile.d/maven.sh&amp;quot;
 
-&lt;span class=&quot;c&quot;&gt;# Add the following lines to maven.sh&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;M2_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/maven
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;M2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2_HOME&lt;/span&gt;/bin
-&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+# Add the following lines to maven.sh
+export M2_HOME=/usr/local/maven
+export M2=$M2_HOME/bin
+PATH=$M2:$PATH&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;now-test-your-install-of-maven&quot;&gt;Now test your install of Maven.&lt;/h3&gt;
 
 &lt;p&gt;Logout of the system and then log back into it. Enter the following command:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mvn -version &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;[jsmith@regan ~]$ mvn -version&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that’s it. have fun with maven.&lt;/p&gt;
 
@@ -409,7 +439,7 @@ sudo apt-get install openssh-server&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;After running the above command we need to start the MariaDB server and enable it in systemd&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo systemctl start mariadb.service
-sudo systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;mariadb.service&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+sudo systemctl enable mariadb.service&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that MariaDB server is enable and running you need to run the install script. Run the following command and anwser the questions&lt;/p&gt;
 
@@ -476,11 +506,11 @@ sudo systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;mariadb.serv
 
 &lt;p&gt;Next insert the following lines into the repo file you just created.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;mongodb&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;MongoDB repo
-&lt;span class=&quot;nv&quot;&gt;baseurl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://downloads-distro.mongodb.org/repo/redhat/os/x86_64/
-&lt;span class=&quot;nv&quot;&gt;gpgcheck&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
-&lt;span class=&quot;nv&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;[mongodb]
+name=MongoDB repo
+baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/x86_64/
+gpgcheck=0
+enabled=1&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;After you saved the file with the repo information you will need to install the MongoDB packages using yum.&lt;/p&gt;
 
@@ -498,11 +528,11 @@ sudo systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;mariadb.serv
 
 &lt;h3 id=&quot;checking-to-see-if-mongodb-is-running&quot;&gt;Checking to see if mongoDB is running&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ps -ef  &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;  grep   mongo&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ps -ef  |  grep   mongo&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;opening-up-the-ports-on-the-firewall&quot;&gt;Opening up the ports on the firewall&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo firewall-cmd --zone&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;public --add-port&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;27017/tcp --permanent
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo firewall-cmd --zone=public --add-port=27017/tcp --permanent
 sudo firewall-cmd --reload&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that’s it. have fun with MongoDB.&lt;/p&gt;
@@ -550,7 +580,7 @@ sudo systemctl stop firewalld&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;Now lets configure your system to start apache on boot&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo systemctl start httpd.service
-sudo systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;httpd.service&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+sudo systemctl enable httpd.service&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now direct your browser to http://127.0.0.1 and you should see the apache2 home page&lt;/p&gt;
 
@@ -577,26 +607,26 @@ sudo systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;httpd.servic
 &lt;p&gt;The first thing we need to do is to download the Maven tar file and untar it to a shared location on the workstation&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget http://mirrors.gigenet.com/apache/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
-su -c &lt;span class=&quot;err&quot;&gt;&amp;quot;&lt;/span&gt;tar -zxvf apache-maven-3.2.3-bin.tar.gz -C /usr/local��� 
-&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/local
+su -c &amp;quot;tar -zxvf apache-maven-3.2.3-bin.tar.gz -C /usr/local��� 
+cd /usr/local
 sudo ln -s apache-maven-3.2.3 maven&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;setup-the-maven-environment-variables-in-shared-profile&quot;&gt;Setup the Maven Environment Variables in shared profile.&lt;/h3&gt;
 
 &lt;p&gt;The next step is to setup the Maven environment variables in a shared profile so all users on the system will get them import at login time.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;vi /etc/profile.d/maven.sh&amp;quot;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &amp;quot;vi /etc/profile.d/maven.sh&amp;quot;
 
-&lt;span class=&quot;c&quot;&gt;# Add the following lines to maven.sh&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;M2_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/maven
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;M2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2_HOME&lt;/span&gt;/bin
-&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+# Add the following lines to maven.sh
+export M2_HOME=/usr/local/maven
+export M2=$M2_HOME/bin
+PATH=$M2:$PATH&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;now-test-your-install-of-maven&quot;&gt;Now test your install of Maven.&lt;/h3&gt;
 
 &lt;p&gt;Logout of the system and then log back into it. Enter the following command:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mvn -version &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;[jsmith@regan ~]$ mvn -version&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that’s it. have fun with maven.&lt;/p&gt;
 
@@ -3464,7 +3494,7 @@ mvn tomcat7:run
 
 &lt;p&gt;now you have to create the git(make it git or gitolite) account&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    useradd git
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;useradd git
     passwd git&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now login as git or gitolite&lt;/p&gt;
@@ -3473,11 +3503,11 @@ mvn tomcat7:run
 
 &lt;p&gt;From my workstations&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;   scp ~/.ssh/id_rsa.pub git@REGAN:/home/git/jsmith.pub &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;scp ~/.ssh/id_rsa.pub git@REGAN:/home/git/jsmith.pub&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now run the following commands from the git account&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;   git clone git://github.com/sitaramc/gitolite
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone git://github.com/sitaramc/gitolite
    mkdir bin
    gitolite/install -ln
    gitolite setup -pk jsmith.pub&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -3486,11 +3516,11 @@ mvn tomcat7:run
 
 &lt;p&gt;From your workstation enter the following command&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;   ssh git@REGAN info&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ssh git@REGAN info&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;your output should look something like this&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;   hello jsmith, this is git@regan running gitolite3 v3.5.1-4-g2f48a3e on git 1.8.2.3
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;hello jsmith, this is git@regan running gitolite3 v3.5.1-4-g2f48a3e on git 1.8.2.3
 
     R W		gitolite-admin
     R W		testing&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -3499,8 +3529,8 @@ mvn tomcat7:run
 
 &lt;p&gt;From your workstation enter the following command&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;   git clone git@&amp;lt;server&amp;gt;:gitolite-admin
-   &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;gitolite-admin&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone git@&amp;lt;server&amp;gt;:gitolite-admin
+   cd gitolite-admin&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;That is everything you have gitolite all setup and ready to go.&lt;/p&gt;
 
@@ -3531,55 +3561,55 @@ mvn tomcat7:run
 &lt;p&gt;Here is the main code to my sample project&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;public class Main
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+{
 
-    private static final Logger &lt;span class=&quot;nv&quot;&gt;LOGGER&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; getLogger&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Main.class&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    private static final Logger LOGGER = getLogger(Main.class);
 
-    public static void main&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;String&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; args&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        // in this setup, both the main&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;String&lt;span class=&quot;o&quot;&gt;[])&lt;/span&gt; method and the JUnit method both specify that
-        ApplicationContext &lt;span class=&quot;nv&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; new AnnotationConfigApplicationContext&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; HelloWorldConfiguration.class &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        MessageService &lt;span class=&quot;nv&quot;&gt;mService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; context.getBean&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;MessageService.class&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        HelloWorld &lt;span class=&quot;nv&quot;&gt;helloWorld&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; context.getBean&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HelloWorld.class&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    public static void main(String[] args)
+    {
+        // in this setup, both the main(String[]) method and the JUnit method both specify that
+        ApplicationContext context = new AnnotationConfigApplicationContext( HelloWorldConfiguration.class );
+        MessageService mService = context.getBean(MessageService.class);
+        HelloWorld helloWorld = context.getBean(HelloWorld.class);
 
         /**
          * Displaying default messgae
          */
-        LOGGER.debug&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Message from HelloWorld Bean: &amp;quot;&lt;/span&gt; + helloWorld.getMessage&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        LOGGER.debug(&amp;quot;Message from HelloWorld Bean: &amp;quot; + helloWorld.getMessage());
 
         /**
          *   Saving Message to database
          */
-        Message &lt;span class=&quot;nv&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; new Message&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        message.setMessage&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;helloWorld.getMessage&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        mService.SaveMessage&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;message&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        Message message = new Message();
+        message.setMessage(helloWorld.getMessage());
+        mService.SaveMessage(message);
 
         /**
          * Settting new message in bean
          */
-        helloWorld.setMessage&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;I am in Staten Island, New York&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        LOGGER.debug&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Message from HelloWorld Bean: &amp;quot;&lt;/span&gt; + helloWorld.getMessage&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        helloWorld.setMessage(&amp;quot;I am in Staten Island, New York&amp;quot;);
+        LOGGER.debug(&amp;quot;Message from HelloWorld Bean: &amp;quot; + helloWorld.getMessage());
 
         /**
          * Saving Message in database.
          */
-        message.setMessage&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;helloWorld.getMessage&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        mService.SaveMessage&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;message&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        message.setMessage(helloWorld.getMessage());
+        mService.SaveMessage(message);
 
         /**
          * Getting messages from database
-         *    - display number of message&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+         *    - display number of message(s)
          *    - display each message in database
          */
-        List&amp;lt;Message&amp;gt; &lt;span class=&quot;nv&quot;&gt;myList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; mService.listMessages&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        LOGGER.debug&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;You Have &amp;quot;&lt;/span&gt; + myList.size&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot; Message(s) In The Database&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        List&amp;lt;Message&amp;gt; myList = mService.listMessages();
+        LOGGER.debug(&amp;quot;You Have &amp;quot; + myList.size() + &amp;quot; Message(s) In The Database&amp;quot;);
 
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Message i : myList&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            LOGGER.debug&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Message: ID: &amp;quot;&lt;/span&gt; + i.getId&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;, Message: &amp;quot;&lt;/span&gt; + i.getMessage&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;.&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+        for (Message i : myList)
+        {
+            LOGGER.debug(&amp;quot;Message: ID: &amp;quot; + i.getId() + &amp;quot;, Message: &amp;quot; + i.getMessage() + &amp;quot;.&amp;quot;);
+        }
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;You can see from this code that the ApplicationContext is mapped to a HelloWorldConfig.class file its not using a XML file.  Below is the code to the HelloWorldConfig.class.&lt;/p&gt;
 
@@ -3593,26 +3623,26 @@ mvn tomcat7:run
  *
  *    This Would be the same as the following
  *    &amp;lt;beans&amp;gt;
- *       &amp;lt;bean &lt;span class=&quot;nv&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;helloWorld&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;com.johnathanmarksmith.HelloSpringJavaBasedJavaConfig.bean.HelloWorld&amp;quot;&lt;/span&gt; /&amp;gt;
+ *       &amp;lt;bean id=&amp;quot;helloWorld&amp;quot; class=&amp;quot;com.johnathanmarksmith.HelloSpringJavaBasedJavaConfig.bean.HelloWorld&amp;quot; /&amp;gt;
  *    &amp;lt;/beans&amp;gt;
  *
  */
 
 @Configuration
-@Import&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;DatabaseConfiguration.class&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+@Import(DatabaseConfiguration.class)
 @ComponentScan
-@PropertySource&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;classpath:application.properties&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-public class HelloWorldConfiguration &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+@PropertySource(&amp;quot;classpath:application.properties&amp;quot;)
+public class HelloWorldConfiguration {
 
     @Bean
-    public HelloWorld getHelloWorld&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Environment env&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        HelloWorld &lt;span class=&quot;nv&quot;&gt;hw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; new HelloWorld&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        hw.setMessage&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;env.getProperty&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;bean.text&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; hw&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    public HelloWorld getHelloWorld(Environment env) {
+        HelloWorld hw = new HelloWorld();
+        hw.setMessage(env.getProperty(&amp;quot;bean.text&amp;quot;));
+        return hw;
+    }
 
 
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;You can see how easy it is to use JavaConfig and Not XML..&lt;/p&gt;
 
@@ -3626,9 +3656,9 @@ public class HelloWorldConfiguration &lt;span class=&quot;o&quot;&gt;{&lt;/span&
 &lt;p&gt;If you would like to download the project from GitHub and run it just follow the following commands:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone git@github.com:JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig.git
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;HelloSpringJavaBasedJavaConfig
+cd HelloSpringJavaBasedJavaConfig
 mvn packge
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;target
+cd target
 java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING….&lt;/p&gt;
@@ -3759,12 +3789,12 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/figure
 &lt;p&gt;To download, make and install Git all you have to do is enter the following commands in a console that your have root access in&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yum install gettext-devel expat-devel curl-devel zlib-devel openssl-devel
-&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/local/src
+cd /usr/local/src
 wget https://www.kernel.org/pub/software/scm/git/git-1.8.2.3.tar.gz
 tar xzvf git-1.8.2.3.tar.gz
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;git-1.8.2.3
-make &lt;span class=&quot;nv&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local all
-make &lt;span class=&quot;nv&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local install&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+cd git-1.8.2.3
+make prefix=/usr/local all
+make prefix=/usr/local install&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;time-for-a-test&quot;&gt;Time For a Test&lt;/h3&gt;
 
@@ -3939,15 +3969,15 @@ gpgcheck=1
 
 &lt;p&gt;You should see something like this:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Welcome to the MariaDB monitor.  Commands end with &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; or &lt;span class=&quot;se&quot;&gt;\g&lt;/span&gt;.
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Welcome to the MariaDB monitor.  Commands end with ; or \g.
 Your MariaDB connection id is 1
 Server version: 5.5.30-MariaDB MariaDB Server
 
-Copyright &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 2000, 2013, Oracle, Monty Program Ab and others.
+Copyright (c) 2000, 2013, Oracle, Monty Program Ab and others.
 
-Type &lt;span class=&quot;s1&quot;&gt;&amp;#39;help;&amp;#39;&lt;/span&gt; or &lt;span class=&quot;s1&quot;&gt;&amp;#39;\h&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; help. Type &lt;span class=&quot;s1&quot;&gt;&amp;#39;\c&amp;#39;&lt;/span&gt; to clear the current input statement.
+Type &amp;#39;help;&amp;#39; or &amp;#39;\h&amp;#39; for help. Type &amp;#39;\c&amp;#39; to clear the current input statement.
 
-MariaDB &lt;span class=&quot;o&quot;&gt;[(&lt;/span&gt;none&lt;span class=&quot;o&quot;&gt;)]&lt;/span&gt;&amp;gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+MariaDB [(none)]&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;That was easy right?&lt;/p&gt;
 
@@ -3971,19 +4001,19 @@ MariaDB &lt;span class=&quot;o&quot;&gt;[(&lt;/span&gt;none&lt;span class=&quot;
 
 &lt;p&gt;To download and untar jboss you need to enter the following commands:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; tar -zxvf jboss-as-7.1.1.Final.tar.gz &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;[jsmith@regan ~] wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
+[jsmith@regan ~] tar -zxvf jboss-as-7.1.1.Final.tar.gz&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;start-up-jboss-in-standalone-mode&quot;&gt;Start Up JBoss in standalone mode&lt;/h3&gt;
 
 &lt;p&gt;Now that you have jboss untar on your linux box its time to start it in standalone mode. Just enter the following commands:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;jboss-as-7.1.1.Final/bin
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; ./standalone.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;[jsmith@regan ~] cd jboss-as-7.1.1.Final/bin
+[jsmith@regan ~] ./standalone.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;The output should look something like the one below:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;=========================================================================&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;=========================================================================
 
   JBoss Bootstrap Environment
 
@@ -3991,60 +4021,60 @@ MariaDB &lt;span class=&quot;o&quot;&gt;[(&lt;/span&gt;none&lt;span class=&quot;
 
   JAVA: java
 
-  JAVA_OPTS:  -server -XX:+UseCompressedOops -XX:+TieredCompilation -Xms64m -Xmx512m -XX:MaxPermSize&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;256m -Djava.net.preferIPv4Stack&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt; -Dorg.jboss.resolver.warning&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt; -Dsun.rmi.dgc.client.gcInterval&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3600000&lt;/span&gt; -Dsun.rmi.dgc.server.gcInterval&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3600000&lt;/span&gt; -Djboss.modules.system.pkgs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;org.jboss.byteman -Djava.awt.headless&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt; -Djboss.server.default.config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;standalone.xml
+  JAVA_OPTS:  -server -XX:+UseCompressedOops -XX:+TieredCompilation -Xms64m -Xmx512m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Dorg.jboss.resolver.warning=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Djboss.server.default.config=standalone.xml
 
-&lt;span class=&quot;o&quot;&gt;=========================================================================&lt;/span&gt;
+=========================================================================
 
-14:10:26,029 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.modules&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; JBoss Modules version 1.1.1.GA
-14:10:26,250 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.msc&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; JBoss MSC version 1.0.2.GA
-14:10:26,312 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; JBAS015899: JBoss AS 7.1.1.Final &lt;span class=&quot;s2&quot;&gt;&amp;quot;Brontes&amp;quot;&lt;/span&gt; starting
-14:10:27,440 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.xnio&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; XNIO Version 3.0.3.GA
-14:10:27,457 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.server&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; JBAS015888: Creating http management service using socket-binding &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;management-http&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-14:10:27,465 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.xnio.nio&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; XNIO NIO Implementation Version 3.0.3.GA
-14:10:27,485 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.remoting&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; JBoss Remoting version 3.2.3.GA
-14:10:27,548 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.logging&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; JBAS011502: Removing bootstrap log handlers
-14:10:27,557 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.configadmin&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;ServerService Thread Pool -- 26&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS016200: Activating ConfigAdmin Subsystem
-14:10:27,587 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.clustering.infinispan&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;ServerService Thread Pool -- 31&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS010280: Activating Infinispan subsystem.
-14:10:27,682 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.connector&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;MSC service thread 1-3&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS010408: Starting JCA Subsystem &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;JBoss IronJacamar 1.0.9.Final&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-14:10:27,689 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.naming&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;ServerService Thread Pool -- 38&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS011800: Activating Naming Subsystem
-14:10:27,720 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.osgi&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;ServerService Thread Pool -- 39&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS011940: Activating OSGi Subsystem
-14:10:27,735 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.security&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;ServerService Thread Pool -- 44&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS013101: Activating Security Subsystem
-14:10:27,750 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.connector.subsystems.datasources&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;ServerService Thread Pool -- 27&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;version 1.3&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-14:10:27,776 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.security&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;MSC service thread 1-2&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS013100: Current PicketBox &lt;span class=&quot;nv&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4.0.7.Final
-14:10:27,840 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.webservices&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;ServerService Thread Pool -- 48&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS015537: Activating WebServices Extension
-14:10:27,871 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.naming&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;MSC service thread 1-4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS011802: Starting Naming Service
-14:10:27,924 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.mail.extension&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;MSC service thread 1-1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS015400: Bound mail session &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;java:jboss/mail/Default&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-14:10:28,183 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.ws.common.management.AbstractServerConfig&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;MSC service thread 1-1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBoss Web Services - Stack CXF Server 4.0.2.GA
-14:10:28,272 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.apache.coyote.http11.Http11Protocol&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;MSC service thread 1-3&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Starting Coyote HTTP/1.1 on http--127.0.0.1-8080
-14:10:28,746 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.remoting&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;MSC service thread 1-1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS017100: Listening on /127.0.0.1:4447
-14:10:28,749 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.remoting&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;MSC service thread 1-3&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS017100: Listening on /127.0.0.1:9999
-14:10:28,754 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.server.deployment.scanner&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;MSC service thread 1-2&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS015012: Started FileSystemDeploymentService &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; directory /home/jsmith/jboss-as-7.1.1.Final/standalone/deployments
-14:10:28,896 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as.connector.subsystems.datasources&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;MSC service thread 1-1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS010400: Bound data &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;java:jboss/datasources/ExampleDS&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-14:10:29,026 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Controller Boot Thread&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS015951: Admin console listening on http://127.0.0.1:9990
-14:10:29,027 INFO  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;org.jboss.as&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Controller Boot Thread&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; JBAS015874: JBoss AS 7.1.1.Final &lt;span class=&quot;s2&quot;&gt;&amp;quot;Brontes&amp;quot;&lt;/span&gt; started in 3281ms - Started &lt;span class=&quot;m&quot;&gt;133&lt;/span&gt; of &lt;span class=&quot;m&quot;&gt;208&lt;/span&gt; services &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;74&lt;/span&gt; services are passive or on-demand&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+14:10:26,029 INFO  [org.jboss.modules] JBoss Modules version 1.1.1.GA
+14:10:26,250 INFO  [org.jboss.msc] JBoss MSC version 1.0.2.GA
+14:10:26,312 INFO  [org.jboss.as] JBAS015899: JBoss AS 7.1.1.Final &amp;quot;Brontes&amp;quot; starting
+14:10:27,440 INFO  [org.xnio] XNIO Version 3.0.3.GA
+14:10:27,457 INFO  [org.jboss.as.server] JBAS015888: Creating http management service using socket-binding (management-http)
+14:10:27,465 INFO  [org.xnio.nio] XNIO NIO Implementation Version 3.0.3.GA
+14:10:27,485 INFO  [org.jboss.remoting] JBoss Remoting version 3.2.3.GA
+14:10:27,548 INFO  [org.jboss.as.logging] JBAS011502: Removing bootstrap log handlers
+14:10:27,557 INFO  [org.jboss.as.configadmin] (ServerService Thread Pool -- 26) JBAS016200: Activating ConfigAdmin Subsystem
+14:10:27,587 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 31) JBAS010280: Activating Infinispan subsystem.
+14:10:27,682 INFO  [org.jboss.as.connector] (MSC service thread 1-3) JBAS010408: Starting JCA Subsystem (JBoss IronJacamar 1.0.9.Final)
+14:10:27,689 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 38) JBAS011800: Activating Naming Subsystem
+14:10:27,720 INFO  [org.jboss.as.osgi] (ServerService Thread Pool -- 39) JBAS011940: Activating OSGi Subsystem
+14:10:27,735 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 44) JBAS013101: Activating Security Subsystem
+14:10:27,750 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+14:10:27,776 INFO  [org.jboss.as.security] (MSC service thread 1-2) JBAS013100: Current PicketBox version=4.0.7.Final
+14:10:27,840 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+14:10:27,871 INFO  [org.jboss.as.naming] (MSC service thread 1-4) JBAS011802: Starting Naming Service
+14:10:27,924 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-1) JBAS015400: Bound mail session [java:jboss/mail/Default]
+14:10:28,183 INFO  [org.jboss.ws.common.management.AbstractServerConfig] (MSC service thread 1-1) JBoss Web Services - Stack CXF Server 4.0.2.GA
+14:10:28,272 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-3) Starting Coyote HTTP/1.1 on http--127.0.0.1-8080
+14:10:28,746 INFO  [org.jboss.as.remoting] (MSC service thread 1-1) JBAS017100: Listening on /127.0.0.1:4447
+14:10:28,749 INFO  [org.jboss.as.remoting] (MSC service thread 1-3) JBAS017100: Listening on /127.0.0.1:9999
+14:10:28,754 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) JBAS015012: Started FileSystemDeploymentService for directory /home/jsmith/jboss-as-7.1.1.Final/standalone/deployments
+14:10:28,896 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+14:10:29,026 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+14:10:29,027 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss AS 7.1.1.Final &amp;quot;Brontes&amp;quot; started in 3281ms - Started 133 of 208 services (74 services are passive or on-demand)&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;add-the-admin&quot;&gt;Add the admin&lt;/h3&gt;
 
 &lt;p&gt;Now it’s time to setup the admin account for jboss. Open a new console and follow the following steps. I am going to make the username “admin” and the password “jboss” but you can use any username and password you would like, follow the commands below&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;jboss-as-7.1.1.Final/bin
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cd jboss-as-7.1.1.Final/bin
 ./add-user.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Your output should look like this:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;What &lt;span class=&quot;nb&quot;&gt;type &lt;/span&gt;of user &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; you wish to add? 
- a&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Management User &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;mgmt-users.properties&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
- b&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Application User &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;application-users.properties&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;What type of user do you wish to add? 
+ a) Management User (mgmt-users.properties) 
+ b) Application User (application-users.properties)
+(a): 
 
 Enter the details of the new user to add.
-Realm &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;ManagementRealm&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; : 
+Realm (ManagementRealm) : 
 Username : admin
 Password : 
 Re-enter Password : 
-The username &lt;span class=&quot;s1&quot;&gt;&amp;#39;admin&amp;#39;&lt;/span&gt; is easy to guess
-Are you sure you want to add user &lt;span class=&quot;s1&quot;&gt;&amp;#39;admin&amp;#39;&lt;/span&gt; yes/no? yes
-About to add user &lt;span class=&quot;s1&quot;&gt;&amp;#39;admin&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; realm &lt;span class=&quot;s1&quot;&gt;&amp;#39;ManagementRealm&amp;#39;&lt;/span&gt;
+The username &amp;#39;admin&amp;#39; is easy to guess
+Are you sure you want to add user &amp;#39;admin&amp;#39; yes/no? yes
+About to add user &amp;#39;admin&amp;#39; for realm &amp;#39;ManagementRealm&amp;#39;
 Is this correct yes/no? yes&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;jboss-is-up-and-running&quot;&gt;JBoss is up and running.&lt;/h3&gt;
@@ -4276,9 +4306,9 @@ public DataSourceInitializer dataSourceInitializer(DataSource dataSource) {
 &lt;p&gt;If you would like to download the project from GitHub and run it just follow the following commands:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone git@github.com:JohnathanMarkSmith/NoMySQL.git
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;NoMySQL
+cd NoMySQL
 mvn package
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;target
+cd target
 java -jar NoMySQL.jar&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Thats it and you should see the following line on the console:&lt;/p&gt;
@@ -4309,55 +4339,55 @@ java -jar NoMySQL.jar&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;Here is the main code to my sample project&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;public class Main
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+{
 
-    private static final Logger &lt;span class=&quot;nv&quot;&gt;LOGGER&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; getLogger&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Main.class&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    private static final Logger LOGGER = getLogger(Main.class);
 
-    public static void main&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;String&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; args&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        // in this setup, both the main&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;String&lt;span class=&quot;o&quot;&gt;[])&lt;/span&gt; method and the JUnit method both specify that
-        ApplicationContext &lt;span class=&quot;nv&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; new AnnotationConfigApplicationContext&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; HelloWorldConfiguration.class &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        MessageService &lt;span class=&quot;nv&quot;&gt;mService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; context.getBean&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;MessageService.class&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        HelloWorld &lt;span class=&quot;nv&quot;&gt;helloWorld&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; context.getBean&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HelloWorld.class&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    public static void main(String[] args)
+    {
+        // in this setup, both the main(String[]) method and the JUnit method both specify that
+        ApplicationContext context = new AnnotationConfigApplicationContext( HelloWorldConfiguration.class );
+        MessageService mService = context.getBean(MessageService.class);
+        HelloWorld helloWorld = context.getBean(HelloWorld.class);
 
         /**
          * Displaying default messgae
          */
-        LOGGER.debug&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Message from HelloWorld Bean: &amp;quot;&lt;/span&gt; + helloWorld.getMessage&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        LOGGER.debug(&amp;quot;Message from HelloWorld Bean: &amp;quot; + helloWorld.getMessage());
 
         /**
          *   Saving Message to database
          */
-        Message &lt;span class=&quot;nv&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; new Message&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        message.setMessage&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;helloWorld.getMessage&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        mService.SaveMessage&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;message&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        Message message = new Message();
+        message.setMessage(helloWorld.getMessage());
+        mService.SaveMessage(message);
 
         /**
          * Settting new message in bean
          */
-        helloWorld.setMessage&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;I am in Staten Island, New York&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        LOGGER.debug&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Message from HelloWorld Bean: &amp;quot;&lt;/span&gt; + helloWorld.getMessage&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        helloWorld.setMessage(&amp;quot;I am in Staten Island, New York&amp;quot;);
+        LOGGER.debug(&amp;quot;Message from HelloWorld Bean: &amp;quot; + helloWorld.getMessage());
 
         /**
          * Saving Message in database.
          */
-        message.setMessage&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;helloWorld.getMessage&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        mService.SaveMessage&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;message&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        message.setMessage(helloWorld.getMessage());
+        mService.SaveMessage(message);
 
         /**
          * Getting messages from database
-         *    - display number of message&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+         *    - display number of message(s)
          *    - display each message in database
          */
-        List&amp;lt;Message&amp;gt; &lt;span class=&quot;nv&quot;&gt;myList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; mService.listMessages&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        LOGGER.debug&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;You Have &amp;quot;&lt;/span&gt; + myList.size&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot; Message(s) In The Database&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        List&amp;lt;Message&amp;gt; myList = mService.listMessages();
+        LOGGER.debug(&amp;quot;You Have &amp;quot; + myList.size() + &amp;quot; Message(s) In The Database&amp;quot;);
 
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Message i : myList&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            LOGGER.debug&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Message: ID: &amp;quot;&lt;/span&gt; + i.getId&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;, Message: &amp;quot;&lt;/span&gt; + i.getMessage&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;.&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+        for (Message i : myList)
+        {
+            LOGGER.debug(&amp;quot;Message: ID: &amp;quot; + i.getId() + &amp;quot;, Message: &amp;quot; + i.getMessage() + &amp;quot;.&amp;quot;);
+        }
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;You can see from this code that the ApplicationContext is mapped to a HelloWorldConfig.class file its not using a XML file.  Below is the code to the HelloWorldConfig.class.&lt;/p&gt;
 
@@ -4371,26 +4401,26 @@ java -jar NoMySQL.jar&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
  *
  *    This Would be the same as the following
  *    &amp;lt;beans&amp;gt;
- *       &amp;lt;bean &lt;span class=&quot;nv&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;helloWorld&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;com.johnathanmarksmith.HelloSpringJavaBasedJavaConfig.bean.HelloWorld&amp;quot;&lt;/span&gt; /&amp;gt;
+ *       &amp;lt;bean id=&amp;quot;helloWorld&amp;quot; class=&amp;quot;com.johnathanmarksmith.HelloSpringJavaBasedJavaConfig.bean.HelloWorld&amp;quot; /&amp;gt;
  *    &amp;lt;/beans&amp;gt;
  *
  */
 
 @Configuration
-@Import&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;DatabaseConfiguration.class&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+@Import(DatabaseConfiguration.class)
 @ComponentScan
-@PropertySource&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;classpath:application.properties&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-public class HelloWorldConfiguration &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+@PropertySource(&amp;quot;classpath:application.properties&amp;quot;)
+public class HelloWorldConfiguration {
 
     @Bean
-    public HelloWorld getHelloWorld&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Environment env&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        HelloWorld &lt;span class=&quot;nv&quot;&gt;hw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; new HelloWorld&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        hw.setMessage&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;env.getProperty&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;bean.text&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; hw&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    public HelloWorld getHelloWorld(Environment env) {
+        HelloWorld hw = new HelloWorld();
+        hw.setMessage(env.getProperty(&amp;quot;bean.text&amp;quot;));
+        return hw;
+    }
 
 
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;You can see how easy it is to use JavaConfig and Not XML..&lt;/p&gt;
 
@@ -4404,9 +4434,9 @@ public class HelloWorldConfiguration &lt;span class=&quot;o&quot;&gt;{&lt;/span&
 &lt;p&gt;If you would like to download the project from GitHub and run it just follow the following commands:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone git@github.com:JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig.git
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;HelloSpringJavaBasedJavaConfig
+cd HelloSpringJavaBasedJavaConfig
 mvn packge
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;target
+cd target
 java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING….&lt;/p&gt;
@@ -4429,22 +4459,22 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/figure
 
 &lt;p&gt;To install MySQL Client and Server enter the following commands:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# yum groupinstall &amp;quot;MySQL Database server&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# yum groupinstall &amp;quot;MySQL Database client&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;[root@regan ~]# yum groupinstall &amp;quot;MySQL Database server&amp;quot;
+[root@regan ~]# yum groupinstall &amp;quot;MySQL Database client&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;to-install-mysql-system-tables-and-setup-mysql-to-start-on-boot&quot;&gt;To install MySQL system tables and Setup MySQL to start on boot&lt;/h3&gt;
 
 &lt;p&gt;To install the MySQL system tables and setup MySQL to start on boot you need to enter the following commands:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# /usr/bin/mysql_install_db --user=mysql&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# chkconfig --level 2345 mysqld on; service mysqld start&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;[root@regan ~]# /usr/bin/mysql_install_db --user=mysql
+[root@regan ~]# chkconfig --level 2345 mysqld on; service mysqld start&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;set-admin-password&quot;&gt;Set Admin Password&lt;/h3&gt;
 
 &lt;p&gt;To set the admin password for the MySQL databse you need to  enter the following commands:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# /usr/bin/mysqladmin -u root password &amp;#39;new-password&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# /usr/bin/mysqladmin -u root -h regan password &amp;#39;new-password&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;[root@regan ~]# /usr/bin/mysqladmin -u root password &amp;#39;new-password&amp;#39;
+[root@regan ~]# /usr/bin/mysqladmin -u root -h regan password &amp;#39;new-password&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that’s it. have fun with MySQL.&lt;/p&gt;
 
@@ -4464,12 +4494,12 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/figure
 
 &lt;p&gt;The best way to see who is commiting work to your Git repository and the last time is easy.  Just go into one of your Git repositories and type the following:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git shortlog -sne &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{print $1,$2,$3,system(&amp;quot;git log -n1 --format=%cd --author=&amp;quot; $2)}&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git shortlog -sne |awk &amp;#39;{print $1,$2,$3,system(&amp;quot;git log -n1 --format=%cd --author=&amp;quot; $2)}&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;and your output should look like:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Wed Apr &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; 11:35:41 &lt;span class=&quot;m&quot;&gt;2013&lt;/span&gt; -0400
-&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; Johnathan Smith 0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Wed Apr 10 11:35:41 2013 -0400
+3 Johnathan Smith 0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;This will show you who is doing all the work and the last time work was commited…..&lt;/p&gt;
 
@@ -4493,7 +4523,7 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/figure
 
 &lt;p&gt;and your output should look like:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    10	Johnathan Smith &amp;lt;johnathansmith1969@gmail.com&amp;gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;10	Johnathan Smith &amp;lt;johnathansmith1969@gmail.com&amp;gt;
     10	Yuya Saito &amp;lt;studiomohawk@gmail.com&amp;gt;
      4	Andrea Schiavini &amp;lt;andrea.schiavini@gmail.com&amp;gt;
      3	Anton Vattay &amp;lt;3martini@gmail.com&amp;gt;
@@ -4559,7 +4589,7 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/figure
 
 &lt;p&gt;The following command is going to setup Apache and set it up to start everytime your workstation or server books.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;chkconfig --level &lt;span class=&quot;m&quot;&gt;2345&lt;/span&gt; httpd on&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; service httpd start&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;chkconfig --level 2345 httpd on; service httpd start&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;test-your-install&quot;&gt;Test Your Install&lt;/h3&gt;
 
@@ -4567,7 +4597,7 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/figure
 
 &lt;p&gt;The following command will create and index.php file with the PHPInfo command in it:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; “&amp;lt;?php phpinfo&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; ?&amp;gt;” &amp;gt; /var/www/html/index.php&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;echo “&amp;lt;?php phpinfo(); ?&amp;gt;” &amp;gt; /var/www/html/index.php&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now launch your browser to http://127.0.0.1 or http://localhost if anything was done righ your output should look like the one below:&lt;/p&gt;
 
@@ -4596,33 +4626,33 @@ java -jar HelloSpringJavaBasedJavaConfig.jar&lt;/code&gt;&lt;/pre&gt;&lt;/figure
 &lt;p&gt;The first thing we need to do is to download the Maven tar file and untar it to a shared location on the workstation&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget http://mirrors.gigenet.com/apache/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz
-su -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;tar -zxvf apache-maven-3.0.5-bin.tar.gz -C /opt/&amp;quot;&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+su -c &amp;quot;tar -zxvf apache-maven-3.0.5-bin.tar.gz -C /opt/&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;setup-the-maven-environment-variables-in-shared-profile&quot;&gt;Setup the Maven Environment Variables in shared profile.&lt;/h3&gt;
 
 &lt;p&gt;The next step is to setup the Maven environment variables in a shared profile so all users on the system will get them import at login time.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;vi /etc/profile.d/maven.sh&amp;quot;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &amp;quot;vi /etc/profile.d/maven.sh&amp;quot;
 
-&lt;span class=&quot;c&quot;&gt;# Add the following lines to maven.sh&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;M2_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/opt/apache-maven-3.0.5
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;M2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2_HOME&lt;/span&gt;/bin
-&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$M2&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+# Add the following lines to maven.sh
+export M2_HOME=/opt/apache-maven-3.0.5
+export M2=$M2_HOME/bin
+PATH=$M2:$PATH&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;now-test-your-install-of-maven&quot;&gt;Now test your install of Maven.&lt;/h3&gt;
 
 &lt;p&gt;Logout of the system and then log back into it. Enter the following command:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;jsmith@regan ~&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mvn -version &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;[jsmith@regan ~]$ mvn -version&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;If you did everything right your output should look something like the one below:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Apache Maven 3.0.5 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;r01de14724cdef164cd33c7c8c2fe155faf9602da&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 2013-02-19 08:51:28-0500&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Apache Maven 3.0.5 (r01de14724cdef164cd33c7c8c2fe155faf9602da; 2013-02-19 08:51:28-0500)
 Maven home: /opt/apache-maven-3.0.5
 Java version: 1.7.0_19, vendor: Oracle Corporation
 Java home: /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.19/jre
 Default locale: en_US, platform encoding: UTF-8
-OS name: &lt;span class=&quot;s2&quot;&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;, version: &lt;span class=&quot;s2&quot;&gt;&amp;quot;2.6.32-358.2.1.el6.i686&amp;quot;&lt;/span&gt;, arch: &lt;span class=&quot;s2&quot;&gt;&amp;quot;i386&amp;quot;&lt;/span&gt;, family: &lt;span class=&quot;s2&quot;&gt;&amp;quot;unix&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+OS name: &amp;quot;linux&amp;quot;, version: &amp;quot;2.6.32-358.2.1.el6.i686&amp;quot;, arch: &amp;quot;i386&amp;quot;, family: &amp;quot;unix&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that’s it. have fun with maven.&lt;/p&gt;
 
@@ -4644,7 +4674,7 @@ OS name: &lt;span class=&quot;s2&quot;&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;
 
 &lt;p&gt;So to make it easy once again here is my post and the details on how to do it.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;yum install java-1.7.0-openjdk*&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;su -c &amp;quot;yum install java-1.7.0-openjdk*&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Thats all you have to do… stop asking… :)&lt;/p&gt;
 
@@ -4708,11 +4738,11 @@ git clone file:////192.168.10.51/code&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;From the birds eyes very its very easy:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone --mirror git@git.com:project project
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;project
+cd project
 git remote add github git@github.com:username/project.git
 
 In cron Job
-&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /pathto/project &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git fetch -q &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git push -q --mirror github&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+cd /pathto/project &amp;amp;&amp;amp; git fetch -q &amp;amp;&amp;amp; git push -q --mirror github&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Thats how easy it is to mirror a Git Project on to GitHub&lt;/p&gt;
 

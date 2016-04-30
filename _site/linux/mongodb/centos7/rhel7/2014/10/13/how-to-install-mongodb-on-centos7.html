@@ -222,11 +222,11 @@
 
 <p>Next insert the following lines into the repo file you just created.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>mongodb<span class="o">]</span>
-<span class="nv">name</span><span class="o">=</span>MongoDB repo
-<span class="nv">baseurl</span><span class="o">=</span>http://downloads-distro.mongodb.org/repo/redhat/os/x86_64/
-<span class="nv">gpgcheck</span><span class="o">=</span>0
-<span class="nv">enabled</span><span class="o">=</span>1</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">[mongodb]
+name=MongoDB repo
+baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/x86_64/
+gpgcheck=0
+enabled=1</code></pre></figure>
 
 <p>After you saved the file with the repo information you will need to install the MongoDB packages using yum.</p>
 
@@ -244,11 +244,11 @@
 
 <h3 id="checking-to-see-if-mongodb-is-running">Checking to see if mongoDB is running</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ps -ef  <span class="p">|</span>  grep   mongo</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ps -ef  |  grep   mongo</code></pre></figure>
 
 <h3 id="opening-up-the-ports-on-the-firewall">Opening up the ports on the firewall</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo firewall-cmd --zone<span class="o">=</span>public --add-port<span class="o">=</span>27017/tcp --permanent
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo firewall-cmd --zone=public --add-port=27017/tcp --permanent
 sudo firewall-cmd --reload</code></pre></figure>
 
 <p>Now that’s it. have fun with MongoDB.</p>

@@ -216,12 +216,12 @@
 
 <p>The best way to see who is commiting work to your Git repository and the last time is easy.  Just go into one of your Git repositories and type the following:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git shortlog -sne <span class="p">|</span>awk <span class="s1">&#39;{print $1,$2,$3,system(&quot;git log -n1 --format=%cd --author=&quot; $2)}&#39;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git shortlog -sne |awk &#39;{print $1,$2,$3,system(&quot;git log -n1 --format=%cd --author=&quot; $2)}&#39;</code></pre></figure>
 
 <p>and your output should look like:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Wed Apr <span class="m">10</span> 11:35:41 <span class="m">2013</span> -0400
-<span class="m">3</span> Johnathan Smith 0</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Wed Apr 10 11:35:41 2013 -0400
+3 Johnathan Smith 0</code></pre></figure>
 
 <p>This will show you who is doing all the work and the last time work was commited…..</p>
 

@@ -218,17 +218,17 @@
 
 <p>This first command is only going to show you the commits and the order of them</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git <span class="k">for</span>-each-ref --sort<span class="o">=</span>-committerdate refs/heads/
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">$ git for-each-ref --sort=-committerdate refs/heads/
 4afeb5072c9667b4aef6d5c4fe17ae686b83fbd8 commit refs/heads/master</code></pre></figure>
 
 <p>This command is better it will show you the branch, date of commit and author</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git <span class="k">for</span>-each-ref --sort<span class="o">=</span>-committerdate refs/heads/ --format<span class="o">=</span><span class="s1">&#39;%(refname) %(committerdate) %(authorname)&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/refs\/heads\///g&#39;</span>
-master Thu Oct <span class="m">2</span> 08:56:32 <span class="m">2014</span> -0700 Johnathan Mark Smith</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">$ git for-each-ref --sort=-committerdate refs/heads/ --format=&#39;%(refname) %(committerdate) %(authorname)&#39; | sed &#39;s/refs\/heads\///g&#39;
+master Thu Oct 2 08:56:32 2014 -0700 Johnathan Mark Smith</code></pre></figure>
 
 <p>Now for the command I like the best, This one will show you the date, author and then the branch</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git <span class="k">for</span>-each-ref --sort<span class="o">=</span>-committerdate refs/heads/ --format<span class="o">=</span><span class="s1">&#39;%(committerdate:short) %(authorname) %(refname:short)&#39;</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">$ git for-each-ref --sort=-committerdate refs/heads/ --format=&#39;%(committerdate:short) %(authorname) %(refname:short)&#39;
 2014-10-02 Johnathan Mark Smith master</code></pre></figure>
 
 <p>If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a></p>

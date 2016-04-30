@@ -347,30 +347,30 @@ c)Determining an object’s programming interface without revealing the actual b
 <p>Confused? Well, here are some very helpful examples of where overloading would be both valid and invalid:
 Examples of Method Overloading in Java – both valid and invalid:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">//compiler error - can<span class="s1">&#39;t overload based on the   </span>
-<span class="s1">//type returned -</span>
-<span class="s1">//(one method returns int, the other returns a float):    </span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">//compiler error - can&#39;t overload based on the   
+//type returned -
+//(one method returns int, the other returns a float):    
 
-<span class="s1">int changeDate(int Year) ;  </span>
-<span class="s1">float changeDate (int Year);    </span>
+int changeDate(int Year) ;  
+float changeDate (int Year);    
 
-<span class="s1">//compiler error - can&#39;</span>t overload by changing just 
-//the name of the parameter <span class="o">(</span>from Month to Year<span class="o">)</span>:    
+//compiler error - can&#39;t overload by changing just 
+//the name of the parameter (from Month to Year):    
 
-int changeDate<span class="o">(</span>int Month<span class="o">)</span> <span class="p">;</span>  
-float changeDate<span class="o">(</span>int Year<span class="o">)</span><span class="p">;</span>    
+int changeDate(int Month) ;  
+float changeDate(int Year);    
 
-//valid <span class="k">case</span> of overloading, since there is an   
+//valid case of overloading, since there is an   
 //extra parameter in the first method:        
 
-int changeDate<span class="o">(</span>int Year, int Month<span class="o">)</span> <span class="p">;</span>  
-int changeDate<span class="o">(</span>int Year<span class="o">)</span><span class="p">;</span>    
+int changeDate(int Year, int Month) ;  
+int changeDate(int Year);    
 
-//also a valid <span class="k">case</span> of overloading, since the   
+//also a valid case of overloading, since the   
 //parameters are of different types:    
 
-int changeDate<span class="o">(</span>float Year<span class="o">)</span> <span class="p">;</span>  
-int changeDate<span class="o">(</span>int Year<span class="o">)</span><span class="p">;</span>  </code></pre></figure>
+int changeDate(float Year) ;  
+int changeDate(int Year);</code></pre></figure>
 
 <p>Overriding methods is completely different from overloading methods. If a derived class requires a different definition for an inherited method, then that method can be redefined in the derived class. This would be considered overriding. An overridden method would have the exact same method name, return type, number of parameters, and types of parameters as the method in the parent class, and the only difference would be the definition of the method.</p>
 

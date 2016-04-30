@@ -218,22 +218,22 @@
 
 <p>To install MySQL Client and Server enter the following commands:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># yum groupinstall &quot;MySQL Database server&quot;</span>
-<span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># yum groupinstall &quot;MySQL Database client&quot;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">[root@regan ~]# yum groupinstall &quot;MySQL Database server&quot;
+[root@regan ~]# yum groupinstall &quot;MySQL Database client&quot;</code></pre></figure>
 
 <h3 id="to-install-mysql-system-tables-and-setup-mysql-to-start-on-boot">To install MySQL system tables and Setup MySQL to start on boot</h3>
 
 <p>To install the MySQL system tables and setup MySQL to start on boot you need to enter the following commands:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># /usr/bin/mysql_install_db --user=mysql</span>
-<span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># chkconfig --level 2345 mysqld on; service mysqld start</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">[root@regan ~]# /usr/bin/mysql_install_db --user=mysql
+[root@regan ~]# chkconfig --level 2345 mysqld on; service mysqld start</code></pre></figure>
 
 <h3 id="set-admin-password">Set Admin Password</h3>
 
 <p>To set the admin password for the MySQL databse you need to  enter the following commands:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># /usr/bin/mysqladmin -u root password &#39;new-password&#39;</span>
-<span class="o">[</span>root@regan ~<span class="o">]</span><span class="c"># /usr/bin/mysqladmin -u root -h regan password &#39;new-password&#39;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">[root@regan ~]# /usr/bin/mysqladmin -u root password &#39;new-password&#39;
+[root@regan ~]# /usr/bin/mysqladmin -u root -h regan password &#39;new-password&#39;</code></pre></figure>
 
 <p>Now that’s it. have fun with MySQL.</p>
 

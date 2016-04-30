@@ -222,7 +222,7 @@
 
 <p>so the first thing we are going to do is to clone my dot files project and move them into a folder called dotfiles</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/Documents
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cd ~/Documents
 mkdir dotfiles
 git clone git@github.com:JohnathanMarkSmith/mintdotfiles.git
 cp mintdotfiles/* dotfiles</code></pre></figure>
@@ -237,7 +237,7 @@ cp ~/.vimrc ~/Documents/dotfiles/vimrc</code></pre></figure>
 
 <p>No lets change the file rights and run the scripte</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/Documents/dotfiles
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cd ~/Documents/dotfiles
 chmod +x makesymlinks.sh
 ./makesymlinks.sh</code></pre></figure>
 
@@ -245,7 +245,7 @@ chmod +x makesymlinks.sh
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">git init
 git add --all
-git commit -am <span class="s2">&quot;first time load&quot;</span>
+git commit -am &quot;first time load&quot;
 git remote add origin ssh://newhost.com/usr/local/gitroot/myproject.git
 git push -u origin master</code></pre></figure>
 

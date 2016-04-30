@@ -230,7 +230,7 @@
 
 <p>The following command is going to setup Apache and set it up to start everytime your workstation or server books.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">chkconfig --level <span class="m">2345</span> httpd on<span class="p">;</span> service httpd start</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">chkconfig --level 2345 httpd on; service httpd start</code></pre></figure>
 
 <h3 id="test-your-install">Test Your Install</h3>
 
@@ -238,7 +238,7 @@
 
 <p>The following command will create and index.php file with the PHPInfo command in it:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> “&lt;?php phpinfo<span class="o">()</span><span class="p">;</span> ?&gt;” &gt; /var/www/html/index.php</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">echo “&lt;?php phpinfo(); ?&gt;” &gt; /var/www/html/index.php</code></pre></figure>
 
 <p>Now launch your browser to http://127.0.0.1 or http://localhost if anything was done righ your output should look like the one below:</p>
 

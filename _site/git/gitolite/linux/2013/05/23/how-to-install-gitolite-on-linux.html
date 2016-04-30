@@ -230,7 +230,7 @@
 
 <p>now you have to create the git(make it git or gitolite) account</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    useradd git
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">useradd git
     passwd git</code></pre></figure>
 
 <p>Now login as git or gitolite</p>
@@ -239,11 +239,11 @@
 
 <p>From my workstations</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">   scp ~/.ssh/id_rsa.pub git@REGAN:/home/git/jsmith.pub </code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">scp ~/.ssh/id_rsa.pub git@REGAN:/home/git/jsmith.pub</code></pre></figure>
 
 <p>Now run the following commands from the git account</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">   git clone git://github.com/sitaramc/gitolite
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clone git://github.com/sitaramc/gitolite
    mkdir bin
    gitolite/install -ln
    gitolite setup -pk jsmith.pub</code></pre></figure>
@@ -252,11 +252,11 @@
 
 <p>From your workstation enter the following command</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">   ssh git@REGAN info</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ssh git@REGAN info</code></pre></figure>
 
 <p>your output should look something like this</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">   hello jsmith, this is git@regan running gitolite3 v3.5.1-4-g2f48a3e on git 1.8.2.3
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">hello jsmith, this is git@regan running gitolite3 v3.5.1-4-g2f48a3e on git 1.8.2.3
 
     R W		gitolite-admin
     R W		testing</code></pre></figure>
@@ -265,8 +265,8 @@
 
 <p>From your workstation enter the following command</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">   git clone git@&lt;server&gt;:gitolite-admin
-   <span class="nb">cd </span>gitolite-admin</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clone git@&lt;server&gt;:gitolite-admin
+   cd gitolite-admin</code></pre></figure>
 
 <p>That is everything you have gitolite all setup and ready to go.</p>
 

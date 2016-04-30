@@ -220,19 +220,19 @@
 
 <p>To download and untar jboss you need to enter the following commands:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>jsmith@regan ~<span class="o">]</span> wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
-<span class="o">[</span>jsmith@regan ~<span class="o">]</span> tar -zxvf jboss-as-7.1.1.Final.tar.gz </code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">[jsmith@regan ~] wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
+[jsmith@regan ~] tar -zxvf jboss-as-7.1.1.Final.tar.gz</code></pre></figure>
 
 <h3 id="start-up-jboss-in-standalone-mode">Start Up JBoss in standalone mode</h3>
 
 <p>Now that you have jboss untar on your linux box its time to start it in standalone mode. Just enter the following commands:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>jsmith@regan ~<span class="o">]</span> <span class="nb">cd </span>jboss-as-7.1.1.Final/bin
-<span class="o">[</span>jsmith@regan ~<span class="o">]</span> ./standalone.sh</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">[jsmith@regan ~] cd jboss-as-7.1.1.Final/bin
+[jsmith@regan ~] ./standalone.sh</code></pre></figure>
 
 <p>The output should look something like the one below:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">=========================================================================</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">=========================================================================
 
   JBoss Bootstrap Environment
 
@@ -240,60 +240,60 @@
 
   JAVA: java
 
-  JAVA_OPTS:  -server -XX:+UseCompressedOops -XX:+TieredCompilation -Xms64m -Xmx512m -XX:MaxPermSize<span class="o">=</span>256m -Djava.net.preferIPv4Stack<span class="o">=</span><span class="nb">true</span> -Dorg.jboss.resolver.warning<span class="o">=</span><span class="nb">true</span> -Dsun.rmi.dgc.client.gcInterval<span class="o">=</span><span class="m">3600000</span> -Dsun.rmi.dgc.server.gcInterval<span class="o">=</span><span class="m">3600000</span> -Djboss.modules.system.pkgs<span class="o">=</span>org.jboss.byteman -Djava.awt.headless<span class="o">=</span><span class="nb">true</span> -Djboss.server.default.config<span class="o">=</span>standalone.xml
+  JAVA_OPTS:  -server -XX:+UseCompressedOops -XX:+TieredCompilation -Xms64m -Xmx512m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Dorg.jboss.resolver.warning=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Djboss.server.default.config=standalone.xml
 
-<span class="o">=========================================================================</span>
+=========================================================================
 
-14:10:26,029 INFO  <span class="o">[</span>org.jboss.modules<span class="o">]</span> JBoss Modules version 1.1.1.GA
-14:10:26,250 INFO  <span class="o">[</span>org.jboss.msc<span class="o">]</span> JBoss MSC version 1.0.2.GA
-14:10:26,312 INFO  <span class="o">[</span>org.jboss.as<span class="o">]</span> JBAS015899: JBoss AS 7.1.1.Final <span class="s2">&quot;Brontes&quot;</span> starting
-14:10:27,440 INFO  <span class="o">[</span>org.xnio<span class="o">]</span> XNIO Version 3.0.3.GA
-14:10:27,457 INFO  <span class="o">[</span>org.jboss.as.server<span class="o">]</span> JBAS015888: Creating http management service using socket-binding <span class="o">(</span>management-http<span class="o">)</span>
-14:10:27,465 INFO  <span class="o">[</span>org.xnio.nio<span class="o">]</span> XNIO NIO Implementation Version 3.0.3.GA
-14:10:27,485 INFO  <span class="o">[</span>org.jboss.remoting<span class="o">]</span> JBoss Remoting version 3.2.3.GA
-14:10:27,548 INFO  <span class="o">[</span>org.jboss.as.logging<span class="o">]</span> JBAS011502: Removing bootstrap log handlers
-14:10:27,557 INFO  <span class="o">[</span>org.jboss.as.configadmin<span class="o">]</span> <span class="o">(</span>ServerService Thread Pool -- 26<span class="o">)</span> JBAS016200: Activating ConfigAdmin Subsystem
-14:10:27,587 INFO  <span class="o">[</span>org.jboss.as.clustering.infinispan<span class="o">]</span> <span class="o">(</span>ServerService Thread Pool -- 31<span class="o">)</span> JBAS010280: Activating Infinispan subsystem.
-14:10:27,682 INFO  <span class="o">[</span>org.jboss.as.connector<span class="o">]</span> <span class="o">(</span>MSC service thread 1-3<span class="o">)</span> JBAS010408: Starting JCA Subsystem <span class="o">(</span>JBoss IronJacamar 1.0.9.Final<span class="o">)</span>
-14:10:27,689 INFO  <span class="o">[</span>org.jboss.as.naming<span class="o">]</span> <span class="o">(</span>ServerService Thread Pool -- 38<span class="o">)</span> JBAS011800: Activating Naming Subsystem
-14:10:27,720 INFO  <span class="o">[</span>org.jboss.as.osgi<span class="o">]</span> <span class="o">(</span>ServerService Thread Pool -- 39<span class="o">)</span> JBAS011940: Activating OSGi Subsystem
-14:10:27,735 INFO  <span class="o">[</span>org.jboss.as.security<span class="o">]</span> <span class="o">(</span>ServerService Thread Pool -- 44<span class="o">)</span> JBAS013101: Activating Security Subsystem
-14:10:27,750 INFO  <span class="o">[</span>org.jboss.as.connector.subsystems.datasources<span class="o">]</span> <span class="o">(</span>ServerService Thread Pool -- 27<span class="o">)</span> JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver <span class="o">(</span>version 1.3<span class="o">)</span>
-14:10:27,776 INFO  <span class="o">[</span>org.jboss.as.security<span class="o">]</span> <span class="o">(</span>MSC service thread 1-2<span class="o">)</span> JBAS013100: Current PicketBox <span class="nv">version</span><span class="o">=</span>4.0.7.Final
-14:10:27,840 INFO  <span class="o">[</span>org.jboss.as.webservices<span class="o">]</span> <span class="o">(</span>ServerService Thread Pool -- 48<span class="o">)</span> JBAS015537: Activating WebServices Extension
-14:10:27,871 INFO  <span class="o">[</span>org.jboss.as.naming<span class="o">]</span> <span class="o">(</span>MSC service thread 1-4<span class="o">)</span> JBAS011802: Starting Naming Service
-14:10:27,924 INFO  <span class="o">[</span>org.jboss.as.mail.extension<span class="o">]</span> <span class="o">(</span>MSC service thread 1-1<span class="o">)</span> JBAS015400: Bound mail session <span class="o">[</span>java:jboss/mail/Default<span class="o">]</span>
-14:10:28,183 INFO  <span class="o">[</span>org.jboss.ws.common.management.AbstractServerConfig<span class="o">]</span> <span class="o">(</span>MSC service thread 1-1<span class="o">)</span> JBoss Web Services - Stack CXF Server 4.0.2.GA
-14:10:28,272 INFO  <span class="o">[</span>org.apache.coyote.http11.Http11Protocol<span class="o">]</span> <span class="o">(</span>MSC service thread 1-3<span class="o">)</span> Starting Coyote HTTP/1.1 on http--127.0.0.1-8080
-14:10:28,746 INFO  <span class="o">[</span>org.jboss.as.remoting<span class="o">]</span> <span class="o">(</span>MSC service thread 1-1<span class="o">)</span> JBAS017100: Listening on /127.0.0.1:4447
-14:10:28,749 INFO  <span class="o">[</span>org.jboss.as.remoting<span class="o">]</span> <span class="o">(</span>MSC service thread 1-3<span class="o">)</span> JBAS017100: Listening on /127.0.0.1:9999
-14:10:28,754 INFO  <span class="o">[</span>org.jboss.as.server.deployment.scanner<span class="o">]</span> <span class="o">(</span>MSC service thread 1-2<span class="o">)</span> JBAS015012: Started FileSystemDeploymentService <span class="k">for</span> directory /home/jsmith/jboss-as-7.1.1.Final/standalone/deployments
-14:10:28,896 INFO  <span class="o">[</span>org.jboss.as.connector.subsystems.datasources<span class="o">]</span> <span class="o">(</span>MSC service thread 1-1<span class="o">)</span> JBAS010400: Bound data <span class="nb">source</span> <span class="o">[</span>java:jboss/datasources/ExampleDS<span class="o">]</span>
-14:10:29,026 INFO  <span class="o">[</span>org.jboss.as<span class="o">]</span> <span class="o">(</span>Controller Boot Thread<span class="o">)</span> JBAS015951: Admin console listening on http://127.0.0.1:9990
-14:10:29,027 INFO  <span class="o">[</span>org.jboss.as<span class="o">]</span> <span class="o">(</span>Controller Boot Thread<span class="o">)</span> JBAS015874: JBoss AS 7.1.1.Final <span class="s2">&quot;Brontes&quot;</span> started in 3281ms - Started <span class="m">133</span> of <span class="m">208</span> services <span class="o">(</span><span class="m">74</span> services are passive or on-demand<span class="o">)</span></code></pre></figure>
+14:10:26,029 INFO  [org.jboss.modules] JBoss Modules version 1.1.1.GA
+14:10:26,250 INFO  [org.jboss.msc] JBoss MSC version 1.0.2.GA
+14:10:26,312 INFO  [org.jboss.as] JBAS015899: JBoss AS 7.1.1.Final &quot;Brontes&quot; starting
+14:10:27,440 INFO  [org.xnio] XNIO Version 3.0.3.GA
+14:10:27,457 INFO  [org.jboss.as.server] JBAS015888: Creating http management service using socket-binding (management-http)
+14:10:27,465 INFO  [org.xnio.nio] XNIO NIO Implementation Version 3.0.3.GA
+14:10:27,485 INFO  [org.jboss.remoting] JBoss Remoting version 3.2.3.GA
+14:10:27,548 INFO  [org.jboss.as.logging] JBAS011502: Removing bootstrap log handlers
+14:10:27,557 INFO  [org.jboss.as.configadmin] (ServerService Thread Pool -- 26) JBAS016200: Activating ConfigAdmin Subsystem
+14:10:27,587 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 31) JBAS010280: Activating Infinispan subsystem.
+14:10:27,682 INFO  [org.jboss.as.connector] (MSC service thread 1-3) JBAS010408: Starting JCA Subsystem (JBoss IronJacamar 1.0.9.Final)
+14:10:27,689 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 38) JBAS011800: Activating Naming Subsystem
+14:10:27,720 INFO  [org.jboss.as.osgi] (ServerService Thread Pool -- 39) JBAS011940: Activating OSGi Subsystem
+14:10:27,735 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 44) JBAS013101: Activating Security Subsystem
+14:10:27,750 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+14:10:27,776 INFO  [org.jboss.as.security] (MSC service thread 1-2) JBAS013100: Current PicketBox version=4.0.7.Final
+14:10:27,840 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+14:10:27,871 INFO  [org.jboss.as.naming] (MSC service thread 1-4) JBAS011802: Starting Naming Service
+14:10:27,924 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-1) JBAS015400: Bound mail session [java:jboss/mail/Default]
+14:10:28,183 INFO  [org.jboss.ws.common.management.AbstractServerConfig] (MSC service thread 1-1) JBoss Web Services - Stack CXF Server 4.0.2.GA
+14:10:28,272 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-3) Starting Coyote HTTP/1.1 on http--127.0.0.1-8080
+14:10:28,746 INFO  [org.jboss.as.remoting] (MSC service thread 1-1) JBAS017100: Listening on /127.0.0.1:4447
+14:10:28,749 INFO  [org.jboss.as.remoting] (MSC service thread 1-3) JBAS017100: Listening on /127.0.0.1:9999
+14:10:28,754 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) JBAS015012: Started FileSystemDeploymentService for directory /home/jsmith/jboss-as-7.1.1.Final/standalone/deployments
+14:10:28,896 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+14:10:29,026 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+14:10:29,027 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss AS 7.1.1.Final &quot;Brontes&quot; started in 3281ms - Started 133 of 208 services (74 services are passive or on-demand)</code></pre></figure>
 
 <h3 id="add-the-admin">Add the admin</h3>
 
 <p>Now it’s time to setup the admin account for jboss. Open a new console and follow the following steps. I am going to make the username “admin” and the password “jboss” but you can use any username and password you would like, follow the commands below</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd </span>jboss-as-7.1.1.Final/bin
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cd jboss-as-7.1.1.Final/bin
 ./add-user.sh</code></pre></figure>
 
 <p>Your output should look like this:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">What <span class="nb">type </span>of user <span class="k">do</span> you wish to add? 
- a<span class="o">)</span> Management User <span class="o">(</span>mgmt-users.properties<span class="o">)</span> 
- b<span class="o">)</span> Application User <span class="o">(</span>application-users.properties<span class="o">)</span>
-<span class="o">(</span>a<span class="o">)</span>: 
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">What type of user do you wish to add? 
+ a) Management User (mgmt-users.properties) 
+ b) Application User (application-users.properties)
+(a): 
 
 Enter the details of the new user to add.
-Realm <span class="o">(</span>ManagementRealm<span class="o">)</span> : 
+Realm (ManagementRealm) : 
 Username : admin
 Password : 
 Re-enter Password : 
-The username <span class="s1">&#39;admin&#39;</span> is easy to guess
-Are you sure you want to add user <span class="s1">&#39;admin&#39;</span> yes/no? yes
-About to add user <span class="s1">&#39;admin&#39;</span> <span class="k">for</span> realm <span class="s1">&#39;ManagementRealm&#39;</span>
+The username &#39;admin&#39; is easy to guess
+Are you sure you want to add user &#39;admin&#39; yes/no? yes
+About to add user &#39;admin&#39; for realm &#39;ManagementRealm&#39;
 Is this correct yes/no? yes</code></pre></figure>
 
 <h3 id="jboss-is-up-and-running">JBoss is up and running.</h3>

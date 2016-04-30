@@ -21,6 +21,7 @@ http://johnathanmarksmith.com/social-networking
 http://johnathanmarksmith.com/tags
 http://johnathanmarksmith.com/technology
 
+http://johnathanmarksmith.com/linux/virtualbox/centos%207/how-to/2016/04/30/how-to-install-virtualbox-5-guest-additions-on-centos-7
 http://johnathanmarksmith.com/linux/mint/linuxmint/grails/2015/07/09/how-to-install-grails-on-a-linux-machine
 http://johnathanmarksmith.com/git/stash/atlassian/2015/04/08/how-to-upgrade-to-atlassian-stash-380
 http://johnathanmarksmith.com/git/ssl/2015/02/06/quick-fix-for-git-ssl-certificates-problem

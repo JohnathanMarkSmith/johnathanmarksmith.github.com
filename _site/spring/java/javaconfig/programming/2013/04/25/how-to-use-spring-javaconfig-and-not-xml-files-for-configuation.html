@@ -219,55 +219,55 @@
 <p>Here is the main code to my sample project</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">public class Main
-<span class="o">{</span>
+{
 
-    private static final Logger <span class="nv">LOGGER</span> <span class="o">=</span> getLogger<span class="o">(</span>Main.class<span class="o">)</span><span class="p">;</span>
+    private static final Logger LOGGER = getLogger(Main.class);
 
-    public static void main<span class="o">(</span>String<span class="o">[]</span> args<span class="o">)</span>
-    <span class="o">{</span>
-        // in this setup, both the main<span class="o">(</span>String<span class="o">[])</span> method and the JUnit method both specify that
-        ApplicationContext <span class="nv">context</span> <span class="o">=</span> new AnnotationConfigApplicationContext<span class="o">(</span> HelloWorldConfiguration.class <span class="o">)</span><span class="p">;</span>
-        MessageService <span class="nv">mService</span> <span class="o">=</span> context.getBean<span class="o">(</span>MessageService.class<span class="o">)</span><span class="p">;</span>
-        HelloWorld <span class="nv">helloWorld</span> <span class="o">=</span> context.getBean<span class="o">(</span>HelloWorld.class<span class="o">)</span><span class="p">;</span>
+    public static void main(String[] args)
+    {
+        // in this setup, both the main(String[]) method and the JUnit method both specify that
+        ApplicationContext context = new AnnotationConfigApplicationContext( HelloWorldConfiguration.class );
+        MessageService mService = context.getBean(MessageService.class);
+        HelloWorld helloWorld = context.getBean(HelloWorld.class);
 
         /**
          * Displaying default messgae
          */
-        LOGGER.debug<span class="o">(</span><span class="s2">&quot;Message from HelloWorld Bean: &quot;</span> + helloWorld.getMessage<span class="o">())</span><span class="p">;</span>
+        LOGGER.debug(&quot;Message from HelloWorld Bean: &quot; + helloWorld.getMessage());
 
         /**
          *   Saving Message to database
          */
-        Message <span class="nv">message</span> <span class="o">=</span> new Message<span class="o">()</span><span class="p">;</span>
-        message.setMessage<span class="o">(</span>helloWorld.getMessage<span class="o">())</span><span class="p">;</span>
-        mService.SaveMessage<span class="o">(</span>message<span class="o">)</span><span class="p">;</span>
+        Message message = new Message();
+        message.setMessage(helloWorld.getMessage());
+        mService.SaveMessage(message);
 
         /**
          * Settting new message in bean
          */
-        helloWorld.setMessage<span class="o">(</span><span class="s2">&quot;I am in Staten Island, New York&quot;</span><span class="o">)</span><span class="p">;</span>
-        LOGGER.debug<span class="o">(</span><span class="s2">&quot;Message from HelloWorld Bean: &quot;</span> + helloWorld.getMessage<span class="o">())</span><span class="p">;</span>
+        helloWorld.setMessage(&quot;I am in Staten Island, New York&quot;);
+        LOGGER.debug(&quot;Message from HelloWorld Bean: &quot; + helloWorld.getMessage());
 
         /**
          * Saving Message in database.
          */
-        message.setMessage<span class="o">(</span>helloWorld.getMessage<span class="o">())</span><span class="p">;</span>
-        mService.SaveMessage<span class="o">(</span>message<span class="o">)</span><span class="p">;</span>
+        message.setMessage(helloWorld.getMessage());
+        mService.SaveMessage(message);
 
         /**
          * Getting messages from database
-         *    - display number of message<span class="o">(</span>s<span class="o">)</span>
+         *    - display number of message(s)
          *    - display each message in database
          */
-        List&lt;Message&gt; <span class="nv">myList</span> <span class="o">=</span> mService.listMessages<span class="o">()</span><span class="p">;</span>
-        LOGGER.debug<span class="o">(</span><span class="s2">&quot;You Have &quot;</span> + myList.size<span class="o">()</span> + <span class="s2">&quot; Message(s) In The Database&quot;</span><span class="o">)</span><span class="p">;</span>
+        List&lt;Message&gt; myList = mService.listMessages();
+        LOGGER.debug(&quot;You Have &quot; + myList.size() + &quot; Message(s) In The Database&quot;);
 
-        <span class="k">for</span> <span class="o">(</span>Message i : myList<span class="o">)</span>
-        <span class="o">{</span>
-            LOGGER.debug<span class="o">(</span><span class="s2">&quot;Message: ID: &quot;</span> + i.getId<span class="o">()</span> + <span class="s2">&quot;, Message: &quot;</span> + i.getMessage<span class="o">()</span> + <span class="s2">&quot;.&quot;</span><span class="o">)</span><span class="p">;</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+        for (Message i : myList)
+        {
+            LOGGER.debug(&quot;Message: ID: &quot; + i.getId() + &quot;, Message: &quot; + i.getMessage() + &quot;.&quot;);
+        }
+    }
+}</code></pre></figure>
 
 <p>You can see from this code that the ApplicationContext is mapped to a HelloWorldConfig.class file its not using a XML file.  Below is the code to the HelloWorldConfig.class.</p>
 
@@ -281,26 +281,26 @@
  *
  *    This Would be the same as the following
  *    &lt;beans&gt;
- *       &lt;bean <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;helloWorld&quot;</span> <span class="nv">class</span><span class="o">=</span><span class="s2">&quot;com.johnathanmarksmith.HelloSpringJavaBasedJavaConfig.bean.HelloWorld&quot;</span> /&gt;
+ *       &lt;bean id=&quot;helloWorld&quot; class=&quot;com.johnathanmarksmith.HelloSpringJavaBasedJavaConfig.bean.HelloWorld&quot; /&gt;
  *    &lt;/beans&gt;
  *
  */
 
 @Configuration
-@Import<span class="o">(</span>DatabaseConfiguration.class<span class="o">)</span>
+@Import(DatabaseConfiguration.class)
 @ComponentScan
-@PropertySource<span class="o">(</span><span class="s2">&quot;classpath:application.properties&quot;</span><span class="o">)</span>
-public class HelloWorldConfiguration <span class="o">{</span>
+@PropertySource(&quot;classpath:application.properties&quot;)
+public class HelloWorldConfiguration {
 
     @Bean
-    public HelloWorld getHelloWorld<span class="o">(</span>Environment env<span class="o">)</span> <span class="o">{</span>
-        HelloWorld <span class="nv">hw</span> <span class="o">=</span> new HelloWorld<span class="o">()</span><span class="p">;</span>
-        hw.setMessage<span class="o">(</span>env.getProperty<span class="o">(</span><span class="s2">&quot;bean.text&quot;</span><span class="o">))</span><span class="p">;</span>
-        <span class="k">return</span> hw<span class="p">;</span>
-    <span class="o">}</span>
+    public HelloWorld getHelloWorld(Environment env) {
+        HelloWorld hw = new HelloWorld();
+        hw.setMessage(env.getProperty(&quot;bean.text&quot;));
+        return hw;
+    }
 
 
-<span class="o">}</span></code></pre></figure>
+}</code></pre></figure>
 
 <p>You can see how easy it is to use JavaConfig and Not XML..</p>
 
@@ -314,9 +314,9 @@ public class HelloWorldConfiguration <span class="o">{</span>
 <p>If you would like to download the project from GitHub and run it just follow the following commands:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clone git@github.com:JohnathanMarkSmith/HelloSpringJavaBasedJavaConfig.git
-<span class="nb">cd </span>HelloSpringJavaBasedJavaConfig
+cd HelloSpringJavaBasedJavaConfig
 mvn packge
-<span class="nb">cd </span>target
+cd target
 java -jar HelloSpringJavaBasedJavaConfig.jar</code></pre></figure>
 
 <p>LIFE IS SO EASY WORKING WITH GIT, MAVEN, SPRING….</p>

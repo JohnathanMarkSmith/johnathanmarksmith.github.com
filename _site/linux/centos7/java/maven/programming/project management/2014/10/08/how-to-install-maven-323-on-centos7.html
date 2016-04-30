@@ -221,26 +221,26 @@
 <p>The first thing we need to do is to download the Maven tar file and untar it to a shared location on the workstation</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">wget http://mirrors.gigenet.com/apache/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
-su -c <span class="err">&quot;</span>tar -zxvf apache-maven-3.2.3-bin.tar.gz -C /usr/local��� 
-<span class="nb">cd</span> /usr/local
+su -c &quot;tar -zxvf apache-maven-3.2.3-bin.tar.gz -C /usr/local��� 
+cd /usr/local
 sudo ln -s apache-maven-3.2.3 maven</code></pre></figure>
 
 <h3 id="setup-the-maven-environment-variables-in-shared-profile">Setup the Maven Environment Variables in shared profile.</h3>
 
 <p>The next step is to setup the Maven environment variables in a shared profile so all users on the system will get them import at login time.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">su -c <span class="s2">&quot;vi /etc/profile.d/maven.sh&quot;</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">su -c &quot;vi /etc/profile.d/maven.sh&quot;
 
-<span class="c"># Add the following lines to maven.sh</span>
-<span class="nb">export </span><span class="nv">M2_HOME</span><span class="o">=</span>/usr/local/maven
-<span class="nb">export </span><span class="nv">M2</span><span class="o">=</span><span class="nv">$M2_HOME</span>/bin
-<span class="nv">PATH</span><span class="o">=</span><span class="nv">$M2</span>:<span class="nv">$PATH</span> </code></pre></figure>
+# Add the following lines to maven.sh
+export M2_HOME=/usr/local/maven
+export M2=$M2_HOME/bin
+PATH=$M2:$PATH</code></pre></figure>
 
 <h3 id="now-test-your-install-of-maven">Now test your install of Maven.</h3>
 
 <p>Logout of the system and then log back into it. Enter the following command:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>jsmith@regan ~<span class="o">]</span><span class="nv">$ </span>mvn -version </code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">[jsmith@regan ~]$ mvn -version</code></pre></figure>
 
 <p>Now that’s it. have fun with maven.</p>
 

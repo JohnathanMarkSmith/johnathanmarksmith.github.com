@@ -218,22 +218,22 @@
 
 <p>The default project layout of a Java project with Gradle is following (just like Maven):</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">- The src/main/java directory contains the <span class="nb">source </span>code.
-- The src/main/resources directory contains the resources <span class="o">(</span>such as properties files<span class="o">)</span>.
-- The src/test/java directory contains the <span class="nb">test </span>classes.
-- The src/test/resources directory contains the <span class="nb">test </span>resources.  </code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">- The src/main/java directory contains the source code.
+- The src/main/resources directory contains the resources (such as properties files).
+- The src/test/java directory contains the test classes.
+- The src/test/resources directory contains the test resources.</code></pre></figure>
 
 <p>So now make a new folder where you would like the project to start:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir runnablejar
-<span class="nb">cd </span>runnablejar  </code></pre></figure>
+cd runnablejar</code></pre></figure>
 
 <p> Let’s create the project layout by using the following commands:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir -p src/main/java
 mkdir -p src/main/resources
 mkdir -p src/test/java
-mkdir -p src/test/resources  </code></pre></figure>
+mkdir -p src/test/resources</code></pre></figure>
 
 <p>As you can see from above the project layout looks just like a Maven project.</p>
 
@@ -242,39 +242,39 @@ mkdir -p src/test/resources  </code></pre></figure>
 <p>Let’s create the main class for this project and make it display “Hello World” 
 cd into src/main/java and create the package layout.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir -p com/johnathanmarksmith/gradle  </code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir -p com/johnathanmarksmith/gradle</code></pre></figure>
 
 <p>We have the project layout created and also the package layout so now it’s time to create the Main Class</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">vi com/johnathanmarksmith/gradle/HelloWorld.java  </code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">vi com/johnathanmarksmith/gradle/HelloWorld.java</code></pre></figure>
 
 <p>and insert the following lines:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">package com.johnathanmarksmith.gradle<span class="p">;</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">package com.johnathanmarksmith.gradle;
 public class HelloWorld
-<span class="o">{</span>
-    public static void main<span class="o">(</span>String<span class="o">[]</span> args<span class="o">)</span> 
-    <span class="o">{</span> 
-        System.out.println<span class="o">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="o">)</span><span class="p">;</span> 
-    <span class="o">}</span> 
-<span class="o">}</span>   </code></pre></figure>
+{
+    public static void main(String[] args) 
+    { 
+        System.out.println(&quot;Hello World!&quot;); 
+    } 
+}</code></pre></figure>
 
 <h3 id="creating-the-gradle-build-file-">Creating the Gradle Build File..  </h3>
 
 <p>The next step is to create the Gralde Build file, Go back to the root of the project.   cd ../../.. And create the build file</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">vi build.gradle   </code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">vi build.gradle</code></pre></figure>
 
 <p>Now add the following lines:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> apply plugin: <span class="s1">&#39;java&#39;</span> 
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">apply plugin: &#39;java&#39; 
  
- jar <span class="o">{</span> 
-        <span class="nv">baseName</span> <span class="o">=</span> <span class="s1">&#39;smith&#39;</span> 
-        <span class="nv">version</span> <span class="o">=</span> <span class="s1">&#39;1.0&#39;</span> 
-        manifest <span class="o">{</span> 
-                     attributes <span class="s1">&#39;Main-Class&#39;</span>: <span class="s1">&#39;com.johnathanmarksmith.gradle.HelloWorld&#39;</span> <span class="o">}</span> 
-     <span class="o">}</span>    </code></pre></figure>
+ jar { 
+        baseName = &#39;smith&#39; 
+        version = &#39;1.0&#39; 
+        manifest { 
+                     attributes &#39;Main-Class&#39;: &#39;com.johnathanmarksmith.gradle.HelloWorld&#39; } 
+     }</code></pre></figure>
 
 <p>Building the project and creating the JAR 
 To build the project and to create the JAR you need to run the following command</p>
@@ -283,7 +283,7 @@ To build the project and to create the JAR you need to run the following command
 
 <p>Now to run the JAR file you enter the following command</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">java -jar ./build/libs/smith-1.0.jar   </code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">java -jar ./build/libs/smith-1.0.jar</code></pre></figure>
 
 <object width="640" height="480"><param name="movie" value="//www.youtube.com/v/p3acEuRzyJA?hl=en_US&amp;version=3" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="//www.youtube.com/v/p3acEuRzyJA?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="640" height="480" allowscriptaccess="always" allowfullscreen="true" /></object>
 
