@@ -4,7 +4,7 @@
  <title>Johnathan Mark Smith</title>
  <link href="http://johnathanmarksmith.com/" rel="self"/>
  <link href="http://johnathanmarksmith.com"/>
- <updated>2016-04-30T07:53:32-07:00</updated>
+ <updated>2016-08-22T09:11:54-07:00</updated>
  <id>http://johnathanmarksmith.com</id>
  <author>
    <name>Johnathan Mark Smith</name>
@@ -13,13 +13,29 @@
 
  
  <entry>
+   <title>How to make a desktop icon on CentOS 7 linux</title>
+   <link href="http://johnathanmarksmith.com/linux/centos%207/how-to/2016/08/22/how-to-make-a-desktop-icon-on-centos-7-linux"/>
+   <updated>2016-08-22T00:00:00-07:00</updated>
+   <id>http://johnathanmarksmith.com/linux/centos%207/how-to/2016/08/22/how-to-make-a-desktop-icon-on-centos-7-linux</id>
+   <content type="html">&lt;p&gt;In this video below I am going to show you a quick way on How to make a desktop icon on CentOS 7.&lt;/p&gt;
+
+&lt;object width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;//www.youtube.com/v/8oxnSeAmRN0?hl=en_US&amp;amp;version=3&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;embed src=&quot;//www.youtube.com/v/8oxnSeAmRN0?hl=en_US&amp;amp;version=3&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;640&quot; height=&quot;480&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
    <title>How to install VirtualBox 5 Guest Additions on CentOS 7</title>
    <link href="http://johnathanmarksmith.com/linux/virtualbox/centos%207/how-to/2016/04/30/how-to-install-virtualbox-5-guest-additions-on-centos-7"/>
    <updated>2016-04-30T00:00:00-07:00</updated>
    <id>http://johnathanmarksmith.com/linux/virtualbox/centos%207/how-to/2016/04/30/how-to-install-virtualbox-5-guest-additions-on-centos-7</id>
-   <content type="html">&lt;p&gt;So last night I had to upgate to VirtualBox 5 due to installing the new MAC os.  After installing VirutalBox5 I wanted to setup my guest linux which I like to use CentOS 7.&lt;/p&gt;
+   <content type="html">&lt;p&gt;So last night I had to upgate to VirtualBox 5 due to installing the new MAC os.  After installing VirtualBox 5 I wanted to setup my guest linux which I like to use CentOS 7.&lt;/p&gt;
 
-&lt;p&gt;I did the basic install of CentOS7 but then wanted to add the VirtualBox Guest Additions but I was going so many errors. After doing some research and playing around I found all the packages that you need to have installed on CentOS7 before trying to install the VirtualBox Guest Addition.&lt;/p&gt;
+&lt;p&gt;I did the basic install of CentOS7 but then wanted to add the VirtualBox Guest Additions but I was getting so many errors trying to get the Virtual Box Guest Additions to install.&lt;/p&gt;
+
+&lt;p&gt;After doing some research and playing around I found all the packages that you need to have installed on CentOS7 before trying to install the VirtualBox Guest Addition.&lt;/p&gt;
 
 &lt;p&gt;In this post I am going to show you a quick and easy way to install everything you need.&lt;/p&gt;
 
