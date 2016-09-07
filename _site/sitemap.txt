@@ -21,6 +21,7 @@ http://johnathanmarksmith.com/social-networking
 http://johnathanmarksmith.com/tags
 http://johnathanmarksmith.com/technology
 
+http://johnathanmarksmith.com/linux/raspberry/pi/raspberry%20pi/how-to/2016/09/07/how-to-make-a-desktop-icon-on-raspberry-pi-3
 http://johnathanmarksmith.com/linux/centos%207/how-to/2016/08/22/how-to-make-a-desktop-icon-on-centos-7-linux
 http://johnathanmarksmith.com/linux/virtualbox/centos%207/how-to/2016/04/30/how-to-install-virtualbox-5-guest-additions-on-centos-7
 http://johnathanmarksmith.com/linux/mint/linuxmint/grails/2015/07/09/how-to-install-grails-on-a-linux-machine
