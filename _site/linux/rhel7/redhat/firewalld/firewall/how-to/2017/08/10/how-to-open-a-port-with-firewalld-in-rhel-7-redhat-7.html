@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <title>
       
-        How To Install Gitolite on Linux - 
+        How to open a port with FirewallD in RHEL 7 (Redhat 7) - 
       
       Johnathan Mark Smith
     </title>
-    <meta name="description" content="How To Install Gitolite on Linux">
+    <meta name="description" content="How to open a port with FirewallD in RHEL 7 (Redhat 7)">
     <meta name="author" content="Johnathan Mark Smith">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -205,72 +205,20 @@
         
 <div class="page-header">
   <h1>
-    How To Install Gitolite on Linux 
+    How to open a port with FirewallD in RHEL 7 (Redhat 7) 
     
   </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <h3 id="why-gitolite">Why Gitolite</h3>
+    <p>In this video below I am going to show you a quick way on How to make a desktop icon on Raspberry.</p>
 
-<p>Git by itself does not do any access control – it relies on the transport medium to do authentication (“who are you?”), and on OS file permissions to do authorisation (“what are you allowed to do?”).</p>
-
-<p>Git also comes with a program called “git-shell” which can act as a restricted login shell if you don’t want users getting a proper shell. Using this and judicious use of Unix groups, you can allow some people read-only access while others get read-write access, etc. This is probably sufficient if your needs are simple and don’t change too often.</p>
-
-<p>However, gitolite does this much better, and offers many more features</p>
-
-<p>Gitolite is useful in any server that is going to host multiple git repositories, each with many developers, where “anyone can do anything to any repo” is not a good idea….</p>
-
-<p>Giteolite will let you pick which developers have access to which repositories and which branches and more…. Gitolite, Gitolite, Gitolite it will save you!!!</p>
-
-<h3 id="how-to-install-gitolite-on-linux">How To Install Gitolite on Linux</h3>
-
-<p>Login in as root</p>
-
-<p>now you have to create the git(make it git or gitolite) account</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">useradd git
-    passwd git</code></pre></figure>
-
-<p>Now login as git or gitolite</p>
-
-<p>You need to copy your SSH public key (a file called ~/.ssh/id_rsa.pub) from your workstation, renaming it to yourname.pub (we’ll use jsmith.pub in our examples).</p>
-
-<p>From my workstations</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">scp ~/.ssh/id_rsa.pub git@REGAN:/home/git/jsmith.pub</code></pre></figure>
-
-<p>Now run the following commands from the git account</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clone git://github.com/sitaramc/gitolite
-   mkdir bin
-   gitolite/install -ln
-   gitolite setup -pk jsmith.pub</code></pre></figure>
-
-<h3 id="now-for-testing">Now for Testing</h3>
-
-<p>From your workstation enter the following command</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ssh git@REGAN info</code></pre></figure>
-
-<p>your output should look something like this</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">hello jsmith, this is git@regan running gitolite3 v3.5.1-4-g2f48a3e on git 1.8.2.3
-
-    R W		gitolite-admin
-    R W		testing</code></pre></figure>
-
-<h3 id="time-to-be-a-gitolite-admin">Time To Be a Gitolite Admin</h3>
-
-<p>From your workstation enter the following command</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clone git@&lt;server&gt;:gitolite-admin
-   cd gitolite-admin</code></pre></figure>
-
-<p>That is everything you have gitolite all setup and ready to go.</p>
-
-<object width="420" height="315"><param name="movie" value="http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;version=3" />&lt;/param&gt;<param name="allowFullScreen" value="true" />&lt;/param&gt;<param name="allowscriptaccess" value="always" />&lt;/param&gt;<embed src="http://www.youtube.com/v/7ZnSjIJoook?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="420" height="315" allowscriptaccess="always" allowfullscreen="true" />&lt;/embed&gt;</object>
+<object width="640" height="480">
+<param name="movie" value="//www.youtube.com/v/Wz-Onl6OT8Y?hl=en_US&amp;version=3" />
+<param name="allowFullScreen" value="true" />
+<param name="allowscriptaccess" value="always" />
+<embed src="//www.youtube.com/v/Ok6Arv6ag9Q?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="640" height="480" allowscriptaccess="always" allowfullscreen="true" /></object>
 
 <p>If you have any questions or comments please email me at <a href="mailto:john@johnathanmarksmith.com">john@johnathanmarksmith.com</a></p>
 
@@ -278,11 +226,11 @@
     <hr>
     <div class="pagination btn-group">
       
-        <a class="btn prev" href="/spring/0%20java/javaconfig/programming/spring%20java%20configuration/2013/05/22/i-was-published-in-this-week-in-spring-on-how-to-use-springs-java-configuration-style" title="I was published in 'This Week in Spring' on how to use Spring's Java Configuration Style">&larr; Previous</a>
+        <a class="btn prev" href="/linux/raspberry/pi/raspberry%20pi/how-to/2016/09/07/how-to-make-a-desktop-icon-on-raspberry-pi-3" title="How to make a desktop icon on Raspberry Pi 3">&larr; Previous</a>
       
         <a class="btn" href="/archive.html">Archive</a>
       
-        <a class="btn next" href="/jquery/javascript/2013/05/24/how-to-use-jquery-validation-plugin-for-field-validatoin" title="How To Use JQuery Validation Plugin for Field Validatoin">Next &rarr;</a>
+        <a class="btn next disabled">Next &rarr;</a>
       
     </div>
     <hr>
@@ -292,7 +240,7 @@
   <div class="span4">
     <section>
       <h4>Published</h4>
-      <div class="date"><span>23 May 2013</span></div>
+      <div class="date"><span>10 August 2017</span></div>
     </section>
          
     
@@ -305,11 +253,17 @@
 
   
      
-    	<li><a href="/tags.html#Git-ref">Git <span>16</span></a></li>
-     
-    	<li><a href="/tags.html#Gitolite-ref">Gitolite <span>1</span></a></li>
-     
     	<li><a href="/tags.html#Linux-ref">Linux <span>31</span></a></li>
+     
+    	<li><a href="/tags.html#RHEL7-ref">RHEL7 <span>5</span></a></li>
+     
+    	<li><a href="/tags.html#Redhat-ref">Redhat <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#Firewalld-ref">Firewalld <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#Firewall-ref">Firewall <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#How-To-ref">How-To <span>4</span></a></li>
     
   
 
