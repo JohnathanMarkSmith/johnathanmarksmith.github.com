@@ -21,6 +21,7 @@ http://johnathanmarksmith.com/social-networking
 http://johnathanmarksmith.com/tags
 http://johnathanmarksmith.com/technology
 
+http://johnathanmarksmith.com/lamp/linux/raspberry/pi/raspberry%20pi/how-to/2018/10/24/installing-lamp-linux-apache-mysql-php-stack-on-your-raspberry-pi
 http://johnathanmarksmith.com/linux/rhel7/redhat/firewalld/firewall/how-to/2017/08/10/how-to-open-a-port-with-firewalld-in-rhel-7-redhat-7
 http://johnathanmarksmith.com/linux/raspberry/pi/raspberry%20pi/how-to/2016/09/07/how-to-make-a-desktop-icon-on-raspberry-pi-3
 http://johnathanmarksmith.com/linux/centos%207/how-to/2016/08/22/how-to-make-a-desktop-icon-on-centos-7-linux

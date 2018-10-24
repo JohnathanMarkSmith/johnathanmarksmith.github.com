@@ -4,13 +4,54 @@
  <title>Johnathan Mark Smith</title>
  <link href="http://johnathanmarksmith.com/" rel="self"/>
  <link href="http://johnathanmarksmith.com"/>
- <updated>2017-08-10T08:15:36-07:00</updated>
+ <updated>2018-10-24T10:48:48-07:00</updated>
  <id>http://johnathanmarksmith.com</id>
  <author>
    <name>Johnathan Mark Smith</name>
    <email>johnathansmith1969@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Installing LAMP (Linux, Apache, MySQL, PHP) stack on your Raspberry Pi</title>
+   <link href="http://johnathanmarksmith.com/lamp/linux/raspberry/pi/raspberry%20pi/how-to/2018/10/24/installing-lamp-linux-apache-mysql-php-stack-on-your-raspberry-pi"/>
+   <updated>2018-10-24T00:00:00-07:00</updated>
+   <id>http://johnathanmarksmith.com/lamp/linux/raspberry/pi/raspberry%20pi/how-to/2018/10/24/installing-lamp-linux-apache-mysql-php-stack-on-your-raspberry-pi</id>
+   <content type="html">&lt;p&gt;Learn to set up a LAMP (Linux, Apache, MySQL, PHP) stack on your Raspberry Pi and configure it to work as a web server.&lt;/p&gt;
+
+&lt;p&gt;What you will learn
+By following this resource and setting up a web server and WordPress website you will learn how to:
+ ◦ Install software on your Raspberry Pi
+ ◦ Install and configure Apache, PHP, and MySQL to create a LAMP web server&lt;/p&gt;
+
+&lt;p&gt;Set up an Apache web server&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install apache2 -y&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Install PHP&lt;/p&gt;
+
+&lt;p&gt;PHP is a preprocessor: it’s code that runs when the server receives a request for a web page via a web browser. It works out what needs to be shown on the page, and then sends that page to the browser. Unlike static HTML, PHP can show different content under different circumstances. Other languages are also capable of doing this, but since WordPress is written in PHP, that’s what we need to use this time. PHP is a very popular language on the web: huge projects like Facebook and Wikipedia are written in PHP.&lt;/p&gt;
+
+&lt;p&gt;Install the PHP package with the following command:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install php -y&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Install MySQL&lt;/p&gt;
+
+&lt;p&gt;MySQL (pronounced My Sequel or My S-Q-L) is a popular database engine. Like PHP, it’s widely used on web servers, which is why projects like WordPress use it, and why those projects are so popular.&lt;/p&gt;
+
+&lt;p&gt;Install the MySQL Server and PHP-MySQL packages by entering the following command into the terminal window:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install mysql-server php-mysql -y&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now restart Apache:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo service apache2 restart&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If you have any questions or comments please email me at &lt;a href=&quot;mailto:john@johnathanmarksmith.com&quot;&gt;john@johnathanmarksmith.com&lt;/a&gt;&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>How to open a port with FirewallD in RHEL 7 (Redhat 7)</title>
